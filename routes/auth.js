@@ -3,6 +3,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 const auth = require('../middleware/auth');
+const Message = require('../models/Message');
 
 // Register new user
 router.post('/register', async (req, res) => {
@@ -142,6 +143,27 @@ router.post('/logout', async (req, res) => {
         res.json({ message: 'Logged out successfully' });
     } catch (error) {
         res.status(500).json({ message: 'Server error' });
+    }
+});
+
+// Delete user account
+router.delete('/delete-account', auth, async (req, res) => {
+    try {
+        // Find and delete all messages associated with the user
+        await Message.deleteMany({
+            $or: [
+                { sender: req.user._id },
+                { receiver: req.user._id }
+            ]
+        });
+
+        // Delete the user account
+        await User.findByIdAndDelete(req.user._id);
+
+        res.json({ message: 'Account and associated data deleted successfully' });
+    } catch (error) {
+        console.error('Error deleting account:', error);
+        res.status(500).json({ error: 'Failed to delete account' });
     }
 });
 

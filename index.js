@@ -23,6 +23,14 @@ app.use(express.json());
 
 app.set('trust proxy', 1);
 
+// Serve static files from public directory
+app.use(express.static('public'));
+
+// Delete account page route
+app.get('/delete-account', (req, res) => {
+    res.sendFile(__dirname + '/public/delete-account.html');
+});
+
 // Welcome route
 app.get('/', (req, res) => {
     res.json({

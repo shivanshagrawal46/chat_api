@@ -5,6 +5,7 @@ const http = require('http');
 const { Server } = require('socket.io');
 const authRoutes = require('./routes/auth');
 const chatRoutes = require('./routes/chat');
+const callRoutes = require('./routes/call');
 const User = require('./models/User');
 const Message = require('./models/Message');
 const jwt = require('jsonwebtoken');
@@ -17,6 +18,9 @@ const io = new Server(server, {
         methods: ["GET", "POST"]
     }
 });
+
+// Make io accessible to routes
+app.set('io', io);
 
 // Middleware
 app.use(express.json());
@@ -39,12 +43,21 @@ app.get('/', (req, res) => {
             auth: {
                 register: 'POST /api/auth/register',
                 login: 'POST /api/auth/login',
-                me: 'GET /api/auth/me'
+                google: 'POST /api/auth/google',
+                me: 'GET /api/auth/me',
+                users: 'GET /api/auth/users (admin only)'
             },
             chat: {
                 send: 'POST /api/chat/send',
                 messages: 'GET /api/chat/messages/:userId',
                 users: 'GET /api/chat/users'
+            },
+            call: {
+                initiate: 'POST /api/call/initiate',
+                accept: 'POST /api/call/accept/:callId',
+                reject: 'POST /api/call/reject/:callId',
+                end: 'POST /api/call/end/:callId',
+                history: 'GET /api/call/history'
             }
         }
     });
@@ -66,8 +79,7 @@ const createAdminUser = async () => {
                 email: 'bhupendrapandey29@gmail.com',
                 phone: '9999999999',
                 password: 'password123',
-                isAdmin: true,
-                //publicKey: 'ADMIN_PUBLIC_KEY_HERE'
+                isAdmin: true
             });
             await admin.save();
             console.log('Admin user created');
@@ -81,6 +93,7 @@ createAdminUser();
 
 // Socket.IO connection handling
 const connectedUsers = new Map();
+const adminSockets = new Set();
 
 io.on('connection', (socket) => {
     console.log('User connected:', socket.id);
@@ -95,10 +108,22 @@ io.on('connection', (socket) => {
                 connectedUsers.set(user._id.toString(), socket.id);
                 socket.userId = user._id.toString();
                 socket.join(user._id.toString());
-                console.log(`User ${user.username} authenticated`);
+                
+                // If user is admin, add to admin sockets
+                if (user.isAdmin) {
+                    adminSockets.add(socket.id);
+                    // Send initial user list to admin
+                    const users = await User.find({ isAdmin: false })
+                        .select('-password -googleId')
+                        .sort({ createdAt: -1 });
+                    socket.emit('user_list', users);
+                }
+                
+                console.log(`User ${user.firstName} authenticated`);
             }
         } catch (error) {
             console.error('Authentication error:', error);
+            socket.emit('error', 'Authentication failed');
         }
     });
 
@@ -127,18 +152,84 @@ io.on('connection', (socket) => {
         }
     });
 
+    // Handle call signaling
+    socket.on('call_user', async (data) => {
+        const { receiverId, signalData, type } = data;
+        const receiverSocketId = connectedUsers.get(receiverId);
+        
+        if (receiverSocketId) {
+            io.to(receiverSocketId).emit('incoming_call', {
+                signal: signalData,
+                from: socket.userId,
+                type
+            });
+        }
+    });
+
+    socket.on('answer_call', (data) => {
+        const { to, signal } = data;
+        const receiverSocketId = connectedUsers.get(to);
+        
+        if (receiverSocketId) {
+            io.to(receiverSocketId).emit('call_accepted', signal);
+        }
+    });
+
+    socket.on('call_rejected', (data) => {
+        const { to } = data;
+        const receiverSocketId = connectedUsers.get(to);
+        
+        if (receiverSocketId) {
+            io.to(receiverSocketId).emit('call_rejected');
+        }
+    });
+
+    socket.on('end_call', (data) => {
+        const { to } = data;
+        const receiverSocketId = connectedUsers.get(to);
+        
+        if (receiverSocketId) {
+            io.to(receiverSocketId).emit('call_ended');
+        }
+    });
+
     // Handle disconnection
     socket.on('disconnect', () => {
         if (socket.userId) {
             connectedUsers.delete(socket.userId);
+            adminSockets.delete(socket.id);
             console.log('User disconnected:', socket.userId);
         }
     });
 });
 
+// Function to notify admins about new user
+const notifyAdminsAboutNewUser = async (user) => {
+    const userData = {
+        _id: user._id,
+        firstName: user.firstName,
+        lastName: user.lastName,
+        email: user.email,
+        phone: user.phone,
+        isAdmin: user.isAdmin,
+        createdAt: user.createdAt
+    };
+    
+    adminSockets.forEach(socketId => {
+        io.to(socketId).emit('new_user', userData);
+    });
+};
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes);
+app.use('/api/call', callRoutes);
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: 'Something went wrong!' });
+});
 
 const PORT = process.env.PORT || 6000;
 server.listen(PORT, () => {

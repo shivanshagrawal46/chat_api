@@ -1,8 +1,20 @@
 require('dotenv').config();
+
+// Validate required environment variables
+const requiredEnvVars = ['JWT_SECRET', 'MONGODB_URI'];
+const missingEnvVars = requiredEnvVars.filter(varName => !process.env[varName]);
+
+if (missingEnvVars.length > 0) {
+    console.error('❌ Missing required environment variables:', missingEnvVars.join(', '));
+    console.error('Please check your .env file and ensure all required variables are set.');
+    process.exit(1);
+}
+
 const express = require('express');
 const mongoose = require('mongoose');
 const http = require('http');
 const { Server } = require('socket.io');
+const cors = require('cors');
 const authRoutes = require('./routes/auth');
 const chatRoutes = require('./routes/chat');
 const callRoutes = require('./routes/call');
@@ -35,16 +47,29 @@ app.get('/delete-account', (req, res) => {
     res.sendFile(__dirname + '/public/delete-account.html');
 });
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.json({
+        status: 'OK',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
+        environment: process.env.NODE_ENV || 'development'
+    });
+});
+
 // Welcome route
 app.get('/', (req, res) => {
     res.json({
         message: 'Welcome to Chat API',
+        version: '1.0.0',
         endpoints: {
+            health: 'GET /health',
             auth: {
                 register: 'POST /api/auth/register',
                 login: 'POST /api/auth/login',
                 google: 'POST /api/auth/google',
                 me: 'GET /api/auth/me',
+                refreshToken: 'POST /api/auth/refresh-token',
                 users: 'GET /api/auth/users (admin only)'
             },
             chat: {
@@ -101,10 +126,21 @@ io.on('connection', (socket) => {
     // Handle user authentication
     socket.on('authenticate', async (token) => {
         try {
+            if (!token) {
+                socket.emit('error', 'No token provided');
+                return;
+            }
+            
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
             const user = await User.findOne({ _id: decoded.userId });
             
             if (user) {
+                // Remove previous socket connection for this user
+                const existingSocketId = connectedUsers.get(user._id.toString());
+                if (existingSocketId && existingSocketId !== socket.id) {
+                    adminSockets.delete(existingSocketId);
+                }
+                
                 connectedUsers.set(user._id.toString(), socket.id);
                 socket.userId = user._id.toString();
                 socket.join(user._id.toString());
@@ -120,21 +156,65 @@ io.on('connection', (socket) => {
                 }
                 
                 console.log(`User ${user.firstName} authenticated`);
+                socket.emit('authenticated', { success: true });
+            } else {
+                socket.emit('error', 'User not found');
             }
         } catch (error) {
             console.error('Authentication error:', error);
-            socket.emit('error', 'Authentication failed');
+            if (error.name === 'TokenExpiredError') {
+                socket.emit('error', 'Token expired. Please login again.');
+            } else if (error.name === 'JsonWebTokenError') {
+                socket.emit('error', 'Invalid token');
+            } else {
+                socket.emit('error', 'Authentication failed');
+            }
         }
     });
 
     // Handle new messages
     socket.on('send_message', async (data) => {
         try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
             const { receiverId, content } = data;
+            
+            // Input validation
+            if (!receiverId || !content) {
+                socket.emit('error', 'Receiver ID and content are required');
+                return;
+            }
+            
+            if (typeof content !== 'string' || content.trim().length === 0) {
+                socket.emit('error', 'Content must be a non-empty string');
+                return;
+            }
+            
+            if (content.length > 1000) {
+                socket.emit('error', 'Message content too long (max 1000 characters)');
+                return;
+            }
+            
+            // Prevent sending message to self
+            if (receiverId === socket.userId) {
+                socket.emit('error', 'Cannot send message to yourself');
+                return;
+            }
+            
+            // Check if receiver exists
+            const receiver = await User.findById(receiverId);
+            if (!receiver) {
+                socket.emit('error', 'Receiver not found');
+                return;
+            }
+            
             const message = new Message({
                 sender: socket.userId,
                 receiver: receiverId,
-                content
+                content: content.trim()
             });
             await message.save();
 

@@ -6,7 +6,8 @@ const auth = require('../middleware/auth');
 const Message = require('../models/Message');
 const { OAuth2Client } = require('google-auth-library');
 
-const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
+// Initialize OAuth2Client with Web Client ID
+const client = new OAuth2Client(process.env.GOOGLE_WEB_CLIENT_ID);
 
 // Register new user
 router.post('/register', async (req, res) => {
@@ -24,7 +25,7 @@ router.post('/register', async (req, res) => {
         }
         const user = new User({ firstName, lastName, email, phone, password });
         await user.save();
-        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
+        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
         res.status(201).json({
             token,
             user: {
@@ -52,7 +53,7 @@ router.post('/login', async (req, res) => {
         if (!user || !(await user.comparePassword(password))) {
             throw new Error('Invalid login credentials');
         }
-        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET);
+        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
         res.json({
             token,
             user: {
@@ -73,14 +74,22 @@ router.post('/login', async (req, res) => {
 router.post('/google', async (req, res) => {
     try {
         const { token } = req.body;
+        console.log('Received token for verification');
         
-        // Verify Google token
+        // Verify Google token using Web Client ID
         const ticket = await client.verifyIdToken({
             idToken: token,
-            audience: process.env.GOOGLE_CLIENT_ID
+            audience: process.env.GOOGLE_WEB_CLIENT_ID
         });
         
         const payload = ticket.getPayload();
+        console.log('Token verified successfully');
+        console.log('Token payload:', {
+            email: payload.email,
+            issuer: payload.iss,
+            audience: payload.aud,
+            expiry: new Date(payload.exp * 1000).toISOString()
+        });
         
         // Check if this is admin's email
         if (payload.email === 'bhupendrapandey29@gmail.com') {
@@ -140,9 +149,14 @@ router.post('/google', async (req, res) => {
             }
         });
     } catch (error) {
-        console.error('Google login error:', error);
+        console.error('Detailed Google login error:', {
+            message: error.message,
+            stack: error.stack,
+            clientId: process.env.GOOGLE_WEB_CLIENT_ID
+        });
         res.status(400).json({ 
-            error: 'Failed to authenticate with Google. Please try again.' 
+            error: 'Failed to authenticate with Google. Please try again.',
+            details: error.message 
         });
     }
 });
@@ -150,6 +164,28 @@ router.post('/google', async (req, res) => {
 // Get current user
 router.get('/me', auth, async (req, res) => {
     res.json(req.user);
+});
+
+// Refresh token
+router.post('/refresh-token', auth, async (req, res) => {
+    try {
+        // Generate new token
+        const newToken = jwt.sign({ userId: req.user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
+        
+        res.json({
+            token: newToken,
+            user: {
+                _id: req.user._id,
+                firstName: req.user.firstName,
+                lastName: req.user.lastName,
+                email: req.user.email,
+                phone: req.user.phone,
+                isAdmin: req.user.isAdmin
+            }
+        });
+    } catch (error) {
+        res.status(400).json({ error: error.message });
+    }
 });
 
 // Get all users (admin only)

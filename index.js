@@ -60,7 +60,7 @@ app.get('/health', (req, res) => {
 // Welcome route
 app.get('/', (req, res) => {
     res.json({
-        message: 'Welcome to Chat API',
+        message: 'Welcome to Bhupendra Chat API',
         version: '1.0.0',
         endpoints: {
             health: 'GET /health',

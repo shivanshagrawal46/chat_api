@@ -74,7 +74,7 @@ router.get('/messages/:userId', auth, async (req, res) => {
                 { sender: userId, receiver: req.user._id }
             ]
         }).sort({ createdAt: 1 });
-        res.json(messages);
+        res.json({ messages });
     } catch (error) {
         console.error('Error fetching messages:', error);
         res.status(400).json({ error: error.message });

@@ -197,7 +197,7 @@ router.get('/users', auth, async (req, res) => {
         const users = await User.find({ isAdmin: false })
             .select('-password -googleId')
             .sort({ createdAt: -1 });
-        res.json(users);
+        res.json({ users });
     } catch (error) {
         res.status(400).json({ error: error.message });
     }

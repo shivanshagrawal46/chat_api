@@ -1,0 +1,157 @@
+Payment API Documentation
+
+Authentication
+All endpoints require a JWT token in the header:
+Authorization: Bearer <JWT_TOKEN>
+
+1. Create a Razorpay Order
+Endpoint:
+POST /api/payment/create-order
+
+Headers:
+Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
+
+Request Body:
+{
+  "amount": 500,                // Amount in INR (e.g., 500 for ₹500)
+  "currency": "INR",            // Optional, default: "INR"
+  "receipt": "order_rcptid_11", // Optional, for your tracking
+  "notes": { "purpose": "Premium Subscription" } // Optional
+}
+
+Response Example:
+{
+  "orderId": "order_xyz123",
+  "amount": 50000,      // in paise (₹500 = 50000 paise)
+  "currency": "INR",
+  "receipt": "order_rcptid_11"
+}
+
+Usage:
+- Call this endpoint to create a new payment order before starting a Razorpay payment in your Flutter app.
+- Use the returned orderId with the Razorpay Flutter SDK.
+
+2. Verify Payment
+Endpoint:
+POST /api/payment/verify
+
+Headers:
+Authorization: Bearer <JWT_TOKEN>
+Content-Type: application/json
+
+Request Body:
+{
+  "orderId": "order_xyz123",
+  "paymentId": "pay_abc456",
+  "status": "paid" // or "failed"
+}
+
+Response Example:
+{ "success": true }
+
+Usage:
+- After payment is completed in the app, call this endpoint to update the backend with the payment result.
+
+3. Get User Payment History
+Endpoint:
+GET /api/payment/user/:userId
+
+Headers:
+Authorization: Bearer <JWT_TOKEN>
+
+Response Example:
+[
+  {
+    "_id": "64f1c2...",
+    "user": "64f1b9...",
+    "amount": 500,
+    "currency": "INR",
+    "orderId": "order_xyz123",
+    "paymentId": "pay_abc456",
+    "status": "paid",
+    "createdAt": "2023-09-01T12:34:56.789Z",
+    "updatedAt": "2023-09-01T12:35:10.123Z"
+  }
+]
+
+Usage:
+- Fetch all payments made by a user (for showing payment history in your app).
+- Users can only see their own payments. Admins can see any user's payments.
+
+Flutter Integration Example
+
+1. Create Order (Dio Example)
+final response = await dio.post(
+  'https://your-backend.com/api/payment/create-order',
+  data: {
+    'amount': 500,
+    'currency': 'INR',
+    'receipt': 'order_rcptid_11',
+    'notes': {'purpose': 'Premium Subscription'},
+  },
+  options: Options(
+    headers: {'Authorization': 'Bearer $jwtToken'},
+  ),
+);
+
+final orderId = response.data['orderId'];
+final amount = response.data['amount'];
+
+2. Start Razorpay Payment
+Use the razorpay_flutter package:
+import 'package:razorpay_flutter/razorpay_flutter.dart';
+
+final _razorpay = Razorpay();
+
+_razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, _handlePaymentSuccess);
+_razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, _handlePaymentError);
+
+_razorpay.open({
+  'key': 'YOUR_RAZORPAY_KEY_ID',
+  'amount': amount, // in paise
+  'order_id': orderId,
+  'name': 'Your App Name',
+  'description': 'Payment for Premium Subscription',
+  'prefill': {'contact': '9876543210', 'email': 'user@example.com'},
+});
+
+3. Verify Payment
+Call this in your payment success handler:
+void _handlePaymentSuccess(PaymentSuccessResponse response) async {
+  await dio.post(
+    'https://your-backend.com/api/payment/verify',
+    data: {
+      'orderId': response.orderId,
+      'paymentId': response.paymentId,
+      'status': 'paid',
+    },
+    options: Options(
+      headers: {'Authorization': 'Bearer $jwtToken'},
+    ),
+  );
+  // Show success to user
+}
+
+4. Get User Payment History
+final response = await dio.get(
+  'https://your-backend.com/api/payment/user/$userId',
+  options: Options(
+    headers: {'Authorization': 'Bearer $jwtToken'},
+  ),
+);
+
+final payments = response.data; // List of payment objects
+
+Summary Table
+
+| Endpoint                        | Method | Description                        | Auth Required |
+|----------------------------------|--------|------------------------------------|--------------|
+| /api/payment/create-order        | POST   | Create a Razorpay order            | Yes          |
+| /api/payment/verify              | POST   | Verify and record payment          | Yes          |
+| /api/payment/user/:userId        | GET    | Get all payments for a user        | Yes          |
+
+Need more help?
+- For webhooks, refunds, or advanced features, just ask!
+- Replace https://your-backend.com with your actual backend URL.
+- Use your JWT token for all requests. 

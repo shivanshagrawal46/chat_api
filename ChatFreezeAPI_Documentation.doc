@@ -1,0 +1,61 @@
+Chat Freeze/Unfreeze API Documentation
+
+Authentication
+All endpoints require a JWT token in the header:
+Authorization: Bearer <JWT_TOKEN>
+
+1. Check if a Chat is Frozen
+Endpoint:
+GET /api/chatmeta?admin=<adminId>&user=<userId>
+
+Headers:
+Authorization: Bearer <JWT_TOKEN>
+
+Response Example:
+{
+  "isFrozen": true,
+  "freezeAmount": 100
+}
+
+Usage:
+- Call this endpoint to check if the chat between the admin and a user is currently frozen and the freeze amount (if any).
+
+2. Freeze or Unfreeze a Chat (Admin Only)
+Endpoint:
+POST /api/chatmeta/freeze
+
+Headers:
+Authorization: Bearer <ADMIN_JWT_TOKEN>
+Content-Type: application/json
+
+Request Body:
+{
+  "admin": "<adminId>",
+  "user": "<userId>",
+  "isFrozen": true,           // true to freeze, false to unfreeze
+  "freezeAmount": 100         // required if freezing, null if unfreezing
+}
+
+Response Example:
+{
+  "success": true,
+  "meta": {
+    "admin": "<adminId>",
+    "user": "<userId>",
+    "isFrozen": true,
+    "freezeAmount": 100,
+    "frozenBy": "<adminId>",
+    "updatedAt": "2023-09-01T12:34:56.789Z"
+  }
+}
+
+Usage:
+- Only the admin can call this endpoint to freeze or unfreeze a chat with a user.
+- To unfreeze, set "isFrozen": false and "freezeAmount": null.
+
+Summary Table
+
+| Endpoint                        | Method | Description                        | Auth Required |
+|----------------------------------|--------|------------------------------------|--------------|
+| /api/chatmeta                   | GET    | Check if chat is frozen            | Yes          |
+| /api/chatmeta/freeze            | POST   | Freeze or unfreeze a chat          | Yes (admin)  | 

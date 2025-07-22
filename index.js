@@ -22,6 +22,7 @@ const paymentRoutes = require('./routes/payment');
 const User = require('./models/User');
 const Message = require('./models/Message');
 const jwt = require('jsonwebtoken');
+const chatMetaRoutes = require('./routes/chatmeta');
 
 const app = express();
 const server = http.createServer(app);
@@ -306,6 +307,7 @@ app.use('/api/auth', authRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/call', callRoutes);
 app.use('/api/payment', paymentRoutes);
+app.use('/api/chatmeta', chatMetaRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

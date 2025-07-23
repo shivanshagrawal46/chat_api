@@ -19,11 +19,7 @@ const userSchema = new mongoose.Schema({
         trim: true,
         lowercase: true
     },
-    phone: {
-        type: String,
-        required: true,
-        trim: true
-    },
+    phone: { type: String, default: '9999999999' }, // Make phone optional for Google login
     password: {
         type: String,
         required: function() {

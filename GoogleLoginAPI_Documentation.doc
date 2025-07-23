@@ -1,0 +1,129 @@
+Google Login API Documentation
+
+---
+
+# 1. API Endpoint
+
+**POST** `/api/auth/google`
+
+**Description:**
+Authenticate a user using Google Sign-In (Web or Android). Verifies the Google ID token, creates/updates the user in the database, and returns a JWT for your app.
+
+**Headers:**
+Content-Type: application/json
+
+**Request Body:**
+{
+  "idToken": "<GOOGLE_ID_TOKEN>"
+}
+
+**Response Example:**
+{
+  "token": "<YOUR_APP_JWT>",
+  "user": {
+    "_id": "...",
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@gmail.com",
+    "picture": "https://...",
+    "isAdmin": false
+  }
+}
+
+---
+
+# 2. How to Use in Flutter
+
+1. Use the `google_sign_in` package to sign in and get the Google ID token.
+2. Send the ID token to your backend `/api/auth/google` endpoint.
+3. Receive your app's JWT and user info in the response.
+4. Use the JWT for authenticated requests in your app.
+
+---
+
+# 3. Optimized Flutter Code Example
+
+```dart
+import 'package:google_sign_in/google_sign_in.dart';
+import 'package:dio/dio.dart';
+
+final GoogleSignIn _googleSignIn = GoogleSignIn(
+  scopes: [
+    'email',
+    'profile',
+  ],
+  // Optionally specify clientId for web/desktop
+  // clientId: 'YOUR_WEB_CLIENT_ID',
+);
+
+Future<void> signInWithGoogle(Dio dio) async {
+  try {
+    // Step 1: Google Sign-In
+    final GoogleSignInAccount? googleUser = await _googleSignIn.signIn();
+    if (googleUser == null) {
+      print('Google sign-in aborted');
+      return;
+    }
+    final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+    final String? idToken = googleAuth.idToken;
+    if (idToken == null) {
+      print('No ID token received');
+      return;
+    }
+
+    // Step 2: Send ID token to backend
+    final response = await dio.post(
+      'https://your-backend.com/api/auth/google',
+      data: {'idToken': idToken},
+      options: Options(headers: {'Content-Type': 'application/json'}),
+    );
+
+    if (response.statusCode == 200) {
+      final data = response.data;
+      final jwt = data['token'];
+      final user = data['user'];
+      print('Login successful! JWT: $jwt');
+      // Save JWT for future API calls
+      // Save user info as needed
+    } else {
+      print('Google login failed: ${response.data['error']}');
+    }
+  } catch (e) {
+    print('Google login error: $e');
+  }
+}
+```
+
+---
+
+# 4. Environment Variables Required
+
+Add these to your `.env` file in your backend:
+```
+GOOGLE_WEB_CLIENT_ID=your_web_client_id_here
+GOOGLE_ANDROID_CLIENT_ID=your_android_client_id_here
+```
+
+---
+
+# 5. Summary Table
+
+| Step                | What to Do/Check                                      |
+|---------------------|------------------------------------------------------|
+| Flutter App         | Use google_sign_in to get ID token                    |
+| Backend             | POST /api/auth/google with { idToken }                |
+| Backend Verification| Accept both Web and Android client IDs as audience    |
+| User Creation       | User is created/updated in DB, JWT returned           |
+| Authenticated Calls | Use JWT for all further API requests                  |
+
+---
+
+# 6. Notes
+- Never send your Google client secret to the frontend or mobile app.
+- Always verify the ID token on the backend.
+- Use the JWT returned by your backend for all authenticated requests.
+- For Android, ensure you use the correct Android client ID in your Google Cloud Console and in your backend `.env`.
+
+---
+
+For any issues or advanced flows (refresh tokens, server auth code, etc.), consult the official Google Sign-In and google_sign_in Flutter package documentation. 

@@ -5,9 +5,9 @@ const User = require('../models/User');
 const auth = require('../middleware/auth');
 const Message = require('../models/Message');
 const { OAuth2Client } = require('google-auth-library');
-
-// Initialize OAuth2Client with Web Client ID
-const client = new OAuth2Client(process.env.GOOGLE_WEB_CLIENT_ID);
+const WEB_CLIENT_ID = process.env.GOOGLE_WEB_CLIENT_ID || '54116343950-vq0kf8eiq6eikv8oig50j8eld54oou1q.apps.googleusercontent.com';
+const ANDROID_CLIENT_ID = process.env.GOOGLE_ANDROID_CLIENT_ID || 'rzp_test_aE4kYli12TObHZ'; // Replace with your actual Android client ID if needed
+const client = new OAuth2Client();
 
 // Register new user
 router.post('/register', async (req, res) => {
@@ -70,48 +70,36 @@ router.post('/login', async (req, res) => {
     }
 });
 
-// Google login
+// Google login (new robust version)
 router.post('/google', async (req, res) => {
     try {
-        const { token } = req.body;
-        console.log('Received token for verification');
-        
-        // Verify Google token using Web Client ID
+        const { idToken } = req.body;
+        if (!idToken) return res.status(400).json({ error: 'No ID token provided' });
+
+        // Accept both web and android client IDs
         const ticket = await client.verifyIdToken({
-            idToken: token,
-            audience: process.env.GOOGLE_WEB_CLIENT_ID
+            idToken,
+            audience: [WEB_CLIENT_ID, ANDROID_CLIENT_ID]
         });
-        
         const payload = ticket.getPayload();
-        console.log('Token verified successfully');
-        console.log('Token payload:', {
-            email: payload.email,
-            issuer: payload.iss,
-            audience: payload.aud,
-            expiry: new Date(payload.exp * 1000).toISOString()
-        });
-        
-        // Check if this is admin's email
+
+        // Prevent admin from logging in via Google
         if (payload.email === 'bhupendrapandey29@gmail.com') {
-            return res.status(403).json({ 
-                error: 'Admin cannot login with Google. Please use email and password login.' 
-            });
+            return res.status(403).json({ error: 'Admin cannot login with Google. Please use email and password login.' });
         }
 
-        // Check if user exists
+        // Find or create user
         let user = await User.findOne({ email: payload.email });
-        
         if (!user) {
-            // Create new user
             user = new User({
-                firstName: payload.given_name,
-                lastName: payload.family_name,
+                firstName: payload.given_name || '',
+                lastName: payload.family_name || '',
                 email: payload.email,
-                phone: '', // Google doesn't provide phone number
-                googleId: payload.sub
+                googleId: payload.sub,
+                picture: payload.picture || '',
+                phone: ''
             });
             await user.save();
-            
             // Notify admins about new user
             if (req.app.get('io')) {
                 req.app.get('io').emit('new_user', {
@@ -125,39 +113,27 @@ router.post('/google', async (req, res) => {
                 });
             }
         } else if (!user.googleId) {
-            // Link existing account with Google
             user.googleId = payload.sub;
             await user.save();
         }
 
-        // Generate JWT token
-        const authToken = jwt.sign(
-            { userId: user._id }, 
-            process.env.JWT_SECRET,
-            { expiresIn: '7d' }
-        );
+        // Issue JWT for your app
+        const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, { expiresIn: '7d' });
 
         res.json({
-            token: authToken,
+            token,
             user: {
                 _id: user._id,
                 firstName: user.firstName,
                 lastName: user.lastName,
                 email: user.email,
-                phone: user.phone,
+                picture: user.picture,
                 isAdmin: user.isAdmin
             }
         });
     } catch (error) {
-        console.error('Detailed Google login error:', {
-            message: error.message,
-            stack: error.stack,
-            clientId: process.env.GOOGLE_WEB_CLIENT_ID
-        });
-        res.status(400).json({ 
-            error: 'Failed to authenticate with Google. Please try again.',
-            details: error.message 
-        });
+        console.error('Google login error:', error);
+        res.status(400).json({ error: 'Failed to authenticate with Google', details: error.message });
     }
 });
 

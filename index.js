@@ -275,6 +275,137 @@ io.on('connection', (socket) => {
         }
     });
 
+    // Handle chat freeze state changes
+    socket.on('freeze_chat', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { admin, user, isFrozen, freezeAmount } = data;
+            if (!admin || !user || typeof isFrozen !== 'boolean') {
+                socket.emit('error', 'admin, user, and isFrozen are required');
+                return;
+            }
+            
+            const actingUser = await User.findById(socket.userId);
+            if (!actingUser) {
+                socket.emit('error', 'User not found');
+                return;
+            }
+            
+            // Admin can always freeze/unfreeze
+            if (actingUser.isAdmin) {
+                const ChatMeta = require('./models/ChatMeta');
+                const update = {
+                    isFrozen,
+                    freezeAmount: isFrozen ? freezeAmount : null,
+                    frozenBy: actingUser._id,
+                    updatedAt: new Date()
+                };
+                const meta = await ChatMeta.findOneAndUpdate(
+                    { admin, user },
+                    { $set: update },
+                    { upsert: true, new: true }
+                );
+                
+                // Broadcast freeze state change to both admin and user
+                const userSocketId = connectedUsers.get(user);
+                if (userSocketId) {
+                    io.to(userSocketId).emit('freeze_state_change', {
+                        isFrozen: meta.isFrozen,
+                        freezeAmount: meta.freezeAmount,
+                        frozenBy: meta.frozenBy
+                    });
+                }
+                
+                // Also emit to admin
+                socket.emit('freeze_state_change', {
+                    isFrozen: meta.isFrozen,
+                    freezeAmount: meta.freezeAmount,
+                    frozenBy: meta.frozenBy
+                });
+                
+                console.log(`Admin ${actingUser.firstName} ${isFrozen ? 'froze' : 'unfroze'} chat for user ${user}`);
+            } else {
+                socket.emit('error', 'Only admin can freeze/unfreeze chat');
+            }
+        } catch (error) {
+            console.error('Error handling freeze chat:', error);
+            socket.emit('error', 'Failed to update freeze state');
+        }
+    });
+
+    // Handle user unfreeze after payment
+    socket.on('unfreeze_after_payment', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { admin, user } = data;
+            if (!admin || !user) {
+                socket.emit('error', 'admin and user are required');
+                return;
+            }
+            
+            const actingUser = await User.findById(socket.userId);
+            if (!actingUser || actingUser._id.toString() !== user) {
+                socket.emit('error', 'Only the user can unfreeze their own chat after payment');
+                return;
+            }
+            
+            // Check for recent successful payment
+            const Payment = require('./models/Payment');
+            const recentPaid = await Payment.findOne({
+                user,
+                status: 'paid'
+            }).sort({ createdAt: -1 });
+            
+            if (!recentPaid) {
+                socket.emit('error', 'No recent successful payment found. Cannot unfreeze.');
+                return;
+            }
+            
+            const ChatMeta = require('./models/ChatMeta');
+            const update = {
+                isFrozen: false,
+                freezeAmount: null,
+                frozenBy: actingUser._id,
+                updatedAt: new Date()
+            };
+            const meta = await ChatMeta.findOneAndUpdate(
+                { admin, user },
+                { $set: update },
+                { upsert: true, new: true }
+            );
+            
+            // Broadcast unfreeze to both user and admin
+            const adminSocketId = connectedUsers.get(admin);
+            if (adminSocketId) {
+                io.to(adminSocketId).emit('freeze_state_change', {
+                    isFrozen: false,
+                    freezeAmount: null,
+                    frozenBy: actingUser._id
+                });
+            }
+            
+            // Also emit to user
+            socket.emit('freeze_state_change', {
+                isFrozen: false,
+                freezeAmount: null,
+                frozenBy: actingUser._id
+            });
+            
+            console.log(`User ${actingUser.firstName} unfroze chat after payment`);
+        } catch (error) {
+            console.error('Error handling unfreeze after payment:', error);
+            socket.emit('error', 'Failed to unfreeze chat');
+        }
+    });
+
     // Handle disconnection
     socket.on('disconnect', () => {
         if (socket.userId) {

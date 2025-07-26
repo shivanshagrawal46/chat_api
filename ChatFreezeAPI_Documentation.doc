@@ -1,34 +1,32 @@
 Chat Freeze/Unfreeze API Documentation
 
-Authentication
-All endpoints require a JWT token in the header:
+---
+
+# 1. REST API Endpoints
+
+## 1.1 Check if a Chat is Frozen
+**GET** `/api/chatmeta?admin=<adminId>&user=<userId>`
+
+**Headers:**
 Authorization: Bearer <JWT_TOKEN>
 
-1. Check if a Chat is Frozen
-Endpoint:
-GET /api/chatmeta?admin=<adminId>&user=<userId>
-
-Headers:
-Authorization: Bearer <JWT_TOKEN>
-
-Response Example:
+**Response Example:**
 {
   "isFrozen": true,
   "freezeAmount": 100
 }
 
-Usage:
+**Usage:**
 - Call this endpoint to check if the chat between the admin and a user is currently frozen and the freeze amount (if any).
 
-2. Freeze or Unfreeze a Chat (Admin Only)
-Endpoint:
-POST /api/chatmeta/freeze
+## 1.2 Freeze or Unfreeze a Chat (Admin Only)
+**POST** `/api/chatmeta/freeze`
 
-Headers:
+**Headers:**
 Authorization: Bearer <ADMIN_JWT_TOKEN>
 Content-Type: application/json
 
-Request Body:
+**Request Body:**
 {
   "admin": "<adminId>",
   "user": "<userId>",
@@ -36,7 +34,7 @@ Request Body:
   "freezeAmount": 100         // required if freezing, null if unfreezing
 }
 
-Response Example:
+**Response Example:**
 {
   "success": true,
   "meta": {
@@ -49,13 +47,135 @@ Response Example:
   }
 }
 
-Usage:
+**Usage:**
 - Only the admin can call this endpoint to freeze or unfreeze a chat with a user.
 - To unfreeze, set "isFrozen": false and "freezeAmount": null.
 
-Summary Table
+---
 
-| Endpoint                        | Method | Description                        | Auth Required |
-|----------------------------------|--------|------------------------------------|--------------|
-| /api/chatmeta                   | GET    | Check if chat is frozen            | Yes          |
-| /api/chatmeta/freeze            | POST   | Freeze or unfreeze a chat          | Yes (admin)  | 
+# 2. Socket.io Events (Real-time)
+
+## 2.1 Admin Freeze/Unfreeze Chat
+**Event:** `freeze_chat`
+
+**Data:**
+{
+  "admin": "<adminId>",
+  "user": "<userId>",
+  "isFrozen": true,           // true to freeze, false to unfreeze
+  "freezeAmount": 100         // required if freezing, null if unfreezing
+}
+
+**Usage:**
+- Admin can freeze/unfreeze a user's chat in real-time
+- Broadcasts `freeze_state_change` to both admin and user
+
+## 2.2 User Unfreeze After Payment
+**Event:** `unfreeze_after_payment`
+
+**Data:**
+{
+  "admin": "<adminId>",
+  "user": "<userId>"
+}
+
+**Usage:**
+- User can unfreeze their chat after successful payment
+- Validates recent successful payment before unfreezing
+- Broadcasts `freeze_state_change` to both user and admin
+
+## 2.3 Listen for Freeze State Changes
+**Event:** `freeze_state_change`
+
+**Data:**
+{
+  "isFrozen": true,
+  "freezeAmount": 100,
+  "frozenBy": "<userId>"
+}
+
+**Usage:**
+- Listen for real-time freeze state changes
+- Update UI immediately when freeze state changes
+- Show payment modal if isFrozen: true
+- Hide payment modal if isFrozen: false
+
+---
+
+# 3. Flutter Implementation Example
+
+## 3.1 Admin Freeze/Unfreeze
+```dart
+// Admin freezes a user's chat
+socket.emit('freeze_chat', {
+  'admin': adminUserId,
+  'user': targetUserId,
+  'isFrozen': true,
+  'freezeAmount': 100
+});
+
+// Admin unfreezes a user's chat
+socket.emit('freeze_chat', {
+  'admin': adminUserId,
+  'user': targetUserId,
+  'isFrozen': false,
+  'freezeAmount': null
+});
+```
+
+## 3.2 User Unfreeze After Payment
+```dart
+// User unfreezes their chat after payment
+socket.emit('unfreeze_after_payment', {
+  'admin': adminUserId,
+  'user': userId
+});
+```
+
+## 3.3 Listen for Real-time Updates
+```dart
+// Listen for freeze state changes
+socket.on('freeze_state_change', (data) {
+  print('Chat freeze state changed: $data');
+  
+  if (data['isFrozen']) {
+    // Show payment modal with freezeAmount
+    showPaymentModal(data['freezeAmount']);
+  } else {
+    // Hide payment modal and enable chat
+    hidePaymentModal();
+    enableChat();
+  }
+});
+```
+
+---
+
+# 4. Summary Table
+
+| Method                | Event/Endpoint                    | Description                        | Auth Required |
+|-----------------------|-----------------------------------|------------------------------------|---------------|
+| GET                   | /api/chatmeta                     | Check if chat is frozen            | Yes           |
+| POST                  | /api/chatmeta/freeze              | Freeze or unfreeze a chat          | Yes (admin)   |
+| Socket.io             | freeze_chat                       | Real-time freeze/unfreeze (admin)  | Yes (admin)   |
+| Socket.io             | unfreeze_after_payment            | User unfreeze after payment        | Yes (user)    |
+| Socket.io             | freeze_state_change (listen)      | Real-time freeze state updates     | Yes           |
+
+---
+
+# 5. Real-time Benefits
+
+1. **Instant Updates**: No page refresh needed for freeze/unfreeze
+2. **Live Notifications**: Users see freeze state changes immediately
+3. **Payment Integration**: Automatic unfreeze after successful payment
+4. **Admin Control**: Admin can freeze/unfreeze from anywhere in real-time
+5. **Better UX**: Seamless chat experience with immediate feedback
+
+---
+
+# 6. Notes
+- Socket.io events provide real-time functionality
+- REST API endpoints are still available for non-real-time operations
+- Users can only unfreeze their own chat after successful payment
+- Admin can freeze/unfreeze any user's chat at any time
+- All events require proper authentication via JWT token 

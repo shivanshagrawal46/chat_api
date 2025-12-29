@@ -36,12 +36,12 @@ const io = new Server(server, {
 // Make io accessible to routes
 app.set('io', io);
 
-// Middleware
+// Middleware - CORS configuration to allow all origins (for website, Flutter app, etc.)
+// Note: JWT tokens in Authorization header don't require credentials, so we can use origin: '*'
 app.use(cors({
     origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
+    allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 

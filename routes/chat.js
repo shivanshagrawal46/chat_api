@@ -116,4 +116,160 @@ router.get('/users', auth, async (req, res) => {
     }
 });
 
+// Get unread count for a specific chat room
+router.get('/unread-count/:roomId', auth, async (req, res) => {
+    try {
+        const { roomId } = req.params;
+        
+        // Validate roomId format
+        if (!mongoose.Types.ObjectId.isValid(roomId)) {
+            return res.status(400).json({ error: 'Invalid room ID format' });
+        }
+        
+        // Count unread messages sent by the other user to current user
+        const unreadCount = await Message.countDocuments({
+            sender: roomId,
+            receiver: req.user._id,
+            isRead: false
+        });
+        
+        res.json({ unreadCount });
+    } catch (error) {
+        console.error('Error fetching unread count:', error);
+        res.status(400).json({ error: error.message });
+    }
+});
+
+// Mark messages as read
+router.post('/mark-as-read', auth, async (req, res) => {
+    try {
+        const { senderId } = req.body;
+        
+        if (!senderId) {
+            return res.status(400).json({ error: 'Sender ID is required' });
+        }
+        
+        // Validate senderId format
+        if (!mongoose.Types.ObjectId.isValid(senderId)) {
+            return res.status(400).json({ error: 'Invalid sender ID format' });
+        }
+        
+        // Mark all unread messages from sender to current user as read
+        const result = await Message.updateMany(
+            {
+                sender: senderId,
+                receiver: req.user._id,
+                isRead: false
+            },
+            {
+                $set: {
+                    isRead: true,
+                    readAt: new Date()
+                }
+            }
+        );
+        
+        // Emit socket event for message read
+        const io = req.app.get('io');
+        if (io) {
+            io.to(senderId).emit('messages_read', {
+                readBy: req.user._id.toString(),
+                count: result.modifiedCount
+            });
+        }
+        
+        res.json({ 
+            success: true, 
+            markedCount: result.modifiedCount 
+        });
+    } catch (error) {
+        console.error('Error marking messages as read:', error);
+        res.status(400).json({ error: error.message });
+    }
+});
+
+// Get all conversations with unread counts
+router.get('/conversations', auth, async (req, res) => {
+    try {
+        // Get all unique users who have chatted with current user
+        const sentMessages = await Message.distinct('receiver', { sender: req.user._id });
+        const receivedMessages = await Message.distinct('sender', { receiver: req.user._id });
+        
+        // Combine and remove duplicates
+        const allUserIds = [...new Set([...sentMessages, ...receivedMessages])];
+        
+        // Get user details and unread counts
+        const conversations = await Promise.all(
+            allUserIds.map(async (userId) => {
+                const user = await User.findById(userId).select('-password -googleId');
+                if (!user) return null;
+                
+                // Get unread count for this conversation
+                const unreadCount = await Message.countDocuments({
+                    sender: userId,
+                    receiver: req.user._id,
+                    isRead: false
+                });
+                
+                // Get last message
+                const lastMessage = await Message.findOne({
+                    $or: [
+                        { sender: req.user._id, receiver: userId },
+                        { sender: userId, receiver: req.user._id }
+                    ]
+                }).sort({ createdAt: -1 });
+                
+                return {
+                    user,
+                    unreadCount,
+                    lastMessage: lastMessage ? {
+                        content: lastMessage.content,
+                        createdAt: lastMessage.createdAt,
+                        isRead: lastMessage.isRead,
+                        sender: lastMessage.sender
+                    } : null
+                };
+            })
+        );
+        
+        // Filter out null values and sort by last message time
+        const validConversations = conversations
+            .filter(conv => conv !== null)
+            .sort((a, b) => {
+                const aTime = a.lastMessage ? new Date(a.lastMessage.createdAt) : new Date(0);
+                const bTime = b.lastMessage ? new Date(b.lastMessage.createdAt) : new Date(0);
+                return bTime - aTime;
+            });
+        
+        res.json({ conversations: validConversations });
+    } catch (error) {
+        console.error('Error fetching conversations:', error);
+        res.status(400).json({ error: error.message });
+    }
+});
+
+// Register/Update FCM token for push notifications
+router.post('/register-fcm-token', auth, async (req, res) => {
+    try {
+        const { fcmToken } = req.body;
+        
+        if (!fcmToken) {
+            return res.status(400).json({ error: 'FCM token is required' });
+        }
+        
+        // Update user's FCM token
+        await User.findByIdAndUpdate(req.user._id, {
+            fcmToken: fcmToken
+        });
+        
+        res.json({ 
+            success: true, 
+            message: 'FCM token registered successfully' 
+        });
+    } catch (error) {
+        console.error('Error registering FCM token:', error);
+        res.status(400).json({ error: error.message });
+    }
+});
+
 module.exports = router; 

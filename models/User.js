@@ -35,6 +35,10 @@ const userSchema = new mongoose.Schema({
         unique: true,
         sparse: true
     },
+    fcmToken: {
+        type: String,
+        default: null
+    },
     createdAt: {
         type: Date,
         default: Date.now

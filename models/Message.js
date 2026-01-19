@@ -16,6 +16,22 @@ const messageSchema = new mongoose.Schema({
         required: true,
         maxlength: 1000
     },
+    isRead: {
+        type: Boolean,
+        default: false
+    },
+    isDelivered: {
+        type: Boolean,
+        default: false
+    },
+    readAt: {
+        type: Date,
+        default: null
+    },
+    deliveredAt: {
+        type: Date,
+        default: null
+    },
     createdAt: {
         type: Date,
         default: Date.now

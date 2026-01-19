@@ -23,6 +23,7 @@ const User = require('./models/User');
 const Message = require('./models/Message');
 const jwt = require('jsonwebtoken');
 const chatMetaRoutes = require('./routes/chatmeta');
+const admin = require('firebase-admin');
 
 const app = express();
 const server = http.createServer(app);
@@ -35,6 +36,64 @@ const io = new Server(server, {
 
 // Make io accessible to routes
 app.set('io', io);
+
+// Initialize Firebase Admin SDK (optional - only if FCM credentials are provided)
+let fcmInitialized = false;
+try {
+    if (process.env.FIREBASE_PROJECT_ID && process.env.FIREBASE_PRIVATE_KEY && process.env.FIREBASE_CLIENT_EMAIL) {
+        const serviceAccount = {
+            type: "service_account",
+            project_id: process.env.FIREBASE_PROJECT_ID,
+            private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
+            private_key: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'), // Handle escaped newlines
+            client_email: process.env.FIREBASE_CLIENT_EMAIL,
+            client_id: process.env.FIREBASE_CLIENT_ID,
+            auth_uri: process.env.FIREBASE_AUTH_URI || "https://accounts.google.com/o/oauth2/auth",
+            token_uri: process.env.FIREBASE_TOKEN_URI || "https://oauth2.googleapis.com/token",
+            auth_provider_x509_cert_url: process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL || "https://www.googleapis.com/oauth2/v1/certs",
+            client_x509_cert_url: process.env.FIREBASE_CLIENT_X509_CERT_URL,
+            universe_domain: process.env.FIREBASE_UNIVERSE_DOMAIN || "googleapis.com"
+        };
+        
+        admin.initializeApp({
+            credential: admin.credential.cert(serviceAccount)
+        });
+        fcmInitialized = true;
+        console.log('✅ Firebase Admin SDK initialized successfully');
+        console.log(`📱 FCM configured for project: ${process.env.FIREBASE_PROJECT_ID}`);
+    } else {
+        console.log('⚠️ Firebase credentials not found. FCM notifications disabled.');
+        console.log('   Required: FIREBASE_PROJECT_ID, FIREBASE_PRIVATE_KEY, FIREBASE_CLIENT_EMAIL');
+    }
+} catch (error) {
+    console.error('⚠️ Failed to initialize Firebase Admin SDK:', error.message);
+    console.log('FCM notifications will be disabled.');
+}
+
+// Helper function to send FCM notification
+const sendFCMNotification = async (fcmToken, title, body, data = {}) => {
+    if (!fcmInitialized || !fcmToken) {
+        return { success: false, error: 'FCM not initialized or no token' };
+    }
+    
+    try {
+        const message = {
+            notification: {
+                title,
+                body
+            },
+            data,
+            token: fcmToken
+        };
+        
+        const response = await admin.messaging().send(message);
+        console.log('Successfully sent FCM notification:', response);
+        return { success: true, response };
+    } catch (error) {
+        console.error('Error sending FCM notification:', error);
+        return { success: false, error: error.message };
+    }
+};
 
 // Middleware - CORS configuration to allow all origins (for website, Flutter app, etc.)
 // Note: JWT tokens in Authorization header don't require credentials, so we can use origin: '*'
@@ -69,7 +128,7 @@ app.get('/health', (req, res) => {
 app.get('/', (req, res) => {
     res.json({
         message: 'Welcome to Bhupendra Chat API',
-        version: '1.0.0',
+        version: '2.0.0',
         endpoints: {
             health: 'GET /health',
             auth: {
@@ -83,7 +142,11 @@ app.get('/', (req, res) => {
             chat: {
                 send: 'POST /api/chat/send',
                 messages: 'GET /api/chat/messages/:userId',
-                users: 'GET /api/chat/users'
+                users: 'GET /api/chat/users',
+                conversations: 'GET /api/chat/conversations',
+                unreadCount: 'GET /api/chat/unread-count/:roomId',
+                markAsRead: 'POST /api/chat/mark-as-read',
+                registerFcmToken: 'POST /api/chat/register-fcm-token'
             },
             call: {
                 initiate: 'POST /api/call/initiate',
@@ -222,7 +285,9 @@ io.on('connection', (socket) => {
             const message = new Message({
                 sender: socket.userId,
                 receiver: receiverId,
-                content: content.trim()
+                content: content.trim(),
+                isDelivered: false,
+                isRead: false
             });
             await message.save();
 
@@ -233,10 +298,108 @@ io.on('connection', (socket) => {
             const receiverSocketId = connectedUsers.get(receiverId);
             if (receiverSocketId) {
                 io.to(receiverSocketId).emit('new_message', message);
+                
+                // Mark as delivered and emit delivered event
+                message.isDelivered = true;
+                message.deliveredAt = new Date();
+                await message.save();
+                
+                socket.emit('message_delivered', {
+                    messageId: message._id,
+                    deliveredAt: message.deliveredAt
+                });
+                
+                // Update unread count for receiver
+                const unreadCount = await Message.countDocuments({
+                    receiver: receiverId,
+                    sender: socket.userId,
+                    isRead: false
+                });
+                
+                io.to(receiverSocketId).emit('unread_count_update', {
+                    senderId: socket.userId,
+                    unreadCount
+                });
+            } else {
+                // Receiver is offline, send FCM notification
+                const sender = await User.findById(socket.userId);
+                if (receiver.fcmToken && sender) {
+                    await sendFCMNotification(
+                        receiver.fcmToken,
+                        `New message from ${sender.firstName} ${sender.lastName}`,
+                        content.trim().substring(0, 100),
+                        {
+                            type: 'chat_message',
+                            senderId: socket.userId,
+                            messageId: message._id.toString()
+                        }
+                    );
+                }
             }
         } catch (error) {
             console.error('Error sending message:', error);
             socket.emit('error', 'Failed to send message');
+        }
+    });
+
+    // Handle marking messages as read
+    socket.on('mark_messages_read', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { senderId } = data;
+            
+            if (!senderId) {
+                socket.emit('error', 'Sender ID is required');
+                return;
+            }
+            
+            // Mark all unread messages from sender as read
+            const result = await Message.updateMany(
+                {
+                    sender: senderId,
+                    receiver: socket.userId,
+                    isRead: false
+                },
+                {
+                    $set: {
+                        isRead: true,
+                        readAt: new Date()
+                    }
+                }
+            );
+            
+            // Emit read event to sender
+            const senderSocketId = connectedUsers.get(senderId);
+            if (senderSocketId) {
+                io.to(senderSocketId).emit('message_read', {
+                    readBy: socket.userId,
+                    count: result.modifiedCount
+                });
+            }
+            
+            // Update unread count for current user
+            const unreadCount = await Message.countDocuments({
+                receiver: socket.userId,
+                sender: senderId,
+                isRead: false
+            });
+            
+            socket.emit('unread_count_update', {
+                senderId: senderId,
+                unreadCount
+            });
+            
+            socket.emit('messages_marked_read', {
+                success: true,
+                count: result.modifiedCount
+            });
+        } catch (error) {
+            console.error('Error marking messages as read:', error);
+            socket.emit('error', 'Failed to mark messages as read');
         }
     });
 

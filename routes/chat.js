@@ -195,8 +195,11 @@ router.get('/conversations', auth, async (req, res) => {
         const sentMessages = await Message.distinct('receiver', { sender: req.user._id });
         const receivedMessages = await Message.distinct('sender', { receiver: req.user._id });
         
-        // Combine and remove duplicates
-        const allUserIds = [...new Set([...sentMessages, ...receivedMessages])];
+        // Convert ObjectIds to strings and remove duplicates
+        const allUserIds = [...new Set([
+            ...sentMessages.map(id => id.toString()),
+            ...receivedMessages.map(id => id.toString())
+        ])];
         
         // Get user details and unread counts
         const conversations = await Promise.all(

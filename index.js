@@ -146,7 +146,8 @@ app.get('/', (req, res) => {
                 conversations: 'GET /api/chat/conversations',
                 unreadCount: 'GET /api/chat/unread-count/:roomId',
                 markAsRead: 'POST /api/chat/mark-as-read',
-                registerFcmToken: 'POST /api/chat/register-fcm-token'
+                registerFcmToken: 'POST /api/chat/register-fcm-token',
+                unregisterFcmToken: 'POST /api/chat/unregister-fcm-token'
             },
             call: {
                 initiate: 'POST /api/call/initiate',

@@ -275,4 +275,22 @@ router.post('/register-fcm-token', auth, async (req, res) => {
     }
 });
 
+// Unregister/Clear FCM token
+router.post('/unregister-fcm-token', auth, async (req, res) => {
+    try {
+        // Clear user's FCM token
+        await User.findByIdAndUpdate(req.user._id, {
+            $unset: { fcmToken: "" }
+        });
+        
+        res.json({ 
+            success: true, 
+            message: 'FCM token cleared successfully' 
+        });
+    } catch (error) {
+        console.error('Error unregistering FCM token:', error);
+        res.status(400).json({ error: error.message });
+    }
+});
+
 module.exports = router; 

@@ -44,4 +44,9 @@ messageSchema.index({ createdAt: -1 });
 messageSchema.index({ sender: 1, createdAt: -1 });
 messageSchema.index({ receiver: 1, createdAt: -1 });
 
+// CRITICAL PERFORMANCE INDEXES for new features
+messageSchema.index({ receiver: 1, isRead: 1 }); // For unread count queries
+messageSchema.index({ sender: 1, receiver: 1, isRead: 1 }); // For marking as read
+messageSchema.index({ receiver: 1, sender: 1, createdAt: -1 }); // For conversation queries
+
 module.exports = mongoose.model('Message', messageSchema); 

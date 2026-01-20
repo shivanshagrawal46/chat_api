@@ -47,7 +47,7 @@ router.post('/send', auth, async (req, res) => {
     }
 });
 
-// Get messages between current user and another user
+// Get messages between current user and another user (OPTIMIZED)
 router.get('/messages/:userId', auth, async (req, res) => {
     try {
         const { userId } = req.params;
@@ -57,23 +57,27 @@ router.get('/messages/:userId', auth, async (req, res) => {
             return res.status(400).json({ error: 'Invalid user ID format' });
         }
         
-        // Check if user exists
-        const otherUser = await User.findById(userId);
-        if (!otherUser) {
-            return res.status(404).json({ error: 'User not found' });
-        }
-        
         // Prevent accessing messages with self
         if (userId === req.user._id.toString()) {
             return res.status(400).json({ error: 'Cannot access messages with yourself' });
         }
         
+        // Check if user exists (optimized with lean() and only ID check)
+        const userExists = await User.exists({ _id: userId });
+        if (!userExists) {
+            return res.status(404).json({ error: 'User not found' });
+        }
+        
+        // Fetch messages with lean() for better performance
         const messages = await Message.find({
             $or: [
                 { sender: req.user._id, receiver: userId },
                 { sender: userId, receiver: req.user._id }
             ]
-        }).sort({ createdAt: 1 });
+        })
+        .sort({ createdAt: 1 })
+        .lean(); // Returns plain JavaScript objects (faster)
+        
         res.json({ messages });
     } catch (error) {
         console.error('Error fetching messages:', error);
@@ -188,7 +192,7 @@ router.post('/mark-as-read', auth, async (req, res) => {
     }
 });
 
-// Get all conversations with unread counts
+// Get all conversations with unread counts (OPTIMIZED)
 router.get('/conversations', auth, async (req, res) => {
     try {
         // Get all unique users who have chatted with current user
@@ -201,26 +205,34 @@ router.get('/conversations', auth, async (req, res) => {
             ...receivedMessages.map(id => id.toString())
         ])];
         
-        // Get user details and unread counts
+        // Fetch all data in parallel for maximum speed
         const conversations = await Promise.all(
             allUserIds.map(async (userId) => {
-                const user = await User.findById(userId).select('-password -googleId');
+                // Execute all queries in parallel using Promise.all
+                const [user, unreadCount, lastMessage] = await Promise.all([
+                    // Fetch user with lean() for better performance
+                    User.findById(userId).select('-password -googleId').lean(),
+                    
+                    // Count unread messages
+                    Message.countDocuments({
+                        sender: userId,
+                        receiver: req.user._id,
+                        isRead: false
+                    }),
+                    
+                    // Get last message (lean for speed)
+                    Message.findOne({
+                        $or: [
+                            { sender: req.user._id, receiver: userId },
+                            { sender: userId, receiver: req.user._id }
+                        ]
+                    })
+                    .sort({ createdAt: -1 })
+                    .select('content createdAt isRead sender')
+                    .lean()
+                ]);
+                
                 if (!user) return null;
-                
-                // Get unread count for this conversation
-                const unreadCount = await Message.countDocuments({
-                    sender: userId,
-                    receiver: req.user._id,
-                    isRead: false
-                });
-                
-                // Get last message
-                const lastMessage = await Message.findOne({
-                    $or: [
-                        { sender: req.user._id, receiver: userId },
-                        { sender: userId, receiver: req.user._id }
-                    ]
-                }).sort({ createdAt: -1 });
                 
                 return {
                     user,

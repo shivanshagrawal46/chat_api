@@ -31,6 +31,17 @@ const io = new Server(server, {
     cors: {
         origin: "*",
         methods: ["GET", "POST"]
+    },
+    // Performance optimizations
+    transports: ['websocket', 'polling'], // Prefer WebSocket
+    upgradeTimeout: 10000,
+    pingTimeout: 5000,
+    pingInterval: 10000,
+    connectTimeout: 45000,
+    maxHttpBufferSize: 1e6, // 1MB
+    allowEIO3: true,
+    perMessageDeflate: {
+        threshold: 1024 // Compress messages > 1KB
     }
 });
 
@@ -244,7 +255,7 @@ io.on('connection', (socket) => {
         }
     });
 
-    // Handle new messages
+    // Handle new messages (OPTIMIZED for speed)
     socket.on('send_message', async (data) => {
         try {
             if (!socket.userId) {
@@ -276,65 +287,96 @@ io.on('connection', (socket) => {
                 return;
             }
             
-            // Check if receiver exists
-            const receiver = await User.findById(receiverId);
+            // Check if receiver exists (optimized with lean() and only needed field)
+            const receiver = await User.findById(receiverId).select('fcmToken firstName lastName').lean();
             if (!receiver) {
                 socket.emit('error', 'Receiver not found');
                 return;
             }
             
+            // Create message object (without saving yet for instant delivery)
+            const trimmedContent = content.trim();
+            const now = new Date();
+            const receiverSocketId = connectedUsers.get(receiverId);
+            const isOnline = !!receiverSocketId;
+            
+            // Create message document
             const message = new Message({
                 sender: socket.userId,
                 receiver: receiverId,
-                content: content.trim(),
-                isDelivered: false,
-                isRead: false
+                content: trimmedContent,
+                isDelivered: isOnline,
+                deliveredAt: isOnline ? now : null,
+                isRead: false,
+                createdAt: now
             });
-            await message.save();
-
-            // Emit to sender
-            socket.emit('new_message', message);
-
-            // Emit to receiver if online
-            const receiverSocketId = connectedUsers.get(receiverId);
+            
+            // INSTANT DELIVERY: Emit to both parties BEFORE database save
+            const messagePayload = {
+                _id: message._id,
+                sender: socket.userId,
+                receiver: receiverId,
+                content: trimmedContent,
+                isDelivered: isOnline,
+                deliveredAt: isOnline ? now : null,
+                isRead: false,
+                createdAt: now
+            };
+            
+            // Send to sender immediately
+            socket.emit('new_message', messagePayload);
+            
+            // Send to receiver if online
             if (receiverSocketId) {
-                io.to(receiverSocketId).emit('new_message', message);
+                io.to(receiverSocketId).emit('new_message', messagePayload);
                 
-                // Mark as delivered and emit delivered event
-                message.isDelivered = true;
-                message.deliveredAt = new Date();
-                await message.save();
-                
+                // Send delivery confirmation to sender
                 socket.emit('message_delivered', {
                     messageId: message._id,
-                    deliveredAt: message.deliveredAt
+                    deliveredAt: now
                 });
-                
-                // Update unread count for receiver
-                const unreadCount = await Message.countDocuments({
+            }
+            
+            // Save to database asynchronously (non-blocking)
+            message.save().catch(err => {
+                console.error('Error saving message to DB:', err);
+                // Emit error to sender
+                socket.emit('error', 'Message sent but failed to save');
+            });
+            
+            // Handle offline notifications and unread counts asynchronously
+            if (receiverSocketId) {
+                // Calculate unread count asynchronously (non-blocking)
+                Message.countDocuments({
                     receiver: receiverId,
                     sender: socket.userId,
                     isRead: false
-                });
-                
-                io.to(receiverSocketId).emit('unread_count_update', {
-                    senderId: socket.userId,
-                    unreadCount
-                });
+                }).then(unreadCount => {
+                    io.to(receiverSocketId).emit('unread_count_update', {
+                        senderId: socket.userId,
+                        unreadCount
+                    });
+                }).catch(err => console.error('Error counting unread messages:', err));
             } else {
-                // Receiver is offline, send FCM notification
-                const sender = await User.findById(socket.userId);
-                if (receiver.fcmToken && sender) {
-                    await sendFCMNotification(
-                        receiver.fcmToken,
-                        `New message from ${sender.firstName} ${sender.lastName}`,
-                        content.trim().substring(0, 100),
-                        {
-                            type: 'chat_message',
-                            senderId: socket.userId,
-                            messageId: message._id.toString()
-                        }
-                    );
+                // Receiver offline - send FCM notification asynchronously
+                if (receiver.fcmToken) {
+                    // Get sender info and send notification (non-blocking)
+                    User.findById(socket.userId).select('firstName lastName').lean()
+                        .then(sender => {
+                            if (sender) {
+                                sendFCMNotification(
+                                    receiver.fcmToken,
+                                    `New message from ${sender.firstName} ${sender.lastName}`,
+                                    trimmedContent.substring(0, 100),
+                                    {
+                                        type: 'chat_message',
+                                        senderId: socket.userId,
+                                        messageId: message._id.toString()
+                                    }
+                                ).catch(err => console.error('FCM notification error:', err));
+                            }
+                        })
+                        .catch(err => console.error('Error fetching sender info:', err));
                 }
             }
         } catch (error) {
@@ -343,7 +385,7 @@ io.on('connection', (socket) => {
         }
     });
 
-    // Handle marking messages as read
+    // Handle marking messages as read (OPTIMIZED)
     socket.on('mark_messages_read', async (data) => {
         try {
             if (!socket.userId) {
@@ -358,8 +400,25 @@ io.on('connection', (socket) => {
                 return;
             }
             
-            // Mark all unread messages from sender as read
-            const result = await Message.updateMany(
+            const now = new Date();
+            
+            // Emit immediate confirmation to user (perceived instant response)
+            socket.emit('messages_marked_read', {
+                success: true,
+                count: 0 // Will be updated after DB operation
+            });
+            
+            // Emit to sender immediately if online
+            const senderSocketId = connectedUsers.get(senderId);
+            if (senderSocketId) {
+                io.to(senderSocketId).emit('message_read', {
+                    readBy: socket.userId,
+                    count: 0 // Approximate, will be accurate after DB
+                });
+            }
+            
+            // Update database asynchronously (non-blocking)
+            Message.updateMany(
                 {
                     sender: senderId,
                     receiver: socket.userId,
@@ -368,35 +427,33 @@ io.on('connection', (socket) => {
                 {
                     $set: {
                         isRead: true,
-                        readAt: new Date()
+                        readAt: now
                     }
                 }
-            );
-            
-            // Emit read event to sender
-            const senderSocketId = connectedUsers.get(senderId);
-            if (senderSocketId) {
-                io.to(senderSocketId).emit('message_read', {
-                    readBy: socket.userId,
-                    count: result.modifiedCount
+            ).then(result => {
+                // Send actual count after DB update
+                if (result.modifiedCount > 0) {
+                    socket.emit('messages_marked_read', {
+                        success: true,
+                        count: result.modifiedCount
+                    });
+                    
+                    if (senderSocketId) {
+                        io.to(senderSocketId).emit('message_read', {
+                            readBy: socket.userId,
+                            count: result.modifiedCount
+                        });
+                    }
+                }
+                
+                // Update unread count (should be 0 now)
+                socket.emit('unread_count_update', {
+                    senderId: senderId,
+                    unreadCount: 0
                 });
-            }
-            
-            // Update unread count for current user
-            const unreadCount = await Message.countDocuments({
-                receiver: socket.userId,
-                sender: senderId,
-                isRead: false
-            });
-            
-            socket.emit('unread_count_update', {
-                senderId: senderId,
-                unreadCount
-            });
-            
-            socket.emit('messages_marked_read', {
-                success: true,
-                count: result.modifiedCount
+            }).catch(error => {
+                console.error('Error marking messages as read:', error);
+                socket.emit('error', 'Failed to mark messages as read');
             });
         } catch (error) {
             console.error('Error marking messages as read:', error);

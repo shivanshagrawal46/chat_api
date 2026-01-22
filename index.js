@@ -326,7 +326,7 @@ io.on('connection', (socket) => {
             // Send to sender immediately
             socket.emit('new_message', messagePayload);
             
-            // Send to receiver if online
+            // Send to receiver via Socket (for real-time when app is in foreground)
             if (receiverSocketId) {
                 io.to(receiverSocketId).emit('new_message', messagePayload);
                 
@@ -335,18 +335,8 @@ io.on('connection', (socket) => {
                     messageId: message._id,
                     deliveredAt: now
                 });
-            }
-            
-            // Save to database asynchronously (non-blocking)
-            message.save().catch(err => {
-                console.error('Error saving message to DB:', err);
-                // Emit error to sender
-                socket.emit('error', 'Message sent but failed to save');
-            });
-            
-            // Handle offline notifications and unread counts asynchronously
-            if (receiverSocketId) {
-                // Calculate unread count asynchronously (non-blocking)
+                
+                // Calculate unread count asynchronously
                 Message.countDocuments({
                     receiver: receiverId,
                     sender: socket.userId,
@@ -357,27 +347,39 @@ io.on('connection', (socket) => {
                         unreadCount
                     });
                 }).catch(err => console.error('Error counting unread messages:', err));
-            } else {
-                // Receiver offline - send FCM notification asynchronously
-                if (receiver.fcmToken) {
-                    // Get sender info and send notification (non-blocking)
-                    User.findById(socket.userId).select('firstName lastName').lean()
-                        .then(sender => {
-                            if (sender) {
-                                sendFCMNotification(
-                                    receiver.fcmToken,
-                                    `New message from ${sender.firstName} ${sender.lastName}`,
-                                    trimmedContent.substring(0, 100),
-                                    {
-                                        type: 'chat_message',
-                                        senderId: socket.userId,
-                                        messageId: message._id.toString()
-                                    }
-                                ).catch(err => console.error('FCM notification error:', err));
-                            }
-                        })
-                        .catch(err => console.error('Error fetching sender info:', err));
-                }
+            }
+            
+            // Save to database asynchronously (non-blocking)
+            message.save().catch(err => {
+                console.error('Error saving message to DB:', err);
+                socket.emit('error', 'Message sent but failed to save');
+            });
+            
+            // ALWAYS send FCM notification (for when app is in background)
+            // This is how WhatsApp/Telegram work - always send push notification
+            // Client app will handle not showing duplicate if already received via socket
+            if (receiver.fcmToken) {
+                User.findById(socket.userId).select('firstName lastName').lean()
+                    .then(sender => {
+                        if (sender) {
+                            sendFCMNotification(
+                                receiver.fcmToken,
+                                `${sender.firstName} ${sender.lastName}`,
+                                trimmedContent.substring(0, 100),
+                                {
+                                    type: 'chat_message',
+                                    senderId: socket.userId,
+                                    senderName: `${sender.firstName} ${sender.lastName}`,
+                                    messageId: message._id.toString(),
+                                    message: trimmedContent.substring(0, 200),
+                                    receiverId: receiverId,
+                                    timestamp: now.toISOString(),
+                                    click_action: 'FLUTTER_NOTIFICATION_CLICK'
+                                }
+                            ).catch(err => console.error('FCM notification error:', err));
+                        }
+                    })
+                    .catch(err => console.error('Error fetching sender info:', err));
             }
         } catch (error) {
             console.error('Error sending message:', error);

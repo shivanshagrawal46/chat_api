@@ -28,12 +28,26 @@ router.post('/create-order', authenticateToken, async (req, res) => {
     try {
         const { amount, currency, receipt, notes } = req.body;
         if (!amount) return res.status(400).json({ error: 'Amount is required' });
+        
+        // Generate short receipt (max 40 chars for Razorpay)
+        let shortReceipt;
+        if (receipt) {
+            // Truncate to 40 chars if too long
+            shortReceipt = receipt.length > 40 ? receipt.substring(0, 40) : receipt;
+        } else {
+            // Generate short receipt: ch_<last8ofUserId>_<last8ofTimestamp>
+            shortReceipt = `ch_${req.user.userId.slice(-8)}_${Date.now().toString().slice(-8)}`;
+        }
+        
         const options = {
             amount: Math.round(amount * 100), // amount in paise
             currency: currency || 'INR',
-            receipt: receipt || `rcpt_${Date.now()}`,
+            receipt: shortReceipt,
             notes: notes || {}
         };
+        
+        console.log('💳 Creating Razorpay order:', { amount: options.amount, receipt: shortReceipt });
+        
         const order = await razorpay.orders.create(options);
         // Save order in DB with status 'created'
         const payment = new Payment({
@@ -46,10 +60,12 @@ router.post('/create-order', authenticateToken, async (req, res) => {
             notes: options.notes
         });
         await payment.save();
+        
+        console.log('✅ Razorpay order created:', order.id);
         res.json({ orderId: order.id, amount: order.amount, currency: order.currency, receipt: order.receipt });
     } catch (err) {
-        console.error('Error creating Razorpay order:', err);
-        res.status(500).json({ error: 'Failed to create order' });
+        console.error('❌ Error creating Razorpay order:', err);
+        res.status(500).json({ error: 'Failed to create order', details: err.error?.description || err.message });
     }
 });
 

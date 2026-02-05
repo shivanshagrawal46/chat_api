@@ -16,8 +16,10 @@ let geminiModel = null;
 try {
     if (process.env.GEMINI_API_KEY) {
         genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-        geminiModel = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
-        console.log('✅ Google Gemini AI initialized successfully');
+        // Use gemini-pro as it's more widely available
+        // Alternative models: 'gemini-1.5-pro-latest', 'gemini-1.5-flash-latest', 'gemini-pro'
+        geminiModel = genAI.getGenerativeModel({ model: 'gemini-pro' });
+        console.log('✅ Google Gemini AI initialized successfully (model: gemini-pro)');
     } else {
         console.log('⚠️ GEMINI_API_KEY not found. AI Chat disabled.');
     }
@@ -262,20 +264,27 @@ router.get('/status', auth, async (req, res) => {
 // Get chat history
 router.get('/history', auth, async (req, res) => {
     try {
+        console.log('📜 Fetching chat history for user:', req.user._id);
+        
         const aiChat = await AIChat.findOne({ user: req.user._id })
             .populate('kundli')
             .lean();
         
         if (!aiChat) {
+            console.log('📜 No chat found for user');
             return res.json({
+                success: true,
                 messages: [],
                 totalQuestions: 0,
                 freeQuestionUsed: false
             });
         }
         
+        console.log('📜 Chat found, messages count:', aiChat.messages?.length || 0);
+        
         res.json({
-            messages: aiChat.messages,
+            success: true,
+            messages: aiChat.messages || [],
             totalQuestions: aiChat.totalQuestions,
             freeQuestionUsed: aiChat.freeQuestionUsed,
             totalSpent: aiChat.totalSpent,
@@ -373,6 +382,7 @@ router.post('/ask-free', auth, async (req, res) => {
         });
         
         await aiChat.save();
+        console.log('💾 Chat saved! Total messages:', aiChat.messages.length);
         
         res.json({
             success: true,

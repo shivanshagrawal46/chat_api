@@ -24,6 +24,9 @@ const Message = require('./models/Message');
 const jwt = require('jsonwebtoken');
 const chatMetaRoutes = require('./routes/chatmeta');
 const admin = require('firebase-admin');
+const kundliRoutes = require('./routes/kundli');
+const aiChatRoutes = require('./routes/aichat');
+const unifiedPaymentRoutes = require('./routes/unified-payment');
 
 const app = express();
 const server = http.createServer(app);
@@ -139,8 +142,9 @@ app.get('/health', (req, res) => {
 app.get('/', (req, res) => {
     res.json({
         message: 'Welcome to Bhupendra Chat API',
-        version: '2.0.0',
-        endpoints: {
+        version: '4.0.0',
+        note: 'All features now support Socket.IO for real-time communication',
+        restEndpoints: {
             health: 'GET /health',
             auth: {
                 register: 'POST /api/auth/register',
@@ -156,9 +160,7 @@ app.get('/', (req, res) => {
                 users: 'GET /api/chat/users',
                 conversations: 'GET /api/chat/conversations',
                 unreadCount: 'GET /api/chat/unread-count/:roomId',
-                markAsRead: 'POST /api/chat/mark-as-read',
-                registerFcmToken: 'POST /api/chat/register-fcm-token',
-                unregisterFcmToken: 'POST /api/chat/unregister-fcm-token'
+                markAsRead: 'POST /api/chat/mark-as-read'
             },
             call: {
                 initiate: 'POST /api/call/initiate',
@@ -167,6 +169,44 @@ app.get('/', (req, res) => {
                 end: 'POST /api/call/end/:callId',
                 history: 'GET /api/call/history'
             }
+        },
+        socketEvents: {
+            connection: {
+                authenticate: 'emit: authenticate(token) -> authenticated/error'
+            },
+            kundli: {
+                save: 'emit: save_kundli({fullName, dateOfBirth, timeOfBirth, placeOfBirth, gender}) -> save_kundli_response',
+                get: 'emit: get_my_kundli() -> get_my_kundli_response'
+            },
+            aiChat: {
+                status: 'emit: ai_chat_status() -> ai_chat_status_response',
+                history: 'emit: ai_chat_history() -> ai_chat_history_response',
+                askFree: 'emit: ai_ask_free({question}) -> ai_ask_free_response',
+                createPayment: 'emit: ai_create_payment() -> ai_create_payment_response',
+                askPaid: 'emit: ai_ask_paid({question, razorpayOrderId, razorpayPaymentId, razorpaySignature}) -> ai_ask_paid_response'
+            },
+            payments: {
+                poojaCreate: 'emit: create_pooja_payment({amount, poojaTitle}) -> create_pooja_payment_response',
+                poojaVerify: 'emit: verify_pooja_payment({razorpayOrderId, razorpayPaymentId, razorpaySignature}) -> verify_pooja_payment_response',
+                shopCreate: 'emit: create_shop_payment({amount, productName, quantity}) -> create_shop_payment_response',
+                shopVerify: 'emit: verify_shop_payment({razorpayOrderId, razorpayPaymentId, razorpaySignature}) -> verify_shop_payment_response',
+                myPayments: 'emit: get_my_payments({type?, page?, limit?}) -> get_my_payments_response'
+            },
+            astrologerChat: {
+                sendMessage: 'emit: send_message({receiverId, content}) -> message_sent/new_message',
+                freeze: 'emit: freeze_chat({admin, user, isFrozen, freezeAmount}) -> freeze_state_change (admin only)',
+                unfreeze: 'emit: unfreeze_after_payment({admin, user}) -> freeze_state_change'
+            },
+            admin: {
+                allPayments: 'emit: admin_get_all_payments({userId?, type?, page?}) -> admin_get_all_payments_response',
+                userPayments: 'emit: admin_get_user_payments({userId}) -> admin_get_user_payments_response',
+                userAiChat: 'emit: admin_get_user_ai_chat({userId}) -> admin_get_user_ai_chat_response',
+                allAiChats: 'emit: admin_get_all_ai_chats({page?, limit?}) -> admin_get_all_ai_chats_response'
+            }
+        },
+        pricing: {
+            aiChat: '₹501 per question (first question free)',
+            astrologerChat: 'Set by admin via freeze amount'
         }
     });
 });
@@ -566,6 +606,1098 @@ io.on('connection', (socket) => {
         }
     });
 
+    // ==========================================
+    // AI CHAT SOCKET EVENTS
+    // ==========================================
+    
+    // Get AI Chat Status
+    socket.on('ai_chat_status', async () => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const Kundli = require('./models/Kundli');
+            const AIChat = require('./models/AIChat');
+            
+            const [kundli, aiChat] = await Promise.all([
+                Kundli.findOne({ user: socket.userId }).lean(),
+                AIChat.findOne({ user: socket.userId }).lean()
+            ]);
+            
+            socket.emit('ai_chat_status_response', {
+                success: true,
+                hasKundli: !!kundli,
+                kundli: kundli || null,
+                freeQuestionUsed: aiChat?.freeQuestionUsed || false,
+                totalQuestions: aiChat?.totalQuestions || 0,
+                totalSpent: aiChat?.totalSpent || 0,
+                pricePerQuestion: 501
+            });
+        } catch (error) {
+            console.error('Error getting AI chat status:', error);
+            socket.emit('error', 'Failed to get AI chat status');
+        }
+    });
+    
+    // Get AI Chat History
+    socket.on('ai_chat_history', async () => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const AIChat = require('./models/AIChat');
+            const aiChat = await AIChat.findOne({ user: socket.userId })
+                .populate('kundli', 'fullName dateOfBirth placeOfBirth')
+                .lean();
+            
+            socket.emit('ai_chat_history_response', {
+                success: true,
+                chat: aiChat,
+                messages: aiChat?.messages || []
+            });
+        } catch (error) {
+            console.error('Error getting AI chat history:', error);
+            socket.emit('error', 'Failed to get chat history');
+        }
+    });
+    
+    // Ask Free AI Question
+    socket.on('ai_ask_free', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { question } = data;
+            if (!question || typeof question !== 'string') {
+                socket.emit('error', 'Question is required');
+                return;
+            }
+            
+            const Kundli = require('./models/Kundli');
+            const AIChat = require('./models/AIChat');
+            const { generateAIResponse, isAstrologyQuestion, countWords, MAX_INPUT_WORDS } = require('./routes/aichat');
+            
+            // Check word count
+            const wordCount = countWords(question);
+            if (wordCount > MAX_INPUT_WORDS) {
+                socket.emit('error', `Question too long. Maximum ${MAX_INPUT_WORDS} words allowed.`);
+                return;
+            }
+            
+            // Check kundli
+            const kundli = await Kundli.findOne({ user: socket.userId });
+            if (!kundli) {
+                socket.emit('error', 'Please save your Kundli first');
+                return;
+            }
+            
+            // Check free question status
+            let aiChat = await AIChat.findOne({ user: socket.userId });
+            if (aiChat?.freeQuestionUsed) {
+                socket.emit('ai_ask_free_response', {
+                    success: false,
+                    error: 'Free question already used',
+                    requiresPayment: true,
+                    pricePerQuestion: 501
+                });
+                return;
+            }
+            
+            // Generate AI response
+            const aiResult = await generateAIResponse(
+                kundli, 
+                question.trim(), 
+                aiChat ? aiChat.messages : []
+            );
+            
+            // Save to chat
+            if (!aiChat) {
+                aiChat = new AIChat({
+                    user: socket.userId,
+                    kundli: kundli._id,
+                    messages: [],
+                    freeQuestionUsed: true,
+                    totalQuestions: 1
+                });
+            } else {
+                aiChat.freeQuestionUsed = true;
+                aiChat.totalQuestions += 1;
+            }
+            
+            // Add messages
+            aiChat.messages.push({
+                role: 'user',
+                content: question.trim(),
+                isFreeQuestion: true,
+                createdAt: new Date()
+            });
+            
+            aiChat.messages.push({
+                role: 'ai',
+                content: aiResult.response,
+                isFreeQuestion: true,
+                isAstrologyQuestion: aiResult.isAstrologyQuestion,
+                createdAt: new Date()
+            });
+            
+            await aiChat.save();
+            
+            socket.emit('ai_ask_free_response', {
+                success: true,
+                answer: aiResult.response,
+                isAstrologyQuestion: aiResult.isAstrologyQuestion,
+                isFreeQuestion: true,
+                freeQuestionUsed: true,
+                totalQuestions: aiChat.totalQuestions
+            });
+            
+        } catch (error) {
+            console.error('Error processing free AI question:', error);
+            socket.emit('error', error.message || 'Failed to process question');
+        }
+    });
+    
+    // Create Payment for AI Question
+    socket.on('ai_create_payment', async () => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const Razorpay = require('razorpay');
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            const AIChat = require('./models/AIChat');
+            const Kundli = require('./models/Kundli');
+            const AI_CHAT_PRICE = 501;
+            
+            if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+                socket.emit('error', 'Payment service not configured');
+                return;
+            }
+            
+            const razorpay = new Razorpay({
+                key_id: process.env.RAZORPAY_KEY_ID,
+                key_secret: process.env.RAZORPAY_KEY_SECRET
+            });
+            
+            // Check kundli
+            const kundli = await Kundli.findOne({ user: socket.userId });
+            if (!kundli) {
+                socket.emit('error', 'Please save your Kundli first');
+                return;
+            }
+            
+            // Get AI chat for question count
+            const aiChat = await AIChat.findOne({ user: socket.userId });
+            const questionNumber = (aiChat?.totalQuestions || 0) + 1;
+            
+            // Create Razorpay order
+            const order = await razorpay.orders.create({
+                amount: AI_CHAT_PRICE * 100, // in paise
+                currency: 'INR',
+                receipt: `ai_chat_${socket.userId}_${Date.now()}`,
+                notes: { userId: socket.userId, type: 'ai_chat', questionNumber }
+            });
+            
+            // Save pending payment
+            const payment = new UnifiedPayment({
+                user: socket.userId,
+                type: 'ai_chat',
+                amount: AI_CHAT_PRICE,
+                status: 'pending',
+                razorpayOrderId: order.id,
+                details: { questionNumber },
+                description: `AI Chat Question #${questionNumber}`
+            });
+            await payment.save();
+            
+            socket.emit('ai_create_payment_response', {
+                success: true,
+                orderId: order.id,
+                amount: AI_CHAT_PRICE,
+                currency: 'INR',
+                paymentId: payment._id,
+                questionNumber
+            });
+            
+        } catch (error) {
+            console.error('Error creating AI payment:', error);
+            socket.emit('error', 'Failed to create payment order');
+        }
+    });
+    
+    // Ask Paid AI Question (after payment verification)
+    socket.on('ai_ask_paid', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { question, razorpayOrderId, razorpayPaymentId, razorpaySignature } = data;
+            
+            if (!question || !razorpayOrderId || !razorpayPaymentId || !razorpaySignature) {
+                socket.emit('error', 'Missing required fields');
+                return;
+            }
+            
+            const crypto = require('crypto');
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            const AIChat = require('./models/AIChat');
+            const Kundli = require('./models/Kundli');
+            const { generateAIResponse, countWords, MAX_INPUT_WORDS } = require('./routes/aichat');
+            const AI_CHAT_PRICE = 501;
+            
+            // Check word count
+            const wordCount = countWords(question);
+            if (wordCount > MAX_INPUT_WORDS) {
+                socket.emit('error', `Question too long. Maximum ${MAX_INPUT_WORDS} words allowed.`);
+                return;
+            }
+            
+            // Verify payment signature
+            const expectedSignature = crypto
+                .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+                .update(`${razorpayOrderId}|${razorpayPaymentId}`)
+                .digest('hex');
+            
+            if (expectedSignature !== razorpaySignature) {
+                socket.emit('error', 'Payment verification failed');
+                return;
+            }
+            
+            // Update payment record
+            const payment = await UnifiedPayment.findOne({ 
+                razorpayOrderId, 
+                user: socket.userId,
+                type: 'ai_chat'
+            });
+            
+            if (!payment) {
+                socket.emit('error', 'Payment record not found');
+                return;
+            }
+            
+            if (payment.status === 'paid') {
+                socket.emit('error', 'Payment already processed');
+                return;
+            }
+            
+            payment.status = 'paid';
+            payment.razorpayPaymentId = razorpayPaymentId;
+            payment.razorpaySignature = razorpaySignature;
+            payment.paidAt = new Date();
+            await payment.save();
+            
+            // Get kundli
+            const kundli = await Kundli.findOne({ user: socket.userId });
+            if (!kundli) {
+                socket.emit('error', 'Kundli not found');
+                return;
+            }
+            
+            // Get or create AI chat
+            let aiChat = await AIChat.findOne({ user: socket.userId });
+            
+            // Generate AI response
+            const aiResult = await generateAIResponse(
+                kundli, 
+                question.trim(), 
+                aiChat ? aiChat.messages : []
+            );
+            
+            // Save to chat
+            if (!aiChat) {
+                aiChat = new AIChat({
+                    user: socket.userId,
+                    kundli: kundli._id,
+                    messages: [],
+                    freeQuestionUsed: true,
+                    totalQuestions: 1,
+                    totalSpent: AI_CHAT_PRICE
+                });
+            } else {
+                aiChat.totalQuestions += 1;
+                aiChat.totalSpent += AI_CHAT_PRICE;
+            }
+            
+            // Add messages
+            aiChat.messages.push({
+                role: 'user',
+                content: question.trim(),
+                isFreeQuestion: false,
+                paymentId: payment._id,
+                createdAt: new Date()
+            });
+            
+            aiChat.messages.push({
+                role: 'ai',
+                content: aiResult.response,
+                isFreeQuestion: false,
+                isAstrologyQuestion: aiResult.isAstrologyQuestion,
+                paymentId: payment._id,
+                createdAt: new Date()
+            });
+            
+            await aiChat.save();
+            
+            socket.emit('ai_ask_paid_response', {
+                success: true,
+                answer: aiResult.response,
+                isAstrologyQuestion: aiResult.isAstrologyQuestion,
+                isFreeQuestion: false,
+                totalQuestions: aiChat.totalQuestions,
+                totalSpent: aiChat.totalSpent,
+                paymentId: payment._id
+            });
+            
+        } catch (error) {
+            console.error('Error processing paid AI question:', error);
+            socket.emit('error', error.message || 'Failed to process question');
+        }
+    });
+    
+    // ==========================================
+    // PAYMENT SOCKET EVENTS (Pooja, Shop)
+    // ==========================================
+    
+    // Create Pooja Payment
+    socket.on('create_pooja_payment', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { amount, poojaTitle, description } = data;
+            
+            if (!amount || !poojaTitle) {
+                socket.emit('error', 'Amount and pooja title are required');
+                return;
+            }
+            
+            const Razorpay = require('razorpay');
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            
+            if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+                socket.emit('error', 'Payment service not configured');
+                return;
+            }
+            
+            const razorpay = new Razorpay({
+                key_id: process.env.RAZORPAY_KEY_ID,
+                key_secret: process.env.RAZORPAY_KEY_SECRET
+            });
+            
+            // Create Razorpay order
+            const order = await razorpay.orders.create({
+                amount: Math.round(amount * 100),
+                currency: 'INR',
+                receipt: `pooja_${socket.userId}_${Date.now()}`,
+                notes: { userId: socket.userId, type: 'pooja_order', poojaTitle }
+            });
+            
+            // Save pending payment
+            const payment = new UnifiedPayment({
+                user: socket.userId,
+                type: 'pooja_order',
+                amount,
+                status: 'pending',
+                razorpayOrderId: order.id,
+                details: { poojaTitle },
+                description: description || `Pooja Booking: ${poojaTitle}`
+            });
+            await payment.save();
+            
+            socket.emit('create_pooja_payment_response', {
+                success: true,
+                orderId: order.id,
+                amount,
+                currency: 'INR',
+                paymentId: payment._id,
+                poojaTitle
+            });
+            
+        } catch (error) {
+            console.error('Error creating pooja payment:', error);
+            socket.emit('error', 'Failed to create payment order');
+        }
+    });
+    
+    // Verify Pooja Payment
+    socket.on('verify_pooja_payment', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { razorpayOrderId, razorpayPaymentId, razorpaySignature } = data;
+            
+            if (!razorpayOrderId || !razorpayPaymentId || !razorpaySignature) {
+                socket.emit('error', 'Missing payment verification details');
+                return;
+            }
+            
+            const crypto = require('crypto');
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            
+            // Verify signature
+            const expectedSignature = crypto
+                .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+                .update(`${razorpayOrderId}|${razorpayPaymentId}`)
+                .digest('hex');
+            
+            if (expectedSignature !== razorpaySignature) {
+                socket.emit('error', 'Payment verification failed');
+                return;
+            }
+            
+            // Update payment
+            const payment = await UnifiedPayment.findOneAndUpdate(
+                { razorpayOrderId, user: socket.userId, type: 'pooja_order' },
+                {
+                    status: 'paid',
+                    razorpayPaymentId,
+                    razorpaySignature,
+                    paidAt: new Date()
+                },
+                { new: true }
+            );
+            
+            if (!payment) {
+                socket.emit('error', 'Payment record not found');
+                return;
+            }
+            
+            socket.emit('verify_pooja_payment_response', {
+                success: true,
+                message: 'Pooja payment verified successfully',
+                payment: {
+                    _id: payment._id,
+                    amount: payment.amount,
+                    poojaTitle: payment.details.poojaTitle,
+                    status: payment.status,
+                    paidAt: payment.paidAt
+                }
+            });
+            
+        } catch (error) {
+            console.error('Error verifying pooja payment:', error);
+            socket.emit('error', 'Failed to verify payment');
+        }
+    });
+    
+    // Create Shop Payment
+    socket.on('create_shop_payment', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { amount, orderId, productName, quantity, description } = data;
+            
+            if (!amount || !productName) {
+                socket.emit('error', 'Amount and product name are required');
+                return;
+            }
+            
+            const Razorpay = require('razorpay');
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            
+            if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+                socket.emit('error', 'Payment service not configured');
+                return;
+            }
+            
+            const razorpay = new Razorpay({
+                key_id: process.env.RAZORPAY_KEY_ID,
+                key_secret: process.env.RAZORPAY_KEY_SECRET
+            });
+            
+            // Create Razorpay order
+            const order = await razorpay.orders.create({
+                amount: Math.round(amount * 100),
+                currency: 'INR',
+                receipt: `shop_${socket.userId}_${Date.now()}`,
+                notes: { userId: socket.userId, type: 'shop_order', productName }
+            });
+            
+            // Save pending payment
+            const payment = new UnifiedPayment({
+                user: socket.userId,
+                type: 'shop_order',
+                amount,
+                status: 'pending',
+                razorpayOrderId: order.id,
+                details: { orderId: orderId || `ORD_${Date.now()}`, productName, quantity: quantity || 1 },
+                description: description || `Shop Order: ${productName}`
+            });
+            await payment.save();
+            
+            socket.emit('create_shop_payment_response', {
+                success: true,
+                orderId: order.id,
+                amount,
+                currency: 'INR',
+                paymentId: payment._id,
+                productName
+            });
+            
+        } catch (error) {
+            console.error('Error creating shop payment:', error);
+            socket.emit('error', 'Failed to create payment order');
+        }
+    });
+    
+    // Verify Shop Payment
+    socket.on('verify_shop_payment', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { razorpayOrderId, razorpayPaymentId, razorpaySignature } = data;
+            
+            if (!razorpayOrderId || !razorpayPaymentId || !razorpaySignature) {
+                socket.emit('error', 'Missing payment verification details');
+                return;
+            }
+            
+            const crypto = require('crypto');
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            
+            // Verify signature
+            const expectedSignature = crypto
+                .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+                .update(`${razorpayOrderId}|${razorpayPaymentId}`)
+                .digest('hex');
+            
+            if (expectedSignature !== razorpaySignature) {
+                socket.emit('error', 'Payment verification failed');
+                return;
+            }
+            
+            // Update payment
+            const payment = await UnifiedPayment.findOneAndUpdate(
+                { razorpayOrderId, user: socket.userId, type: 'shop_order' },
+                {
+                    status: 'paid',
+                    razorpayPaymentId,
+                    razorpaySignature,
+                    paidAt: new Date()
+                },
+                { new: true }
+            );
+            
+            if (!payment) {
+                socket.emit('error', 'Payment record not found');
+                return;
+            }
+            
+            socket.emit('verify_shop_payment_response', {
+                success: true,
+                message: 'Shop payment verified successfully',
+                payment: {
+                    _id: payment._id,
+                    amount: payment.amount,
+                    productName: payment.details.productName,
+                    orderId: payment.details.orderId,
+                    status: payment.status,
+                    paidAt: payment.paidAt
+                }
+            });
+            
+        } catch (error) {
+            console.error('Error verifying shop payment:', error);
+            socket.emit('error', 'Failed to verify payment');
+        }
+    });
+    
+    // Get User's Payment History (for user)
+    socket.on('get_my_payments', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { type, page = 1, limit = 20 } = data || {};
+            
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            const Payment = require('./models/Payment');
+            
+            // Build query
+            const query = { user: socket.userId, status: 'paid' };
+            if (type && type !== 'all') {
+                query.type = type;
+            }
+            
+            // Get unified payments (AI, Pooja, Shop)
+            const unifiedPayments = await UnifiedPayment.find(query)
+                .sort({ paidAt: -1, createdAt: -1 })
+                .skip((page - 1) * limit)
+                .limit(limit)
+                .lean();
+            
+            // Get astrologer payments (from original Payment model)
+            const astrologerPayments = await Payment.find({ 
+                user: socket.userId, 
+                status: 'paid' 
+            })
+                .sort({ createdAt: -1 })
+                .lean();
+            
+            // Combine and format
+            const formattedAstrologerPayments = astrologerPayments.map(p => ({
+                _id: p._id,
+                type: 'astrologer_chat',
+                amount: p.amount,
+                status: p.status,
+                paidAt: p.createdAt,
+                details: { orderId: p.orderId, paymentId: p.paymentId },
+                description: 'Astrologer Chat Payment'
+            }));
+            
+            // Merge all payments
+            let allPayments = [...unifiedPayments, ...formattedAstrologerPayments];
+            
+            // Filter by type if needed
+            if (type && type !== 'all') {
+                allPayments = allPayments.filter(p => p.type === type);
+            }
+            
+            // Sort by date
+            allPayments.sort((a, b) => new Date(b.paidAt || b.createdAt) - new Date(a.paidAt || a.createdAt));
+            
+            // Calculate totals by type
+            const totals = {
+                ai_chat: 0,
+                astrologer_chat: 0,
+                pooja_order: 0,
+                shop_order: 0,
+                total: 0
+            };
+            
+            allPayments.forEach(p => {
+                if (totals.hasOwnProperty(p.type)) {
+                    totals[p.type] += p.amount;
+                }
+                totals.total += p.amount;
+            });
+            
+            socket.emit('get_my_payments_response', {
+                success: true,
+                payments: allPayments.slice(0, limit),
+                totals,
+                pagination: {
+                    page,
+                    limit,
+                    total: allPayments.length
+                }
+            });
+            
+        } catch (error) {
+            console.error('Error fetching payments:', error);
+            socket.emit('error', 'Failed to fetch payments');
+        }
+    });
+    
+    // ==========================================
+    // ADMIN SOCKET EVENTS
+    // ==========================================
+    
+    // Admin: Get All Payments (Unified View)
+    socket.on('admin_get_all_payments', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            // Check if admin
+            const adminUser = await User.findById(socket.userId);
+            if (!adminUser || !adminUser.isAdmin) {
+                socket.emit('error', 'Admin access required');
+                return;
+            }
+            
+            const { userId, type, page = 1, limit = 50 } = data || {};
+            
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            const Payment = require('./models/Payment');
+            
+            // Build query for unified payments
+            const unifiedQuery = { status: 'paid' };
+            if (userId) unifiedQuery.user = userId;
+            if (type && type !== 'all' && type !== 'astrologer_chat') {
+                unifiedQuery.type = type;
+            }
+            
+            // Get unified payments
+            let unifiedPayments = [];
+            if (!type || type === 'all' || ['ai_chat', 'pooja_order', 'shop_order'].includes(type)) {
+                unifiedPayments = await UnifiedPayment.find(unifiedQuery)
+                    .populate('user', 'firstName lastName email phone')
+                    .sort({ paidAt: -1, createdAt: -1 })
+                    .lean();
+            }
+            
+            // Get astrologer payments
+            let astrologerPayments = [];
+            if (!type || type === 'all' || type === 'astrologer_chat') {
+                const astrologerQuery = { status: 'paid' };
+                if (userId) astrologerQuery.user = userId;
+                
+                astrologerPayments = await Payment.find(astrologerQuery)
+                    .populate('user', 'firstName lastName email phone')
+                    .sort({ createdAt: -1 })
+                    .lean();
+            }
+            
+            // Format astrologer payments
+            const formattedAstrologerPayments = astrologerPayments.map(p => ({
+                _id: p._id,
+                user: p.user,
+                type: 'astrologer_chat',
+                amount: p.amount,
+                status: p.status,
+                paidAt: p.createdAt,
+                createdAt: p.createdAt,
+                details: { orderId: p.orderId, paymentId: p.paymentId },
+                description: 'Astrologer Chat Payment (Freeze/Unfreeze)'
+            }));
+            
+            // Merge and sort
+            let allPayments = [...unifiedPayments, ...formattedAstrologerPayments];
+            allPayments.sort((a, b) => new Date(b.paidAt || b.createdAt) - new Date(a.paidAt || a.createdAt));
+            
+            // Calculate stats
+            const stats = {
+                ai_chat: { count: 0, total: 0 },
+                astrologer_chat: { count: 0, total: 0 },
+                pooja_order: { count: 0, total: 0 },
+                shop_order: { count: 0, total: 0 },
+                grandTotal: 0
+            };
+            
+            allPayments.forEach(p => {
+                if (stats[p.type]) {
+                    stats[p.type].count++;
+                    stats[p.type].total += p.amount;
+                }
+                stats.grandTotal += p.amount;
+            });
+            
+            // Paginate
+            const paginatedPayments = allPayments.slice((page - 1) * limit, page * limit);
+            
+            socket.emit('admin_get_all_payments_response', {
+                success: true,
+                payments: paginatedPayments,
+                stats,
+                pagination: {
+                    page,
+                    limit,
+                    total: allPayments.length,
+                    totalPages: Math.ceil(allPayments.length / limit)
+                }
+            });
+            
+        } catch (error) {
+            console.error('Error fetching admin payments:', error);
+            socket.emit('error', 'Failed to fetch payments');
+        }
+    });
+    
+    // Admin: Get User's All Payments
+    socket.on('admin_get_user_payments', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const adminUser = await User.findById(socket.userId);
+            if (!adminUser || !adminUser.isAdmin) {
+                socket.emit('error', 'Admin access required');
+                return;
+            }
+            
+            const { userId } = data;
+            if (!userId) {
+                socket.emit('error', 'User ID is required');
+                return;
+            }
+            
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            const Payment = require('./models/Payment');
+            
+            // Get user info
+            const targetUser = await User.findById(userId).select('firstName lastName email phone').lean();
+            if (!targetUser) {
+                socket.emit('error', 'User not found');
+                return;
+            }
+            
+            // Get all unified payments for user
+            const unifiedPayments = await UnifiedPayment.find({ user: userId, status: 'paid' })
+                .sort({ paidAt: -1, createdAt: -1 })
+                .lean();
+            
+            // Get astrologer payments for user
+            const astrologerPayments = await Payment.find({ user: userId, status: 'paid' })
+                .sort({ createdAt: -1 })
+                .lean();
+            
+            // Format astrologer payments
+            const formattedAstrologerPayments = astrologerPayments.map(p => ({
+                _id: p._id,
+                type: 'astrologer_chat',
+                amount: p.amount,
+                status: p.status,
+                paidAt: p.createdAt,
+                createdAt: p.createdAt,
+                details: { orderId: p.orderId, paymentId: p.paymentId },
+                description: 'Astrologer Chat Payment'
+            }));
+            
+            // Merge and sort
+            let allPayments = [...unifiedPayments, ...formattedAstrologerPayments];
+            allPayments.sort((a, b) => new Date(b.paidAt || b.createdAt) - new Date(a.paidAt || a.createdAt));
+            
+            // Calculate totals by type
+            const summary = {
+                ai_chat: { count: 0, total: 0 },
+                astrologer_chat: { count: 0, total: 0 },
+                pooja_order: { count: 0, total: 0 },
+                shop_order: { count: 0, total: 0 },
+                grandTotal: 0
+            };
+            
+            allPayments.forEach(p => {
+                if (summary[p.type]) {
+                    summary[p.type].count++;
+                    summary[p.type].total += p.amount;
+                }
+                summary.grandTotal += p.amount;
+            });
+            
+            socket.emit('admin_get_user_payments_response', {
+                success: true,
+                user: targetUser,
+                payments: allPayments,
+                summary
+            });
+            
+        } catch (error) {
+            console.error('Error fetching user payments:', error);
+            socket.emit('error', 'Failed to fetch user payments');
+        }
+    });
+    
+    // Admin: Get AI Chat for User
+    socket.on('admin_get_user_ai_chat', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const adminUser = await User.findById(socket.userId);
+            if (!adminUser || !adminUser.isAdmin) {
+                socket.emit('error', 'Admin access required');
+                return;
+            }
+            
+            const { userId } = data;
+            if (!userId) {
+                socket.emit('error', 'User ID is required');
+                return;
+            }
+            
+            const AIChat = require('./models/AIChat');
+            const Kundli = require('./models/Kundli');
+            
+            // Get user info
+            const targetUser = await User.findById(userId).select('firstName lastName email phone').lean();
+            if (!targetUser) {
+                socket.emit('error', 'User not found');
+                return;
+            }
+            
+            // Get AI chat and kundli
+            const [aiChat, kundli] = await Promise.all([
+                AIChat.findOne({ user: userId }).lean(),
+                Kundli.findOne({ user: userId }).lean()
+            ]);
+            
+            socket.emit('admin_get_user_ai_chat_response', {
+                success: true,
+                user: targetUser,
+                kundli,
+                aiChat: {
+                    totalQuestions: aiChat?.totalQuestions || 0,
+                    totalSpent: aiChat?.totalSpent || 0,
+                    freeQuestionUsed: aiChat?.freeQuestionUsed || false,
+                    lastActivity: aiChat?.lastActivity,
+                    createdAt: aiChat?.createdAt
+                },
+                messages: aiChat?.messages || []
+            });
+            
+        } catch (error) {
+            console.error('Error fetching user AI chat:', error);
+            socket.emit('error', 'Failed to fetch AI chat');
+        }
+    });
+    
+    // Admin: Get All AI Chats
+    socket.on('admin_get_all_ai_chats', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const adminUser = await User.findById(socket.userId);
+            if (!adminUser || !adminUser.isAdmin) {
+                socket.emit('error', 'Admin access required');
+                return;
+            }
+            
+            const { page = 1, limit = 20 } = data || {};
+            
+            const AIChat = require('./models/AIChat');
+            
+            const [chats, total] = await Promise.all([
+                AIChat.find()
+                    .populate('user', 'firstName lastName email phone')
+                    .populate('kundli', 'fullName dateOfBirth placeOfBirth')
+                    .sort({ lastActivity: -1 })
+                    .skip((page - 1) * limit)
+                    .limit(limit)
+                    .lean(),
+                AIChat.countDocuments()
+            ]);
+            
+            // Add message count to each chat
+            const formattedChats = chats.map(chat => ({
+                _id: chat._id,
+                user: chat.user,
+                kundli: chat.kundli,
+                totalQuestions: chat.totalQuestions,
+                totalSpent: chat.totalSpent,
+                freeQuestionUsed: chat.freeQuestionUsed,
+                messageCount: chat.messages?.length || 0,
+                lastActivity: chat.lastActivity,
+                createdAt: chat.createdAt
+            }));
+            
+            socket.emit('admin_get_all_ai_chats_response', {
+                success: true,
+                chats: formattedChats,
+                pagination: {
+                    page,
+                    limit,
+                    total,
+                    totalPages: Math.ceil(total / limit)
+                }
+            });
+            
+        } catch (error) {
+            console.error('Error fetching all AI chats:', error);
+            socket.emit('error', 'Failed to fetch AI chats');
+        }
+    });
+    
+    // ==========================================
+    // KUNDLI SOCKET EVENTS
+    // ==========================================
+    
+    // Save/Update Kundli
+    socket.on('save_kundli', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { fullName, dateOfBirth, timeOfBirth, placeOfBirth, gender, latitude, longitude } = data;
+            
+            // Validation
+            if (!fullName || !dateOfBirth || !timeOfBirth || !placeOfBirth || !gender) {
+                socket.emit('error', 'All fields are required: fullName, dateOfBirth, timeOfBirth, placeOfBirth, gender');
+                return;
+            }
+            
+            if (!['male', 'female', 'other'].includes(gender.toLowerCase())) {
+                socket.emit('error', 'Gender must be male, female, or other');
+                return;
+            }
+            
+            const Kundli = require('./models/Kundli');
+            
+            // Upsert kundli
+            const kundli = await Kundli.findOneAndUpdate(
+                { user: socket.userId },
+                {
+                    user: socket.userId,
+                    fullName: fullName.trim(),
+                    dateOfBirth: new Date(dateOfBirth),
+                    timeOfBirth: timeOfBirth.trim(),
+                    placeOfBirth: placeOfBirth.trim(),
+                    gender: gender.toLowerCase(),
+                    coordinates: (latitude && longitude) ? { latitude, longitude } : undefined,
+                    updatedAt: new Date()
+                },
+                { new: true, upsert: true, setDefaultsOnInsert: true }
+            );
+            
+            socket.emit('save_kundli_response', {
+                success: true,
+                message: 'Kundli saved successfully',
+                kundli
+            });
+            
+        } catch (error) {
+            console.error('Error saving kundli:', error);
+            socket.emit('error', 'Failed to save kundli');
+        }
+    });
+    
+    // Get My Kundli
+    socket.on('get_my_kundli', async () => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const Kundli = require('./models/Kundli');
+            const kundli = await Kundli.findOne({ user: socket.userId }).lean();
+            
+            socket.emit('get_my_kundli_response', {
+                success: true,
+                hasKundli: !!kundli,
+                kundli
+            });
+            
+        } catch (error) {
+            console.error('Error getting kundli:', error);
+            socket.emit('error', 'Failed to get kundli');
+        }
+    });
+
     // Handle user unfreeze after payment
     socket.on('unfreeze_after_payment', async (data) => {
         try {
@@ -668,6 +1800,9 @@ app.use('/api/chat', chatRoutes);
 app.use('/api/call', callRoutes);
 app.use('/api/payment', paymentRoutes);
 app.use('/api/chatmeta', chatMetaRoutes);
+app.use('/api/kundli', kundliRoutes);
+app.use('/api/ai-chat', aiChatRoutes);
+app.use('/api/payments', unifiedPaymentRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

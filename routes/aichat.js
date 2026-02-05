@@ -139,11 +139,16 @@ I can only help you with astrology-related questions based on your Kundli (birth
 // Helper: Generate AI response (Astrology Only)
 const generateAIResponse = async (kundli, question, chatHistory) => {
     if (!geminiModel) {
-        throw new Error('AI service not available');
+        console.error('❌ Gemini model not initialized! Check GEMINI_API_KEY in .env');
+        throw new Error('AI service not available. Please check GEMINI_API_KEY configuration.');
     }
     
     // Validate if question is astrology-related
-    if (!isAstrologyQuestion(question)) {
+    const isAstroQuestion = isAstrologyQuestion(question);
+    console.log('🔍 Is astrology question:', isAstroQuestion, '| Question:', question.substring(0, 30));
+    
+    if (!isAstroQuestion) {
+        console.log('⚠️ Non-astrology question detected, returning default response');
         return { response: NON_ASTROLOGY_RESPONSE, isAstrologyQuestion: false };
     }
     
@@ -191,16 +196,29 @@ User's Question: ${question}
 
 Provide your astrological response:`;
 
-    const result = await geminiModel.generateContent({
-        contents: [{ role: 'user', parts: [{ text: systemPrompt }] }],
-        generationConfig: {
-            maxOutputTokens: MAX_OUTPUT_TOKENS,
-            temperature: 0.7,
+    try {
+        console.log('🔮 Calling Gemini AI for question:', question.substring(0, 50) + '...');
+        
+        const result = await geminiModel.generateContent({
+            contents: [{ role: 'user', parts: [{ text: systemPrompt }] }],
+            generationConfig: {
+                maxOutputTokens: MAX_OUTPUT_TOKENS,
+                temperature: 0.7,
+            }
+        });
+        
+        const response = result.response.text();
+        console.log('✅ Gemini AI response received, length:', response.length);
+        
+        if (!response || response.trim().length === 0) {
+            throw new Error('Empty response from AI');
         }
-    });
-    
-    const response = result.response.text();
-    return { response, isAstrologyQuestion: true };
+        
+        return { response, isAstrologyQuestion: true };
+    } catch (aiError) {
+        console.error('❌ Gemini AI Error:', aiError.message);
+        throw new Error(`AI generation failed: ${aiError.message}`);
+    }
 };
 
 
@@ -272,11 +290,16 @@ router.get('/history', auth, async (req, res) => {
 // Ask free question (first question only)
 router.post('/ask-free', auth, async (req, res) => {
     try {
+        console.log('📝 AI Ask-Free Request from user:', req.user._id);
+        
         const { question } = req.body;
         
         if (!question || question.trim().length === 0) {
+            console.log('❌ Empty question received');
             return res.status(400).json({ error: 'Question is required' });
         }
+        
+        console.log('📝 Question received:', question.substring(0, 50) + '...');
         
         // Validate word count
         const wordCount = countWords(question);
@@ -287,18 +310,22 @@ router.post('/ask-free', auth, async (req, res) => {
         }
         
         // Check Kundli
+        console.log('🔍 Checking Kundli for user:', req.user._id);
         const kundli = await Kundli.findOne({ user: req.user._id });
         if (!kundli) {
+            console.log('❌ No Kundli found for user');
             return res.status(400).json({ 
                 error: 'Please save your Kundli details first',
                 requiresKundli: true 
             });
         }
+        console.log('✅ Kundli found:', kundli.fullName);
         
         // Get or create AI chat
         let aiChat = await AIChat.findOne({ user: req.user._id });
         
         if (aiChat && aiChat.freeQuestionUsed) {
+            console.log('❌ Free question already used');
             return res.status(400).json({ 
                 error: 'Free question already used. Please pay ₹501 for more questions.',
                 requiresPayment: true,
@@ -306,6 +333,7 @@ router.post('/ask-free', auth, async (req, res) => {
             });
         }
         
+        console.log('🤖 Generating AI response...');
         // Generate AI response
         const aiResult = await generateAIResponse(
             kundli, 
@@ -356,8 +384,12 @@ router.post('/ask-free', auth, async (req, res) => {
             message: 'This was your free question. Future questions will cost ₹501 each.'
         });
     } catch (error) {
-        console.error('Error processing free question:', error);
-        res.status(400).json({ error: error.message });
+        console.error('❌ Error processing free question:', error.message);
+        console.error('Stack:', error.stack);
+        res.status(500).json({ 
+            error: error.message || 'Failed to process your question',
+            details: process.env.NODE_ENV === 'development' ? error.stack : undefined
+        });
     }
 });
 

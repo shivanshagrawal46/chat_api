@@ -43,7 +43,7 @@ router.post('/pooja/create', auth, async (req, res) => {
         const order = await razorpay.orders.create({
             amount: Math.round(amount * 100), // Convert to paise
             currency: 'INR',
-            receipt: `pooja_${req.user._id}_${Date.now()}`,
+            receipt: `pj_${req.user._id.toString().slice(-8)}_${Date.now().toString().slice(-8)}`,
             notes: {
                 userId: req.user._id.toString(),
                 type: 'pooja_order',
@@ -152,7 +152,7 @@ router.post('/shop/create', auth, async (req, res) => {
         const order = await razorpay.orders.create({
             amount: Math.round(amount * 100),
             currency: 'INR',
-            receipt: `shop_${req.user._id}_${Date.now()}`,
+            receipt: `sh_${req.user._id.toString().slice(-8)}_${Date.now().toString().slice(-8)}`,
             notes: {
                 userId: req.user._id.toString(),
                 type: 'shop_order',
@@ -261,7 +261,7 @@ router.post('/astrologer/create', auth, async (req, res) => {
         const order = await razorpay.orders.create({
             amount: Math.round(amount * 100),
             currency: 'INR',
-            receipt: `astro_${req.user._id}_${Date.now()}`,
+            receipt: `as_${req.user._id.toString().slice(-8)}_${Date.now().toString().slice(-8)}`,
             notes: {
                 userId: req.user._id.toString(),
                 type: 'astrologer_chat',

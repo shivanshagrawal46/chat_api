@@ -802,7 +802,7 @@ io.on('connection', (socket) => {
             const order = await razorpay.orders.create({
                 amount: AI_CHAT_PRICE * 100, // in paise
                 currency: 'INR',
-                receipt: `ai_chat_${socket.userId}_${Date.now()}`,
+                receipt: `ai_${socket.userId.slice(-8)}_${Date.now().toString().slice(-8)}`,
                 notes: { userId: socket.userId, type: 'ai_chat', questionNumber }
             });
             
@@ -1000,7 +1000,7 @@ io.on('connection', (socket) => {
             const order = await razorpay.orders.create({
                 amount: Math.round(amount * 100),
                 currency: 'INR',
-                receipt: `pooja_${socket.userId}_${Date.now()}`,
+                receipt: `pj_${socket.userId.slice(-8)}_${Date.now().toString().slice(-8)}`,
                 notes: { userId: socket.userId, type: 'pooja_order', poojaTitle }
             });
             
@@ -1127,7 +1127,7 @@ io.on('connection', (socket) => {
             const order = await razorpay.orders.create({
                 amount: Math.round(amount * 100),
                 currency: 'INR',
-                receipt: `shop_${socket.userId}_${Date.now()}`,
+                receipt: `sh_${socket.userId.slice(-8)}_${Date.now().toString().slice(-8)}`,
                 notes: { userId: socket.userId, type: 'shop_order', productName }
             });
             

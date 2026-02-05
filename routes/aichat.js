@@ -385,7 +385,7 @@ router.post('/create-payment', auth, async (req, res) => {
         const order = await razorpay.orders.create({
             amount: AI_CHAT_PRICE * 100, // Convert to paise
             currency: 'INR',
-            receipt: `ai_chat_${req.user._id}_${Date.now()}`,
+            receipt: `ai_${req.user._id.toString().slice(-8)}_${Date.now().toString().slice(-8)}`,
             notes: {
                 userId: req.user._id.toString(),
                 type: 'ai_chat',

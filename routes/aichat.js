@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { GoogleGenAI } = require('@google/genai');
 const AIChat = require('../models/AIChat');
 const Kundli = require('../models/Kundli');
 const UnifiedPayment = require('../models/UnifiedPayment');
@@ -9,16 +9,14 @@ const auth = require('../middleware/auth');
 const Razorpay = require('razorpay');
 const crypto = require('crypto');
 
-// Initialize Gemini AI
+// Initialize Gemini AI (New SDK)
 let genAI = null;
-let geminiModel = null;
+const GEMINI_MODEL = 'gemini-2.0-flash';
 
 try {
     if (process.env.GEMINI_API_KEY) {
-        genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-        // Use gemini-1.5-flash-latest which is widely available
-        geminiModel = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
-        console.log('✅ Google Gemini AI initialized (model: gemini-1.5-flash-latest)');
+        genAI = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
+        console.log(`✅ Google Gemini AI initialized (model: ${GEMINI_MODEL})`);
     } else {
         console.log('⚠️ GEMINI_API_KEY not found. AI Chat disabled.');
     }
@@ -137,10 +135,10 @@ I can only help you with astrology-related questions based on your Kundli (birth
 
 **Please ask me something related to astrology, and I'll provide insights based on your birth chart!**`;
 
-// Helper: Generate AI response (Astrology Only)
+// Helper: Generate AI response (Astrology Only) - Using New SDK
 const generateAIResponse = async (kundli, question, chatHistory) => {
-    if (!geminiModel) {
-        console.error('❌ Gemini model not initialized! Check GEMINI_API_KEY in .env');
+    if (!genAI) {
+        console.error('❌ Gemini AI not initialized! Check GEMINI_API_KEY in .env');
         throw new Error('AI service not available. Please check GEMINI_API_KEY configuration.');
     }
     
@@ -200,16 +198,18 @@ Provide your astrological response:`;
     try {
         console.log('🔮 Calling Gemini AI for question:', question.substring(0, 50) + '...');
         
-        const result = await geminiModel.generateContent({
-            contents: [{ role: 'user', parts: [{ text: systemPrompt }] }],
-            generationConfig: {
+        // New SDK syntax
+        const result = await genAI.models.generateContent({
+            model: GEMINI_MODEL,
+            contents: systemPrompt,
+            config: {
                 maxOutputTokens: MAX_OUTPUT_TOKENS,
                 temperature: 0.7,
             }
         });
         
-        const response = result.response.text();
-        console.log('✅ Gemini AI response received, length:', response.length);
+        const response = result.text;
+        console.log('✅ Gemini AI response received, length:', response?.length || 0);
         
         if (!response || response.trim().length === 0) {
             throw new Error('Empty response from AI');

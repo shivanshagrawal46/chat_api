@@ -9,7 +9,7 @@ const aiMessageSchema = new mongoose.Schema({
     content: {
         type: String,
         required: true,
-        maxlength: 2000
+        maxlength: 10000  // Increased to accommodate AI responses
     },
     tokenCount: {
         type: Number,

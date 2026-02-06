@@ -16,8 +16,9 @@ let geminiModel = null;
 try {
     if (process.env.GEMINI_API_KEY) {
         genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-        geminiModel = genAI.getGenerativeModel({ model: 'gemini-2.5-pro' });
-        console.log('✅ Google Gemini AI initialized successfully (model: gemini-2.5-pro)');
+        // Use gemini-1.5-flash-latest which is widely available
+        geminiModel = genAI.getGenerativeModel({ model: 'gemini-1.5-flash-latest' });
+        console.log('✅ Google Gemini AI initialized (model: gemini-1.5-flash-latest)');
     } else {
         console.log('⚠️ GEMINI_API_KEY not found. AI Chat disabled.');
     }

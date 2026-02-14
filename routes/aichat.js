@@ -40,7 +40,7 @@ try {
 // Constants
 const AI_CHAT_PRICE = 21; // ₹21 per question
 const MAX_INPUT_WORDS = 200;
-const MAX_OUTPUT_TOKENS = 500;  // ~300 words (1 token ≈ 0.75 words)
+const MAX_OUTPUT_TOKENS = 2048;  // Increased for Hindi/Hinglish support (Devanagari uses 2-4 tokens per char)
 
 // Helper: Count words
 const countWords = (text) => {
@@ -241,17 +241,18 @@ Instructions:
 2. Be respectful and compassionate in your responses
 3. Give practical advice along with astrological predictions
 4. If asked about career, marriage, health, etc., ALWAYS relate your answer to their birth chart and planetary positions
-5. IMPORTANT: Keep responses SHORT and CONCISE - maximum 250-300 words only
+5. IMPORTANT: Keep responses CONCISE but COMPLETE - around 200-400 words
 6. Use simple language that anyone can understand
 7. Include relevant planetary positions, doshas, or yogas when applicable
 8. Always end with positive guidance or remedies if discussing challenges
 9. If the question is not about astrology, politely decline and suggest astrology-related topics
 10. Do NOT write long paragraphs - be brief and to the point
 11. If responding in Hindi, use proper Devanagari script. If responding in Hinglish, use Roman script (the way the user wrote). ALWAYS match the user's language style.
+12. CRITICAL: Always complete your response with a proper conclusion. NEVER leave a sentence unfinished.
 
 User's Question: ${question}
 
-Provide a SHORT and CONCISE astrological response (max 300 words):`;
+Provide a COMPLETE and CONCISE astrological response (200-400 words). Make sure to finish with a proper conclusion:`;
 
     try {
         console.log('🔮 Calling Gemini AI for question:', question.substring(0, 50) + '...');

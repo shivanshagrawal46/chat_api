@@ -80,6 +80,67 @@ router.post('/save', auth, async (req, res) => {
     }
 });
 
+// Edit Kundli (partial update - only update fields that are provided)
+router.put('/edit', auth, async (req, res) => {
+    try {
+        const { fullName, dateOfBirth, timeOfBirth, placeOfBirth, gender, latitude, longitude } = req.body;
+        
+        // Check if kundli exists
+        const kundli = await Kundli.findOne({ user: req.user._id });
+        if (!kundli) {
+            return res.status(404).json({ 
+                error: 'Kundli not found. Please create your Kundli first using /save.' 
+            });
+        }
+        
+        // Update only provided fields
+        if (fullName !== undefined && fullName.trim()) {
+            kundli.fullName = fullName.trim();
+        }
+        
+        if (dateOfBirth !== undefined) {
+            const dob = new Date(dateOfBirth);
+            if (isNaN(dob.getTime())) {
+                return res.status(400).json({ error: 'Invalid date format' });
+            }
+            kundli.dateOfBirth = dob;
+        }
+        
+        if (timeOfBirth !== undefined) {
+            const timeRegex = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+            if (!timeRegex.test(timeOfBirth)) {
+                return res.status(400).json({ error: 'Time must be in HH:MM format (24-hour)' });
+            }
+            kundli.timeOfBirth = timeOfBirth;
+        }
+        
+        if (placeOfBirth !== undefined && placeOfBirth.trim()) {
+            kundli.placeOfBirth = placeOfBirth.trim();
+        }
+        
+        if (gender !== undefined) {
+            if (!['male', 'female', 'other'].includes(gender.toLowerCase())) {
+                return res.status(400).json({ error: 'Gender must be male, female, or other' });
+            }
+            kundli.gender = gender.toLowerCase();
+        }
+        
+        if (latitude !== undefined) kundli.coordinates.latitude = latitude;
+        if (longitude !== undefined) kundli.coordinates.longitude = longitude;
+        
+        await kundli.save();
+        
+        res.json({ 
+            success: true, 
+            message: 'Kundli updated successfully', 
+            kundli 
+        });
+    } catch (error) {
+        console.error('Error editing kundli:', error);
+        res.status(400).json({ error: error.message });
+    }
+});
+
 // Get user's Kundli
 router.get('/my-kundli', auth, async (req, res) => {
     try {

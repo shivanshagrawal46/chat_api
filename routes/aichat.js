@@ -11,7 +11,7 @@ const crypto = require('crypto');
 
 // Initialize Gemini AI (New SDK)
 let genAI = null;
-const GEMINI_MODEL = 'gemini-2.0-flash';
+const GEMINI_MODEL = 'gemini-3-pro-preview';
 
 try {
     if (process.env.GEMINI_API_KEY) {
@@ -38,7 +38,7 @@ try {
 }
 
 // Constants
-const AI_CHAT_PRICE = 501; // ₹501 per question
+const AI_CHAT_PRICE = 21; // ₹21 per question
 const MAX_INPUT_WORDS = 200;
 const MAX_OUTPUT_TOKENS = 500;  // ~300 words (1 token ≈ 0.75 words)
 
@@ -47,7 +47,7 @@ const countWords = (text) => {
     return text.trim().split(/\s+/).filter(word => word.length > 0).length;
 };
 
-// Astrology-related keywords for validation
+// Astrology-related keywords for validation (English + Hindi)
 const ASTROLOGY_KEYWORDS = [
     // General astrology terms
     'kundli', 'kundali', 'horoscope', 'zodiac', 'rashi', 'nakshatra', 'graha', 'planet',
@@ -78,7 +78,26 @@ const ASTROLOGY_KEYWORDS = [
     'lucky', 'unlucky', 'favorable', 'unfavorable', 'good time', 'bad time',
     // Spiritual/religious
     'pooja', 'puja', 'mantra', 'gemstone', 'stone', 'rudraksha', 'yantra', 'temple',
-    'fasting', 'vrat', 'donation', 'daan', 'charity'
+    'fasting', 'vrat', 'donation', 'daan', 'charity',
+    // Hindi keywords (Devanagari)
+    'कुंडली', 'कुण्डली', 'राशि', 'राशिफल', 'ज्योतिष', 'ग्रह', 'नक्षत्र', 'जन्मपत्री', 'जन्मकुंडली',
+    'भविष्य', 'भविष्यवाणी', 'दशा', 'महादशा', 'अंतर्दशा', 'गोचर',
+    // Hindi planets
+    'सूर्य', 'चंद्र', 'चन्द्र', 'मंगल', 'बुध', 'गुरु', 'बृहस्पति', 'शुक्र', 'शनि', 'राहु', 'केतु',
+    // Hindi zodiac signs
+    'मेष', 'वृषभ', 'मिथुन', 'कर्क', 'सिंह', 'कन्या', 'तुला', 'वृश्चिक', 'धनु', 'मकर', 'कुंभ', 'कुम्भ', 'मीन',
+    // Hindi doshas and yogas
+    'दोष', 'मांगलिक', 'काल सर्प', 'साढ़े साती', 'साढ़ेसाती', 'योग',
+    // Hindi life topics
+    'शादी', 'विवाह', 'नौकरी', 'करियर', 'प्रेम', 'प्यार', 'स्वास्थ्य', 'सेहत', 'धन', 'पैसा', 'पैसे',
+    'व्यापार', 'व्यवसाय', 'पढ़ाई', 'शिक्षा', 'परिवार', 'संतान', 'बच्चे', 'यात्रा', 'विदेश',
+    'भाग्य', 'किस्मत', 'तकदीर', 'उपाय', 'समस्या', 'समाधान',
+    // Hindi spiritual/religious
+    'पूजा', 'मंत्र', 'रत्न', 'रुद्राक्ष', 'यंत्र', 'मंदिर', 'व्रत', 'उपवास', 'दान',
+    // Hindi question patterns (transliterated)
+    'kab hogi', 'kab milegi', 'kab hoga', 'kaisa hoga', 'kaisi hogi', 'kya hoga',
+    'meri shaadi', 'mera career', 'meri naukri', 'mera bhavishya', 'meri kundli',
+    'batao', 'bataiye', 'bataye', 'upay batao', 'kya karu', 'kya karein'
 ];
 
 // Helper: Check if question is astrology-related
@@ -90,6 +109,13 @@ const isAstrologyQuestion = (question) => {
         if (lowerQuestion.includes(keyword)) {
             return true;
         }
+    }
+    
+    // Check if the question contains Hindi (Devanagari) characters
+    const hasHindiChars = /[\u0900-\u097F]/.test(lowerQuestion);
+    if (hasHindiChars) {
+        // If question is in Hindi, it's very likely astrology-related (since this is an astrology app)
+        return true;
     }
     
     // Check for common question patterns about life (usually astrology context)
@@ -105,6 +131,14 @@ const isAstrologyQuestion = (question) => {
         /this\s+(year|month|week)/i,
         /next\s+(year|month|week)/i,
         /\d{4}/, // Year mentions
+        // Hindi transliterated patterns
+        /kab\s+(hogi|hoga|milegi|milega|aayegi|aayega)/i,
+        /kaisa\s+(hoga|rahega)/i,
+        /kaisi\s+(hogi|rahegi)/i,
+        /kya\s+(hoga|karu|karein|karoon)/i,
+        /mer[aie]\s+(shaadi|career|naukri|bhavishya|kundli|sehat|padhai)/i,
+        /batao|bataiye|bataye/i,
+        /upay\s+batao/i,
     ];
     
     for (const pattern of lifePatterns) {
@@ -116,23 +150,26 @@ const isAstrologyQuestion = (question) => {
     return false;
 };
 
-// Non-astrology response
-const NON_ASTROLOGY_RESPONSE = `🙏 Namaste! I am your dedicated Vedic Astrology AI assistant.
+// Non-astrology response (bilingual Hindi + English)
+const NON_ASTROLOGY_RESPONSE = `🙏 नमस्ते! मैं आपका वैदिक ज्योतिष AI सहायक हूँ।
+Namaste! I am your dedicated Vedic Astrology AI assistant.
 
-I can only help you with astrology-related questions based on your Kundli (birth chart). 
+मैं केवल आपकी कुंडली (जन्मपत्री) के आधार पर ज्योतिष संबंधी प्रश्नों में आपकी सहायता कर सकता हूँ।
+I can only help you with astrology-related questions based on your Kundli (birth chart).
 
-**I can help you with:**
-✨ Career and job predictions
-✨ Marriage and relationship guidance
-✨ Health insights from your chart
-✨ Wealth and financial predictions
-✨ Education and study guidance
-✨ Planetary periods (Dasha) analysis
-✨ Remedies for planetary doshas
-✨ Muhurat (auspicious timing)
-✨ Compatibility analysis
-✨ General life predictions
+**मैं इनमें मदद कर सकता हूँ / I can help you with:**
+✨ करियर और नौकरी भविष्यवाणी / Career and job predictions
+✨ शादी और रिश्ते मार्गदर्शन / Marriage and relationship guidance
+✨ स्वास्थ्य जानकारी / Health insights from your chart
+✨ धन और वित्तीय भविष्यवाणी / Wealth and financial predictions
+✨ शिक्षा मार्गदर्शन / Education and study guidance
+✨ दशा विश्लेषण / Planetary periods (Dasha) analysis
+✨ दोषों के उपाय / Remedies for planetary doshas
+✨ मुहूर्त / Muhurat (auspicious timing)
+✨ कुंडली मिलान / Compatibility analysis
+✨ सामान्य जीवन भविष्यवाणी / General life predictions
 
+**कृपया ज्योतिष से संबंधित कोई प्रश्न पूछें!**
 **Please ask me something related to astrology, and I'll provide insights based on your birth chart!**`;
 
 // Helper: Generate AI response (Astrology Only) - Using New SDK
@@ -170,7 +207,26 @@ User's Birth Details (Kundli):
         ).join('\n');
     }
 
+    // Detect if question is in Hindi (Devanagari) or Hinglish (transliterated Hindi in Roman script)
+    const isHindiQuestion = /[\u0900-\u097F]/.test(question);
+    const hinglishPatterns = /\b(kab|kaisa|kaisi|kya|mera|meri|mere|batao|bataiye|bataye|hoga|hogi|milegi|milega|naukri|shaadi|vivah|bhavishya|kundli|kundali|upay|karu|karein|karoon|aayegi|aayega|rahega|rahegi|achha|bura|shubh|ashubh|graho|rashifal|padhai|paisa|dhan|sehat|bacho|bacche)\b/i.test(question);
+    const isHinglishQuestion = !isHindiQuestion && hinglishPatterns;
+
+    const languageInstruction = isHindiQuestion 
+        ? 'HINDI (Devanagari script) - respond in Hindi using Devanagari script' 
+        : isHinglishQuestion 
+            ? 'HINGLISH (Hindi in Roman script) - respond in Hinglish (Hindi written in Roman/English script, the way the user wrote)' 
+            : 'ENGLISH - respond in English';
+
     const systemPrompt = `You are an expert Vedic astrologer AI assistant. You ONLY provide astrological guidance based on the user's birth details (Kundli).
+
+LANGUAGE INSTRUCTIONS:
+- You are TRILINGUAL and can communicate in Hindi, Hinglish, and English.
+- If the user asks in Hindi (Devanagari script), respond in Hindi (Devanagari script).
+- If the user asks in Hinglish (Hindi written in Roman/English script like "meri shaadi kab hogi"), respond in Hinglish (Hindi in Roman script).
+- If the user asks in English, respond in English.
+- MATCH the user's language style. If they write in Hinglish, reply in Hinglish. Do NOT switch to Devanagari for Hinglish questions.
+- The current question is in: ${languageInstruction}
 
 IMPORTANT RESTRICTIONS:
 - You MUST ONLY answer questions related to astrology, horoscope, kundli, zodiac, planets, predictions, and spiritual guidance.
@@ -191,6 +247,7 @@ Instructions:
 8. Always end with positive guidance or remedies if discussing challenges
 9. If the question is not about astrology, politely decline and suggest astrology-related topics
 10. Do NOT write long paragraphs - be brief and to the point
+11. If responding in Hindi, use proper Devanagari script. If responding in Hinglish, use Roman script (the way the user wrote). ALWAYS match the user's language style.
 
 User's Question: ${question}
 
@@ -336,7 +393,7 @@ router.post('/ask-free', auth, async (req, res) => {
         if (aiChat && aiChat.freeQuestionUsed) {
             console.log('❌ Free question already used');
             return res.status(400).json({ 
-                error: 'Free question already used. Please pay ₹501 for more questions.',
+                error: 'Free question already used. Please pay ₹21 for more questions.',
                 requiresPayment: true,
                 pricePerQuestion: AI_CHAT_PRICE
             });
@@ -391,7 +448,7 @@ router.post('/ask-free', auth, async (req, res) => {
             isFreeQuestion: true,
             freeQuestionUsed: true,
             totalQuestions: aiChat.totalQuestions,
-            message: 'This was your free question. Future questions will cost ₹501 each.'
+            message: 'This was your free question. Future questions will cost ₹21 each.'
         });
     } catch (error) {
         console.error('❌ Error processing free question:', error.message);
@@ -435,7 +492,7 @@ router.post('/create-payment', auth, async (req, res) => {
             }
         });
         
-        // Create payment record
+        // Create payment record with tracking fields
         const payment = new UnifiedPayment({
             user: req.user._id,
             type: 'ai_chat',
@@ -443,7 +500,11 @@ router.post('/create-payment', auth, async (req, res) => {
             status: 'pending',
             razorpayOrderId: order.id,
             details: {
-                questionNumber: questionNumber
+                questionNumber: questionNumber,
+                questionAnswered: false,  // Track if AI responded
+                answerDelivered: false,   // Track if answer was sent
+                retryCount: 0,            // Track retry attempts
+                failureReason: null       // Track failure reason
             },
             description: `AI Astrologer Chat - Question #${questionNumber}`
         });
@@ -482,19 +543,8 @@ router.post('/ask-paid', auth, async (req, res) => {
             });
         }
         
-        // Verify payment signature
-        const body = razorpayOrderId + '|' + razorpayPaymentId;
-        const expectedSignature = crypto
-            .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
-            .update(body)
-            .digest('hex');
-        
-        if (expectedSignature !== razorpaySignature) {
-            return res.status(400).json({ error: 'Invalid payment signature' });
-        }
-        
-        // Update payment record
-        const payment = await UnifiedPayment.findOne({ 
+        // Find payment record
+        let payment = await UnifiedPayment.findOne({ 
             razorpayOrderId,
             user: req.user._id,
             type: 'ai_chat'
@@ -504,31 +554,81 @@ router.post('/ask-paid', auth, async (req, res) => {
             return res.status(404).json({ error: 'Payment not found' });
         }
         
-        if (payment.status === 'paid') {
-            return res.status(400).json({ error: 'Payment already used' });
+        // Check if this is a retry (payment made but question not answered)
+        const isRetry = payment.status === 'paid' && !payment.details.questionAnswered;
+        
+        if (payment.status === 'paid' && payment.details.questionAnswered) {
+            return res.status(400).json({ 
+                error: 'This payment has already been used for a question',
+                alreadyAnswered: true
+            });
         }
         
-        payment.status = 'paid';
-        payment.razorpayPaymentId = razorpayPaymentId;
-        payment.razorpaySignature = razorpaySignature;
-        payment.paidAt = new Date();
+        // First time payment verification
+        if (payment.status !== 'paid') {
+            // Verify payment signature
+            const body = razorpayOrderId + '|' + razorpayPaymentId;
+            const expectedSignature = crypto
+                .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+                .update(body)
+                .digest('hex');
+            
+            if (expectedSignature !== razorpaySignature) {
+                return res.status(400).json({ error: 'Invalid payment signature' });
+            }
+            
+            // Update payment status
+            payment.status = 'paid';
+            payment.razorpayPaymentId = razorpayPaymentId;
+            payment.razorpaySignature = razorpaySignature;
+            payment.paidAt = new Date();
+        }
+        
+        // Store the question being asked
+        payment.details.question = question.trim();
+        payment.details.retryCount = (payment.details.retryCount || 0) + (isRetry ? 1 : 0);
         await payment.save();
+        
+        console.log(`💬 Processing ${isRetry ? 'RETRY' : 'NEW'} paid question for user:`, req.user._id);
         
         // Get Kundli
         const kundli = await Kundli.findOne({ user: req.user._id });
         if (!kundli) {
-            return res.status(400).json({ error: 'Kundli not found' });
+            payment.details.failureReason = 'Kundli not found';
+            await payment.save();
+            return res.status(400).json({ error: 'Kundli not found', canRetry: true });
         }
         
         // Get or create AI chat
         let aiChat = await AIChat.findOne({ user: req.user._id });
         
         // Generate AI response
-        const aiResult = await generateAIResponse(
-            kundli, 
-            question.trim(), 
-            aiChat ? aiChat.messages : []
-        );
+        let aiResult;
+        try {
+            aiResult = await generateAIResponse(
+                kundli, 
+                question.trim(), 
+                aiChat ? aiChat.messages : []
+            );
+        } catch (aiError) {
+            // AI failed - save failure reason and allow retry
+            payment.details.failureReason = aiError.message;
+            await payment.save();
+            console.error('❌ AI generation failed for paid question:', aiError.message);
+            return res.status(500).json({ 
+                error: 'AI failed to generate response. You can retry with the same payment.',
+                canRetry: true,
+                paymentId: payment._id,
+                razorpayOrderId: payment.razorpayOrderId
+            });
+        }
+        
+        // AI succeeded! Mark as answered
+        payment.details.questionAnswered = true;
+        payment.details.answerDelivered = true;
+        payment.details.answeredAt = new Date();
+        payment.details.failureReason = null;
+        await payment.save();
         
         // Save to chat
         if (!aiChat) {
@@ -540,7 +640,8 @@ router.post('/ask-paid', auth, async (req, res) => {
                 totalQuestions: 1,
                 totalSpent: AI_CHAT_PRICE
             });
-        } else {
+        } else if (!isRetry) {
+            // Only increment if not a retry
             aiChat.totalQuestions += 1;
             aiChat.totalSpent += AI_CHAT_PRICE;
         }
@@ -577,6 +678,182 @@ router.post('/ask-paid', auth, async (req, res) => {
         });
     } catch (error) {
         console.error('Error processing paid question:', error);
+        res.status(400).json({ error: error.message });
+    }
+});
+
+// Check for unused paid questions (paid but AI failed)
+router.get('/check-unused-payment', auth, async (req, res) => {
+    try {
+        // Find any paid but unanswered questions for this user
+        const unusedPayment = await UnifiedPayment.findOne({
+            user: req.user._id,
+            type: 'ai_chat',
+            status: 'paid',
+            'details.questionAnswered': { $ne: true }
+        }).sort({ createdAt: -1 }).lean();
+        
+        if (!unusedPayment) {
+            return res.json({
+                success: true,
+                hasUnusedPayment: false
+            });
+        }
+        
+        res.json({
+            success: true,
+            hasUnusedPayment: true,
+            payment: {
+                _id: unusedPayment._id,
+                razorpayOrderId: unusedPayment.razorpayOrderId,
+                razorpayPaymentId: unusedPayment.razorpayPaymentId,
+                amount: unusedPayment.amount,
+                question: unusedPayment.details.question,
+                failureReason: unusedPayment.details.failureReason,
+                retryCount: unusedPayment.details.retryCount || 0,
+                paidAt: unusedPayment.paidAt
+            },
+            message: 'You have a paid question that was not answered. You can retry it.'
+        });
+    } catch (error) {
+        console.error('Error checking unused payment:', error);
+        res.status(400).json({ error: error.message });
+    }
+});
+
+// Retry a failed paid question
+router.post('/retry-paid', auth, async (req, res) => {
+    try {
+        const { question, paymentId } = req.body;
+        
+        if (!question) {
+            return res.status(400).json({ error: 'Question is required' });
+        }
+        
+        // Find the unused payment
+        let payment;
+        if (paymentId) {
+            payment = await UnifiedPayment.findOne({
+                _id: paymentId,
+                user: req.user._id,
+                type: 'ai_chat',
+                status: 'paid',
+                'details.questionAnswered': { $ne: true }
+            });
+        } else {
+            // Find any unused payment for this user
+            payment = await UnifiedPayment.findOne({
+                user: req.user._id,
+                type: 'ai_chat',
+                status: 'paid',
+                'details.questionAnswered': { $ne: true }
+            }).sort({ createdAt: -1 });
+        }
+        
+        if (!payment) {
+            return res.status(404).json({ 
+                error: 'No unused paid question found. Please make a new payment.',
+                requiresPayment: true
+            });
+        }
+        
+        // Validate word count
+        const wordCount = countWords(question);
+        if (wordCount > MAX_INPUT_WORDS) {
+            return res.status(400).json({ 
+                error: `Question too long. Maximum ${MAX_INPUT_WORDS} words allowed.` 
+            });
+        }
+        
+        // Update retry count and question
+        payment.details.question = question.trim();
+        payment.details.retryCount = (payment.details.retryCount || 0) + 1;
+        await payment.save();
+        
+        console.log(`🔄 Retry #${payment.details.retryCount} for user:`, req.user._id);
+        
+        // Get Kundli
+        const kundli = await Kundli.findOne({ user: req.user._id });
+        if (!kundli) {
+            payment.details.failureReason = 'Kundli not found';
+            await payment.save();
+            return res.status(400).json({ error: 'Kundli not found', canRetry: true });
+        }
+        
+        // Get AI chat
+        let aiChat = await AIChat.findOne({ user: req.user._id });
+        
+        // Generate AI response
+        let aiResult;
+        try {
+            aiResult = await generateAIResponse(
+                kundli, 
+                question.trim(), 
+                aiChat ? aiChat.messages : []
+            );
+        } catch (aiError) {
+            payment.details.failureReason = aiError.message;
+            await payment.save();
+            console.error('❌ AI retry failed:', aiError.message);
+            return res.status(500).json({ 
+                error: 'AI failed again. Please try later.',
+                canRetry: true,
+                retryCount: payment.details.retryCount
+            });
+        }
+        
+        // AI succeeded!
+        payment.details.questionAnswered = true;
+        payment.details.answerDelivered = true;
+        payment.details.answeredAt = new Date();
+        payment.details.failureReason = null;
+        await payment.save();
+        
+        // Save to chat (first time saving since previous attempts failed)
+        if (!aiChat) {
+            aiChat = new AIChat({
+                user: req.user._id,
+                kundli: kundli._id,
+                messages: [],
+                freeQuestionUsed: true,
+                totalQuestions: 1,
+                totalSpent: AI_CHAT_PRICE
+            });
+        } else {
+            aiChat.totalQuestions += 1;
+            aiChat.totalSpent += AI_CHAT_PRICE;
+        }
+        
+        aiChat.messages.push({
+            role: 'user',
+            content: question.trim(),
+            isFreeQuestion: false,
+            paymentId: payment._id,
+            createdAt: new Date()
+        });
+        
+        aiChat.messages.push({
+            role: 'ai',
+            content: aiResult.response,
+            isFreeQuestion: false,
+            isAstrologyQuestion: aiResult.isAstrologyQuestion,
+            paymentId: payment._id,
+            createdAt: new Date()
+        });
+        
+        await aiChat.save();
+        console.log('✅ Retry successful! Question answered.');
+        
+        res.json({
+            success: true,
+            answer: aiResult.response,
+            isAstrologyQuestion: aiResult.isAstrologyQuestion,
+            retrySuccessful: true,
+            totalQuestions: aiChat.totalQuestions,
+            totalSpent: aiChat.totalSpent
+        });
+    } catch (error) {
+        console.error('Error in retry:', error);
         res.status(400).json({ error: error.message });
     }
 });

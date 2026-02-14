@@ -176,6 +176,7 @@ app.get('/', (req, res) => {
             },
             kundli: {
                 save: 'emit: save_kundli({fullName, dateOfBirth, timeOfBirth, placeOfBirth, gender}) -> save_kundli_response',
+                edit: 'emit: edit_kundli({fullName?, dateOfBirth?, timeOfBirth?, placeOfBirth?, gender?}) -> edit_kundli_response (partial update)',
                 get: 'emit: get_my_kundli() -> get_my_kundli_response'
             },
             aiChat: {
@@ -205,7 +206,7 @@ app.get('/', (req, res) => {
             }
         },
         pricing: {
-            aiChat: '₹501 per question (first question free)',
+            aiChat: '₹21 per question (first question free)',
             astrologerChat: 'Set by admin via freeze amount'
         }
     });
@@ -633,7 +634,7 @@ io.on('connection', (socket) => {
                 freeQuestionUsed: aiChat?.freeQuestionUsed || false,
                 totalQuestions: aiChat?.totalQuestions || 0,
                 totalSpent: aiChat?.totalSpent || 0,
-                pricePerQuestion: 501
+                pricePerQuestion: 21
             });
         } catch (error) {
             console.error('Error getting AI chat status:', error);
@@ -704,7 +705,7 @@ io.on('connection', (socket) => {
                     success: false,
                     error: 'Free question already used',
                     requiresPayment: true,
-                    pricePerQuestion: 501
+                    pricePerQuestion: 21
                 });
                 return;
             }
@@ -775,7 +776,7 @@ io.on('connection', (socket) => {
             const UnifiedPayment = require('./models/UnifiedPayment');
             const AIChat = require('./models/AIChat');
             const Kundli = require('./models/Kundli');
-            const AI_CHAT_PRICE = 501;
+            const AI_CHAT_PRICE = 21;
             
             if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
                 socket.emit('error', 'Payment service not configured');
@@ -853,7 +854,7 @@ io.on('connection', (socket) => {
             const AIChat = require('./models/AIChat');
             const Kundli = require('./models/Kundli');
             const { generateAIResponse, countWords, MAX_INPUT_WORDS } = require('./routes/aichat');
-            const AI_CHAT_PRICE = 501;
+            const AI_CHAT_PRICE = 21;
             
             // Check word count
             const wordCount = countWords(question);
@@ -1672,6 +1673,76 @@ io.on('connection', (socket) => {
         } catch (error) {
             console.error('Error saving kundli:', error);
             socket.emit('error', 'Failed to save kundli');
+        }
+    });
+    
+    // Edit Kundli (partial update - only update provided fields)
+    socket.on('edit_kundli', async (data) => {
+        try {
+            if (!socket.userId) {
+                socket.emit('error', 'Not authenticated');
+                return;
+            }
+            
+            const { fullName, dateOfBirth, timeOfBirth, placeOfBirth, gender, latitude, longitude } = data;
+            
+            const Kundli = require('./models/Kundli');
+            
+            // Find existing kundli
+            const kundli = await Kundli.findOne({ user: socket.userId });
+            if (!kundli) {
+                socket.emit('edit_kundli_response', {
+                    success: false,
+                    error: 'Kundli not found. Please save your Kundli first.'
+                });
+                return;
+            }
+            
+            // Update only provided fields
+            if (fullName !== undefined && fullName.trim()) {
+                kundli.fullName = fullName.trim();
+            }
+            if (dateOfBirth !== undefined) {
+                const dob = new Date(dateOfBirth);
+                if (isNaN(dob.getTime())) {
+                    socket.emit('error', 'Invalid date format');
+                    return;
+                }
+                kundli.dateOfBirth = dob;
+            }
+            if (timeOfBirth !== undefined) {
+                const timeRegex = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/;
+                if (!timeRegex.test(timeOfBirth)) {
+                    socket.emit('error', 'Time must be in HH:MM format (24-hour)');
+                    return;
+                }
+                kundli.timeOfBirth = timeOfBirth;
+            }
+            if (placeOfBirth !== undefined && placeOfBirth.trim()) {
+                kundli.placeOfBirth = placeOfBirth.trim();
+            }
+            if (gender !== undefined) {
+                if (!['male', 'female', 'other'].includes(gender.toLowerCase())) {
+                    socket.emit('error', 'Gender must be male, female, or other');
+                    return;
+                }
+                kundli.gender = gender.toLowerCase();
+            }
+            if (latitude !== undefined) kundli.coordinates.latitude = latitude;
+            if (longitude !== undefined) kundli.coordinates.longitude = longitude;
+            
+            kundli.updatedAt = new Date();
+            await kundli.save();
+            
+            socket.emit('edit_kundli_response', {
+                success: true,
+                message: 'Kundli updated successfully',
+                kundli
+            });
+            
+        } catch (error) {
+            console.error('Error editing kundli:', error);
+            socket.emit('error', 'Failed to edit kundli');
         }
     });
     

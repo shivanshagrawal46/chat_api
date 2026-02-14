@@ -40,6 +40,12 @@ const unifiedPaymentSchema = new mongoose.Schema({
     details: {
         // For AI Chat
         questionNumber: { type: Number, default: null },
+        question: { type: String, default: null },           // Store the question asked
+        questionAnswered: { type: Boolean, default: false }, // Track if AI responded successfully
+        answerDelivered: { type: Boolean, default: false },  // Track if answer was sent to user
+        retryCount: { type: Number, default: 0 },            // Number of retry attempts
+        failureReason: { type: String, default: null },      // Why it failed (if any)
+        answeredAt: { type: Date, default: null },           // When AI answered
         
         // For Astrologer Chat
         astrologerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', default: null },

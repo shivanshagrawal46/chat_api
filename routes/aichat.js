@@ -40,7 +40,7 @@ try {
 // Constants
 const AI_CHAT_PRICE = 21; // ₹21 per question
 const MAX_INPUT_WORDS = 200;
-const MAX_OUTPUT_TOKENS = 2048;  // Increased for Hindi/Hinglish support (Devanagari uses 2-4 tokens per char)
+const MAX_OUTPUT_TOKENS = 5000;  // Total output budget (thinking + response)
 
 // Helper: Count words
 const countWords = (text) => {
@@ -207,26 +207,14 @@ User's Birth Details (Kundli):
         ).join('\n');
     }
 
-    // Detect if question is in Hindi (Devanagari) or Hinglish (transliterated Hindi in Roman script)
-    const isHindiQuestion = /[\u0900-\u097F]/.test(question);
-    const hinglishPatterns = /\b(kab|kaisa|kaisi|kya|mera|meri|mere|batao|bataiye|bataye|hoga|hogi|milegi|milega|naukri|shaadi|vivah|bhavishya|kundli|kundali|upay|karu|karein|karoon|aayegi|aayega|rahega|rahegi|achha|bura|shubh|ashubh|graho|rashifal|padhai|paisa|dhan|sehat|bacho|bacche)\b/i.test(question);
-    const isHinglishQuestion = !isHindiQuestion && hinglishPatterns;
-
-    const languageInstruction = isHindiQuestion 
-        ? 'HINDI (Devanagari script) - respond in Hindi using Devanagari script' 
-        : isHinglishQuestion 
-            ? 'HINGLISH (Hindi in Roman script) - respond in Hinglish (Hindi written in Roman/English script, the way the user wrote)' 
-            : 'ENGLISH - respond in English';
-
     const systemPrompt = `You are an expert Vedic astrologer AI assistant. You ONLY provide astrological guidance based on the user's birth details (Kundli).
 
 LANGUAGE INSTRUCTIONS:
-- You are TRILINGUAL and can communicate in Hindi, Hinglish, and English.
-- If the user asks in Hindi (Devanagari script), respond in Hindi (Devanagari script).
-- If the user asks in Hinglish (Hindi written in Roman/English script like "meri shaadi kab hogi"), respond in Hinglish (Hindi in Roman script).
-- If the user asks in English, respond in English.
-- MATCH the user's language style. If they write in Hinglish, reply in Hinglish. Do NOT switch to Devanagari for Hinglish questions.
-- The current question is in: ${languageInstruction}
+- You MUST reply in the SAME language the user writes in.
+- If the user writes in English, reply ONLY in English.
+- If the user writes in Hindi (Devanagari script like "मेरी शादी कब होगी"), reply in Hindi Devanagari.
+- If the user writes in Hinglish (Hindi in Roman script like "meri shaadi kab hogi"), reply in Hinglish Roman script.
+- NEVER mix languages. NEVER reply in Hinglish or Hindi if the user asked in English.
 
 IMPORTANT RESTRICTIONS:
 - You MUST ONLY answer questions related to astrology, horoscope, kundli, zodiac, planets, predictions, and spiritual guidance.
@@ -247,23 +235,27 @@ Instructions:
 8. Always end with positive guidance or remedies if discussing challenges
 9. If the question is not about astrology, politely decline and suggest astrology-related topics
 10. Do NOT write long paragraphs - be brief and to the point
-11. If responding in Hindi, use proper Devanagari script. If responding in Hinglish, use Roman script (the way the user wrote). ALWAYS match the user's language style.
+11. MATCH the user's language exactly. English question = English answer. Hindi question = Hindi answer. Hinglish question = Hinglish answer. NEVER use Hindi/Hinglish for English questions.
 12. CRITICAL: Always complete your response with a proper conclusion. NEVER leave a sentence unfinished.
 
 User's Question: ${question}
 
-Provide a COMPLETE and CONCISE astrological response (200-400 words). Make sure to finish with a proper conclusion:`;
+Provide a COMPLETE astrological response in the SAME language as the question:`;
 
     try {
         console.log('🔮 Calling Gemini AI for question:', question.substring(0, 50) + '...');
         
-        // New SDK syntax
+        // New SDK syntax - Gemini 3 Pro has thinking mode ON by default
+        // Thinking tokens count towards maxOutputTokens, so we set a budget
         const result = await genAI.models.generateContent({
             model: GEMINI_MODEL,
             contents: systemPrompt,
             config: {
                 maxOutputTokens: MAX_OUTPUT_TOKENS,
                 temperature: 0.7,
+                thinkingConfig: {
+                    thinkingBudget: 3024  // Thinking capped at 3024, remaining ~1976 for actual response
+                }
             }
         });
         

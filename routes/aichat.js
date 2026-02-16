@@ -244,10 +244,17 @@ Provide a COMPLETE astrological response in the SAME language as the question:`;
 
     try {
         console.log('🔮 Calling Gemini AI for question:', question.substring(0, 50) + '...');
+        const startTime = Date.now();
+        
+        // Add 45-second timeout to prevent hanging forever
+        const AI_TIMEOUT_MS = 45000;
+        const timeoutPromise = new Promise((_, reject) => 
+            setTimeout(() => reject(new Error('AI response timed out after 45 seconds. Please retry.')), AI_TIMEOUT_MS)
+        );
         
         // New SDK syntax - Gemini 3 Pro has thinking mode ON by default
         // Thinking tokens count towards maxOutputTokens, so we set a budget
-        const result = await genAI.models.generateContent({
+        const aiPromise = genAI.models.generateContent({
             model: GEMINI_MODEL,
             contents: systemPrompt,
             config: {
@@ -259,8 +266,12 @@ Provide a COMPLETE astrological response in the SAME language as the question:`;
             }
         });
         
+        // Race: AI response vs timeout
+        const result = await Promise.race([aiPromise, timeoutPromise]);
+        
+        const elapsed = Date.now() - startTime;
         const response = result.text;
-        console.log('✅ Gemini AI response received, length:', response?.length || 0);
+        console.log(`✅ Gemini AI response received in ${elapsed}ms, length: ${response?.length || 0}`);
         
         if (!response || response.trim().length === 0) {
             throw new Error('Empty response from AI');

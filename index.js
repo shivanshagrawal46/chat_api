@@ -38,8 +38,8 @@ const io = new Server(server, {
     // Performance optimizations
     transports: ['websocket', 'polling'], // Prefer WebSocket
     upgradeTimeout: 10000,
-    pingTimeout: 5000,
-    pingInterval: 10000,
+    pingTimeout: 60000,    // 60s - Gemini 3 Pro can take 15-30s to respond
+    pingInterval: 25000,   // 25s - less frequent pings to avoid disconnect during AI processing
     connectTimeout: 45000,
     maxHttpBufferSize: 1e6, // 1MB
     allowEIO3: true,
@@ -710,6 +710,9 @@ io.on('connection', (socket) => {
                 return;
             }
             
+            // Tell client we're processing (so they know server received it)
+            socket.emit('ai_processing', { status: 'thinking', message: 'AI is generating your answer...' });
+            
             // Generate AI response
             const aiResult = await generateAIResponse(
                 kundli, 
@@ -760,7 +763,10 @@ io.on('connection', (socket) => {
             
         } catch (error) {
             console.error('Error processing free AI question:', error);
-            socket.emit('error', error.message || 'Failed to process question');
+            socket.emit('ai_ask_free_response', {
+                success: false,
+                error: error.message || 'Failed to process question'
+            });
         }
     });
     
@@ -836,6 +842,8 @@ io.on('connection', (socket) => {
     
     // Ask Paid AI Question (after payment verification)
     socket.on('ai_ask_paid', async (data) => {
+        let payment = null; // Track payment for error recovery
+        
         try {
             if (!socket.userId) {
                 socket.emit('error', 'Not authenticated');
@@ -875,7 +883,7 @@ io.on('connection', (socket) => {
             }
             
             // Update payment record
-            const payment = await UnifiedPayment.findOne({ 
+            payment = await UnifiedPayment.findOne({ 
                 razorpayOrderId, 
                 user: socket.userId,
                 type: 'ai_chat'
@@ -886,33 +894,89 @@ io.on('connection', (socket) => {
                 return;
             }
             
-            if (payment.status === 'paid') {
-                socket.emit('error', 'Payment already processed');
+            // Check if already answered (prevent double-charge)
+            if (payment.status === 'paid' && payment.details?.questionAnswered) {
+                socket.emit('ai_ask_paid_response', {
+                    success: false,
+                    error: 'This payment has already been used for a question',
+                    alreadyAnswered: true
+                });
                 return;
             }
             
-            payment.status = 'paid';
-            payment.razorpayPaymentId = razorpayPaymentId;
-            payment.razorpaySignature = razorpaySignature;
-            payment.paidAt = new Date();
+            // Check if this is a retry (paid but AI failed previously)
+            const isRetry = payment.status === 'paid' && !payment.details?.questionAnswered;
+            
+            // First time: verify and mark as paid
+            if (payment.status !== 'paid') {
+                payment.status = 'paid';
+                payment.razorpayPaymentId = razorpayPaymentId;
+                payment.razorpaySignature = razorpaySignature;
+                payment.paidAt = new Date();
+            }
+            
+            // Track the question
+            payment.details = payment.details || {};
+            payment.details.question = question.trim();
+            payment.details.retryCount = (payment.details.retryCount || 0) + (isRetry ? 1 : 0);
             await payment.save();
+            
+            // Tell client we're processing (so they know server received it)
+            socket.emit('ai_processing', { 
+                status: 'thinking', 
+                message: 'Payment verified! AI is generating your answer...',
+                paymentId: payment._id
+            });
+            
+            console.log(`💬 Socket: Processing ${isRetry ? 'RETRY' : 'NEW'} paid question for user:`, socket.userId);
             
             // Get kundli
             const kundli = await Kundli.findOne({ user: socket.userId });
             if (!kundli) {
-                socket.emit('error', 'Kundli not found');
+                payment.details.failureReason = 'Kundli not found';
+                await payment.save();
+                socket.emit('ai_ask_paid_response', {
+                    success: false,
+                    error: 'Kundli not found',
+                    canRetry: true,
+                    paymentId: payment._id,
+                    razorpayOrderId: payment.razorpayOrderId
+                });
                 return;
             }
             
             // Get or create AI chat
             let aiChat = await AIChat.findOne({ user: socket.userId });
             
-            // Generate AI response
-            const aiResult = await generateAIResponse(
-                kundli, 
-                question.trim(), 
-                aiChat ? aiChat.messages : []
-            );
+            // Generate AI response with error recovery
+            let aiResult;
+            try {
+                aiResult = await generateAIResponse(
+                    kundli, 
+                    question.trim(), 
+                    aiChat ? aiChat.messages : []
+                );
+            } catch (aiError) {
+                // AI failed — save failure reason, allow retry
+                payment.details.failureReason = aiError.message;
+                await payment.save();
+                console.error('❌ Socket: AI generation failed for paid question:', aiError.message);
+                socket.emit('ai_ask_paid_response', {
+                    success: false,
+                    error: 'AI failed to generate response. You can retry with the same payment.',
+                    canRetry: true,
+                    paymentId: payment._id,
+                    razorpayOrderId: payment.razorpayOrderId
+                });
+                return;
+            }
+            
+            // AI succeeded! Mark as answered
+            payment.details.questionAnswered = true;
+            payment.details.answerDelivered = true;
+            payment.details.answeredAt = new Date();
+            payment.details.failureReason = null;
+            await payment.save();
             
             // Save to chat
             if (!aiChat) {
@@ -924,7 +988,7 @@ io.on('connection', (socket) => {
                     totalQuestions: 1,
                     totalSpent: AI_CHAT_PRICE
                 });
-            } else {
+            } else if (!isRetry) {
                 aiChat.totalQuestions += 1;
                 aiChat.totalSpent += AI_CHAT_PRICE;
             }
@@ -948,6 +1012,7 @@ io.on('connection', (socket) => {
             });
             
             await aiChat.save();
+            console.log('✅ Socket: Paid question answered successfully for user:', socket.userId);
             
             socket.emit('ai_ask_paid_response', {
                 success: true,
@@ -961,7 +1026,23 @@ io.on('connection', (socket) => {
             
         } catch (error) {
             console.error('Error processing paid AI question:', error);
-            socket.emit('error', error.message || 'Failed to process question');
+            // Save failure to payment if we have a payment record
+            if (payment) {
+                try {
+                    payment.details = payment.details || {};
+                    payment.details.failureReason = error.message;
+                    await payment.save();
+                } catch (saveErr) {
+                    console.error('Failed to save payment failure:', saveErr);
+                }
+            }
+            socket.emit('ai_ask_paid_response', {
+                success: false,
+                error: error.message || 'Failed to process question',
+                canRetry: !!payment,
+                paymentId: payment?._id,
+                razorpayOrderId: payment?.razorpayOrderId
+            });
         }
     });
     
@@ -1872,7 +1953,12 @@ app.use('/api/call', callRoutes);
 app.use('/api/payment', paymentRoutes);
 app.use('/api/chatmeta', chatMetaRoutes);
 app.use('/api/kundli', kundliRoutes);
-app.use('/api/ai-chat', aiChatRoutes);
+// AI chat routes need longer timeout (Gemini 3 Pro can take 15-30s to respond)
+app.use('/api/ai-chat', (req, res, next) => {
+    req.setTimeout(60000); // 60 second request timeout
+    res.setTimeout(60000); // 60 second response timeout
+    next();
+}, aiChatRoutes);
 app.use('/api/payments', unifiedPaymentRoutes);
 
 // Error handling middleware

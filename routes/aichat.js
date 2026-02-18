@@ -12,6 +12,9 @@ const crypto = require('crypto');
 // Initialize Gemini AI (New SDK)
 let genAI = null;
 const GEMINI_MODEL = 'gemini-3-pro-preview';
+const GEMINI_FALLBACK_MODEL = 'gemini-2.5-pro';
+const MAX_AI_RETRIES = 3;
+const RETRY_DELAY_MS = 2000;
 
 try {
     if (process.env.GEMINI_API_KEY) {
@@ -264,46 +267,69 @@ User's Question: ${question}
 
 Provide a COMPLETE astrological response in the SAME language as the question:`;
 
-        console.log('🔮 Calling Gemini AI for question:', question.substring(0, 50) + '...');
-        console.log('🔮 Model:', GEMINI_MODEL, '| User:', userId);
         const startTime = Date.now();
-        
         const AI_TIMEOUT_MS = 90000;
-        const timeoutPromise = new Promise((_, reject) => 
-            setTimeout(() => reject(new Error('AI response timed out after 90 seconds. Please retry.')), AI_TIMEOUT_MS)
-        );
         
-        let aiPromise;
-        try {
-            aiPromise = genAI.models.generateContent({
-                model: GEMINI_MODEL,
-                contents: systemPrompt,
-                config: {
-                    maxOutputTokens: MAX_OUTPUT_TOKENS,
-                    temperature: 0.7,
-                    thinkingConfig: {
-                        thinkingBudget: 2524
+        // Retry loop: try primary model, then fallback model on 503/429 errors
+        let result;
+        let lastError;
+        
+        for (let attempt = 1; attempt <= MAX_AI_RETRIES; attempt++) {
+            const useModel = attempt <= 2 ? GEMINI_MODEL : GEMINI_FALLBACK_MODEL;
+            const thinkBudget = useModel === GEMINI_MODEL ? 2524 : 1024;
+            
+            console.log(`🔮 Attempt ${attempt}/${MAX_AI_RETRIES} | Model: ${useModel} | User: ${userId}`);
+            console.log(`🔮 Question: ${question.substring(0, 50)}...`);
+            
+            const timeoutPromise = new Promise((_, reject) => 
+                setTimeout(() => reject(new Error('AI response timed out after 90 seconds. Please retry.')), AI_TIMEOUT_MS)
+            );
+            
+            try {
+                const aiPromise = genAI.models.generateContent({
+                    model: useModel,
+                    contents: systemPrompt,
+                    config: {
+                        maxOutputTokens: MAX_OUTPUT_TOKENS,
+                        temperature: 0.7,
+                        thinkingConfig: {
+                            thinkingBudget: thinkBudget
+                        }
                     }
+                });
+                console.log('📡 Gemini API call initiated, waiting for response...');
+                
+                result = await Promise.race([aiPromise, timeoutPromise]);
+                console.log(`✅ Gemini responded on attempt ${attempt}`);
+                break;
+                
+            } catch (retryError) {
+                const elapsed = Date.now() - startTime;
+                lastError = retryError;
+                const status = retryError.status || retryError.code;
+                console.error(`❌ Attempt ${attempt} failed after ${elapsed}ms: ${retryError.message}`);
+                if (status) console.error(`❌ HTTP Status: ${status}`);
+                
+                const isRetryable = status === 503 || status === 429 || status === 500;
+                if (isRetryable && attempt < MAX_AI_RETRIES) {
+                    const delay = RETRY_DELAY_MS * attempt;
+                    console.log(`⏳ Retryable error (${status}). Waiting ${delay}ms before retry...`);
+                    await new Promise(r => setTimeout(r, delay));
+                    continue;
                 }
-            });
-            console.log('📡 Gemini API call initiated, waiting for response...');
-        } catch (syncError) {
-            console.error('❌ Gemini SDK sync error (call creation failed):', syncError.message);
-            console.error('❌ Full error:', JSON.stringify(syncError, Object.getOwnPropertyNames(syncError)));
-            throw new Error(`Gemini SDK error: ${syncError.message}`);
+                
+                if (!isRetryable) {
+                    console.error('❌ Non-retryable error, giving up');
+                    console.error('❌ Error name:', retryError.name, '| Code:', retryError.code || 'N/A');
+                    if (retryError.errorDetails) console.error('❌ Error details:', JSON.stringify(retryError.errorDetails));
+                    throw retryError;
+                }
+            }
         }
         
-        // Race: AI response vs timeout
-        let result;
-        try {
-            result = await Promise.race([aiPromise, timeoutPromise]);
-        } catch (raceError) {
-            const elapsed = Date.now() - startTime;
-            console.error(`❌ Gemini Promise.race failed after ${elapsed}ms:`, raceError.message);
-            console.error('❌ Error name:', raceError.name, '| Code:', raceError.code || 'N/A');
-            if (raceError.status) console.error('❌ HTTP Status:', raceError.status);
-            if (raceError.errorDetails) console.error('❌ Error details:', JSON.stringify(raceError.errorDetails));
-            throw raceError;
+        if (!result) {
+            console.error('❌ All retry attempts exhausted');
+            throw lastError || new Error('AI failed after all retry attempts');
         }
         
         const elapsed = Date.now() - startTime;

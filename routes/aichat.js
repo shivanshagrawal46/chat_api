@@ -11,8 +11,8 @@ const crypto = require('crypto');
 
 // Initialize Gemini AI (New SDK)
 let genAI = null;
-const GEMINI_MODEL = 'gemini-3-pro-preview';
-const GEMINI_FALLBACK_MODEL = 'gemini-2.5-pro';
+const GEMINI_MODEL = 'gemini-2.5-pro';
+const GEMINI_FALLBACK_MODEL = 'gemini-2.5-flash';
 const MAX_AI_RETRIES = 3;
 const RETRY_DELAY_MS = 2000;
 

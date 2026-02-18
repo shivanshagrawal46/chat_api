@@ -42,6 +42,10 @@ const AI_CHAT_PRICE = 21; // ₹21 per question
 const MAX_INPUT_WORDS = 200;
 const MAX_OUTPUT_TOKENS = 5000;  // Total output budget (thinking + response)
 
+// Per-user processing lock to prevent duplicate concurrent AI calls
+// (e.g., frontend sending via both Socket.IO and REST simultaneously)
+const activeAIRequests = new Map();
+
 // Helper: Count words
 const countWords = (text) => {
     return text.trim().split(/\s+/).filter(word => word.length > 0).length;
@@ -179,17 +183,35 @@ const generateAIResponse = async (kundli, question, chatHistory) => {
         throw new Error('AI service not available. Please check GEMINI_API_KEY configuration.');
     }
     
-    // Validate if question is astrology-related
-    const isAstroQuestion = isAstrologyQuestion(question);
-    console.log('🔍 Is astrology question:', isAstroQuestion, '| Question:', question.substring(0, 30));
-    
-    if (!isAstroQuestion) {
-        console.log('⚠️ Non-astrology question detected, returning default response');
-        return { response: NON_ASTROLOGY_RESPONSE, isAstrologyQuestion: false };
+    // Per-user lock to prevent duplicate concurrent calls
+    // (frontend may fire both Socket.IO and REST for the same question)
+    const userId = kundli.user?.toString() || 'unknown';
+    if (activeAIRequests.has(userId)) {
+        console.log('⏳ AI request already in progress for user:', userId, '— skipping duplicate');
+        throw new Error('Your question is already being processed. Please wait for the response.');
     }
+    activeAIRequests.set(userId, Date.now());
     
-    // Build context with kundli details
-    const kundliContext = `
+    // Safety: auto-release lock after 100s no matter what (longer than 90s AI timeout)
+    const lockTimeout = setTimeout(() => {
+        if (activeAIRequests.has(userId)) {
+            console.warn('⚠️ Force-releasing stale AI lock for user:', userId);
+            activeAIRequests.delete(userId);
+        }
+    }, 100000);
+    
+    try {
+        // Validate if question is astrology-related
+        const isAstroQuestion = isAstrologyQuestion(question);
+        console.log('🔍 Is astrology question:', isAstroQuestion, '| Question:', question.substring(0, 50));
+        
+        if (!isAstroQuestion) {
+            console.log('⚠️ Non-astrology question detected, returning default response');
+            return { response: NON_ASTROLOGY_RESPONSE, isAstrologyQuestion: false };
+        }
+        
+        // Build context with kundli details
+        const kundliContext = `
 User's Birth Details (Kundli):
 - Name: ${kundli.fullName}
 - Date of Birth: ${new Date(kundli.dateOfBirth).toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' })}
@@ -198,16 +220,16 @@ User's Birth Details (Kundli):
 - Gender: ${kundli.gender}
 `;
 
-    // Build chat history context (last 10 messages for context)
-    let historyContext = '';
-    if (chatHistory && chatHistory.length > 0) {
-        const recentHistory = chatHistory.slice(-10);
-        historyContext = '\nPrevious Conversation:\n' + recentHistory.map(msg => 
-            `${msg.role === 'user' ? 'User' : 'Astrologer AI'}: ${msg.content}`
-        ).join('\n');
-    }
+        // Build chat history context (last 10 messages for context)
+        let historyContext = '';
+        if (chatHistory && chatHistory.length > 0) {
+            const recentHistory = chatHistory.slice(-10);
+            historyContext = '\nPrevious Conversation:\n' + recentHistory.map(msg => 
+                `${msg.role === 'user' ? 'User' : 'Astrologer AI'}: ${msg.content}`
+            ).join('\n');
+        }
 
-    const systemPrompt = `You are an expert Vedic astrologer AI assistant. You ONLY provide astrological guidance based on the user's birth details (Kundli).
+        const systemPrompt = `You are an expert Vedic astrologer AI assistant. You ONLY provide astrological guidance based on the user's birth details (Kundli).
 
 LANGUAGE INSTRUCTIONS:
 - You MUST reply in the SAME language the user writes in.
@@ -242,45 +264,93 @@ User's Question: ${question}
 
 Provide a COMPLETE astrological response in the SAME language as the question:`;
 
-    try {
         console.log('🔮 Calling Gemini AI for question:', question.substring(0, 50) + '...');
+        console.log('🔮 Model:', GEMINI_MODEL, '| User:', userId);
         const startTime = Date.now();
         
-        // Add 45-second timeout to prevent hanging forever
-        const AI_TIMEOUT_MS = 45000;
+        const AI_TIMEOUT_MS = 90000;
         const timeoutPromise = new Promise((_, reject) => 
-            setTimeout(() => reject(new Error('AI response timed out after 45 seconds. Please retry.')), AI_TIMEOUT_MS)
+            setTimeout(() => reject(new Error('AI response timed out after 90 seconds. Please retry.')), AI_TIMEOUT_MS)
         );
         
-        // New SDK syntax - Gemini 3 Pro has thinking mode ON by default
-        // Thinking tokens count towards maxOutputTokens, so we set a budget
-        const aiPromise = genAI.models.generateContent({
-            model: GEMINI_MODEL,
-            contents: systemPrompt,
-            config: {
-                maxOutputTokens: MAX_OUTPUT_TOKENS,
-                temperature: 0.7,
-                thinkingConfig: {
-                    thinkingBudget: 3024  // Thinking capped at 3024, remaining ~1976 for actual response
+        let aiPromise;
+        try {
+            aiPromise = genAI.models.generateContent({
+                model: GEMINI_MODEL,
+                contents: systemPrompt,
+                config: {
+                    maxOutputTokens: MAX_OUTPUT_TOKENS,
+                    temperature: 0.7,
+                    thinkingConfig: {
+                        thinkingBudget: 2524
+                    }
                 }
-            }
-        });
-        
-        // Race: AI response vs timeout
-        const result = await Promise.race([aiPromise, timeoutPromise]);
-        
-        const elapsed = Date.now() - startTime;
-        const response = result.text;
-        console.log(`✅ Gemini AI response received in ${elapsed}ms, length: ${response?.length || 0}`);
-        
-        if (!response || response.trim().length === 0) {
-            throw new Error('Empty response from AI');
+            });
+            console.log('📡 Gemini API call initiated, waiting for response...');
+        } catch (syncError) {
+            console.error('❌ Gemini SDK sync error (call creation failed):', syncError.message);
+            console.error('❌ Full error:', JSON.stringify(syncError, Object.getOwnPropertyNames(syncError)));
+            throw new Error(`Gemini SDK error: ${syncError.message}`);
         }
         
+        // Race: AI response vs timeout
+        let result;
+        try {
+            result = await Promise.race([aiPromise, timeoutPromise]);
+        } catch (raceError) {
+            const elapsed = Date.now() - startTime;
+            console.error(`❌ Gemini Promise.race failed after ${elapsed}ms:`, raceError.message);
+            console.error('❌ Error name:', raceError.name, '| Code:', raceError.code || 'N/A');
+            if (raceError.status) console.error('❌ HTTP Status:', raceError.status);
+            if (raceError.errorDetails) console.error('❌ Error details:', JSON.stringify(raceError.errorDetails));
+            throw raceError;
+        }
+        
+        const elapsed = Date.now() - startTime;
+        console.log(`📥 Gemini raw response received in ${elapsed}ms`);
+        
+        // Defensive response parsing — result.text can throw in some SDK versions
+        let response;
+        try {
+            response = result.text;
+        } catch (textError) {
+            console.error('❌ Error reading result.text:', textError.message);
+            // Fallback: try extracting from candidates directly
+            if (result.candidates && result.candidates[0]?.content?.parts) {
+                const parts = result.candidates[0].content.parts;
+                response = parts
+                    .filter(p => !p.thought)
+                    .map(p => p.text)
+                    .filter(Boolean)
+                    .join('');
+                console.log('🔄 Extracted response from candidates, length:', response?.length || 0);
+            }
+        }
+        
+        if (!response || response.trim().length === 0) {
+            console.error('❌ Empty AI response. Result keys:', result ? Object.keys(result) : 'null');
+            if (result?.candidates) {
+                console.error('❌ Candidates:', JSON.stringify(result.candidates?.map(c => ({
+                    finishReason: c.finishReason,
+                    partsCount: c.content?.parts?.length
+                }))));
+            }
+            if (result?.promptFeedback) {
+                console.error('❌ Prompt feedback (may be blocked):', JSON.stringify(result.promptFeedback));
+            }
+            throw new Error('Empty response from AI. The prompt may have been blocked by safety filters.');
+        }
+        
+        console.log(`✅ Gemini AI response received in ${elapsed}ms, length: ${response.length}`);
         return { response, isAstrologyQuestion: true };
+        
     } catch (aiError) {
         console.error('❌ Gemini AI Error:', aiError.message);
+        console.error('❌ Error stack:', aiError.stack);
         throw new Error(`AI generation failed: ${aiError.message}`);
+    } finally {
+        clearTimeout(lockTimeout);
+        activeAIRequests.delete(userId);
     }
 };
 
@@ -325,23 +395,26 @@ router.get('/status', auth, async (req, res) => {
 // Get chat history
 router.get('/history', auth, async (req, res) => {
     try {
-        console.log('📜 Fetching chat history for user:', req.user._id);
+        const userId = req.user._id.toString();
+        const isProcessing = activeAIRequests.has(userId);
+        console.log('📜 REST: Fetching chat history for user:', userId, isProcessing ? '(AI still processing)' : '');
         
         const aiChat = await AIChat.findOne({ user: req.user._id })
             .populate('kundli')
             .lean();
         
         if (!aiChat) {
-            console.log('📜 No chat found for user');
+            console.log('📜 REST: No chat found for user');
             return res.json({
                 success: true,
                 messages: [],
                 totalQuestions: 0,
-                freeQuestionUsed: false
+                freeQuestionUsed: false,
+                isProcessing
             });
         }
         
-        console.log('📜 Chat found, messages count:', aiChat.messages?.length || 0);
+        console.log('📜 REST: Chat found, messages count:', aiChat.messages?.length || 0);
         
         res.json({
             success: true,
@@ -349,7 +422,8 @@ router.get('/history', auth, async (req, res) => {
             totalQuestions: aiChat.totalQuestions,
             freeQuestionUsed: aiChat.freeQuestionUsed,
             totalSpent: aiChat.totalSpent,
-            kundli: aiChat.kundli
+            kundli: aiChat.kundli,
+            isProcessing
         });
     } catch (error) {
         console.error('Error fetching chat history:', error);
@@ -403,13 +477,22 @@ router.post('/ask-free', auth, async (req, res) => {
             });
         }
         
-        console.log('🤖 Generating AI response...');
-        // Generate AI response
-        const aiResult = await generateAIResponse(
-            kundli, 
-            question.trim(), 
-            aiChat ? aiChat.messages : []
-        );
+        console.log('🤖 REST: Generating AI response for user:', req.user._id.toString());
+        // Generate AI response (has built-in per-user lock to prevent duplicates)
+        let aiResult;
+        try {
+            aiResult = await generateAIResponse(
+                kundli, 
+                question.trim(), 
+                aiChat ? aiChat.messages : []
+            );
+        } catch (aiError) {
+            console.error('❌ REST: AI generation failed:', aiError.message);
+            return res.status(500).json({ 
+                error: aiError.message || 'AI failed to generate response. Please try again.',
+                canRetry: true
+            });
+        }
         
         // Save to chat
         if (!aiChat) {
@@ -443,7 +526,7 @@ router.post('/ask-free', auth, async (req, res) => {
         });
         
         await aiChat.save();
-        console.log('💾 Chat saved! Total messages:', aiChat.messages.length);
+        console.log('💾 REST: Chat saved! Total messages:', aiChat.messages.length, '| User:', req.user._id.toString());
         
         res.json({
             success: true,
@@ -455,10 +538,11 @@ router.post('/ask-free', auth, async (req, res) => {
             message: 'This was your free question. Future questions will cost ₹21 each.'
         });
     } catch (error) {
-        console.error('❌ Error processing free question:', error.message);
-        console.error('Stack:', error.stack);
+        console.error('❌ REST: Error processing free question:', error.message);
+        console.error('❌ REST: Stack:', error.stack);
         res.status(500).json({ 
             error: error.message || 'Failed to process your question',
+            canRetry: true,
             details: process.env.NODE_ENV === 'development' ? error.stack : undefined
         });
     }
@@ -937,3 +1021,4 @@ module.exports.countWords = countWords;
 module.exports.AI_CHAT_PRICE = AI_CHAT_PRICE;
 module.exports.MAX_INPUT_WORDS = MAX_INPUT_WORDS;
 module.exports.NON_ASTROLOGY_RESPONSE = NON_ASTROLOGY_RESPONSE;
+module.exports.activeAIRequests = activeAIRequests;

@@ -38,9 +38,9 @@ const io = new Server(server, {
     // Performance optimizations
     transports: ['websocket', 'polling'], // Prefer WebSocket
     upgradeTimeout: 10000,
-    pingTimeout: 60000,    // 60s - Gemini 3 Pro can take 15-30s to respond
+    pingTimeout: 120000,   // 120s - Gemini 3 Pro with thinking can take up to 90s
     pingInterval: 25000,   // 25s - less frequent pings to avoid disconnect during AI processing
-    connectTimeout: 45000,
+    connectTimeout: 60000,
     maxHttpBufferSize: 1e6, // 1MB
     allowEIO3: true,
     perMessageDeflate: {
@@ -650,15 +650,28 @@ io.on('connection', (socket) => {
                 return;
             }
             
+            console.log('📜 Socket: Fetching chat history for user:', socket.userId);
+            
             const AIChat = require('./models/AIChat');
+            const { activeAIRequests } = require('./routes/aichat');
             const aiChat = await AIChat.findOne({ user: socket.userId })
                 .populate('kundli', 'fullName dateOfBirth placeOfBirth')
                 .lean();
             
+            // Let client know if AI is still processing
+            const isProcessing = activeAIRequests.has(socket.userId);
+            
+            if (!aiChat) {
+                console.log('📜 Socket: No chat found for user:', socket.userId, isProcessing ? '(AI still processing)' : '');
+            } else {
+                console.log('📜 Socket: Chat found, messages:', aiChat.messages?.length || 0);
+            }
+            
             socket.emit('ai_chat_history_response', {
                 success: true,
                 chat: aiChat,
-                messages: aiChat?.messages || []
+                messages: aiChat?.messages || [],
+                isProcessing
             });
         } catch (error) {
             console.error('Error getting AI chat history:', error);
@@ -679,6 +692,8 @@ io.on('connection', (socket) => {
                 socket.emit('error', 'Question is required');
                 return;
             }
+            
+            console.log('📝 Socket: ai_ask_free from user:', socket.userId);
             
             const Kundli = require('./models/Kundli');
             const AIChat = require('./models/AIChat');
@@ -713,12 +728,22 @@ io.on('connection', (socket) => {
             // Tell client we're processing (so they know server received it)
             socket.emit('ai_processing', { status: 'thinking', message: 'AI is generating your answer...' });
             
-            // Generate AI response
-            const aiResult = await generateAIResponse(
-                kundli, 
-                question.trim(), 
-                aiChat ? aiChat.messages : []
-            );
+            // Generate AI response (has built-in per-user lock to prevent duplicates)
+            let aiResult;
+            try {
+                aiResult = await generateAIResponse(
+                    kundli, 
+                    question.trim(), 
+                    aiChat ? aiChat.messages : []
+                );
+            } catch (aiError) {
+                console.error('❌ Socket: AI generation failed:', aiError.message);
+                socket.emit('ai_ask_free_response', {
+                    success: false,
+                    error: aiError.message || 'AI failed to generate response. Please try again.'
+                });
+                return;
+            }
             
             // Save to chat
             if (!aiChat) {
@@ -751,6 +776,7 @@ io.on('connection', (socket) => {
             });
             
             await aiChat.save();
+            console.log('✅ Socket: Free question answered, messages saved for user:', socket.userId);
             
             socket.emit('ai_ask_free_response', {
                 success: true,
@@ -762,7 +788,8 @@ io.on('connection', (socket) => {
             });
             
         } catch (error) {
-            console.error('Error processing free AI question:', error);
+            console.error('❌ Socket: Error processing free AI question:', error.message);
+            console.error('❌ Socket: Stack:', error.stack);
             socket.emit('ai_ask_free_response', {
                 success: false,
                 error: error.message || 'Failed to process question'

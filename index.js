@@ -281,6 +281,43 @@ io.on('connection', (socket) => {
                 
                 console.log(`User ${user.firstName} authenticated`);
                 socket.emit('authenticated', { success: true });
+
+                // Async: deliver pending messages when user comes online (WhatsApp-like)
+                setImmediate(async () => {
+                    try {
+                        const pending = await Message.find(
+                            { receiver: user._id, isDelivered: false },
+                            { _id: 1, sender: 1 }
+                        ).lean();
+                        if (pending.length === 0) return;
+
+                        const deliveredAt = new Date();
+                        await Message.updateMany(
+                            { _id: { $in: pending.map(m => m._id) } },
+                            { $set: { isDelivered: true, deliveredAt } }
+                        );
+
+                        const bySender = {};
+                        pending.forEach(m => {
+                            const s = m.sender.toString();
+                            if (!bySender[s]) bySender[s] = [];
+                            bySender[s].push(m._id.toString());
+                        });
+
+                        for (const [sid, msgIds] of Object.entries(bySender)) {
+                            const senderSocketId = connectedUsers.get(sid);
+                            if (senderSocketId) {
+                                io.to(senderSocketId).emit('messages_delivered', {
+                                    messageIds: msgIds,
+                                    deliveredTo: user._id.toString(),
+                                    deliveredAt
+                                });
+                            }
+                        }
+                    } catch (err) {
+                        console.error('Error delivering pending messages:', err);
+                    }
+                });
             } else {
                 socket.emit('error', 'User not found');
             }
@@ -428,75 +465,61 @@ io.on('connection', (socket) => {
         }
     });
 
-    // Handle marking messages as read (OPTIMIZED)
+    // Handle marking messages as seen (WhatsApp-like: get IDs → emit instant → DB async)
     socket.on('mark_messages_read', async (data) => {
         try {
             if (!socket.userId) {
                 socket.emit('error', 'Not authenticated');
                 return;
             }
-            
+
             const { senderId } = data;
-            
+
             if (!senderId) {
                 socket.emit('error', 'Sender ID is required');
                 return;
             }
-            
-            const now = new Date();
-            
-            // Emit immediate confirmation to user (perceived instant response)
+
+            // Fast indexed query — only fetch IDs
+            const unreadMessages = await Message.find(
+                { sender: senderId, receiver: socket.userId, isRead: false },
+                { _id: 1 }
+            ).lean();
+
+            const messageIds = unreadMessages.map(m => m._id.toString());
+
+            // Instant confirmation to self
             socket.emit('messages_marked_read', {
                 success: true,
-                count: 0 // Will be updated after DB operation
+                count: messageIds.length
             });
-            
-            // Emit to sender immediately if online
+
+            if (messageIds.length === 0) return;
+
+            const now = new Date();
+
+            // INSTANT: Notify sender their messages were seen (with exact IDs)
             const senderSocketId = connectedUsers.get(senderId);
             if (senderSocketId) {
-                io.to(senderSocketId).emit('message_read', {
-                    readBy: socket.userId,
-                    count: 0 // Approximate, will be accurate after DB
+                io.to(senderSocketId).emit('messages_seen', {
+                    seenBy: socket.userId,
+                    messageIds,
+                    seenAt: now
                 });
             }
-            
-            // Update database asynchronously (non-blocking)
+
+            // Reset unread count instantly
+            socket.emit('unread_count_update', {
+                senderId: senderId,
+                unreadCount: 0
+            });
+
+            // DB update async (non-blocking)
             Message.updateMany(
-                {
-                    sender: senderId,
-                    receiver: socket.userId,
-                    isRead: false
-                },
-                {
-                    $set: {
-                        isRead: true,
-                        readAt: now
-                    }
-                }
-            ).then(result => {
-                // Send actual count after DB update
-                if (result.modifiedCount > 0) {
-                    socket.emit('messages_marked_read', {
-                        success: true,
-                        count: result.modifiedCount
-                    });
-                    
-                    if (senderSocketId) {
-                        io.to(senderSocketId).emit('message_read', {
-                            readBy: socket.userId,
-                            count: result.modifiedCount
-                        });
-                    }
-                }
-                
-                // Update unread count (should be 0 now)
-                socket.emit('unread_count_update', {
-                    senderId: senderId,
-                    unreadCount: 0
-                });
-            }).catch(error => {
-                console.error('Error marking messages as read:', error);
-                socket.emit('error', 'Failed to mark messages as read');
+                { _id: { $in: unreadMessages.map(m => m._id) } },
+                { $set: { isRead: true, readAt: now } }
+            ).catch(err => {
+                console.error('Error marking messages as read:', err);
             });
         } catch (error) {
             console.error('Error marking messages as read:', error);

@@ -65,14 +65,8 @@ router.post('/send', auth, async (req, res) => {
                         }
                     );
 
-                    // Keep legacy event + add explicit delivered status event
                     io.to(senderRoom).emit('message_delivered', {
                         messageId: message._id.toString(),
-                        deliveredAt
-                    });
-                    io.to(senderRoom).emit('message_status_update', {
-                        messageId: message._id.toString(),
-                        status: 'delivered',
                         deliveredAt
                     });
                 } catch (socketError) {
@@ -185,66 +179,58 @@ router.get('/unread-count/:roomId', auth, async (req, res) => {
     }
 });
 
-// Mark messages as read
+// Mark messages as seen (WhatsApp-like: find IDs → respond fast → emit + DB async)
 router.post('/mark-as-read', auth, async (req, res) => {
     try {
         const { senderId } = req.body;
-        
+
         if (!senderId) {
             return res.status(400).json({ error: 'Sender ID is required' });
         }
-        
-        // Validate senderId format
+
         if (!mongoose.Types.ObjectId.isValid(senderId)) {
             return res.status(400).json({ error: 'Invalid sender ID format' });
         }
-        
-        // Mark all unread messages from sender to current user as read
-        const result = await Message.updateMany(
-            {
-                sender: senderId,
-                receiver: req.user._id,
-                isRead: false
-            },
-            {
-                $set: {
-                    isRead: true,
-                    readAt: new Date()
-                }
-            }
-        );
-        
-        // Emit socket event for message read
+
+        // Fast indexed query — only fetch IDs
+        const unreadMessages = await Message.find(
+            { sender: senderId, receiver: req.user._id, isRead: false },
+            { _id: 1 }
+        ).lean();
+
+        const messageIds = unreadMessages.map(m => m._id.toString());
+
+        if (messageIds.length === 0) {
+            return res.json({ success: true, markedCount: 0 });
+        }
+
+        const now = new Date();
+
+        // Respond immediately
+        res.json({ success: true, markedCount: messageIds.length });
+
+        // Emit seen status via socket (non-blocking, after response)
         const io = req.app.get('io');
         if (io) {
-            const readAt = new Date();
-            const senderRoom = senderId.toString();
-
-            // Keep socket emissions async so HTTP response flow stays simple and fast
             setImmediate(() => {
                 try {
-                    // Keep legacy event for existing clients
-                    io.to(senderRoom).emit('messages_read', {
-                        readBy: req.user._id.toString(),
-                        count: result.modifiedCount
-                    });
-
-                    // Add explicit "seen" status event
-                    io.to(senderRoom).emit('message_status_update', {
+                    io.to(senderId.toString()).emit('messages_seen', {
                         seenBy: req.user._id.toString(),
-                        status: 'seen',
-                        count: result.modifiedCount,
-                        readAt
+                        messageIds,
+                        seenAt: now
                     });
-                } catch (socketError) {
-                    console.error('Error emitting seen status:', socketError);
+                } catch (err) {
+                    console.error('Error emitting seen status:', err);
                 }
             });
         }
-        
-        res.json({ 
-            success: true, 
-            markedCount: result.modifiedCount 
+
+        // DB update async (non-blocking, after response)
+        Message.updateMany(
+            { _id: { $in: unreadMessages.map(m => m._id) } },
+            { $set: { isRead: true, readAt: now } }
+        ).catch(err => {
+            console.error('Error marking messages as read:', err);
         });
     } catch (error) {
         console.error('Error marking messages as read:', error);

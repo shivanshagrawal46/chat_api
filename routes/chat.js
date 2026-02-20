@@ -40,6 +40,47 @@ router.post('/send', auth, async (req, res) => {
             content: content.trim()
         });
         await message.save();
+
+        // Fire-and-forget delivery status over Socket.IO (does not block API response)
+        const io = req.app.get('io');
+        if (io) {
+            const senderRoom = req.user._id.toString();
+            const receiverRoom = receiverId.toString();
+
+            setImmediate(async () => {
+                try {
+                    const receiverSockets = io.sockets.adapter.rooms.get(receiverRoom);
+                    const isReceiverOnline = !!(receiverSockets && receiverSockets.size > 0);
+
+                    if (!isReceiverOnline) return;
+
+                    const deliveredAt = new Date();
+                    await Message.updateOne(
+                        { _id: message._id, isDelivered: false },
+                        {
+                            $set: {
+                                isDelivered: true,
+                                deliveredAt
+                            }
+                        }
+                    );
+
+                    // Keep legacy event + add explicit delivered status event
+                    io.to(senderRoom).emit('message_delivered', {
+                        messageId: message._id.toString(),
+                        deliveredAt
+                    });
+                    io.to(senderRoom).emit('message_status_update', {
+                        messageId: message._id.toString(),
+                        status: 'delivered',
+                        deliveredAt
+                    });
+                } catch (socketError) {
+                    console.error('Error emitting delivered status:', socketError);
+                }
+            });
+        }
+
         res.status(201).json(message);
     } catch (error) {
         console.error('Error sending message:', error);
@@ -176,9 +217,28 @@ router.post('/mark-as-read', auth, async (req, res) => {
         // Emit socket event for message read
         const io = req.app.get('io');
         if (io) {
-            io.to(senderId).emit('messages_read', {
-                readBy: req.user._id.toString(),
-                count: result.modifiedCount
+            const readAt = new Date();
+            const senderRoom = senderId.toString();
+
+            // Keep socket emissions async so HTTP response flow stays simple and fast
+            setImmediate(() => {
+                try {
+                    // Keep legacy event for existing clients
+                    io.to(senderRoom).emit('messages_read', {
+                        readBy: req.user._id.toString(),
+                        count: result.modifiedCount
+                    });
+
+                    // Add explicit "seen" status event
+                    io.to(senderRoom).emit('message_status_update', {
+                        seenBy: req.user._id.toString(),
+                        status: 'seen',
+                        count: result.modifiedCount,
+                        readAt
+                    });
+                } catch (socketError) {
+                    console.error('Error emitting seen status:', socketError);
+                }
             });
         }
         

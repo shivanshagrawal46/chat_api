@@ -201,26 +201,26 @@ const fetchKundliDataForAI = async (kundli) => {
 
         const userId = kundli.user?.toString?.() || kundli.user;
         const body = {
-            personName: kundli.fullName,
-            jvk: userId,
-            dateOfBirth: dateStr,
-            timeOfBirth: `${hh || '00'}:${mm || '00'}`,
-            placeOfBirth: kundli.placeOfBirth,
-            gender: kundli.gender,
-            day: dob.getDate(),
-            month: dob.getMonth() + 1,
             year: dob.getFullYear(),
+            month: dob.getMonth() + 1,
+            day: dob.getDate(),
             hour,
-            minute
+            minute,
+            second: 0,
+            timezone: 'Asia/Kolkata',
+            dst: false,
+            name: (kundli.fullName || '').trim(),
+            gender: (kundli.gender || 'male').toLowerCase(),
+            city: (kundli.placeOfBirth || '').trim(),
+            lat: kundli.coordinates?.latitude ?? 0,
+            lon: kundli.coordinates?.longitude ?? 0,
+            save: true,
+            jvk: userId || 'guest_user'
         };
-        if (kundli.coordinates?.latitude != null && kundli.coordinates?.longitude != null) {
-            body.latitude = kundli.coordinates.latitude;
-            body.longitude = kundli.coordinates.longitude;
-        }
 
         const url = `${KUNDLI_API_BASE}/userSearcheds/kundali`;
 
-        console.log('📡 Kundli API: Calling', url, '| personName:', body.personName, '| jvk:', body.jvk);
+        console.log('📡 Kundli API: Calling', url, '| name:', body.name, '| jvk:', body.jvk);
 
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), KUNDLI_API_TIMEOUT_MS);

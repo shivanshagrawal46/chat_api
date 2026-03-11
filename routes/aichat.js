@@ -179,6 +179,94 @@ I can only help you with astrology-related questions based on your Kundli (birth
 **कृपया ज्योतिष से संबंधित कोई प्रश्न पूछें!**
 **Please ask me something related to astrology, and I'll provide insights based on your birth chart!**`;
 
+// Kundli API base URL (from env; used to fetch lagna, mahadasha for AI context)
+const KUNDLI_API_BASE = process.env.KUNDLI_API_BASE_URL || 'http://64.227.131.149:3102/api';
+const KUNDLI_API_TIMEOUT_MS = 15000;
+
+/**
+ * Fetch Lagna + Mahadasha data from external Kundli API.
+ * Returns formatted string for Gemini prompt, or empty string on failure (AI still gets birth details).
+ */
+const fetchKundliDataForAI = async (kundli) => {
+    if (!kundli) return '';
+    try {
+        const dob = new Date(kundli.dateOfBirth);
+        const dateStr = dob.toISOString().slice(0, 10);
+        const [hh, mm] = (kundli.timeOfBirth || '00:00').split(':');
+        const body = {
+            fullName: kundli.fullName,
+            dateOfBirth: dateStr,
+            timeOfBirth: `${hh || '00'}:${mm || '00'}`,
+            placeOfBirth: kundli.placeOfBirth,
+            gender: kundli.gender
+        };
+        if (kundli.coordinates?.latitude != null && kundli.coordinates?.longitude != null) {
+            body.latitude = kundli.coordinates.latitude;
+            body.longitude = kundli.coordinates.longitude;
+        }
+
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), KUNDLI_API_TIMEOUT_MS);
+
+        const res = await fetch(`${KUNDLI_API_BASE}/userSearcheds/kundali`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(body),
+            signal: controller.signal
+        });
+        clearTimeout(timeoutId);
+
+        if (!res.ok) {
+            console.warn('⚠️ Kundli API returned', res.status, await res.text().catch(() => ''));
+            return '';
+        }
+
+        const json = await res.json();
+        const data = json.data || json;
+
+        const parts = [];
+
+        if (data.lagna) {
+            const l = data.lagna;
+            parts.push('LAGNA (Birth Chart):');
+            if (l.sign) parts.push(`- Lagna Sign: ${l.sign}`);
+            if (Array.isArray(l.chart) && l.chart.length) {
+                parts.push('- Houses:');
+                l.chart.forEach((h, i) => {
+                    const sign = h.sign || '';
+                    const planets = Array.isArray(h.planets) ? h.planets.join(', ') : '';
+                    parts.push(`  House ${(h.house ?? i + 1)}: ${sign}${planets ? ` | Planets: ${planets}` : ''}`);
+                });
+            }
+            if (Array.isArray(l.planetDetails) && l.planetDetails.length) {
+                parts.push('- Planet Details:');
+                l.planetDetails.forEach(p => {
+                    const name = p.name || p.planet || '';
+                    const flags = [p.retrograde && 'retrograde', p.combust && 'combust', p.exalted && 'exalted', p.debilitated && 'debilitated'].filter(Boolean);
+                    if (name) parts.push(`  ${name}: ${flags.length ? flags.join(', ') : 'normal'}`);
+                });
+            }
+        }
+
+        const vim = data.vimshottari?.vimshottari || data.vimshottari;
+        if (vim?.mahaDasha && Array.isArray(vim.mahaDasha) && vim.mahaDasha.length) {
+            parts.push('MAHADASHA (Vimshottari):');
+            vim.mahaDasha.forEach(m => {
+                const planet = m.planet || '';
+                const start = m.start ? new Date(m.start).toLocaleDateString('en-IN') : '';
+                const end = m.date ? new Date(m.date).toLocaleDateString('en-IN') : '';
+                if (planet) parts.push(`  ${planet}: ${start} - ${end}`);
+            });
+        }
+
+        if (parts.length === 0) return '';
+        return '\n\nKundli Chart Data (from Kundli software):\n' + parts.join('\n');
+    } catch (err) {
+        console.warn('⚠️ Kundli API fetch failed:', err.message);
+        return '';
+    }
+};
+
 // Helper: Generate AI response (Astrology Only) - Using New SDK
 const generateAIResponse = async (kundli, question, chatHistory) => {
     if (!genAI) {
@@ -212,8 +300,11 @@ const generateAIResponse = async (kundli, question, chatHistory) => {
             console.log('⚠️ Non-astrology question detected, returning default response');
             return { response: NON_ASTROLOGY_RESPONSE, isAstrologyQuestion: false };
         }
-        
-        // Build context with kundli details
+
+        // Fetch Lagna + Mahadasha from Kundli API (async, non-blocking; fallback to birth details only on failure)
+        const kundliChartData = await fetchKundliDataForAI(kundli);
+
+        // Build context with birth details + kundli chart data (lagna, mahadasha)
         const kundliContext = `
 User's Birth Details (Kundli):
 - Name: ${kundli.fullName}
@@ -221,6 +312,7 @@ User's Birth Details (Kundli):
 - Time of Birth: ${kundli.timeOfBirth}
 - Place of Birth: ${kundli.placeOfBirth}
 - Gender: ${kundli.gender}
+${kundliChartData}
 `;
 
         // Build chat history context (last 10 messages for context)
@@ -254,14 +346,15 @@ Instructions:
 2. Be respectful and compassionate in your responses
 3. Give practical advice along with astrological predictions
 4. If asked about career, marriage, health, etc., ALWAYS relate your answer to their birth chart and planetary positions
-5. IMPORTANT: Keep responses CONCISE but COMPLETE - around 200-400 words
-6. Use simple language that anyone can understand
-7. Include relevant planetary positions, doshas, or yogas when applicable
-8. Always end with positive guidance or remedies if discussing challenges
-9. If the question is not about astrology, politely decline and suggest astrology-related topics
-10. Do NOT write long paragraphs - be brief and to the point
-11. MATCH the user's language exactly. English question = English answer. Hindi question = Hindi answer. Hinglish question = Hinglish answer. NEVER use Hindi/Hinglish for English questions.
-12. CRITICAL: Always complete your response with a proper conclusion. NEVER leave a sentence unfinished.
+5. IMPORTANT: Use the Lagna (house chart) and Mahadasha data provided above when they are available. Reference specific planets, houses, and dasha periods in your predictions
+6. Keep responses CONCISE but COMPLETE - around 200-400 words
+7. Use simple language that anyone can understand
+8. Include relevant planetary positions, doshas, or yogas when applicable
+9. Always end with positive guidance or remedies if discussing challenges
+10. If the question is not about astrology, politely decline and suggest astrology-related topics
+11. Do NOT write long paragraphs - be brief and to the point
+12. MATCH the user's language exactly. English question = English answer. Hindi question = Hindi answer. Hinglish question = Hinglish answer. NEVER use Hindi/Hinglish for English questions.
+13. CRITICAL: Always complete your response with a proper conclusion. NEVER leave a sentence unfinished.
 
 User's Question: ${question}
 

@@ -199,8 +199,10 @@ const fetchKundliDataForAI = async (kundli) => {
         const hour = parseInt(hh, 10) || 0;
         const minute = parseInt(mm, 10) || 0;
 
+        const userId = kundli.user?.toString?.() || kundli.user;
         const body = {
-            fullName: kundli.fullName,
+            personName: kundli.fullName,
+            jvk: userId,
             dateOfBirth: dateStr,
             timeOfBirth: `${hh || '00'}:${mm || '00'}`,
             placeOfBirth: kundli.placeOfBirth,
@@ -217,15 +219,13 @@ const fetchKundliDataForAI = async (kundli) => {
         }
 
         const url = `${KUNDLI_API_BASE}/userSearcheds/kundali`;
-        const userId = kundli.user?.toString?.() || kundli.user;
-        const urlWithParams = userId ? `${url}?jvk=${userId}` : url;
 
-        console.log('📡 Kundli API: Calling', urlWithParams, '| Body keys:', Object.keys(body));
+        console.log('📡 Kundli API: Calling', url, '| personName:', body.personName, '| jvk:', body.jvk);
 
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), KUNDLI_API_TIMEOUT_MS);
 
-        const res = await fetch(urlWithParams, {
+        const res = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body),

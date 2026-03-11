@@ -188,27 +188,44 @@ const KUNDLI_API_TIMEOUT_MS = 15000;
  * Returns formatted string for Gemini prompt, or empty string on failure (AI still gets birth details).
  */
 const fetchKundliDataForAI = async (kundli) => {
-    if (!kundli) return '';
+    if (!kundli) {
+        console.warn('⚠️ Kundli API: No kundli object provided');
+        return '';
+    }
     try {
         const dob = new Date(kundli.dateOfBirth);
         const dateStr = dob.toISOString().slice(0, 10);
         const [hh, mm] = (kundli.timeOfBirth || '00:00').split(':');
+        const hour = parseInt(hh, 10) || 0;
+        const minute = parseInt(mm, 10) || 0;
+
         const body = {
             fullName: kundli.fullName,
             dateOfBirth: dateStr,
             timeOfBirth: `${hh || '00'}:${mm || '00'}`,
             placeOfBirth: kundli.placeOfBirth,
-            gender: kundli.gender
+            gender: kundli.gender,
+            day: dob.getDate(),
+            month: dob.getMonth() + 1,
+            year: dob.getFullYear(),
+            hour,
+            minute
         };
         if (kundli.coordinates?.latitude != null && kundli.coordinates?.longitude != null) {
             body.latitude = kundli.coordinates.latitude;
             body.longitude = kundli.coordinates.longitude;
         }
 
+        const url = `${KUNDLI_API_BASE}/userSearcheds/kundali`;
+        const userId = kundli.user?.toString?.() || kundli.user;
+        const urlWithParams = userId ? `${url}?jvk=${userId}` : url;
+
+        console.log('📡 Kundli API: Calling', urlWithParams, '| Body keys:', Object.keys(body));
+
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), KUNDLI_API_TIMEOUT_MS);
 
-        const res = await fetch(`${KUNDLI_API_BASE}/userSearcheds/kundali`, {
+        const res = await fetch(urlWithParams, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(body),
@@ -216,53 +233,70 @@ const fetchKundliDataForAI = async (kundli) => {
         });
         clearTimeout(timeoutId);
 
+        const rawText = await res.text();
         if (!res.ok) {
-            console.warn('⚠️ Kundli API returned', res.status, await res.text().catch(() => ''));
+            console.warn('⚠️ Kundli API returned', res.status, '| Body:', rawText?.slice(0, 200));
             return '';
         }
 
-        const json = await res.json();
-        const data = json.data || json;
+        let json;
+        try {
+            json = JSON.parse(rawText);
+        } catch (parseErr) {
+            console.warn('⚠️ Kundli API: Invalid JSON response');
+            return '';
+        }
+
+        const data = json.data ?? json;
+        const topKeys = typeof data === 'object' && data !== null ? Object.keys(data) : [];
+        console.log('📡 Kundli API: Response keys:', topKeys);
 
         const parts = [];
 
-        if (data.lagna) {
-            const l = data.lagna;
+        const lagna = data?.lagna ?? data?.lagnaChart;
+        if (lagna && typeof lagna === 'object') {
             parts.push('LAGNA (Birth Chart):');
-            if (l.sign) parts.push(`- Lagna Sign: ${l.sign}`);
-            if (Array.isArray(l.chart) && l.chart.length) {
+            if (lagna.sign) parts.push(`- Lagna Sign: ${lagna.sign}`);
+            const chart = lagna.chart ?? lagna.houses;
+            if (Array.isArray(chart) && chart.length) {
                 parts.push('- Houses:');
-                l.chart.forEach((h, i) => {
-                    const sign = h.sign || '';
-                    const planets = Array.isArray(h.planets) ? h.planets.join(', ') : '';
+                chart.forEach((h, i) => {
+                    const sign = h.sign ?? h.rashi ?? '';
+                    const planets = Array.isArray(h.planets) ? h.planets.join(', ') : (h.planet ? [h.planet].flat().join(', ') : '');
                     parts.push(`  House ${(h.house ?? i + 1)}: ${sign}${planets ? ` | Planets: ${planets}` : ''}`);
                 });
             }
-            if (Array.isArray(l.planetDetails) && l.planetDetails.length) {
+            const planetDetails = lagna.planetDetails ?? lagna.planets ?? lagna.planetPosition;
+            if (Array.isArray(planetDetails) && planetDetails.length) {
                 parts.push('- Planet Details:');
-                l.planetDetails.forEach(p => {
-                    const name = p.name || p.planet || '';
+                planetDetails.forEach(p => {
+                    const name = p.name ?? p.planet ?? '';
                     const flags = [p.retrograde && 'retrograde', p.combust && 'combust', p.exalted && 'exalted', p.debilitated && 'debilitated'].filter(Boolean);
                     if (name) parts.push(`  ${name}: ${flags.length ? flags.join(', ') : 'normal'}`);
                 });
             }
         }
 
-        const vim = data.vimshottari?.vimshottari || data.vimshottari;
-        if (vim?.mahaDasha && Array.isArray(vim.mahaDasha) && vim.mahaDasha.length) {
+        const vim = data?.vimshottari?.vimshottari ?? data?.vimshottari ?? data?.dasha;
+        const mahaDasha = vim?.mahaDasha ?? vim?.maha_dasha ?? vim?.mahadasha;
+        if (Array.isArray(mahaDasha) && mahaDasha.length) {
             parts.push('MAHADASHA (Vimshottari):');
-            vim.mahaDasha.forEach(m => {
-                const planet = m.planet || '';
+            mahaDasha.forEach(m => {
+                const planet = m.planet ?? m.name ?? '';
                 const start = m.start ? new Date(m.start).toLocaleDateString('en-IN') : '';
-                const end = m.date ? new Date(m.date).toLocaleDateString('en-IN') : '';
+                const end = (m.date ?? m.end) ? new Date(m.date ?? m.end).toLocaleDateString('en-IN') : '';
                 if (planet) parts.push(`  ${planet}: ${start} - ${end}`);
             });
         }
 
-        if (parts.length === 0) return '';
+        if (parts.length === 0) {
+            console.warn('⚠️ Kundli API: No lagna/mahadasha in response. Top-level keys:', topKeys);
+            return '';
+        }
+        console.log('✅ Kundli API: Fetched', parts.length, 'sections for Gemini');
         return '\n\nKundli Chart Data (from Kundli software):\n' + parts.join('\n');
     } catch (err) {
-        console.warn('⚠️ Kundli API fetch failed:', err.message);
+        console.warn('⚠️ Kundli API fetch failed:', err.message, err.cause || '');
         return '';
     }
 };
@@ -363,13 +397,13 @@ Provide a COMPLETE astrological response in the SAME language as the question:`;
         const startTime = Date.now();
         const AI_TIMEOUT_MS = 90000;
         
-        // Retry loop: try primary model, then fallback model on 503/429 errors
+        // Retry loop: always use Gemini 2.5 Pro for astrology analysis (no Flash fallback)
         let result;
         let lastError;
         
         for (let attempt = 1; attempt <= MAX_AI_RETRIES; attempt++) {
-            const useModel = attempt <= 2 ? GEMINI_MODEL : GEMINI_FALLBACK_MODEL;
-            const thinkBudget = useModel === GEMINI_MODEL ? 2524 : 1024;
+            const useModel = GEMINI_MODEL;
+            const thinkBudget = 2524;
             
             console.log(`🔮 Attempt ${attempt}/${MAX_AI_RETRIES} | Model: ${useModel} | User: ${userId}`);
             console.log(`🔮 Question: ${question.substring(0, 50)}...`);
@@ -405,7 +439,7 @@ Provide a COMPLETE astrological response in the SAME language as the question:`;
                 
                 const isRetryable = status === 503 || status === 429 || status === 500;
                 if (isRetryable && attempt < MAX_AI_RETRIES) {
-                    const delay = RETRY_DELAY_MS * attempt;
+                    const delay = status === 429 ? 8000 * attempt : RETRY_DELAY_MS * attempt;
                     console.log(`⏳ Retryable error (${status}). Waiting ${delay}ms before retry...`);
                     await new Promise(r => setTimeout(r, delay));
                     continue;

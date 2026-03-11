@@ -220,7 +220,8 @@ const fetchKundliDataForAI = async (kundli) => {
 
         const url = `${KUNDLI_API_BASE}/userSearcheds/kundali`;
 
-        console.log('📡 Kundli API: Calling', url, '| name:', body.name, '| jvk:', body.jvk);
+        console.log('📡 Kundli API: Calling', url);
+        console.log('🔍 DEBUG Kundli API REQUEST BODY:', JSON.stringify(body, null, 2));
 
         const controller = new AbortController();
         const timeoutId = setTimeout(() => controller.abort(), KUNDLI_API_TIMEOUT_MS);
@@ -250,6 +251,10 @@ const fetchKundliDataForAI = async (kundli) => {
         const data = json.data ?? json;
         const topKeys = typeof data === 'object' && data !== null ? Object.keys(data) : [];
         console.log('📡 Kundli API: Response keys:', topKeys);
+        console.log('🔍 DEBUG Kundli API FULL RESPONSE:', JSON.stringify(json, null, 2));
+        if (data?.lagna) {
+            console.log('🔍 DEBUG Kundli API LAGNA:', JSON.stringify(data.lagna, null, 2));
+        }
 
         const parts = [];
 
@@ -337,6 +342,7 @@ const generateAIResponse = async (kundli, question, chatHistory) => {
 
         // Fetch Lagna + Mahadasha from Kundli API (async, non-blocking; fallback to birth details only on failure)
         const kundliChartData = await fetchKundliDataForAI(kundli);
+        console.log('🔍 DEBUG Kundli Chart Data SENT TO GEMINI:', kundliChartData || '(empty - API fetch failed or no lagna)');
 
         // Build context with birth details + kundli chart data (lagna, mahadasha)
         const kundliContext = `
@@ -393,6 +399,11 @@ Instructions:
 User's Question: ${question}
 
 Provide a COMPLETE astrological response in the SAME language as the question:`;
+
+        console.log('🔍 DEBUG FULL PROMPT TO GEMINI (systemPrompt):');
+        console.log('--- BEGIN GEMINI PROMPT ---');
+        console.log(systemPrompt);
+        console.log('--- END GEMINI PROMPT ---');
 
         const startTime = Date.now();
         const AI_TIMEOUT_MS = 90000;

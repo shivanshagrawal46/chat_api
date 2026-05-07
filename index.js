@@ -27,6 +27,14 @@ const admin = require('firebase-admin');
 const kundliRoutes = require('./routes/kundli');
 const aiChatRoutes = require('./routes/aichat');
 const unifiedPaymentRoutes = require('./routes/unified-payment');
+const walletRoutes = require('./routes/wallet');
+const astrologerRoutes = require('./routes/astrologers');
+const astrologerChatRoutes = require('./routes/astrologer-chat');
+const Wallet = require('./models/Wallet');
+const WalletTransaction = require('./models/WalletTransaction');
+const Astrologer = require('./models/Astrologer');
+const AstrologerChatSession = require('./models/AstrologerChatSession');
+const billing = require('./services/astroBillingEngine');
 
 const app = express();
 const server = http.createServer(app);
@@ -50,6 +58,10 @@ const io = new Server(server, {
 
 // Make io accessible to routes
 app.set('io', io);
+
+// Hand the same io instance to the astrologer-chat billing engine so it can
+// emit per-minute ticks, low-balance warnings, and end-session events.
+billing.setIO(io);
 
 // Initialize Firebase Admin SDK (optional - only if FCM credentials are provided)
 let fcmInitialized = false;
@@ -105,6 +117,54 @@ const sendFCMNotification = async (fcmToken, title, body, data = {}) => {
         return { success: true, response };
     } catch (error) {
         console.error('Error sending FCM notification:', error);
+        return { success: false, error: error.message };
+    }
+};
+
+// High-priority "ringing" FCM notification used when a user starts an
+// astrologer chat. Both the user (waiting screen) and the admin (incoming
+// chat) receive it. It's a data + notification message with high priority
+// so it wakes the device and triggers the client's full-screen ringtone UI.
+const sendRingingFCMNotification = async (fcmToken, title, body, data = {}) => {
+    if (!fcmInitialized || !fcmToken) {
+        return { success: false, error: 'FCM not initialized or no token' };
+    }
+    try {
+        // FCM requires every value in `data` to be a string
+        const stringifiedData = Object.fromEntries(
+            Object.entries(data).map(([k, v]) => [k, v == null ? '' : String(v)])
+        );
+        const message = {
+            token: fcmToken,
+            notification: { title, body },
+            data: {
+                ...stringifiedData,
+                click_action: 'FLUTTER_NOTIFICATION_CLICK'
+            },
+            android: {
+                priority: 'high',
+                notification: {
+                    channelId: 'astro_chat_ring',
+                    sound: 'default',
+                    priority: 'max',
+                    visibility: 'public'
+                }
+            },
+            apns: {
+                headers: { 'apns-priority': '10' },
+                payload: {
+                    aps: {
+                        sound: 'default',
+                        contentAvailable: true,
+                        category: 'INCOMING_ASTRO_CHAT'
+                    }
+                }
+            }
+        };
+        const response = await admin.messaging().send(message);
+        return { success: true, response };
+    } catch (error) {
+        console.error('Error sending ringing FCM notification:', error);
         return { success: false, error: error.message };
     }
 };
@@ -205,9 +265,62 @@ app.get('/', (req, res) => {
                 allAiChats: 'emit: admin_get_all_ai_chats({page?, limit?}) -> admin_get_all_ai_chats_response'
             }
         },
+        wallet: {
+            balance: 'GET /api/wallet/balance',
+            rechargeCreate: 'POST /api/wallet/recharge/create-order { amount }',
+            rechargeVerify: 'POST /api/wallet/recharge/verify { razorpayOrderId, razorpayPaymentId, razorpaySignature }',
+            transactions: 'GET /api/wallet/transactions?type=&page=&limit='
+        },
+        astrologers: {
+            list: 'GET /api/astrologers',
+            single: 'GET /api/astrologers/:key',
+            adminToggleOnline: 'PATCH /api/astrologers/admin/:key/online { isOnline }',
+            adminUpdateRate: 'PATCH /api/astrologers/admin/:key/rate { ratePerMinute }'
+        },
+        astrologerChat: {
+            active: 'GET /api/astrologer-chat/active',
+            history: 'GET /api/astrologer-chat/history',
+            sessionMessages: 'GET /api/astrologer-chat/:sessionId/messages',
+            startSession: 'POST /api/astrologer-chat/sessions/start { astrologerKey }',
+            cancelSession: 'POST /api/astrologer-chat/sessions/:id/cancel',
+            adminTabs: 'GET /api/astrologer-chat/admin/tabs',
+            adminAccept: 'POST /api/astrologer-chat/admin/sessions/:id/accept',
+            adminReject: 'POST /api/astrologer-chat/admin/sessions/:id/reject',
+            adminEnd: 'POST /api/astrologer-chat/admin/sessions/:id/end'
+        },
+        newSocketEvents: {
+            wallet: {
+                balance: 'emit: wallet_balance() -> wallet_balance_response',
+                rechargeCreate: 'emit: wallet_recharge_create({ amount }) -> wallet_recharge_create_response',
+                rechargeVerify: 'emit: wallet_recharge_verify({ razorpayOrderId, razorpayPaymentId, razorpaySignature }) -> wallet_recharge_verify_response',
+                transactions: 'emit: wallet_transactions({ type?, page?, limit? }) -> wallet_transactions_response',
+                updates: 'server pushes: wallet_updated({ balance, lastTransaction })'
+            },
+            astrologerChat: {
+                request: 'emit: astro_request_chat({ astrologerKey }) -> astro_request_chat_response + astro_chat_ringing (admin)',
+                accept: 'emit: astro_accept_chat({ sessionId }) (admin only) -> astro_chat_accepted',
+                reject: 'emit: astro_reject_chat({ sessionId }) (admin only)',
+                join: 'emit: astro_join_chat({ sessionId }) (both sides) -> astro_chat_started when both joined',
+                send: 'emit: astro_send_message({ sessionId, content }) -> astro_new_message',
+                end: 'emit: astro_end_chat({ sessionId }) -> astro_chat_ended',
+                serverPushes: ['astro_chat_ringing', 'astro_chat_ringing_placed', 'astro_chat_accepted', 'astro_join_state', 'astro_chat_started', 'astro_billing_tick', 'astro_low_balance_warning', 'astro_chat_ended']
+            },
+            aiChatWallet: {
+                ask: 'emit: ai_ask_paid_wallet({ question }) -> ai_ask_paid_wallet_response (debits ₹21 from wallet, refunds on failure)'
+            }
+        },
         pricing: {
-            aiChat: '₹21 per question (first question free)',
-            astrologerChat: 'Set by admin via freeze amount'
+            aiChat: '₹21 per question (first question free) — payable via Razorpay or wallet',
+            astrologerChat: {
+                bhupendra: '₹50/min',
+                others: '₹15/min (Samta, Rashmi, Smirita, Rekha)',
+                minBalanceToStart: '5 minutes worth (₹250 for Bhupendra, ₹75 for others)',
+                billing: 'Astrotalk-style: per-minute deduction, 30s grace period when wallet runs low',
+                walletRecharge: 'via Razorpay'
+            },
+            legacy: {
+                astrologerFreezeUnfreeze: 'Old freeze/unfreeze flow remains intact for backward compatibility'
+            }
         }
     });
 });
@@ -240,6 +353,33 @@ const createAdminUser = async () => {
 
 createAdminUser();
 
+// Seed the 5 virtual astrologers if the collection is empty. Idempotent —
+// safe to call on every boot.
+const seedAstrologers = async () => {
+    try {
+        const result = await Astrologer.seedDefaults();
+        if (result.seeded) {
+            console.log(`✅ Seeded ${result.count} astrologers (Bhupendra, Samta, Rashmi, Smirita, Rekha)`);
+        }
+    } catch (error) {
+        console.error('Error seeding astrologers:', error);
+    }
+};
+
+// On boot, finalize any astrologer chat sessions that were left mid-flight
+// before the previous shutdown — otherwise they'd block users and astrologers
+// from starting fresh sessions (one-active-per-user, one-active-per-astrologer).
+const recoverOrphanSessionsOnBoot = async () => {
+    try {
+        await billing.recoverOrphanSessions();
+    } catch (error) {
+        console.error('Error recovering orphan sessions:', error);
+    }
+};
+
+seedAstrologers();
+recoverOrphanSessionsOnBoot();
+
 // Socket.IO connection handling
 const connectedUsers = new Map();
 const adminSockets = new Set();
@@ -267,16 +407,26 @@ io.on('connection', (socket) => {
                 
                 connectedUsers.set(user._id.toString(), socket.id);
                 socket.userId = user._id.toString();
+                socket.isAdmin = !!user.isAdmin;
                 socket.join(user._id.toString());
                 
-                // If user is admin, add to admin sockets
+                // If user is admin, add to admin sockets AND the shared
+                // `admins` Socket.IO room so the billing engine and ring
+                // events can broadcast to all admin connections at once.
                 if (user.isAdmin) {
                     adminSockets.add(socket.id);
+                    socket.join(billing.ADMIN_ROOM);
                     // Send initial user list to admin
                     const users = await User.find({ isAdmin: false })
                         .select('-password -googleId')
                         .sort({ createdAt: -1 });
                     socket.emit('user_list', users);
+                } else {
+                    // Ensure a wallet exists for every non-admin user the
+                    // moment they connect. Cheap upsert; safe to repeat.
+                    Wallet.findOrCreate(user._id).catch(err => {
+                        console.error('Wallet ensure error:', err);
+                    });
                 }
                 
                 console.log(`User ${user.firstName} authenticated`);
@@ -1969,6 +2119,742 @@ io.on('connection', (socket) => {
         }
     });
 
+    // ==========================================
+    // WALLET SOCKET EVENTS
+    // ==========================================
+
+    // Quick balance fetch — clients call this on chat screen open.
+    socket.on('wallet_balance', async () => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const wallet = await Wallet.findOrCreate(socket.userId);
+            socket.emit('wallet_balance_response', {
+                success: true,
+                balance: wallet.balance,
+                currency: wallet.currency,
+                totalRecharged: wallet.totalRecharged,
+                totalSpent: wallet.totalSpent
+            });
+        } catch (err) {
+            console.error('wallet_balance error:', err);
+            socket.emit('error', 'Failed to fetch wallet balance');
+        }
+    });
+
+    // Create a Razorpay order for wallet recharge. Mirrors POST /api/wallet/recharge/create-order.
+    socket.on('wallet_recharge_create', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const amount = Number(data?.amount);
+            if (!amount || isNaN(amount) || amount < 10) {
+                return socket.emit('wallet_recharge_create_response', {
+                    success: false, error: 'Minimum recharge is ₹10'
+                });
+            }
+            if (amount > 100000) {
+                return socket.emit('wallet_recharge_create_response', {
+                    success: false, error: 'Maximum recharge is ₹1,00,000'
+                });
+            }
+            if (!process.env.RAZORPAY_KEY_ID || !process.env.RAZORPAY_KEY_SECRET) {
+                return socket.emit('error', 'Payment service not configured');
+            }
+            const Razorpay = require('razorpay');
+            const razorpay = new Razorpay({
+                key_id: process.env.RAZORPAY_KEY_ID,
+                key_secret: process.env.RAZORPAY_KEY_SECRET
+            });
+            const order = await razorpay.orders.create({
+                amount: Math.round(amount * 100),
+                currency: 'INR',
+                receipt: `wlt_${socket.userId.slice(-8)}_${Date.now().toString().slice(-8)}`,
+                notes: { userId: socket.userId, type: 'wallet_recharge' }
+            });
+
+            const wallet = await Wallet.findOrCreate(socket.userId);
+            await WalletTransaction.create({
+                user: socket.userId,
+                type: 'recharge',
+                amount,
+                balanceAfter: wallet.balance,
+                razorpayOrderId: order.id,
+                description: `Wallet recharge of ₹${amount}`,
+                status: 'pending'
+            });
+
+            socket.emit('wallet_recharge_create_response', {
+                success: true,
+                orderId: order.id,
+                amount,
+                currency: 'INR',
+                keyId: process.env.RAZORPAY_KEY_ID
+            });
+        } catch (err) {
+            console.error('wallet_recharge_create error:', err);
+            socket.emit('error', 'Failed to create recharge order');
+        }
+    });
+
+    // Verify a Razorpay payment for wallet recharge. Idempotent.
+    socket.on('wallet_recharge_verify', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const { razorpayOrderId, razorpayPaymentId, razorpaySignature } = data || {};
+            if (!razorpayOrderId || !razorpayPaymentId || !razorpaySignature) {
+                return socket.emit('wallet_recharge_verify_response', {
+                    success: false, error: 'Missing payment verification fields'
+                });
+            }
+            const crypto = require('crypto');
+            const expected = crypto
+                .createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+                .update(`${razorpayOrderId}|${razorpayPaymentId}`)
+                .digest('hex');
+            if (expected !== razorpaySignature) {
+                return socket.emit('wallet_recharge_verify_response', {
+                    success: false, error: 'Invalid payment signature'
+                });
+            }
+            const txn = await WalletTransaction.findOne({
+                user: socket.userId,
+                razorpayOrderId,
+                type: 'recharge'
+            });
+            if (!txn) {
+                return socket.emit('wallet_recharge_verify_response', {
+                    success: false, error: 'Transaction record not found'
+                });
+            }
+            // Idempotency
+            if (txn.status === 'success') {
+                const w = await Wallet.findOrCreate(socket.userId);
+                return socket.emit('wallet_recharge_verify_response', {
+                    success: true, alreadyCredited: true, balance: w.balance, amount: txn.amount
+                });
+            }
+            const wallet = await Wallet.findOneAndUpdate(
+                { user: socket.userId },
+                {
+                    $inc: { balance: txn.amount, totalRecharged: txn.amount },
+                    $set: { lastTransactionAt: new Date(), updatedAt: new Date() }
+                },
+                { new: true, upsert: true, setDefaultsOnInsert: true }
+            );
+            txn.status = 'success';
+            txn.razorpayPaymentId = razorpayPaymentId;
+            txn.razorpaySignature = razorpaySignature;
+            txn.balanceAfter = wallet.balance;
+            await txn.save();
+
+            const payload = {
+                balance: wallet.balance,
+                lastTransaction: { type: 'recharge', amount: txn.amount, createdAt: txn.createdAt }
+            };
+            io.to(socket.userId).emit('wallet_updated', payload);
+
+            socket.emit('wallet_recharge_verify_response', {
+                success: true,
+                balance: wallet.balance,
+                amount: txn.amount,
+                transactionId: txn._id
+            });
+        } catch (err) {
+            console.error('wallet_recharge_verify error:', err);
+            socket.emit('error', 'Failed to verify recharge');
+        }
+    });
+
+    // Paginated transaction history.
+    socket.on('wallet_transactions', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const { type, page = 1, limit = 20 } = data || {};
+            const query = { user: socket.userId, status: 'success' };
+            if (type) query.type = type;
+            const skip = (page - 1) * limit;
+            const [transactions, total] = await Promise.all([
+                WalletTransaction.find(query).sort({ createdAt: -1 }).skip(skip).limit(limit).lean(),
+                WalletTransaction.countDocuments(query)
+            ]);
+            socket.emit('wallet_transactions_response', {
+                success: true,
+                transactions,
+                pagination: { page, limit, total, pages: Math.ceil(total / limit) }
+            });
+        } catch (err) {
+            console.error('wallet_transactions error:', err);
+            socket.emit('error', 'Failed to fetch transactions');
+        }
+    });
+
+    // ==========================================
+    // ASTROLOGER CHAT SOCKET EVENTS
+    // ==========================================
+
+    // User requests a chat with an astrologer. Validates min balance,
+    // creates a `ringing` session and notifies all admin sockets + the
+    // admin's FCM token (incoming-call style ringtone).
+    socket.on('astro_request_chat', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            if (socket.isAdmin) {
+                return socket.emit('astro_request_chat_response', {
+                    success: false, error: 'Admins cannot start a paid chat'
+                });
+            }
+            const { astrologerKey } = data || {};
+            if (!astrologerKey) {
+                return socket.emit('astro_request_chat_response', {
+                    success: false, error: 'astrologerKey is required'
+                });
+            }
+
+            const astro = await Astrologer.findOne({ key: astrologerKey.toLowerCase(), isActive: true });
+            if (!astro) {
+                return socket.emit('astro_request_chat_response', {
+                    success: false, error: 'Astrologer not found'
+                });
+            }
+            if (!astro.isOnline) {
+                return socket.emit('astro_request_chat_response', {
+                    success: false, error: 'Astrologer is currently offline'
+                });
+            }
+
+            const existing = await AstrologerChatSession.findOne({
+                user: socket.userId,
+                status: { $in: ['ringing', 'accepted', 'active'] }
+            });
+            if (existing) {
+                return socket.emit('astro_request_chat_response', {
+                    success: false,
+                    error: 'You already have an in-progress chat session',
+                    session: existing
+                });
+            }
+
+            const astroBusy = await AstrologerChatSession.findOne({
+                astrologerKey: astro.key,
+                status: { $in: ['ringing', 'accepted', 'active'] }
+            });
+            if (astroBusy) {
+                return socket.emit('astro_request_chat_response', {
+                    success: false,
+                    error: `${astro.displayName} is currently busy. Please try again shortly.`
+                });
+            }
+
+            const wallet = await Wallet.findOrCreate(socket.userId);
+            const minRequired = astro.ratePerMinute * billing.MIN_MINUTES_TO_START;
+            if (wallet.balance < minRequired) {
+                return socket.emit('astro_request_chat_response', {
+                    success: false,
+                    error: 'Insufficient wallet balance',
+                    walletBalance: wallet.balance,
+                    ratePerMinute: astro.ratePerMinute,
+                    minBalanceRequired: minRequired,
+                    shortfall: minRequired - wallet.balance
+                });
+            }
+
+            const session = await AstrologerChatSession.create({
+                user: socket.userId,
+                astrologerKey: astro.key,
+                astrologerName: astro.displayName,
+                ratePerMinute: astro.ratePerMinute,
+                minBalanceRequired: minRequired,
+                status: 'ringing',
+                requestedAt: new Date()
+            });
+
+            billing.armRingTimeout(session._id);
+
+            const userDoc = await User.findById(socket.userId).select('firstName lastName phone').lean();
+            const ringPayload = {
+                sessionId: session._id,
+                astrologerKey: astro.key,
+                astrologerName: astro.displayName,
+                ratePerMinute: astro.ratePerMinute,
+                user: { _id: socket.userId, ...userDoc },
+                walletBalance: wallet.balance,
+                estimatedMinutes: Math.floor(wallet.balance / astro.ratePerMinute),
+                requestedAt: session.requestedAt,
+                ringTimeoutMs: billing.RING_TIMEOUT_MS
+            };
+
+            // Ring all admin sockets (single-admin model — every admin device
+            // shows the incoming card; whoever taps Accept first wins).
+            io.to(billing.ADMIN_ROOM).emit('astro_chat_ringing', ringPayload);
+
+            // FCM push so admin gets a ringtone even if app is backgrounded.
+            (async () => {
+                try {
+                    const adminUsers = await User.find({ isAdmin: true, fcmToken: { $ne: null } })
+                        .select('fcmToken').lean();
+                    for (const a of adminUsers) {
+                        sendRingingFCMNotification(
+                            a.fcmToken,
+                            `Incoming chat for ${astro.displayName}`,
+                            `${userDoc?.firstName || 'A user'} wants to chat (₹${astro.ratePerMinute}/min)`,
+                            {
+                                type: 'incoming_astro_chat',
+                                sessionId: session._id.toString(),
+                                astrologerKey: astro.key,
+                                astrologerName: astro.displayName,
+                                ratePerMinute: astro.ratePerMinute,
+                                userId: socket.userId,
+                                userName: `${userDoc?.firstName || ''} ${userDoc?.lastName || ''}`.trim()
+                            }
+                        ).catch(() => {});
+                    }
+                } catch (e) {
+                    console.error('Admin ring FCM error:', e);
+                }
+            })();
+
+            socket.emit('astro_request_chat_response', {
+                success: true,
+                session,
+                walletBalance: wallet.balance,
+                estimatedMinutes: Math.floor(wallet.balance / astro.ratePerMinute),
+                ringTimeoutMs: billing.RING_TIMEOUT_MS
+            });
+            // Also a direct "we are ringing" event for the user's UI
+            socket.emit('astro_chat_ringing_placed', {
+                sessionId: session._id,
+                astrologerKey: astro.key,
+                astrologerName: astro.displayName,
+                ratePerMinute: astro.ratePerMinute,
+                ringTimeoutMs: billing.RING_TIMEOUT_MS
+            });
+        } catch (err) {
+            console.error('astro_request_chat error:', err);
+            socket.emit('error', 'Failed to start chat');
+        }
+    });
+
+    // Admin accepts a ringing session. Status -> accepted.
+    socket.on('astro_accept_chat', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            if (!socket.isAdmin) {
+                return socket.emit('error', 'Only admin can accept');
+            }
+            const { sessionId } = data || {};
+            if (!sessionId) return socket.emit('error', 'sessionId is required');
+
+            const session = await AstrologerChatSession.findById(sessionId);
+            if (!session) return socket.emit('error', 'Session not found');
+            if (session.status !== 'ringing') {
+                return socket.emit('astro_accept_chat_response', {
+                    success: false, error: `Session is already ${session.status}`
+                });
+            }
+
+            billing.clearRingTimeout(session._id);
+            session.status = 'accepted';
+            session.acceptedAt = new Date();
+            await session.save();
+            billing.armJoinTimeout(session._id);
+
+            const payload = {
+                sessionId: session._id,
+                astrologerKey: session.astrologerKey,
+                astrologerName: session.astrologerName,
+                ratePerMinute: session.ratePerMinute,
+                joinTimeoutMs: billing.JOIN_TIMEOUT_MS,
+                acceptedAt: session.acceptedAt
+            };
+            io.to(session.user.toString()).emit('astro_chat_accepted', payload);
+            io.to(billing.ADMIN_ROOM).emit('astro_chat_accepted', { ...payload, userId: session.user });
+
+            socket.emit('astro_accept_chat_response', { success: true, session });
+        } catch (err) {
+            console.error('astro_accept_chat error:', err);
+            socket.emit('error', 'Failed to accept chat');
+        }
+    });
+
+    // Admin rejects a ringing session.
+    socket.on('astro_reject_chat', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            if (!socket.isAdmin) return socket.emit('error', 'Only admin can reject');
+            const { sessionId } = data || {};
+            if (!sessionId) return socket.emit('error', 'sessionId is required');
+            const session = await AstrologerChatSession.findById(sessionId);
+            if (!session) return socket.emit('error', 'Session not found');
+            if (session.status !== 'ringing') {
+                return socket.emit('astro_reject_chat_response', {
+                    success: false, error: `Session is already ${session.status}`
+                });
+            }
+            await billing.endSession(sessionId, 'admin_rejected');
+            socket.emit('astro_reject_chat_response', { success: true });
+        } catch (err) {
+            console.error('astro_reject_chat error:', err);
+            socket.emit('error', 'Failed to reject chat');
+        }
+    });
+
+    // BOTH sides emit this when their chat screen opens. When BOTH flags are
+    // true, billing kicks off and the first minute is charged immediately.
+    socket.on('astro_join_chat', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const { sessionId } = data || {};
+            if (!sessionId) return socket.emit('error', 'sessionId is required');
+
+            const session = await AstrologerChatSession.findById(sessionId);
+            if (!session) return socket.emit('error', 'Session not found');
+
+            // Authorize: caller must be the user OR an admin
+            const isParticipant =
+                session.user.toString() === socket.userId || socket.isAdmin;
+            if (!isParticipant) return socket.emit('error', 'Forbidden');
+
+            if (!['accepted', 'active'].includes(session.status)) {
+                return socket.emit('astro_join_chat_response', {
+                    success: false, error: `Session is ${session.status}; cannot join`
+                });
+            }
+
+            // Mark the appropriate join flag
+            const isUser = session.user.toString() === socket.userId;
+            if (isUser && !session.userJoined) {
+                session.userJoined = true;
+                session.userJoinedAt = new Date();
+            }
+            if (socket.isAdmin && !session.adminJoined) {
+                session.adminJoined = true;
+                session.adminJoinedAt = new Date();
+            }
+            await session.save();
+
+            // Notify both sides about updated join state
+            const joinState = {
+                sessionId: session._id,
+                userJoined: session.userJoined,
+                adminJoined: session.adminJoined
+            };
+            io.to(session.user.toString()).emit('astro_join_state', joinState);
+            io.to(billing.ADMIN_ROOM).emit('astro_join_state', { ...joinState, userId: session.user });
+
+            // Activate + charge the first minute when both have joined
+            if (session.userJoined && session.adminJoined && session.status === 'accepted') {
+                await billing.activateAndStartBilling(session._id);
+            }
+
+            socket.emit('astro_join_chat_response', { success: true, session });
+        } catch (err) {
+            console.error('astro_join_chat error:', err);
+            socket.emit('error', 'Failed to join chat');
+        }
+    });
+
+    // In-session message. Saved to the existing Message collection but tagged
+    // with astrologerKey + sessionId so admin's "Bhupendra" tab can filter them.
+    socket.on('astro_send_message', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const { sessionId, content } = data || {};
+            if (!sessionId || !content) {
+                return socket.emit('error', 'sessionId and content are required');
+            }
+            if (typeof content !== 'string' || content.trim().length === 0) {
+                return socket.emit('error', 'content must be a non-empty string');
+            }
+            if (content.length > 1000) {
+                return socket.emit('error', 'Message too long (max 1000 characters)');
+            }
+
+            const session = await AstrologerChatSession.findById(sessionId);
+            if (!session) return socket.emit('error', 'Session not found');
+            if (session.status !== 'active') {
+                return socket.emit('error', `Cannot send messages — session is ${session.status}`);
+            }
+
+            const isUser = session.user.toString() === socket.userId;
+            if (!isUser && !socket.isAdmin) return socket.emit('error', 'Forbidden');
+
+            // Sender / receiver: when admin is talking through a persona, the
+            // admin id is the sender and the user is the receiver, and vice
+            // versa. We tag the message with astrologerKey so admin's tab UI
+            // can group them by persona.
+            let senderId, receiverId;
+            if (isUser) {
+                senderId = socket.userId;
+                receiverId = (await User.findOne({ isAdmin: true }).select('_id').lean())?._id;
+            } else {
+                // Admin is replying — receiver is the session's user
+                senderId = socket.userId;
+                receiverId = session.user;
+            }
+            if (!receiverId) return socket.emit('error', 'No admin recipient configured');
+
+            const trimmed = content.trim();
+            const now = new Date();
+            const receiverSocketId = connectedUsers.get(receiverId.toString());
+            const isOnline = !!receiverSocketId;
+
+            const message = new Message({
+                sender: senderId,
+                receiver: receiverId,
+                content: trimmed,
+                isDelivered: isOnline,
+                deliveredAt: isOnline ? now : null,
+                isRead: false,
+                createdAt: now,
+                astrologerKey: session.astrologerKey,
+                sessionId: session._id
+            });
+
+            const payload = {
+                _id: message._id,
+                sender: senderId,
+                receiver: receiverId,
+                content: trimmed,
+                isDelivered: isOnline,
+                deliveredAt: isOnline ? now : null,
+                isRead: false,
+                createdAt: now,
+                astrologerKey: session.astrologerKey,
+                sessionId: session._id
+            };
+
+            // Echo to sender + push to receiver
+            socket.emit('astro_new_message', payload);
+            if (receiverSocketId) {
+                io.to(receiverSocketId).emit('astro_new_message', payload);
+                socket.emit('astro_message_delivered', {
+                    messageId: message._id,
+                    deliveredAt: now
+                });
+            }
+
+            // Save async — non-blocking
+            message.save().catch(err => {
+                console.error('Error saving astro message:', err);
+            });
+        } catch (err) {
+            console.error('astro_send_message error:', err);
+            socket.emit('error', 'Failed to send message');
+        }
+    });
+
+    // Either side may end the chat at any time during `accepted` or `active`.
+    socket.on('astro_end_chat', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const { sessionId } = data || {};
+            if (!sessionId) return socket.emit('error', 'sessionId is required');
+            const session = await AstrologerChatSession.findById(sessionId);
+            if (!session) return socket.emit('error', 'Session not found');
+
+            const isUser = session.user.toString() === socket.userId;
+            if (!isUser && !socket.isAdmin) return socket.emit('error', 'Forbidden');
+            if (!['ringing', 'accepted', 'active'].includes(session.status)) {
+                return socket.emit('astro_end_chat_response', {
+                    success: true, alreadyEnded: true, session
+                });
+            }
+
+            const reason = isUser ? 'user_ended' : 'admin_ended';
+            const updated = await billing.endSession(sessionId, reason);
+            socket.emit('astro_end_chat_response', { success: true, session: updated });
+        } catch (err) {
+            console.error('astro_end_chat error:', err);
+            socket.emit('error', 'Failed to end chat');
+        }
+    });
+
+    // ==========================================
+    // AI CHAT — pay from wallet (alternative to per-question Razorpay)
+    // ==========================================
+
+    // Same flow as `ai_ask_paid` but the ₹21 is debited from the user's
+    // wallet instead of going through a fresh Razorpay round-trip. The
+    // existing `ai_ask_paid` socket event is left untouched so users who
+    // prefer per-question Razorpay can still use it.
+    socket.on('ai_ask_paid_wallet', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const { question } = data || {};
+            if (!question || typeof question !== 'string') {
+                return socket.emit('error', 'Question is required');
+            }
+
+            const Kundli = require('./models/Kundli');
+            const AIChat = require('./models/AIChat');
+            const UnifiedPayment = require('./models/UnifiedPayment');
+            const { generateAIResponse, countWords, MAX_INPUT_WORDS } = require('./routes/aichat');
+            const AI_CHAT_PRICE = 21;
+
+            const wordCount = countWords(question);
+            if (wordCount > MAX_INPUT_WORDS) {
+                return socket.emit('ai_ask_paid_wallet_response', {
+                    success: false, error: `Question too long. Max ${MAX_INPUT_WORDS} words.`
+                });
+            }
+
+            const kundli = await Kundli.findOne({ user: socket.userId });
+            if (!kundli) {
+                return socket.emit('ai_ask_paid_wallet_response', {
+                    success: false, error: 'Please save your Kundli first'
+                });
+            }
+
+            // Atomically debit the wallet
+            const wallet = await Wallet.findOneAndUpdate(
+                { user: socket.userId, balance: { $gte: AI_CHAT_PRICE } },
+                {
+                    $inc: { balance: -AI_CHAT_PRICE, totalSpent: AI_CHAT_PRICE },
+                    $set: { lastTransactionAt: new Date() }
+                },
+                { new: true }
+            );
+            if (!wallet) {
+                return socket.emit('ai_ask_paid_wallet_response', {
+                    success: false,
+                    error: 'Insufficient wallet balance',
+                    requiredAmount: AI_CHAT_PRICE
+                });
+            }
+
+            // Record a UnifiedPayment row with type ai_chat so the existing
+            // payment-history endpoints continue to show it. We mark it as
+            // paid since the wallet debit is the actual settlement.
+            const aiChatExisting = await AIChat.findOne({ user: socket.userId });
+            const questionNumber = (aiChatExisting?.totalQuestions || 0) + 1;
+            const payment = await UnifiedPayment.create({
+                user: socket.userId,
+                type: 'ai_chat',
+                amount: AI_CHAT_PRICE,
+                status: 'paid',
+                paidAt: new Date(),
+                details: {
+                    questionNumber,
+                    question: question.trim(),
+                    questionAnswered: false,
+                    answerDelivered: false
+                },
+                description: `AI Chat Question #${questionNumber} (wallet)`
+            });
+
+            await WalletTransaction.create({
+                user: socket.userId,
+                type: 'ai_chat',
+                amount: -AI_CHAT_PRICE,
+                balanceAfter: wallet.balance,
+                aiQuestionPaymentRef: payment._id,
+                description: `AI chat question #${questionNumber}`
+            });
+
+            io.to(socket.userId).emit('wallet_updated', {
+                balance: wallet.balance,
+                lastTransaction: { type: 'ai_chat', amount: -AI_CHAT_PRICE }
+            });
+
+            socket.emit('ai_processing', {
+                status: 'thinking',
+                message: 'Wallet charged. AI is generating your answer...',
+                paymentId: payment._id
+            });
+
+            let aiResult;
+            try {
+                aiResult = await generateAIResponse(
+                    kundli, question.trim(),
+                    aiChatExisting ? aiChatExisting.messages : []
+                );
+            } catch (aiError) {
+                // AI failed — refund the wallet
+                const refunded = await Wallet.findOneAndUpdate(
+                    { user: socket.userId },
+                    {
+                        $inc: { balance: AI_CHAT_PRICE, totalSpent: -AI_CHAT_PRICE },
+                        $set: { lastTransactionAt: new Date() }
+                    },
+                    { new: true }
+                );
+                await WalletTransaction.create({
+                    user: socket.userId,
+                    type: 'refund',
+                    amount: AI_CHAT_PRICE,
+                    balanceAfter: refunded?.balance ?? wallet.balance,
+                    aiQuestionPaymentRef: payment._id,
+                    description: 'Refund: AI failed to generate answer'
+                });
+                payment.status = 'refunded';
+                payment.details.failureReason = aiError.message;
+                await payment.save();
+
+                io.to(socket.userId).emit('wallet_updated', {
+                    balance: refunded?.balance ?? wallet.balance,
+                    lastTransaction: { type: 'refund', amount: AI_CHAT_PRICE }
+                });
+
+                return socket.emit('ai_ask_paid_wallet_response', {
+                    success: false,
+                    error: 'AI failed. ₹21 has been refunded to your wallet.',
+                    refunded: true,
+                    walletBalance: refunded?.balance ?? wallet.balance
+                });
+            }
+
+            // AI succeeded — save messages
+            payment.details.questionAnswered = true;
+            payment.details.answerDelivered = true;
+            payment.details.answeredAt = new Date();
+            await payment.save();
+
+            let aiChat = aiChatExisting;
+            if (!aiChat) {
+                aiChat = new AIChat({
+                    user: socket.userId,
+                    kundli: kundli._id,
+                    messages: [],
+                    freeQuestionUsed: true,
+                    totalQuestions: 1,
+                    totalSpent: AI_CHAT_PRICE
+                });
+            } else {
+                aiChat.totalQuestions += 1;
+                aiChat.totalSpent += AI_CHAT_PRICE;
+            }
+            aiChat.messages.push({
+                role: 'user',
+                content: question.trim(),
+                isFreeQuestion: false,
+                paymentId: payment._id,
+                createdAt: new Date()
+            });
+            aiChat.messages.push({
+                role: 'ai',
+                content: aiResult.response,
+                isFreeQuestion: false,
+                isAstrologyQuestion: aiResult.isAstrologyQuestion,
+                paymentId: payment._id,
+                createdAt: new Date()
+            });
+            await aiChat.save();
+
+            socket.emit('ai_ask_paid_wallet_response', {
+                success: true,
+                answer: aiResult.response,
+                isAstrologyQuestion: aiResult.isAstrologyQuestion,
+                isFreeQuestion: false,
+                totalQuestions: aiChat.totalQuestions,
+                totalSpent: aiChat.totalSpent,
+                walletBalance: wallet.balance,
+                paymentId: payment._id
+            });
+        } catch (err) {
+            console.error('ai_ask_paid_wallet error:', err);
+            socket.emit('error', 'Failed to process question');
+        }
+    });
+
     // Handle disconnection
     socket.on('disconnect', () => {
         if (socket.userId) {
@@ -2010,6 +2896,9 @@ app.use('/api/ai-chat', (req, res, next) => {
     next();
 }, aiChatRoutes);
 app.use('/api/payments', unifiedPaymentRoutes);
+app.use('/api/wallet', walletRoutes);
+app.use('/api/astrologers', astrologerRoutes);
+app.use('/api/astrologer-chat', astrologerChatRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

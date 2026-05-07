@@ -32,6 +32,21 @@ const messageSchema = new mongoose.Schema({
         type: Date,
         default: null
     },
+    // ===== Astrologer-chat fields (optional) =====
+    // When a message belongs to a paid astrologer-chat session, these tag it
+    // with the astrologer persona and the session id. They stay null for
+    // ordinary admin<->user messages so the existing flow is unchanged.
+    astrologerKey: {
+        type: String,
+        default: null,
+        index: true
+    },
+    sessionId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'AstrologerChatSession',
+        default: null,
+        index: true
+    },
     createdAt: {
         type: Date,
         default: Date.now
@@ -48,5 +63,10 @@ messageSchema.index({ receiver: 1, createdAt: -1 });
 messageSchema.index({ receiver: 1, isRead: 1 }); // For unread count queries
 messageSchema.index({ sender: 1, receiver: 1, isRead: 1 }); // For marking as read
 messageSchema.index({ receiver: 1, sender: 1, createdAt: -1 }); // For conversation queries
+
+// Astrologer-chat lookups: list messages for an admin's "Bhupendra" tab,
+// or all messages within a single session, ordered chronologically.
+messageSchema.index({ astrologerKey: 1, createdAt: -1 });
+messageSchema.index({ sessionId: 1, createdAt: 1 });
 
 module.exports = mongoose.model('Message', messageSchema); 

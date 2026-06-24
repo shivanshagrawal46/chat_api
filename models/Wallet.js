@@ -8,8 +8,10 @@ const walletSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
         required: true,
-        unique: true,
-        index: true
+        // `unique: true` already creates an index on this field, so we
+        // intentionally do NOT add `index: true` here — that would trigger
+        // Mongoose's "Duplicate schema index on {user:1}" warning.
+        unique: true
     },
     balance: {
         type: Number,
@@ -47,13 +49,26 @@ walletSchema.pre('save', function (next) {
     next();
 });
 
-// Helper: get-or-create wallet for a user
+// Helper: get-or-create wallet for a user.
+// Uses an atomic upsert so two concurrent callers (e.g. a fast reconnect)
+// can never both succeed on `create()` and trigger a DuplicateKeyError.
+// `$setOnInsert` ensures we only stamp default fields when the doc is brand
+// new, never overwriting an existing balance.
 walletSchema.statics.findOrCreate = async function (userId) {
-    let wallet = await this.findOne({ user: userId });
-    if (!wallet) {
-        wallet = await this.create({ user: userId, balance: 0 });
-    }
-    return wallet;
+    return this.findOneAndUpdate(
+        { user: userId },
+        {
+            $setOnInsert: {
+                user: userId,
+                balance: 0,
+                totalRecharged: 0,
+                totalSpent: 0,
+                currency: 'INR',
+                createdAt: new Date()
+            }
+        },
+        { new: true, upsert: true, setDefaultsOnInsert: true }
+    );
 };
 
 module.exports = mongoose.model('Wallet', walletSchema);

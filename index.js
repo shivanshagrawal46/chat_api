@@ -96,6 +96,31 @@ try {
     console.log('FCM notifications will be disabled.');
 }
 
+// FCM error codes that mean "this token is permanently dead — stop using it".
+// Source: https://firebase.google.com/docs/cloud-messaging/send-message#admin
+const FCM_DEAD_TOKEN_CODES = new Set([
+    'messaging/registration-token-not-registered',
+    'messaging/invalid-registration-token',
+    'messaging/invalid-argument' // sometimes returned for malformed tokens
+]);
+
+// When FCM tells us a token is dead, wipe it from any User docs that hold
+// it so we never try to send to it again. Returns silently — fire-and-forget.
+const cleanupDeadFCMToken = async (fcmToken, errorCode) => {
+    if (!FCM_DEAD_TOKEN_CODES.has(errorCode)) return;
+    try {
+        const result = await User.updateMany(
+            { fcmToken },
+            { $unset: { fcmToken: '' } }
+        );
+        if (result.modifiedCount > 0) {
+            console.log(`🧹 Cleared ${result.modifiedCount} dead FCM token(s) (${errorCode})`);
+        }
+    } catch (cleanupErr) {
+        console.error('Failed to clear dead FCM token:', cleanupErr);
+    }
+};
+
 // Helper function to send FCM notification
 const sendFCMNotification = async (fcmToken, title, body, data = {}) => {
     if (!fcmInitialized || !fcmToken) {
@@ -116,8 +141,15 @@ const sendFCMNotification = async (fcmToken, title, body, data = {}) => {
         console.log('Successfully sent FCM notification:', response);
         return { success: true, response };
     } catch (error) {
-        console.error('Error sending FCM notification:', error);
-        return { success: false, error: error.message };
+        const code = error?.errorInfo?.code;
+        if (FCM_DEAD_TOKEN_CODES.has(code)) {
+            // Quiet log + cleanup — this is a known/expected condition, not a bug
+            console.warn(`⚠️ FCM token dead (${code}). Cleaning up.`);
+            cleanupDeadFCMToken(fcmToken, code);
+        } else {
+            console.error('Error sending FCM notification:', error);
+        }
+        return { success: false, error: error.message, code };
     }
 };
 
@@ -164,8 +196,14 @@ const sendRingingFCMNotification = async (fcmToken, title, body, data = {}) => {
         const response = await admin.messaging().send(message);
         return { success: true, response };
     } catch (error) {
-        console.error('Error sending ringing FCM notification:', error);
-        return { success: false, error: error.message };
+        const code = error?.errorInfo?.code;
+        if (FCM_DEAD_TOKEN_CODES.has(code)) {
+            console.warn(`⚠️ Ringing FCM token dead (${code}). Cleaning up — admin/user will need to re-register the token.`);
+            cleanupDeadFCMToken(fcmToken, code);
+        } else {
+            console.error('Error sending ringing FCM notification:', error);
+        }
+        return { success: false, error: error.message, code };
     }
 };
 
@@ -2594,8 +2632,15 @@ io.on('connection', (socket) => {
 
             const trimmed = content.trim();
             const now = new Date();
-            const receiverSocketId = connectedUsers.get(receiverId.toString());
-            const isOnline = !!receiverSocketId;
+
+            // Delivery routing (consistent with every other astro_* event):
+            //  - user -> admin  : broadcast to ADMIN_ROOM (reaches whichever
+            //    admin device has the chat open, regardless of which admin
+            //    account it is). Online = any admin socket connected.
+            //  - admin -> user  : emit to the session user's room.
+            const receiverIsAdmin = isUser;
+            const userSocketId = connectedUsers.get(session.user.toString());
+            const isOnline = receiverIsAdmin ? (adminSockets.size > 0) : !!userSocketId;
 
             const message = new Message({
                 sender: senderId,
@@ -2622,10 +2667,22 @@ io.on('connection', (socket) => {
                 sessionId: session._id
             };
 
-            // Echo to sender + push to receiver
+            // Echo to sender immediately
             socket.emit('astro_new_message', payload);
-            if (receiverSocketId) {
-                io.to(receiverSocketId).emit('astro_new_message', payload);
+
+            // Push to the receiver
+            if (receiverIsAdmin) {
+                // Include userId so the admin UI can route it to the right
+                // conversation tab. Broadcast to all admin sockets.
+                io.to(billing.ADMIN_ROOM).emit('astro_new_message', {
+                    ...payload,
+                    userId: session.user
+                });
+            } else {
+                io.to(session.user.toString()).emit('astro_new_message', payload);
+            }
+
+            if (isOnline) {
                 socket.emit('astro_message_delivered', {
                     messageId: message._id,
                     deliveredAt: now
@@ -2861,6 +2918,28 @@ io.on('connection', (socket) => {
             connectedUsers.delete(socket.userId);
             adminSockets.delete(socket.id);
             console.log('User disconnected:', socket.userId);
+
+            // Free up the user's not-yet-active astrologer sessions so a
+            // reconnect/retry isn't blocked by a stuck `ringing`/`accepted`
+            // session. Active (billing) sessions are intentionally left alone —
+            // the billing/grace logic owns those, and a brief network blip
+            // must not end a paid chat.
+            if (!socket.isAdmin) {
+                const disconnectedUserId = socket.userId;
+                setImmediate(async () => {
+                    try {
+                        const stuck = await AstrologerChatSession.find({
+                            user: disconnectedUserId,
+                            status: { $in: ['ringing', 'accepted'] }
+                        }).select('_id');
+                        for (const s of stuck) {
+                            await billing.endSession(s._id, 'user_disconnected');
+                        }
+                    } catch (err) {
+                        console.error('Disconnect session cleanup error:', err);
+                    }
+                });
+            }
         }
     });
 });

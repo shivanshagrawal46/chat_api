@@ -6,10 +6,11 @@ const astrologerSchema = new mongoose.Schema({
     key: {
         type: String,
         required: true,
+        // `unique: true` already creates the index on this field. Adding
+        // `index: true` would cause Mongoose's duplicate-index warning.
         unique: true,
         lowercase: true,
-        trim: true,
-        index: true
+        trim: true
     },
     displayName: {
         type: String,

@@ -88,10 +88,11 @@ function armRingTimeout(sessionId) {
     if (t.ringTimeoutId) clearTimeout(t.ringTimeoutId);
     t.ringTimeoutId = setTimeout(async () => {
         try {
-            const s = await AstrologerChatSession.findById(sessionId);
-            if (s && s.status === 'ringing') {
-                await endSession(sessionId, 'admin_did_not_answer');
-            }
+            // Atomic: only cancel if STILL ringing. If an admin accepted in the
+            // same tick, the transition already moved it to `accepted` and this
+            // is a no-op — so we can never cancel a session that was just
+            // accepted/activated.
+            await cancelIfStatus(sessionId, 'ringing', 'admin_did_not_answer');
         } catch (err) {
             console.error('Ring timeout error:', err);
         }
@@ -118,7 +119,10 @@ function armJoinTimeout(sessionId) {
             const s = await AstrologerChatSession.findById(sessionId);
             if (s && s.status === 'accepted') {
                 const reason = !s.userJoined ? 'user_did_not_join' : 'admin_did_not_answer';
-                await endSession(sessionId, reason);
+                // Atomic: only cancel if STILL accepted. If both joined and the
+                // session activated in the same tick, this won't match and the
+                // live (now active) session is preserved.
+                await cancelIfStatus(sessionId, 'accepted', reason);
             }
         } catch (err) {
             console.error('Join timeout error:', err);
@@ -141,22 +145,29 @@ function clearJoinTimeout(sessionId) {
  * and schedules subsequent ticks every 60s. Idempotent — safe to call twice.
  */
 async function activateAndStartBilling(sessionId) {
-    const session = await AstrologerChatSession.findById(sessionId);
-    if (!session) return null;
-    if (session.status === 'active') {
-        // Already active, just make sure a tick is scheduled
-        if (!activeSessionTimers.get(sessionId.toString())?.timeoutId) {
+    // Atomic accepted -> active transition. Both join events can arrive at
+    // virtually the same instant; only ONE caller wins this conditional update,
+    // so the first minute is charged exactly once and `astro_chat_started` is
+    // emitted exactly once.
+    const session = await AstrologerChatSession.findOneAndUpdate(
+        { _id: sessionId, status: 'accepted' },
+        { $set: { status: 'active', startedAt: new Date(), updatedAt: new Date() } },
+        { new: true }
+    );
+
+    if (!session) {
+        // We didn't win the transition. Either it's already active (the other
+        // join won) or it's no longer joinable. If active without a scheduled
+        // tick, make sure billing keeps ticking — but never charge here.
+        const existing = await AstrologerChatSession.findById(sessionId);
+        if (existing && existing.status === 'active' &&
+            !activeSessionTimers.get(sessionId.toString())?.timeoutId) {
             scheduleNextTick(sessionId);
         }
-        return session;
+        return existing;
     }
-    if (session.status !== 'accepted') return null;
 
     clearJoinTimeout(sessionId);
-
-    session.status = 'active';
-    session.startedAt = new Date();
-    await session.save();
 
     emitToBoth(session, 'astro_chat_started', {
         sessionId: session._id,
@@ -363,16 +374,26 @@ async function beginGracePeriod(sessionId) {
 async function endSession(sessionId, reason = 'user_ended') {
     clearAllTimers(sessionId);
 
-    const session = await AstrologerChatSession.findById(sessionId);
-    if (!session) return null;
-    if (['ended', 'cancelled'].includes(session.status)) return session;
+    const current = await AstrologerChatSession.findById(sessionId);
+    if (!current) return null;
+    if (['ended', 'cancelled'].includes(current.status)) return current;
 
-    session.endedAt = new Date();
-    session.endReason = reason;
     // Sessions that never reached `active` are cancelled (no charge); active
     // sessions become `ended` with the duration and totals already recorded.
-    session.status = (session.status === 'active') ? 'ended' : 'cancelled';
-    await session.save();
+    const newStatus = (current.status === 'active') ? 'ended' : 'cancelled';
+
+    // Atomic transition guarded against an already-terminal state, so two
+    // concurrent enders (user taps End + admin taps End + a timeout firing)
+    // can't both emit `astro_chat_ended` or clobber each other's fields.
+    const session = await AstrologerChatSession.findOneAndUpdate(
+        { _id: sessionId, status: { $nin: ['ended', 'cancelled'] } },
+        { $set: { status: newStatus, endedAt: new Date(), endReason: reason, updatedAt: new Date() } },
+        { new: true }
+    );
+    if (!session) {
+        // Someone else terminated it first — don't re-emit.
+        return await AstrologerChatSession.findById(sessionId);
+    }
 
     const payload = {
         sessionId: session._id,
@@ -388,6 +409,36 @@ async function endSession(sessionId, reason = 'user_ended') {
     };
     emitToBoth(session, 'astro_chat_ended', payload);
 
+    return session;
+}
+
+/**
+ * Atomically cancel a session ONLY if it is still in `expectedStatus`. Used by
+ * the ring/join timeouts so a session that was accepted or activated in the
+ * same instant the timer fires is never wrongly cancelled. No-op (returns null)
+ * if the status already moved on.
+ */
+async function cancelIfStatus(sessionId, expectedStatus, reason) {
+    const session = await AstrologerChatSession.findOneAndUpdate(
+        { _id: sessionId, status: expectedStatus },
+        { $set: { status: 'cancelled', endedAt: new Date(), endReason: reason, updatedAt: new Date() } },
+        { new: true }
+    );
+    if (!session) return null;
+
+    clearAllTimers(sessionId);
+    emitToBoth(session, 'astro_chat_ended', {
+        sessionId: session._id,
+        astrologerKey: session.astrologerKey,
+        astrologerName: session.astrologerName,
+        userId: session.user,
+        status: session.status,
+        endReason: reason,
+        durationSeconds: session.durationSeconds,
+        minutesBilled: session.minutesBilled,
+        totalCharged: session.totalCharged,
+        endedAt: session.endedAt
+    });
     return session;
 }
 

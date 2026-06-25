@@ -506,6 +506,87 @@ io.on('connection', (socket) => {
                         console.error('Error delivering pending messages:', err);
                     }
                 });
+
+                // Resume any in-progress astrologer chat so a reconnecting
+                // client (missed event / app restart / brief network blip)
+                // recovers its UI state instead of being stuck on the ringing
+                // screen. This only matches when THIS user is the session's
+                // customer, so admins are naturally unaffected.
+                setImmediate(async () => {
+                    try {
+                        const liveSession = await AstrologerChatSession.findOne({
+                            user: user._id,
+                            status: { $in: ['ringing', 'accepted', 'active'] }
+                        }).lean();
+                        if (!liveSession) return;
+
+                        const base = {
+                            sessionId: liveSession._id,
+                            astrologerKey: liveSession.astrologerKey,
+                            astrologerName: liveSession.astrologerName,
+                            ratePerMinute: liveSession.ratePerMinute,
+                            resumed: true
+                        };
+                        if (liveSession.status === 'ringing') {
+                            socket.emit('astro_chat_ringing_placed', {
+                                ...base,
+                                ringTimeoutMs: billing.RING_TIMEOUT_MS
+                            });
+                        } else if (liveSession.status === 'accepted') {
+                            socket.emit('astro_chat_accepted', {
+                                ...base,
+                                joinTimeoutMs: billing.JOIN_TIMEOUT_MS,
+                                acceptedAt: liveSession.acceptedAt
+                            });
+                        } else if (liveSession.status === 'active') {
+                            socket.emit('astro_chat_started', {
+                                ...base,
+                                startedAt: liveSession.startedAt
+                            });
+                        }
+                    } catch (err) {
+                        console.error('Resume astro session error:', err);
+                    }
+                });
+
+                // Admin resume: a reconnecting admin re-surfaces every
+                // in-progress session (ringing cards + live chats) so they
+                // aren't lost on a refresh / network blip / app restart.
+                if (user.isAdmin) {
+                    setImmediate(async () => {
+                        try {
+                            const liveSessions = await AstrologerChatSession.find({
+                                status: { $in: ['ringing', 'accepted', 'active'] }
+                            }).lean();
+                            for (const s of liveSessions) {
+                                const base = {
+                                    sessionId: s._id,
+                                    astrologerKey: s.astrologerKey,
+                                    astrologerName: s.astrologerName,
+                                    ratePerMinute: s.ratePerMinute,
+                                    userId: s.user,
+                                    resumed: true
+                                };
+                                if (s.status === 'ringing') {
+                                    socket.emit('astro_chat_ringing', base);
+                                } else if (s.status === 'accepted') {
+                                    socket.emit('astro_chat_accepted', {
+                                        ...base,
+                                        joinTimeoutMs: billing.JOIN_TIMEOUT_MS,
+                                        acceptedAt: s.acceptedAt
+                                    });
+                                } else if (s.status === 'active') {
+                                    socket.emit('astro_chat_started', {
+                                        ...base,
+                                        startedAt: s.startedAt
+                                    });
+                                }
+                            }
+                        } catch (err) {
+                            console.error('Admin resume error:', err);
+                        }
+                    });
+                }
             } else {
                 socket.emit('error', 'User not found');
             }
@@ -2481,18 +2562,22 @@ io.on('connection', (socket) => {
             const { sessionId } = data || {};
             if (!sessionId) return socket.emit('error', 'sessionId is required');
 
-            const session = await AstrologerChatSession.findById(sessionId);
-            if (!session) return socket.emit('error', 'Session not found');
-            if (session.status !== 'ringing') {
+            // Atomic ringing -> accepted: if two admin devices tap Accept, or
+            // Accept races the 60s ring-timeout, only one wins this update.
+            const session = await AstrologerChatSession.findOneAndUpdate(
+                { _id: sessionId, status: 'ringing' },
+                { $set: { status: 'accepted', acceptedAt: new Date(), updatedAt: new Date() } },
+                { new: true }
+            );
+            if (!session) {
+                const existing = await AstrologerChatSession.findById(sessionId);
                 return socket.emit('astro_accept_chat_response', {
-                    success: false, error: `Session is already ${session.status}`
+                    success: false,
+                    error: existing ? `Session is already ${existing.status}` : 'Session not found'
                 });
             }
 
             billing.clearRingTimeout(session._id);
-            session.status = 'accepted';
-            session.acceptedAt = new Date();
-            await session.save();
             billing.armJoinTimeout(session._id);
 
             const payload = {
@@ -2505,6 +2590,33 @@ io.on('connection', (socket) => {
             };
             io.to(session.user.toString()).emit('astro_chat_accepted', payload);
             io.to(billing.ADMIN_ROOM).emit('astro_chat_accepted', { ...payload, userId: session.user });
+
+            // Wake the user's app (backgrounded / locked / socket dropped) so
+            // they can enter the chat before the join window closes. The
+            // socket emit above covers the foreground case; this is the
+            // fallback that prevents "stuck on ringing" when the app isn't
+            // actively listening.
+            (async () => {
+                try {
+                    const u = await User.findById(session.user).select('fcmToken').lean();
+                    if (u?.fcmToken) {
+                        sendRingingFCMNotification(
+                            u.fcmToken,
+                            `${session.astrologerName} accepted your chat`,
+                            'Tap to join the chat now',
+                            {
+                                type: 'astro_chat_accepted',
+                                sessionId: session._id.toString(),
+                                astrologerKey: session.astrologerKey,
+                                astrologerName: session.astrologerName,
+                                ratePerMinute: session.ratePerMinute
+                            }
+                        ).catch(() => {});
+                    }
+                } catch (e) {
+                    console.error('Accept FCM error:', e);
+                }
+            })();
 
             socket.emit('astro_accept_chat_response', { success: true, session });
         } catch (err) {
@@ -2557,33 +2669,49 @@ io.on('connection', (socket) => {
                 });
             }
 
-            // Mark the appropriate join flag
+            // Atomically set only THIS side's join flag. Read-modify-write
+            // would lose an update when the user-join and admin-join arrive at
+            // the same instant, leaving one flag false forever -> billing never
+            // starts -> the join timeout kills a chat both sides actually joined.
             const isUser = session.user.toString() === socket.userId;
-            if (isUser && !session.userJoined) {
-                session.userJoined = true;
-                session.userJoinedAt = new Date();
+            const setFields = { updatedAt: new Date() };
+            if (isUser) {
+                setFields.userJoined = true;
+                setFields.userJoinedAt = new Date();
             }
-            if (socket.isAdmin && !session.adminJoined) {
-                session.adminJoined = true;
-                session.adminJoinedAt = new Date();
+            if (socket.isAdmin) {
+                setFields.adminJoined = true;
+                setFields.adminJoinedAt = new Date();
             }
-            await session.save();
+
+            const updated = await AstrologerChatSession.findOneAndUpdate(
+                { _id: sessionId, status: { $in: ['accepted', 'active'] } },
+                { $set: setFields },
+                { new: true }
+            );
+            if (!updated) {
+                return socket.emit('astro_join_chat_response', {
+                    success: false, error: 'Session is no longer joinable'
+                });
+            }
 
             // Notify both sides about updated join state
             const joinState = {
-                sessionId: session._id,
-                userJoined: session.userJoined,
-                adminJoined: session.adminJoined
+                sessionId: updated._id,
+                userJoined: updated.userJoined,
+                adminJoined: updated.adminJoined
             };
-            io.to(session.user.toString()).emit('astro_join_state', joinState);
-            io.to(billing.ADMIN_ROOM).emit('astro_join_state', { ...joinState, userId: session.user });
+            io.to(updated.user.toString()).emit('astro_join_state', joinState);
+            io.to(billing.ADMIN_ROOM).emit('astro_join_state', { ...joinState, userId: updated.user });
 
-            // Activate + charge the first minute when both have joined
-            if (session.userJoined && session.adminJoined && session.status === 'accepted') {
-                await billing.activateAndStartBilling(session._id);
+            // Activate + charge the first minute when both have joined.
+            // activateAndStartBilling is itself atomic, so concurrent joins
+            // charge the first minute exactly once.
+            if (updated.userJoined && updated.adminJoined && updated.status === 'accepted') {
+                await billing.activateAndStartBilling(updated._id);
             }
 
-            socket.emit('astro_join_chat_response', { success: true, session });
+            socket.emit('astro_join_chat_response', { success: true, session: updated });
         } catch (err) {
             console.error('astro_join_chat error:', err);
             socket.emit('error', 'Failed to join chat');
@@ -2921,24 +3049,29 @@ io.on('connection', (socket) => {
 
             // Free up the user's not-yet-active astrologer sessions so a
             // reconnect/retry isn't blocked by a stuck `ringing`/`accepted`
-            // session. Active (billing) sessions are intentionally left alone —
-            // the billing/grace logic owns those, and a brief network blip
-            // must not end a paid chat.
+            // session — BUT only after a grace window, and only if the user is
+            // still offline. Mobile clients drop the socket constantly
+            // (transport upgrades, brief blips, backgrounding); cancelling
+            // immediately would make a normal reconnect kill a live request.
+            // Active (billing) sessions are never touched here — the
+            // billing/grace logic owns those.
             if (!socket.isAdmin) {
                 const disconnectedUserId = socket.userId;
-                setImmediate(async () => {
+                setTimeout(async () => {
                     try {
+                        // Reconnected in the meantime? Leave the session alone.
+                        if (connectedUsers.has(disconnectedUserId)) return;
                         const stuck = await AstrologerChatSession.find({
                             user: disconnectedUserId,
                             status: { $in: ['ringing', 'accepted'] }
                         }).select('_id');
                         for (const s of stuck) {
-                            await billing.endSession(s._id, 'user_disconnected');
+                            await billing.endSession(s._id, 'disconnected');
                         }
                     } catch (err) {
                         console.error('Disconnect session cleanup error:', err);
                     }
-                });
+                }, 15000);
             }
         }
     });

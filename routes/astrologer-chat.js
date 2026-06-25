@@ -318,18 +318,21 @@ router.post('/admin/sessions/:id/accept', auth, async (req, res) => {
         if (!req.user.isAdmin) {
             return res.status(403).json({ error: 'Admin access required' });
         }
-        const session = await AstrologerChatSession.findById(req.params.id);
-        if (!session) return res.status(404).json({ error: 'Session not found' });
-        if (session.status !== 'ringing') {
-            return res.status(400).json({ error: `Session is already ${session.status}` });
+        // Atomic ringing -> accepted: guards against a double accept or an
+        // accept racing the ring-timeout (only one transition wins).
+        const session = await AstrologerChatSession.findOneAndUpdate(
+            { _id: req.params.id, status: 'ringing' },
+            { $set: { status: 'accepted', acceptedAt: new Date(), updatedAt: new Date() } },
+            { new: true }
+        );
+        if (!session) {
+            const existing = await AstrologerChatSession.findById(req.params.id);
+            return res.status(existing ? 400 : 404).json({
+                error: existing ? `Session is already ${existing.status}` : 'Session not found'
+            });
         }
 
         billing.clearRingTimeout(session._id);
-
-        session.status = 'accepted';
-        session.acceptedAt = new Date();
-        await session.save();
-
         billing.armJoinTimeout(session._id);
 
         const payload = {

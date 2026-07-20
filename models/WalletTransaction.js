@@ -11,7 +11,7 @@ const walletTransactionSchema = new mongoose.Schema({
     },
     type: {
         type: String,
-        enum: ['recharge', 'astro_chat', 'ai_chat', 'refund', 'adjustment'],
+        enum: ['recharge', 'astro_chat', 'ai_chat', 'shop_order', 'refund', 'adjustment'],
         required: true,
         index: true
     },

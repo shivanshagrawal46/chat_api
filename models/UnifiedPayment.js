@@ -57,7 +57,13 @@ const unifiedPaymentSchema = new mongoose.Schema({
         
         // For Shop Order
         orderId: { type: String, default: null },
-        orderItems: { type: String, default: null } // JSON string of items
+        orderItems: { type: String, default: null }, // JSON string of items
+
+        // For Kosh (shop) content bought via wallet — lets us mark content as
+        // owned and dedupe repeat purchases per (user, contentId).
+        contentId: { type: String, default: null },
+        purchaseEmail: { type: String, default: null },
+        paymentMethod: { type: String, default: null } // e.g. 'wallet'
     },
     // Description
     description: {

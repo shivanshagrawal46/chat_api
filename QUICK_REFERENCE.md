@@ -7,6 +7,7 @@ GET    /api/chat/unread-count/:roomId      # Get unread count for a chat
 POST   /api/chat/mark-as-read              # Mark messages as read
 GET    /api/chat/conversations              # Get all conversations with unread counts
 POST   /api/chat/register-fcm-token        # Register FCM token for notifications
+POST   /api/chat/unregister-fcm-token      # Clear/remove FCM token (logout/disable)
 ```
 
 ## 📡 New Socket.IO Events
@@ -152,6 +153,18 @@ fetch('/api/chat/register-fcm-token', {
     'Authorization': `Bearer ${jwtToken}`
   },
   body: JSON.stringify({ fcmToken })
+});
+```
+
+### 7. Unregister FCM Token (Logout/Disable Notifications)
+```javascript
+// When user logs out or disables notifications
+fetch('/api/chat/unregister-fcm-token', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': `Bearer ${jwtToken}`
+  }
 });
 ```
 

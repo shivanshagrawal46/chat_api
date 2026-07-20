@@ -30,6 +30,7 @@ const unifiedPaymentRoutes = require('./routes/unified-payment');
 const walletRoutes = require('./routes/wallet');
 const astrologerRoutes = require('./routes/astrologers');
 const astrologerChatRoutes = require('./routes/astrologer-chat');
+const koshRoutes = require('./routes/kosh');
 const Wallet = require('./models/Wallet');
 const WalletTransaction = require('./models/WalletTransaction');
 const Astrologer = require('./models/Astrologer');
@@ -3111,6 +3112,7 @@ app.use('/api/payments', unifiedPaymentRoutes);
 app.use('/api/wallet', walletRoutes);
 app.use('/api/astrologers', astrologerRoutes);
 app.use('/api/astrologer-chat', astrologerChatRoutes);
+app.use('/api/kosh-purchase', koshRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

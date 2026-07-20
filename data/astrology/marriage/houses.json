@@ -1,0 +1,182 @@
+{
+  "1": {
+    "name": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "signification": {
+      "en": "self, personality, physical vitality, and overall approach to life",
+      "hi": "स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण"
+    },
+    "domainAngle": {
+      "en": "how your own personality, self-confidence, and readiness for commitment shape your approach to marriage and partnership",
+      "hi": "आपका व्यक्तित्व, आत्मविश्वास और प्रतिबद्धता के लिए तत्परता किस प्रकार विवाह और साझेदारी के प्रति आपके दृष्टिकोण को आकार देती है"
+    },
+    "category": "kendra-trikona"
+  },
+  "2": {
+    "name": {
+      "en": "2nd House (Dhana/Kutumba Bhava)",
+      "hi": "द्वितीय भाव (धन/कुटुंब भाव)"
+    },
+    "signification": {
+      "en": "family, accumulated resources, speech, and values",
+      "hi": "परिवार, संचित संसाधन, वाणी और मूल्य"
+    },
+    "domainAngle": {
+      "en": "family values after marriage, shared household resources, and how your speech shapes harmony within the family",
+      "hi": "विवाह के बाद पारिवारिक मूल्य, साझा घरेलू संसाधन और आपकी वाणी परिवार में सामंजस्य को कैसे आकार देती है"
+    },
+    "category": "maraka"
+  },
+  "3": {
+    "name": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "signification": {
+      "en": "self-effort, courage, communication skills, and short journeys",
+      "hi": "स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ"
+    },
+    "domainAngle": {
+      "en": "the courage and initiative to pursue and commit to a relationship, and day-to-day communication with your partner",
+      "hi": "रिश्ते को आगे बढ़ाने और प्रतिबद्ध होने का साहस व पहल, तथा अपने साथी के साथ दैनिक संचार"
+    },
+    "category": "upachaya"
+  },
+  "4": {
+    "name": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "signification": {
+      "en": "comfort, home, vehicles, and emotional/domestic foundation",
+      "hi": "सुख-सुविधा, घर, वाहन और भावनात्मक/घरेलू आधार"
+    },
+    "domainAngle": {
+      "en": "domestic peace, emotional security, and overall comfort and happiness within married life",
+      "hi": "घरेलू शांति, भावनात्मक सुरक्षा और वैवाहिक जीवन में समग्र सुख-सुविधा"
+    },
+    "category": "kendra-trikona"
+  },
+  "5": {
+    "name": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "signification": {
+      "en": "romance, intelligence, creativity, and children",
+      "hi": "रोमांस, बुद्धिमत्ता, रचनात्मकता और संतान"
+    },
+    "domainAngle": {
+      "en": "romance, courtship, love affairs, and the blessing of children within the marriage",
+      "hi": "रोमांस, प्रणय-निवेदन, प्रेम-प्रसंग और विवाह में संतान का आशीर्वाद"
+    },
+    "category": "kendra-trikona"
+  },
+  "6": {
+    "name": {
+      "en": "6th House (Ripu/Roga Bhava)",
+      "hi": "षष्ठम भाव (रिपु/रोग भाव)"
+    },
+    "signification": {
+      "en": "disputes, competition, health, and daily routine",
+      "hi": "विवाद, प्रतिस्पर्धा, स्वास्थ्य और दैनिक दिनचर्या"
+    },
+    "domainAngle": {
+      "en": "misunderstandings, disagreements, possible legal/litigation matters, or health concerns that test the relationship",
+      "hi": "गलतफहमियाँ, मतभेद, संभावित कानूनी/मुकदमेबाज़ी मामले, या स्वास्थ्य चिंताएँ जो रिश्ते की परीक्षा लेती हैं"
+    },
+    "category": "upachaya"
+  },
+  "7": {
+    "name": {
+      "en": "7th House (Kalatra/Vivaha Bhava)",
+      "hi": "सप्तम भाव (कलत्र/विवाह भाव)"
+    },
+    "signification": {
+      "en": "marriage, spouse, partnership, and public dealing",
+      "hi": "विवाह, जीवनसाथी, साझेदारी और सार्वजनिक व्यवहार"
+    },
+    "domainAngle": {
+      "en": "this is the very house of marriage itself - its condition most directly defines the nature of your spouse, marital happiness, and the quality of the partnership",
+      "hi": "यह स्वयं विवाह का भाव है - इसकी स्थिति सीधे आपके जीवनसाथी की प्रकृति, वैवाहिक सुख और साझेदारी की गुणवत्ता को परिभाषित करती है"
+    },
+    "category": "kendra-trikona"
+  },
+  "8": {
+    "name": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "signification": {
+      "en": "transformation, intimacy, inheritance, and hidden/sudden matters",
+      "hi": "रूपांतरण, अंतरंगता, विरासत और छिपे/अचानक विषय"
+    },
+    "domainAngle": {
+      "en": "the longevity and depth of the marital bond, physical intimacy, in-laws' wealth, and sudden transformative events in married life",
+      "hi": "वैवाहिक बंधन की दीर्घायु और गहराई, शारीरिक अंतरंगता, ससुराल पक्ष की संपत्ति, और वैवाहिक जीवन की अचानक रूपांतरकारी घटनाएँ"
+    },
+    "category": "dusthana"
+  },
+  "9": {
+    "name": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "signification": {
+      "en": "fortune, dharma, philosophy, and long-distance/foreign connections",
+      "hi": "भाग्य, धर्म, दर्शनशास्त्र और दूरस्थ/विदेश संबंध"
+    },
+    "domainAngle": {
+      "en": "the spouse's luck and moral compass, blessings from father-in-law/elders, and possibly a foreign or long-distance connection with the partner",
+      "hi": "जीवनसाथी का भाग्य और नैतिक दिशा-बोध, ससुर/बड़ों का आशीर्वाद, और संभवतः साथी के साथ विदेश या दूरस्थ संबंध"
+    },
+    "category": "kendra-trikona"
+  },
+  "10": {
+    "name": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "signification": {
+      "en": "career, public status, and authority",
+      "hi": "करियर, सार्वजनिक प्रतिष्ठा और अधिकार"
+    },
+    "domainAngle": {
+      "en": "the spouse's career and professional status, and how the marriage affects your own public image and standing",
+      "hi": "जीवनसाथी का करियर और व्यावसायिक प्रतिष्ठा, तथा विवाह आपकी अपनी सार्वजनिक छवि और प्रतिष्ठा को कैसे प्रभावित करता है"
+    },
+    "category": "kendra-trikona"
+  },
+  "11": {
+    "name": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "signification": {
+      "en": "gains, networks, and fulfilment of desires",
+      "hi": "लाभ, नेटवर्क और इच्छाओं की पूर्ति"
+    },
+    "domainAngle": {
+      "en": "financial gains through marriage, friendship and camaraderie with your spouse, and fulfilment of shared desires as a couple",
+      "hi": "विवाह के माध्यम से वित्तीय लाभ, जीवनसाथी के साथ मित्रता और सौहार्द, तथा दंपति के रूप में साझा इच्छाओं की पूर्ति"
+    },
+    "category": "upachaya"
+  },
+  "12": {
+    "name": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "signification": {
+      "en": "foreign lands, expenditure, isolation, and spirituality",
+      "hi": "विदेश, व्यय, एकांत और आध्यात्म"
+    },
+    "domainAngle": {
+      "en": "bed pleasures and physical intimacy, possible foreign settlement with the spouse, periods of separation, or family-related expenditure",
+      "hi": "शय्या सुख और शारीरिक अंतरंगता, साथी के साथ संभावित विदेश निवास, अलगाव की अवधि, या परिवार-संबंधी व्यय"
+    },
+    "category": "dusthana"
+  }
+}

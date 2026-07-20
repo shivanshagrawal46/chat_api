@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate:career-dataset": "node scripts/generateCareerAstrologyDataset.js",
+    "generate:marriage-dataset": "node scripts/generateMarriageAstrologyDataset.js",
+    "generate:money-dataset": "node scripts/generateMoneyAstrologyDataset.js",
+    "generate:health-dataset": "node scripts/generateHealthAstrologyDataset.js"
   },
   "keywords": [],
   "author": "",

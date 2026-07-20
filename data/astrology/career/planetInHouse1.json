@@ -1,0 +1,155 @@
+{
+  "sun": {
+    "key": "sun",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Sun placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition. This placement inclines you towards government service and administration, politics and public leadership, management and executive roles, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "सूर्य (Surya) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है है। यह स्थिति आपको सरकारी सेवा और प्रशासन, राजनीति और सार्वजनिक नेतृत्व, प्रबंधन और कार्यकारी पद की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  },
+  "moon": {
+    "key": "moon",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Moon placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection. This placement inclines you towards nursing, healthcare and hospitality, public relations and customer-facing roles, psychology and counselling, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "चंद्रमा (Chandra) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है है। यह स्थिति आपको नर्सिंग, स्वास्थ्य सेवा और आतिथ्य, जनसंपर्क और ग्राहक-सेवा भूमिकाएँ, मनोविज्ञान और परामर्श की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  },
+  "mars": {
+    "key": "mars",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Mars placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries a bold, energetic, and competitive drive centered on courage, action, and technical mastery. This placement inclines you towards engineering, mechanical and automobile fields, defence, police and security services, sports, fitness and athletics, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "मंगल (Mangal) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है है। यह स्थिति आपको इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र, रक्षा, पुलिस और सुरक्षा सेवाएँ, खेल, फिटनेस और एथलेटिक्स की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  },
+  "mercury": {
+    "key": "mercury",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Mercury placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. This placement inclines you towards business, trading and commerce, writing, journalism and media, accounting, finance and analytics, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "बुध (Budh) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है। यह स्थिति आपको व्यापार और वाणिज्य, लेखन, पत्रकारिता और मीडिया, लेखांकन, वित्त और विश्लेषण की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  },
+  "jupiter": {
+    "key": "jupiter",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Jupiter placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning. This placement inclines you towards teaching, professorship and academia, law, judiciary and legal consultancy, banking, finance and investment advisory, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "बृहस्पति / गुरु (Guru) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है है। यह स्थिति आपको शिक्षण, प्रोफेसरशिप और शिक्षाजगत, कानून, न्यायपालिका और विधिक परामर्श, बैंकिंग, वित्त और निवेश सलाहकारी की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  },
+  "venus": {
+    "key": "venus",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Venus placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste. This placement inclines you towards arts, entertainment and the film industry, fashion, design and beauty industry, luxury goods, hospitality and event management, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "शुक्र (Shukra) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है है। यह स्थिति आपको कला, मनोरंजन और फिल्म उद्योग, फैशन, डिज़ाइन और सौंदर्य उद्योग, विलासिता वस्तुएँ, आतिथ्य और इवेंट प्रबंधन की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  },
+  "saturn": {
+    "key": "saturn",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Saturn placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. This placement inclines you towards labour-intensive and service-oriented industries, mining, oil, agriculture and heavy industry, judiciary, law-and-order and compliance roles, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "शनि (Shani) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है। यह स्थिति आपको श्रम-प्रधान और सेवा-उन्मुख उद्योग, खनन, तेल, कृषि और भारी उद्योग, न्यायपालिका, कानून-व्यवस्था और अनुपालन भूमिकाएँ की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  },
+  "rahu": {
+    "key": "rahu",
+    "planet": "rahu",
+    "planetName": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Rahu placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. This placement inclines you towards technology, IT and emerging/disruptive fields, foreign trade, import-export and aviation, mass media, digital content and photography, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "राहु (Rahu) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है है। यह स्थिति आपको प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र, विदेश व्यापार, आयात-निर्यात और विमानन, जनसंचार माध्यम, डिजिटल सामग्री और फोटोग्राफी की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  },
+  "ketu": {
+    "key": "ketu",
+    "planet": "ketu",
+    "planetName": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Ketu placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to career. It carries a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. This placement inclines you towards research, analytics and highly specialised technical work, spirituality, astrology and religious institutions, alternative medicine and healing sciences, and others perceive you through this planet's qualities - a strong, visible personal-brand effect on your professional life.",
+      "hi": "केतु (Ketu) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और करियर के प्रति समग्र दृष्टिकोण को रंग देता है। इसमें एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है है। यह स्थिति आपको शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य, आध्यात्म, ज्योतिष और धार्मिक संस्थान, वैकल्पिक चिकित्सा और उपचार विज्ञान की ओर प्रवृत्त करती है, और अन्य लोग आपको इस ग्रह के गुणों के माध्यम से देखते हैं - जो आपके व्यावसायिक जीवन पर एक मज़बूत, दृश्यमान व्यक्तिगत-छवि प्रभाव है।"
+    }
+  }
+}

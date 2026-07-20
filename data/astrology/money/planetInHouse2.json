@@ -1,0 +1,155 @@
+{
+  "sun": {
+    "key": "sun",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Sun placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect. This placement strongly favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets.",
+      "hi": "सूर्य (Surya) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है। यह स्थिति अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अत्यंत अनुकूल है।"
+    }
+  },
+  "moon": {
+    "key": "moon",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Moon placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods. This placement strongly favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself.",
+      "hi": "चंद्रमा (Chandra) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है। यह स्थिति जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अत्यंत अनुकूल है।"
+    }
+  },
+  "mars": {
+    "key": "mars",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Mars placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery. This placement strongly favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking.",
+      "hi": "मंगल (Mangal) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है। यह स्थिति रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अत्यंत अनुकूल है।"
+    }
+  },
+  "mercury": {
+    "key": "mercury",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Mercury placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. This placement strongly favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source.",
+      "hi": "बुध (Budh) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है। यह स्थिति व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अत्यंत अनुकूल है।"
+    }
+  },
+  "jupiter": {
+    "key": "jupiter",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Jupiter placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance. This placement strongly favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains.",
+      "hi": "बृहस्पति / गुरु (Guru) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है। यह स्थिति कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अत्यंत अनुकूल है।"
+    }
+  },
+  "venus": {
+    "key": "venus",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Venus placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living. This placement strongly favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings.",
+      "hi": "शुक्र (Shukra) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है। यह स्थिति कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अत्यंत अनुकूल है।"
+    }
+  },
+  "saturn": {
+    "key": "saturn",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Saturn placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. This placement strongly favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established.",
+      "hi": "शनि (Shani) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है। यह स्थिति अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अत्यंत अनुकूल है।"
+    }
+  },
+  "rahu": {
+    "key": "rahu",
+    "planet": "rahu",
+    "planetName": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Rahu placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. This placement strongly favours sudden, unconventional, or foreign-sourced wealth; speculative gains through stock markets, trading, or high-risk ventures; wealth through technology, foreign trade, or emerging/disruptive fields.",
+      "hi": "राहु (Rahu) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है है। यह स्थिति अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति; शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ; तकनीक, विदेश व्यापार या उभरते/विघटनकारी क्षेत्रों से संपत्ति के लिए अत्यंत अनुकूल है।"
+    }
+  },
+  "ketu": {
+    "key": "ketu",
+    "planet": "ketu",
+    "planetName": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Ketu placed directly in the 2nd house (Dhana/wealth house) has a strong, immediate influence on your finances, since it occupies one of the two primary wealth houses. It carries a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. This placement strongly favours relative detachment from material wealth or reduced interest in active accumulation; sudden, unexpected financial gains or losses, often outside one's direct control; wealth through research, specialised technical work, or spiritual/occult fields.",
+      "hi": "केतु (Ketu) का सीधे द्वितीय भाव (धन भाव) में स्थित होना आपके वित्त पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह दो प्रमुख धन भावों में से एक में स्थित है। इसमें एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है है। यह स्थिति भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि; अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि; शोध, विशिष्ट तकनीकी कार्य या आध्यात्मिक/गूढ़ क्षेत्रों से संपत्ति के लिए अत्यंत अनुकूल है।"
+    }
+  }
+}

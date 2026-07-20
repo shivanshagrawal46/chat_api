@@ -1,0 +1,377 @@
+{
+  "sun": {
+    "order": 1,
+    "name": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect",
+      "hi": "एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "a spouse who is authoritative, proud, and status-conscious",
+        "a partner connected with government, administration, or leadership roles",
+        "a relationship where ego and mutual respect need conscious balancing",
+        "a marriage that visibly raises your social standing",
+        "a father-figure-like, protective quality in the partner"
+      ],
+      "hi": [
+        "एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी",
+        "सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी",
+        "एक ऐसा रिश्ता जहाँ अहं और पारस्परिक सम्मान का सचेत संतुलन आवश्यक है",
+        "एक विवाह जो आपकी सामाजिक प्रतिष्ठा को स्पष्ट रूप से बढ़ाता है",
+        "साथी में पिता-तुल्य, संरक्षणात्मक गुण"
+      ]
+    },
+    "friends": [
+      "moon",
+      "mars",
+      "jupiter"
+    ],
+    "neutrals": [
+      "mercury"
+    ],
+    "enemies": [
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ]
+  },
+  "moon": {
+    "order": 2,
+    "name": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort",
+      "hi": "एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "a caring, emotionally attuned, and nurturing spouse",
+        "strong emotional bonding and empathetic understanding between partners",
+        "a relationship where mood swings need gentle handling",
+        "a home-loving partner who prioritises domestic comfort",
+        "a spouse who may be publicly liked or involved in caregiving/hospitality fields"
+      ],
+      "hi": [
+        "एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी",
+        "साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ",
+        "एक ऐसा रिश्ता जहाँ मनोदशा में उतार-चढ़ाव को कोमलता से संभालने की आवश्यकता है",
+        "घर-प्रेमी साथी जो घरेलू सुख को प्राथमिकता देता है",
+        "एक साथी जो सार्वजनिक रूप से पसंद किया जाए या देखभाल/आतिथ्य क्षेत्रों से जुड़ा हो"
+      ]
+    },
+    "friends": [
+      "sun",
+      "mercury"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": []
+  },
+  "mars": {
+    "order": 3,
+    "name": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action",
+      "hi": "एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "a passionate, energetic, and protective spouse",
+        "a relationship with strong physical chemistry but a tendency towards arguments if unchecked",
+        "a partner connected with engineering, defence, sports, or technical fields",
+        "possible early friction, delays, or the classical \"Mangal Dosha\" concern before the relationship stabilises",
+        "a marriage that grows stronger once mutual patience and respect are established"
+      ],
+      "hi": [
+        "एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी",
+        "एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो",
+        "इंजीनियरिंग, रक्षा, खेल या तकनीकी क्षेत्रों से जुड़ा साथी",
+        "रिश्ते के स्थिर होने से पहले संभावित प्रारंभिक टकराव, देरी या क्लासिक \"मंगल दोष\" की चिंता",
+        "एक विवाह जो पारस्परिक धैर्य और सम्मान स्थापित होने के बाद अधिक मज़बूत होता है"
+      ]
+    },
+    "friends": [
+      "sun",
+      "moon",
+      "jupiter"
+    ],
+    "neutrals": [
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "mercury"
+    ]
+  },
+  "mercury": {
+    "order": 4,
+    "name": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness",
+      "hi": "एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "a communicative, witty, and intellectually engaging spouse",
+        "a relationship where conversation, humour, and shared interests matter greatly",
+        "a partner connected with business, writing, media, or analytical fields",
+        "a youthful, adaptable dynamic between partners",
+        "a need to guard against overthinking or emotional detachment in the relationship"
+      ],
+      "hi": [
+        "एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी",
+        "एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं",
+        "व्यापार, लेखन, मीडिया या विश्लेषणात्मक क्षेत्रों से जुड़ा साथी",
+        "साथियों के बीच एक युवा, अनुकूलनीय गतिशीलता",
+        "रिश्ते में अत्यधिक विचार-मंथन या भावनात्मक दूरी से बचने की आवश्यकता"
+      ]
+    },
+    "friends": [
+      "sun",
+      "venus"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "moon"
+    ]
+  },
+  "jupiter": {
+    "order": 5,
+    "name": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance",
+      "hi": "एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "a wise, respected, and morally-grounded spouse",
+        "one of the most auspicious placements for marital happiness and mutual growth",
+        "a partner connected with teaching, law, finance, or spiritual/advisory fields",
+        "a marriage that brings blessings, prosperity, and long-term stability",
+        "a relationship built on trust, guidance, and shared values"
+      ],
+      "hi": [
+        "एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी",
+        "वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक",
+        "शिक्षण, कानून, वित्त या आध्यात्मिक/सलाहकारी क्षेत्रों से जुड़ा साथी",
+        "एक विवाह जो आशीर्वाद, समृद्धि और दीर्घकालिक स्थिरता लाता है",
+        "विश्वास, मार्गदर्शन और साझा मूल्यों पर आधारित एक रिश्ता"
+      ]
+    },
+    "friends": [
+      "sun",
+      "moon",
+      "mars"
+    ],
+    "neutrals": [
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "mercury",
+      "venus"
+    ]
+  },
+  "venus": {
+    "order": 6,
+    "name": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership",
+      "hi": "एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "a romantic, charming, and aesthetically-inclined spouse",
+        "the single strongest natural indicator of love, attraction, and marital harmony",
+        "a higher likelihood of a love marriage or a strongly romantic courtship",
+        "a partner connected with arts, fashion, beauty, or luxury/hospitality fields",
+        "a relationship marked by affection, comfort, and mutual enjoyment of life's pleasures"
+      ],
+      "hi": [
+        "एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी",
+        "प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक",
+        "प्रेम-विवाह या अत्यंत रोमांटिक प्रणय-निवेदन की अधिक संभावना",
+        "कला, फैशन, सौंदर्य या विलासिता/आतिथ्य क्षेत्रों से जुड़ा साथी",
+        "स्नेह, सुख-सुविधा और जीवन के आनंद के पारस्परिक भोग से चिह्नित एक रिश्ता"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "saturn"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "sun",
+      "moon"
+    ]
+  },
+  "saturn": {
+    "order": 7,
+    "name": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment",
+      "hi": "एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "a mature, disciplined, and often older or more reserved spouse",
+        "a tendency towards delayed marriage or a slow, cautious courtship",
+        "a partner connected with labour-intensive, structured, or service-oriented professions",
+        "a relationship that may feel distant or cold initially but deepens into a very stable, dependable bond",
+        "marriage built on duty, patience, and long-term loyalty rather than early excitement"
+      ],
+      "hi": [
+        "एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी",
+        "विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति",
+        "श्रम-प्रधान, संरचित या सेवा-उन्मुख व्यवसायों से जुड़ा साथी",
+        "एक ऐसा रिश्ता जो शुरू में दूर या ठंडा महसूस हो सकता है परन्तु एक अत्यंत स्थिर, भरोसेमंद बंधन में गहरा होता है",
+        "प्रारंभिक उत्साह के बजाय कर्तव्य, धैर्य और दीर्घकालिक निष्ठा पर निर्मित विवाह"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "venus"
+    ],
+    "neutrals": [
+      "jupiter",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "sun",
+      "moon",
+      "mars"
+    ]
+  },
+  "rahu": {
+    "order": 8,
+    "name": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "nature": "malefic (shadow)",
+    "traits": {
+      "en": "an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events",
+      "hi": "एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "an unconventional match - possibly crossing caste, community, religion, or country boundaries",
+        "intense attraction or infatuation-driven courtship",
+        "a sudden, unexpected, or fast-moving path to marriage",
+        "a partner connected with foreign lands, technology, or unconventional fields",
+        "a need for caution against illusion, secrecy, or deception in the relationship"
+      ],
+      "hi": [
+        "एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए",
+        "तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन",
+        "विवाह की ओर एक अचानक, अप्रत्याशित या तीव्र गति वाला मार्ग",
+        "विदेश, तकनीक या अपरंपरागत क्षेत्रों से जुड़ा साथी",
+        "रिश्ते में भ्रम, गोपनीयता या छल से सावधान रहने की आवश्यकता"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "venus",
+      "saturn"
+    ],
+    "neutrals": [
+      "jupiter"
+    ],
+    "enemies": [
+      "sun",
+      "moon",
+      "mars"
+    ]
+  },
+  "ketu": {
+    "order": 9,
+    "name": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "nature": "malefic (shadow)",
+    "traits": {
+      "en": "a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus",
+      "hi": "एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है"
+    },
+    "marriageAreas": {
+      "en": [
+        "a private, spiritually or introspectively inclined spouse",
+        "a tendency towards emotional detachment or reduced interest in worldly relationship dynamics",
+        "a relationship carrying a \"past-life connection\" quality, feeling destined rather than pursued",
+        "possible phases of separation, distance, or a preference for solitude within the marriage",
+        "a partner connected with research, healing, or spiritual/occult fields"
+      ],
+      "hi": [
+        "एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी",
+        "सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति",
+        "एक रिश्ता जिसमें \"पूर्व-जन्म संबंध\" जैसा गुण हो, जो पीछा किए जाने के बजाय नियति-निर्धारित महसूस हो",
+        "विवाह के भीतर अलगाव, दूरी या एकांत की प्राथमिकता के संभावित दौर",
+        "शोध, उपचार या आध्यात्मिक/गूढ़ क्षेत्रों से जुड़ा साथी"
+      ]
+    },
+    "friends": [
+      "mars",
+      "venus",
+      "saturn"
+    ],
+    "neutrals": [
+      "jupiter",
+      "mercury"
+    ],
+    "enemies": [
+      "sun",
+      "moon"
+    ]
+  }
+}

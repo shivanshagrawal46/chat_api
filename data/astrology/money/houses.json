@@ -1,0 +1,182 @@
+{
+  "1": {
+    "name": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "signification": {
+      "en": "self, personality, physical vitality, and overall approach to life",
+      "hi": "स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण"
+    },
+    "domainAngle": {
+      "en": "how your own personality, confidence, and health form the foundation of your overall earning and money-handling capacity",
+      "hi": "आपका व्यक्तित्व, आत्मविश्वास और स्वास्थ्य किस प्रकार आपकी समग्र कमाई और धन-प्रबंधन क्षमता की नींव बनाते हैं"
+    },
+    "category": "kendra-trikona"
+  },
+  "2": {
+    "name": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "signification": {
+      "en": "accumulated wealth, family resources, savings, and speech",
+      "hi": "संचित संपत्ति, पारिवारिक संसाधन, बचत और वाणी"
+    },
+    "domainAngle": {
+      "en": "this is the primary house of accumulated wealth itself - bank balance, savings, family assets, and net worth",
+      "hi": "यह स्वयं संचित संपत्ति का प्रमुख भाव है - बैंक बैलेंस, बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति"
+    },
+    "category": "dhana"
+  },
+  "3": {
+    "name": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "signification": {
+      "en": "self-effort, courage, communication skills, and short journeys",
+      "hi": "स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ"
+    },
+    "domainAngle": {
+      "en": "wealth generated through self-driven hustle, courageous business initiatives, and support from siblings",
+      "hi": "स्वप्रेरित परिश्रम, साहसिक व्यावसायिक पहल और भाई-बहनों के समर्थन से उत्पन्न संपत्ति"
+    },
+    "category": "upachaya"
+  },
+  "4": {
+    "name": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "signification": {
+      "en": "comfort, real estate, vehicles, and emotional/domestic foundation",
+      "hi": "सुख-सुविधा, संपत्ति, वाहन और भावनात्मक/घरेलू आधार"
+    },
+    "domainAngle": {
+      "en": "wealth through property, real estate, vehicles, and fixed/inherited assets",
+      "hi": "संपत्ति, रियल एस्टेट, वाहन और स्थिर/विरासत में मिली संपत्ति से धन"
+    },
+    "category": "kendra-trikona"
+  },
+  "5": {
+    "name": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "signification": {
+      "en": "creativity, intelligence, education, and speculative ability",
+      "hi": "रचनात्मकता, बुद्धिमत्ता, शिक्षा और सट्टा/अटकल क्षमता"
+    },
+    "domainAngle": {
+      "en": "wealth through speculation (stocks/trading), intelligence-driven income, and education-linked earning potential",
+      "hi": "सट्टेबाज़ी (शेयर/ट्रेडिंग), बुद्धि-प्रेरित आय और शिक्षा से जुड़ी कमाई क्षमता से धन"
+    },
+    "category": "kendra-trikona"
+  },
+  "6": {
+    "name": {
+      "en": "6th House (Ripu/Rina Bhava)",
+      "hi": "षष्ठम भाव (रिपु/ऋण भाव)"
+    },
+    "signification": {
+      "en": "debts, competition, service, and overcoming obstacles",
+      "hi": "ऋण, प्रतिस्पर्धा, सेवा और बाधाओं पर विजय"
+    },
+    "domainAngle": {
+      "en": "debts, loans, financial disputes/litigation, and income through service or competitive employment",
+      "hi": "ऋण, कर्ज़, वित्तीय विवाद/मुकदमेबाज़ी और सेवा या प्रतिस्पर्धी रोज़गार से आय"
+    },
+    "category": "upachaya"
+  },
+  "7": {
+    "name": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "signification": {
+      "en": "partnerships, business dealings, trade, and public interaction",
+      "hi": "साझेदारी, व्यावसायिक लेन-देन, व्यापार और सार्वजनिक संपर्क"
+    },
+    "domainAngle": {
+      "en": "wealth through business partnerships, trade, and financial contribution from a spouse or collaborator",
+      "hi": "व्यावसायिक साझेदारी, व्यापार और जीवनसाथी या सहयोगी से वित्तीय योगदान से धन"
+    },
+    "category": "kendra-trikona"
+  },
+  "8": {
+    "name": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "signification": {
+      "en": "transformation, insurance, inheritance, and hidden/sudden matters",
+      "hi": "रूपांतरण, बीमा, विरासत और छिपे/अचानक विषय"
+    },
+    "domainAngle": {
+      "en": "sudden wealth or losses, inheritance, insurance payouts, and hidden or in-laws' financial resources",
+      "hi": "अचानक धन-लाभ या हानि, विरासत, बीमा भुगतान, और छिपे या ससुराल पक्ष के वित्तीय संसाधन"
+    },
+    "category": "dusthana"
+  },
+  "9": {
+    "name": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "signification": {
+      "en": "fortune, higher education, philosophy, and long-distance/foreign connections",
+      "hi": "भाग्य, उच्च शिक्षा, दर्शनशास्त्र और दूरस्थ/विदेश संबंध"
+    },
+    "domainAngle": {
+      "en": "wealth through fortune/luck, paternal assets, foreign income, and dharmic or higher-education-linked earning",
+      "hi": "भाग्य, पैतृक संपत्ति, विदेशी आय, और धर्म या उच्च-शिक्षा से जुड़ी कमाई से धन"
+    },
+    "category": "kendra-trikona"
+  },
+  "10": {
+    "name": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "signification": {
+      "en": "career, profession, public status, and authority",
+      "hi": "करियर, व्यवसाय, सार्वजनिक प्रतिष्ठा और अधिकार"
+    },
+    "domainAngle": {
+      "en": "wealth generated through career, professional reputation, and public recognition translating into earnings",
+      "hi": "करियर, व्यावसायिक प्रतिष्ठा और आय में परिवर्तित होने वाली सार्वजनिक पहचान से उत्पन्न धन"
+    },
+    "category": "kendra-trikona"
+  },
+  "11": {
+    "name": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "signification": {
+      "en": "gains, income, large networks, and fulfilment of desires",
+      "hi": "लाभ, आय, विस्तृत नेटवर्क और इच्छाओं की पूर्ति"
+    },
+    "domainAngle": {
+      "en": "this is the primary house of gains and income itself - profits, realised earnings, and fulfilment of financial ambitions",
+      "hi": "यह स्वयं लाभ और आय का प्रमुख भाव है - मुनाफ़ा, वास्तविक कमाई और वित्तीय महत्वाकांक्षाओं की पूर्ति"
+    },
+    "category": "labha"
+  },
+  "12": {
+    "name": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "signification": {
+      "en": "foreign lands, expenditure, isolation, and spirituality",
+      "hi": "विदेश, व्यय, एकांत और आध्यात्म"
+    },
+    "domainAngle": {
+      "en": "expenditure, foreign income/investments, losses, and charitable or hidden financial outflows",
+      "hi": "व्यय, विदेशी आय/निवेश, हानि, और धर्मार्थ या छिपा हुआ वित्तीय बहिर्वाह"
+    },
+    "category": "dusthana"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "1": {
+    "name": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "signification": {
+      "en": "self, personality, physical body, and overall vitality",
+      "hi": "स्वयं, व्यक्तित्व, भौतिक शरीर और समग्र जीवनशक्ति"
+    },
+    "domainAngle": {
+      "en": "the physical body and constitution itself - your baseline vitality, immune strength, and overall approach to health",
+      "hi": "स्वयं भौतिक शरीर और संरचना - आपकी आधारभूत जीवनशक्ति, प्रतिरक्षा शक्ति और स्वास्थ्य के प्रति समग्र दृष्टिकोण"
+    },
+    "category": "kendra-trikona"
+  },
+  "2": {
+    "name": {
+      "en": "2nd House (Dhana/Maraka Bhava)",
+      "hi": "द्वितीय भाव (धन/मारक भाव)"
+    },
+    "signification": {
+      "en": "face, eyes, teeth, speech, and family resources",
+      "hi": "चेहरा, आँखें, दाँत, वाणी और पारिवारिक संसाधन"
+    },
+    "domainAngle": {
+      "en": "the face, eyes, teeth, and throat area, along with family health history and nutritional/bodily reserves",
+      "hi": "चेहरा, आँखें, दाँत और गले का क्षेत्र, साथ ही पारिवारिक स्वास्थ्य इतिहास और पोषण/शारीरिक भंडार"
+    },
+    "category": "maraka"
+  },
+  "3": {
+    "name": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "signification": {
+      "en": "courage, stamina, ears, arms, and shoulders",
+      "hi": "साहस, सहनशक्ति, कान, बाँहें और कंधे"
+    },
+    "domainAngle": {
+      "en": "stamina, courage-driven resilience, the ears/arms/shoulders, respiratory strength, and siblings' health",
+      "hi": "सहनशक्ति, साहस-प्रेरित लचीलापन, कान/बाँहें/कंधे, श्वसन शक्ति और भाई-बहनों का स्वास्थ्य"
+    },
+    "category": "upachaya"
+  },
+  "4": {
+    "name": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "signification": {
+      "en": "chest, heart, stomach, and emotional/domestic foundation",
+      "hi": "छाती, हृदय, पेट और भावनात्मक/घरेलू आधार"
+    },
+    "domainAngle": {
+      "en": "the chest, heart, and digestive comfort, along with emotional wellbeing and mother's health",
+      "hi": "छाती, हृदय और पाचन संबंधी आराम, साथ ही भावनात्मक कल्याण और माता का स्वास्थ्य"
+    },
+    "category": "kendra-trikona"
+  },
+  "5": {
+    "name": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "signification": {
+      "en": "intelligence, stomach, upper abdomen, and past-life merit",
+      "hi": "बुद्धि, पेट, ऊपरी उदर और पूर्व-जन्म का पुण्य"
+    },
+    "domainAngle": {
+      "en": "mental health, the stomach/upper abdominal region, and health karma linked to children",
+      "hi": "मानसिक स्वास्थ्य, पेट/ऊपरी उदर क्षेत्र, और बच्चों से जुड़ा स्वास्थ्य कर्म"
+    },
+    "category": "kendra-trikona"
+  },
+  "6": {
+    "name": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "signification": {
+      "en": "disease, injury, enemies, debts, and daily discipline",
+      "hi": "रोग, चोट, शत्रु, ऋण और दैनिक अनुशासन"
+    },
+    "domainAngle": {
+      "en": "this is the primary house of disease itself - illness, infection, injury, immune resistance, and health discipline/routine",
+      "hi": "यह स्वयं रोग का प्रमुख भाव है - बीमारी, संक्रमण, चोट, प्रतिरक्षा प्रतिरोध और स्वास्थ्य अनुशासन/दिनचर्या"
+    },
+    "category": "roga"
+  },
+  "7": {
+    "name": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "signification": {
+      "en": "partnerships, kidneys, and the reproductive/urinary system",
+      "hi": "साझेदारी, गुर्दे और प्रजनन/मूत्र तंत्र"
+    },
+    "domainAngle": {
+      "en": "the kidneys, reproductive and urinary organs, and spouse's health/its impact on your own wellbeing",
+      "hi": "गुर्दे, प्रजनन और मूत्र अंग, और जीवनसाथी का स्वास्थ्य/आपके स्वयं के कल्याण पर इसका प्रभाव"
+    },
+    "category": "maraka"
+  },
+  "8": {
+    "name": {
+      "en": "8th House (Ayu Bhava)",
+      "hi": "अष्टम भाव (आयु भाव)"
+    },
+    "signification": {
+      "en": "longevity, chronic conditions, surgery, and transformation",
+      "hi": "दीर्घायु, पुरानी स्थितियाँ, शल्य-चिकित्सा और रूपांतरण"
+    },
+    "domainAngle": {
+      "en": "this is the primary house of chronic illness, longevity, surgery, accidents, and hidden or transformative health crises",
+      "hi": "यह पुरानी बीमारी, दीर्घायु, शल्य-चिकित्सा, दुर्घटनाओं और छिपे या रूपांतरणकारी स्वास्थ्य संकटों का प्रमुख भाव है"
+    },
+    "category": "ayu"
+  },
+  "9": {
+    "name": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "signification": {
+      "en": "fortune, hips/thighs, and higher wisdom",
+      "hi": "भाग्य, कूल्हे/जांघें और उच्च ज्ञान"
+    },
+    "domainAngle": {
+      "en": "the hips and thighs, fortune/luck in health matters, father's health, and benefit from foreign or higher-wisdom-guided treatment",
+      "hi": "कूल्हे और जांघें, स्वास्थ्य मामलों में भाग्य, पिता का स्वास्थ्य, और विदेशी या उच्च-ज्ञान-निर्देशित उपचार से लाभ"
+    },
+    "category": "kendra-trikona"
+  },
+  "10": {
+    "name": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "signification": {
+      "en": "career, public status, and the knees/joints",
+      "hi": "करियर, सार्वजनिक प्रतिष्ठा और घुटने/जोड़"
+    },
+    "domainAngle": {
+      "en": "the knees and joints, and career/professional-stress-linked health impacts such as burnout",
+      "hi": "घुटने और जोड़, तथा करियर/व्यावसायिक-तनाव से जुड़े स्वास्थ्य प्रभाव जैसे थकावट"
+    },
+    "category": "kendra-trikona"
+  },
+  "11": {
+    "name": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "signification": {
+      "en": "gains, circulation, calves/ankles, and fulfilment of desires",
+      "hi": "लाभ, रक्त-संचार, पिंडली/टखने और इच्छाओं की पूर्ति"
+    },
+    "domainAngle": {
+      "en": "the calves and ankles, blood circulation, and gains/recovery achieved from treatment - the fulfilment of health goals",
+      "hi": "पिंडली और टखने, रक्त-संचार, और उपचार से प्राप्त लाभ/रिकवरी - स्वास्थ्य लक्ष्यों की पूर्ति"
+    },
+    "category": "upachaya"
+  },
+  "12": {
+    "name": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "signification": {
+      "en": "hospitalization, feet, sleep, isolation, and loss",
+      "hi": "अस्पताल में भर्ती, पैर, नींद, एकांत और हानि"
+    },
+    "domainAngle": {
+      "en": "this is the primary house of hospitalization, confinement, sleep disorders, subconscious/psychological health, and rest-linked recovery",
+      "hi": "यह अस्पताल में भर्ती, एकांतवास, नींद संबंधी विकार, अवचेतन/मनोवैज्ञानिक स्वास्थ्य, और विश्राम-संबंधी रिकवरी का प्रमुख भाव है"
+    },
+    "category": "vyaya"
+  }
+}

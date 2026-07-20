@@ -1,0 +1,1514 @@
+{
+  "sun_1": {
+    "key": "sun_1",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 1st house (1st House (Lagna/Ascendant)). This means core personality and approach to money works through self, personality, physical vitality, and overall approach to life. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes how your own personality, confidence, and health form the foundation of your overall earning and money-handling capacity. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 1वें भाव (प्रथम भाव (लग्न)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से आपका व्यक्तित्व, आत्मविश्वास और स्वास्थ्य किस प्रकार आपकी समग्र कमाई और धन-प्रबंधन क्षमता की नींव बनाते हैं को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "sun_2": {
+    "key": "sun_2",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 2nd house (2nd House (Dhana Bhava)). This means core personality and approach to money works through accumulated wealth, family resources, savings, and speech. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes this is the primary house of accumulated wealth itself - bank balance, savings, family assets, and net worth. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is the 2nd house itself - the primary seat of accumulated wealth. A well-placed factor here directly and powerfully strengthens savings, family assets, and overall net worth.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 2वें भाव (द्वितीय भाव (धन भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण संचित संपत्ति, पारिवारिक संसाधन, बचत और वाणी के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से यह स्वयं संचित संपत्ति का प्रमुख भाव है - बैंक बैलेंस, बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह स्वयं द्वितीय भाव है - संचित संपत्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को मज़बूत करता है।"
+    }
+  },
+  "sun_3": {
+    "key": "sun_3",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 3,
+    "houseName": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 3rd house (3rd House (Parakrama Bhava)). This means core personality and approach to money works through self-effort, courage, communication skills, and short journeys. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes wealth generated through self-driven hustle, courageous business initiatives, and support from siblings. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 3वें भाव (तृतीय भाव (पराक्रम भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से स्वप्रेरित परिश्रम, साहसिक व्यावसायिक पहल और भाई-बहनों के समर्थन से उत्पन्न संपत्ति को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "sun_4": {
+    "key": "sun_4",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 4,
+    "houseName": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 4th house (4th House (Sukha Bhava)). This means core personality and approach to money works through comfort, real estate, vehicles, and emotional/domestic foundation. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes wealth through property, real estate, vehicles, and fixed/inherited assets. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 4वें भाव (चतुर्थ भाव (सुख भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण सुख-सुविधा, संपत्ति, वाहन और भावनात्मक/घरेलू आधार के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से संपत्ति, रियल एस्टेट, वाहन और स्थिर/विरासत में मिली संपत्ति से धन को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "sun_5": {
+    "key": "sun_5",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 5,
+    "houseName": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 5th house (5th House (Vidya/Purva Punya Bhava)). This means core personality and approach to money works through creativity, intelligence, education, and speculative ability. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes wealth through speculation (stocks/trading), intelligence-driven income, and education-linked earning potential. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 5वें भाव (पंचम भाव (विद्या/पूर्व पुण्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रचनात्मकता, बुद्धिमत्ता, शिक्षा और सट्टा/अटकल क्षमता के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से सट्टेबाज़ी (शेयर/ट्रेडिंग), बुद्धि-प्रेरित आय और शिक्षा से जुड़ी कमाई क्षमता से धन को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "sun_6": {
+    "key": "sun_6",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Ripu/Rina Bhava)",
+      "hi": "षष्ठम भाव (रिपु/ऋण भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 6th house (6th House (Ripu/Rina Bhava)). This means core personality and approach to money works through debts, competition, service, and overcoming obstacles. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes debts, loans, financial disputes/litigation, and income through service or competitive employment. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 6वें भाव (षष्ठम भाव (रिपु/ऋण भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण ऋण, प्रतिस्पर्धा, सेवा और बाधाओं पर विजय के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से ऋण, कर्ज़, वित्तीय विवाद/मुकदमेबाज़ी और सेवा या प्रतिस्पर्धी रोज़गार से आय को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "sun_7": {
+    "key": "sun_7",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 7,
+    "houseName": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 7th house (7th House (Kalatra/Vyapara Bhava)). This means core personality and approach to money works through partnerships, business dealings, trade, and public interaction. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes wealth through business partnerships, trade, and financial contribution from a spouse or collaborator. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 7वें भाव (सप्तम भाव (कलत्र/व्यापार भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण साझेदारी, व्यावसायिक लेन-देन, व्यापार और सार्वजनिक संपर्क के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से व्यावसायिक साझेदारी, व्यापार और जीवनसाथी या सहयोगी से वित्तीय योगदान से धन को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "sun_8": {
+    "key": "sun_8",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 8,
+    "houseName": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 8th house (8th House (Ayu/Mrityu Bhava)). This means core personality and approach to money works through transformation, insurance, inheritance, and hidden/sudden matters. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes sudden wealth or losses, inheritance, insurance payouts, and hidden or in-laws' financial resources. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 8वें भाव (अष्टम भाव (आयु/मृत्यु भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रूपांतरण, बीमा, विरासत और छिपे/अचानक विषय के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से अचानक धन-लाभ या हानि, विरासत, बीमा भुगतान, और छिपे या ससुराल पक्ष के वित्तीय संसाधन को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "sun_9": {
+    "key": "sun_9",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 9,
+    "houseName": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 9th house (9th House (Bhagya Bhava)). This means core personality and approach to money works through fortune, higher education, philosophy, and long-distance/foreign connections. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes wealth through fortune/luck, paternal assets, foreign income, and dharmic or higher-education-linked earning. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 9वें भाव (नवम भाव (भाग्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण भाग्य, उच्च शिक्षा, दर्शनशास्त्र और दूरस्थ/विदेश संबंध के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से भाग्य, पैतृक संपत्ति, विदेशी आय, और धर्म या उच्च-शिक्षा से जुड़ी कमाई से धन को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "sun_10": {
+    "key": "sun_10",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 10th house (10th House (Karma Bhava)). This means core personality and approach to money works through career, profession, public status, and authority. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes wealth generated through career, professional reputation, and public recognition translating into earnings. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 10वें भाव (दशम भाव (कर्म भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण करियर, व्यवसाय, सार्वजनिक प्रतिष्ठा और अधिकार के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से करियर, व्यावसायिक प्रतिष्ठा और आय में परिवर्तित होने वाली सार्वजनिक पहचान से उत्पन्न धन को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "sun_11": {
+    "key": "sun_11",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 11,
+    "houseName": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 11th house (11th House (Labha Bhava)). This means core personality and approach to money works through gains, income, large networks, and fulfilment of desires. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes this is the primary house of gains and income itself - profits, realised earnings, and fulfilment of financial ambitions. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is the 11th house itself - the primary seat of gains and income realisation. A well-placed factor here directly and powerfully strengthens actual cash-flow, profits, and fulfilment of financial goals.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 11वें भाव (एकादश भाव (लाभ भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण लाभ, आय, विस्तृत नेटवर्क और इच्छाओं की पूर्ति के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से यह स्वयं लाभ और आय का प्रमुख भाव है - मुनाफ़ा, वास्तविक कमाई और वित्तीय महत्वाकांक्षाओं की पूर्ति को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह स्वयं एकादश भाव है - लाभ और आय-प्राप्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से वास्तविक नकदी-प्रवाह, मुनाफ़े और वित्तीय लक्ष्यों की पूर्ति को मज़बूत करता है।"
+    }
+  },
+  "sun_12": {
+    "key": "sun_12",
+    "role": "lagna",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 12,
+    "houseName": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Sun is placed in the 12th house (12th House (Vyaya Bhava)). This means core personality and approach to money works through foreign lands, expenditure, isolation, and spirituality. A fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect - specifically this shapes expenditure, foreign income/investments, losses, and charitable or hidden financial outflows. This favours wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश सूर्य (Surya) 12वें भाव (द्वादश भाव (व्यय भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण विदेश, व्यय, एकांत और आध्यात्म के माध्यम से कार्य करती है। यह एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है - जो विशेष रूप से व्यय, विदेशी आय/निवेश, हानि, और धर्मार्थ या छिपा हुआ वित्तीय बहिर्वाह को आकार देती है। यह अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "moon_1": {
+    "key": "moon_1",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 1st house (1st House (Lagna/Ascendant)). This means core personality and approach to money works through self, personality, physical vitality, and overall approach to life. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes how your own personality, confidence, and health form the foundation of your overall earning and money-handling capacity. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 1वें भाव (प्रथम भाव (लग्न)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से आपका व्यक्तित्व, आत्मविश्वास और स्वास्थ्य किस प्रकार आपकी समग्र कमाई और धन-प्रबंधन क्षमता की नींव बनाते हैं को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "moon_2": {
+    "key": "moon_2",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 2nd house (2nd House (Dhana Bhava)). This means core personality and approach to money works through accumulated wealth, family resources, savings, and speech. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes this is the primary house of accumulated wealth itself - bank balance, savings, family assets, and net worth. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is the 2nd house itself - the primary seat of accumulated wealth. A well-placed factor here directly and powerfully strengthens savings, family assets, and overall net worth.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 2वें भाव (द्वितीय भाव (धन भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण संचित संपत्ति, पारिवारिक संसाधन, बचत और वाणी के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से यह स्वयं संचित संपत्ति का प्रमुख भाव है - बैंक बैलेंस, बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह स्वयं द्वितीय भाव है - संचित संपत्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को मज़बूत करता है।"
+    }
+  },
+  "moon_3": {
+    "key": "moon_3",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 3,
+    "houseName": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 3rd house (3rd House (Parakrama Bhava)). This means core personality and approach to money works through self-effort, courage, communication skills, and short journeys. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes wealth generated through self-driven hustle, courageous business initiatives, and support from siblings. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 3वें भाव (तृतीय भाव (पराक्रम भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से स्वप्रेरित परिश्रम, साहसिक व्यावसायिक पहल और भाई-बहनों के समर्थन से उत्पन्न संपत्ति को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "moon_4": {
+    "key": "moon_4",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 4,
+    "houseName": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 4th house (4th House (Sukha Bhava)). This means core personality and approach to money works through comfort, real estate, vehicles, and emotional/domestic foundation. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes wealth through property, real estate, vehicles, and fixed/inherited assets. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 4वें भाव (चतुर्थ भाव (सुख भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण सुख-सुविधा, संपत्ति, वाहन और भावनात्मक/घरेलू आधार के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से संपत्ति, रियल एस्टेट, वाहन और स्थिर/विरासत में मिली संपत्ति से धन को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "moon_5": {
+    "key": "moon_5",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 5,
+    "houseName": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 5th house (5th House (Vidya/Purva Punya Bhava)). This means core personality and approach to money works through creativity, intelligence, education, and speculative ability. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes wealth through speculation (stocks/trading), intelligence-driven income, and education-linked earning potential. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 5वें भाव (पंचम भाव (विद्या/पूर्व पुण्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रचनात्मकता, बुद्धिमत्ता, शिक्षा और सट्टा/अटकल क्षमता के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से सट्टेबाज़ी (शेयर/ट्रेडिंग), बुद्धि-प्रेरित आय और शिक्षा से जुड़ी कमाई क्षमता से धन को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "moon_6": {
+    "key": "moon_6",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Ripu/Rina Bhava)",
+      "hi": "षष्ठम भाव (रिपु/ऋण भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 6th house (6th House (Ripu/Rina Bhava)). This means core personality and approach to money works through debts, competition, service, and overcoming obstacles. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes debts, loans, financial disputes/litigation, and income through service or competitive employment. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 6वें भाव (षष्ठम भाव (रिपु/ऋण भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण ऋण, प्रतिस्पर्धा, सेवा और बाधाओं पर विजय के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से ऋण, कर्ज़, वित्तीय विवाद/मुकदमेबाज़ी और सेवा या प्रतिस्पर्धी रोज़गार से आय को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "moon_7": {
+    "key": "moon_7",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 7,
+    "houseName": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 7th house (7th House (Kalatra/Vyapara Bhava)). This means core personality and approach to money works through partnerships, business dealings, trade, and public interaction. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes wealth through business partnerships, trade, and financial contribution from a spouse or collaborator. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 7वें भाव (सप्तम भाव (कलत्र/व्यापार भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण साझेदारी, व्यावसायिक लेन-देन, व्यापार और सार्वजनिक संपर्क के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से व्यावसायिक साझेदारी, व्यापार और जीवनसाथी या सहयोगी से वित्तीय योगदान से धन को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "moon_8": {
+    "key": "moon_8",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 8,
+    "houseName": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 8th house (8th House (Ayu/Mrityu Bhava)). This means core personality and approach to money works through transformation, insurance, inheritance, and hidden/sudden matters. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes sudden wealth or losses, inheritance, insurance payouts, and hidden or in-laws' financial resources. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 8वें भाव (अष्टम भाव (आयु/मृत्यु भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रूपांतरण, बीमा, विरासत और छिपे/अचानक विषय के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से अचानक धन-लाभ या हानि, विरासत, बीमा भुगतान, और छिपे या ससुराल पक्ष के वित्तीय संसाधन को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "moon_9": {
+    "key": "moon_9",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 9,
+    "houseName": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 9th house (9th House (Bhagya Bhava)). This means core personality and approach to money works through fortune, higher education, philosophy, and long-distance/foreign connections. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes wealth through fortune/luck, paternal assets, foreign income, and dharmic or higher-education-linked earning. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 9वें भाव (नवम भाव (भाग्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण भाग्य, उच्च शिक्षा, दर्शनशास्त्र और दूरस्थ/विदेश संबंध के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से भाग्य, पैतृक संपत्ति, विदेशी आय, और धर्म या उच्च-शिक्षा से जुड़ी कमाई से धन को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "moon_10": {
+    "key": "moon_10",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 10th house (10th House (Karma Bhava)). This means core personality and approach to money works through career, profession, public status, and authority. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes wealth generated through career, professional reputation, and public recognition translating into earnings. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 10वें भाव (दशम भाव (कर्म भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण करियर, व्यवसाय, सार्वजनिक प्रतिष्ठा और अधिकार के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से करियर, व्यावसायिक प्रतिष्ठा और आय में परिवर्तित होने वाली सार्वजनिक पहचान से उत्पन्न धन को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "moon_11": {
+    "key": "moon_11",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 11,
+    "houseName": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 11th house (11th House (Labha Bhava)). This means core personality and approach to money works through gains, income, large networks, and fulfilment of desires. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes this is the primary house of gains and income itself - profits, realised earnings, and fulfilment of financial ambitions. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is the 11th house itself - the primary seat of gains and income realisation. A well-placed factor here directly and powerfully strengthens actual cash-flow, profits, and fulfilment of financial goals.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 11वें भाव (एकादश भाव (लाभ भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण लाभ, आय, विस्तृत नेटवर्क और इच्छाओं की पूर्ति के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से यह स्वयं लाभ और आय का प्रमुख भाव है - मुनाफ़ा, वास्तविक कमाई और वित्तीय महत्वाकांक्षाओं की पूर्ति को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह स्वयं एकादश भाव है - लाभ और आय-प्राप्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से वास्तविक नकदी-प्रवाह, मुनाफ़े और वित्तीय लक्ष्यों की पूर्ति को मज़बूत करता है।"
+    }
+  },
+  "moon_12": {
+    "key": "moon_12",
+    "role": "lagna",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 12,
+    "houseName": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Moon is placed in the 12th house (12th House (Vyaya Bhava)). This means core personality and approach to money works through foreign lands, expenditure, isolation, and spirituality. A receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods - specifically this shapes expenditure, foreign income/investments, losses, and charitable or hidden financial outflows. This favours income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश चंद्रमा (Chandra) 12वें भाव (द्वादश भाव (व्यय भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण विदेश, व्यय, एकांत और आध्यात्म के माध्यम से कार्य करती है। यह एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है - जो विशेष रूप से व्यय, विदेशी आय/निवेश, हानि, और धर्मार्थ या छिपा हुआ वित्तीय बहिर्वाह को आकार देती है। यह जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "mars_1": {
+    "key": "mars_1",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 1st house (1st House (Lagna/Ascendant)). This means core personality and approach to money works through self, personality, physical vitality, and overall approach to life. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes how your own personality, confidence, and health form the foundation of your overall earning and money-handling capacity. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 1वें भाव (प्रथम भाव (लग्न)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से आपका व्यक्तित्व, आत्मविश्वास और स्वास्थ्य किस प्रकार आपकी समग्र कमाई और धन-प्रबंधन क्षमता की नींव बनाते हैं को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mars_2": {
+    "key": "mars_2",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 2nd house (2nd House (Dhana Bhava)). This means core personality and approach to money works through accumulated wealth, family resources, savings, and speech. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes this is the primary house of accumulated wealth itself - bank balance, savings, family assets, and net worth. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is the 2nd house itself - the primary seat of accumulated wealth. A well-placed factor here directly and powerfully strengthens savings, family assets, and overall net worth.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 2वें भाव (द्वितीय भाव (धन भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण संचित संपत्ति, पारिवारिक संसाधन, बचत और वाणी के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से यह स्वयं संचित संपत्ति का प्रमुख भाव है - बैंक बैलेंस, बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह स्वयं द्वितीय भाव है - संचित संपत्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को मज़बूत करता है।"
+    }
+  },
+  "mars_3": {
+    "key": "mars_3",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 3,
+    "houseName": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 3rd house (3rd House (Parakrama Bhava)). This means core personality and approach to money works through self-effort, courage, communication skills, and short journeys. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes wealth generated through self-driven hustle, courageous business initiatives, and support from siblings. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 3वें भाव (तृतीय भाव (पराक्रम भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से स्वप्रेरित परिश्रम, साहसिक व्यावसायिक पहल और भाई-बहनों के समर्थन से उत्पन्न संपत्ति को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "mars_4": {
+    "key": "mars_4",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 4,
+    "houseName": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 4th house (4th House (Sukha Bhava)). This means core personality and approach to money works through comfort, real estate, vehicles, and emotional/domestic foundation. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes wealth through property, real estate, vehicles, and fixed/inherited assets. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 4वें भाव (चतुर्थ भाव (सुख भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण सुख-सुविधा, संपत्ति, वाहन और भावनात्मक/घरेलू आधार के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से संपत्ति, रियल एस्टेट, वाहन और स्थिर/विरासत में मिली संपत्ति से धन को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mars_5": {
+    "key": "mars_5",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 5,
+    "houseName": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 5th house (5th House (Vidya/Purva Punya Bhava)). This means core personality and approach to money works through creativity, intelligence, education, and speculative ability. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes wealth through speculation (stocks/trading), intelligence-driven income, and education-linked earning potential. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 5वें भाव (पंचम भाव (विद्या/पूर्व पुण्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रचनात्मकता, बुद्धिमत्ता, शिक्षा और सट्टा/अटकल क्षमता के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से सट्टेबाज़ी (शेयर/ट्रेडिंग), बुद्धि-प्रेरित आय और शिक्षा से जुड़ी कमाई क्षमता से धन को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mars_6": {
+    "key": "mars_6",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Ripu/Rina Bhava)",
+      "hi": "षष्ठम भाव (रिपु/ऋण भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 6th house (6th House (Ripu/Rina Bhava)). This means core personality and approach to money works through debts, competition, service, and overcoming obstacles. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes debts, loans, financial disputes/litigation, and income through service or competitive employment. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 6वें भाव (षष्ठम भाव (रिपु/ऋण भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण ऋण, प्रतिस्पर्धा, सेवा और बाधाओं पर विजय के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से ऋण, कर्ज़, वित्तीय विवाद/मुकदमेबाज़ी और सेवा या प्रतिस्पर्धी रोज़गार से आय को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "mars_7": {
+    "key": "mars_7",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 7,
+    "houseName": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 7th house (7th House (Kalatra/Vyapara Bhava)). This means core personality and approach to money works through partnerships, business dealings, trade, and public interaction. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes wealth through business partnerships, trade, and financial contribution from a spouse or collaborator. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 7वें भाव (सप्तम भाव (कलत्र/व्यापार भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण साझेदारी, व्यावसायिक लेन-देन, व्यापार और सार्वजनिक संपर्क के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से व्यावसायिक साझेदारी, व्यापार और जीवनसाथी या सहयोगी से वित्तीय योगदान से धन को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mars_8": {
+    "key": "mars_8",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 8,
+    "houseName": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 8th house (8th House (Ayu/Mrityu Bhava)). This means core personality and approach to money works through transformation, insurance, inheritance, and hidden/sudden matters. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes sudden wealth or losses, inheritance, insurance payouts, and hidden or in-laws' financial resources. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 8वें भाव (अष्टम भाव (आयु/मृत्यु भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रूपांतरण, बीमा, विरासत और छिपे/अचानक विषय के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से अचानक धन-लाभ या हानि, विरासत, बीमा भुगतान, और छिपे या ससुराल पक्ष के वित्तीय संसाधन को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "mars_9": {
+    "key": "mars_9",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 9,
+    "houseName": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 9th house (9th House (Bhagya Bhava)). This means core personality and approach to money works through fortune, higher education, philosophy, and long-distance/foreign connections. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes wealth through fortune/luck, paternal assets, foreign income, and dharmic or higher-education-linked earning. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 9वें भाव (नवम भाव (भाग्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण भाग्य, उच्च शिक्षा, दर्शनशास्त्र और दूरस्थ/विदेश संबंध के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से भाग्य, पैतृक संपत्ति, विदेशी आय, और धर्म या उच्च-शिक्षा से जुड़ी कमाई से धन को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mars_10": {
+    "key": "mars_10",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 10th house (10th House (Karma Bhava)). This means core personality and approach to money works through career, profession, public status, and authority. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes wealth generated through career, professional reputation, and public recognition translating into earnings. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 10वें भाव (दशम भाव (कर्म भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण करियर, व्यवसाय, सार्वजनिक प्रतिष्ठा और अधिकार के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से करियर, व्यावसायिक प्रतिष्ठा और आय में परिवर्तित होने वाली सार्वजनिक पहचान से उत्पन्न धन को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mars_11": {
+    "key": "mars_11",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 11,
+    "houseName": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 11th house (11th House (Labha Bhava)). This means core personality and approach to money works through gains, income, large networks, and fulfilment of desires. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes this is the primary house of gains and income itself - profits, realised earnings, and fulfilment of financial ambitions. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is the 11th house itself - the primary seat of gains and income realisation. A well-placed factor here directly and powerfully strengthens actual cash-flow, profits, and fulfilment of financial goals.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 11वें भाव (एकादश भाव (लाभ भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण लाभ, आय, विस्तृत नेटवर्क और इच्छाओं की पूर्ति के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से यह स्वयं लाभ और आय का प्रमुख भाव है - मुनाफ़ा, वास्तविक कमाई और वित्तीय महत्वाकांक्षाओं की पूर्ति को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह स्वयं एकादश भाव है - लाभ और आय-प्राप्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से वास्तविक नकदी-प्रवाह, मुनाफ़े और वित्तीय लक्ष्यों की पूर्ति को मज़बूत करता है।"
+    }
+  },
+  "mars_12": {
+    "key": "mars_12",
+    "role": "lagna",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 12,
+    "houseName": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mars is placed in the 12th house (12th House (Vyaya Bhava)). This means core personality and approach to money works through foreign lands, expenditure, isolation, and spirituality. A bold, energetic, and competitive drive centered on courage, quick action, and technical mastery - specifically this shapes expenditure, foreign income/investments, losses, and charitable or hidden financial outflows. This favours wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश मंगल (Mangal) 12वें भाव (द्वादश भाव (व्यय भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण विदेश, व्यय, एकांत और आध्यात्म के माध्यम से कार्य करती है। यह एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है - जो विशेष रूप से व्यय, विदेशी आय/निवेश, हानि, और धर्मार्थ या छिपा हुआ वित्तीय बहिर्वाह को आकार देती है। यह रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "mercury_1": {
+    "key": "mercury_1",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 1st house (1st House (Lagna/Ascendant)). This means core personality and approach to money works through self, personality, physical vitality, and overall approach to life. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes how your own personality, confidence, and health form the foundation of your overall earning and money-handling capacity. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बुध (Budh) 1वें भाव (प्रथम भाव (लग्न)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से आपका व्यक्तित्व, आत्मविश्वास और स्वास्थ्य किस प्रकार आपकी समग्र कमाई और धन-प्रबंधन क्षमता की नींव बनाते हैं को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mercury_2": {
+    "key": "mercury_2",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 2nd house (2nd House (Dhana Bhava)). This means core personality and approach to money works through accumulated wealth, family resources, savings, and speech. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes this is the primary house of accumulated wealth itself - bank balance, savings, family assets, and net worth. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is the 2nd house itself - the primary seat of accumulated wealth. A well-placed factor here directly and powerfully strengthens savings, family assets, and overall net worth.",
+      "hi": "आपका लग्नेश बुध (Budh) 2वें भाव (द्वितीय भाव (धन भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण संचित संपत्ति, पारिवारिक संसाधन, बचत और वाणी के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से यह स्वयं संचित संपत्ति का प्रमुख भाव है - बैंक बैलेंस, बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह स्वयं द्वितीय भाव है - संचित संपत्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को मज़बूत करता है।"
+    }
+  },
+  "mercury_3": {
+    "key": "mercury_3",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 3,
+    "houseName": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 3rd house (3rd House (Parakrama Bhava)). This means core personality and approach to money works through self-effort, courage, communication skills, and short journeys. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes wealth generated through self-driven hustle, courageous business initiatives, and support from siblings. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश बुध (Budh) 3वें भाव (तृतीय भाव (पराक्रम भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से स्वप्रेरित परिश्रम, साहसिक व्यावसायिक पहल और भाई-बहनों के समर्थन से उत्पन्न संपत्ति को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "mercury_4": {
+    "key": "mercury_4",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 4,
+    "houseName": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 4th house (4th House (Sukha Bhava)). This means core personality and approach to money works through comfort, real estate, vehicles, and emotional/domestic foundation. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes wealth through property, real estate, vehicles, and fixed/inherited assets. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बुध (Budh) 4वें भाव (चतुर्थ भाव (सुख भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण सुख-सुविधा, संपत्ति, वाहन और भावनात्मक/घरेलू आधार के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से संपत्ति, रियल एस्टेट, वाहन और स्थिर/विरासत में मिली संपत्ति से धन को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mercury_5": {
+    "key": "mercury_5",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 5,
+    "houseName": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 5th house (5th House (Vidya/Purva Punya Bhava)). This means core personality and approach to money works through creativity, intelligence, education, and speculative ability. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes wealth through speculation (stocks/trading), intelligence-driven income, and education-linked earning potential. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बुध (Budh) 5वें भाव (पंचम भाव (विद्या/पूर्व पुण्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रचनात्मकता, बुद्धिमत्ता, शिक्षा और सट्टा/अटकल क्षमता के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से सट्टेबाज़ी (शेयर/ट्रेडिंग), बुद्धि-प्रेरित आय और शिक्षा से जुड़ी कमाई क्षमता से धन को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mercury_6": {
+    "key": "mercury_6",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Ripu/Rina Bhava)",
+      "hi": "षष्ठम भाव (रिपु/ऋण भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 6th house (6th House (Ripu/Rina Bhava)). This means core personality and approach to money works through debts, competition, service, and overcoming obstacles. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes debts, loans, financial disputes/litigation, and income through service or competitive employment. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश बुध (Budh) 6वें भाव (षष्ठम भाव (रिपु/ऋण भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण ऋण, प्रतिस्पर्धा, सेवा और बाधाओं पर विजय के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से ऋण, कर्ज़, वित्तीय विवाद/मुकदमेबाज़ी और सेवा या प्रतिस्पर्धी रोज़गार से आय को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "mercury_7": {
+    "key": "mercury_7",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 7,
+    "houseName": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 7th house (7th House (Kalatra/Vyapara Bhava)). This means core personality and approach to money works through partnerships, business dealings, trade, and public interaction. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes wealth through business partnerships, trade, and financial contribution from a spouse or collaborator. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बुध (Budh) 7वें भाव (सप्तम भाव (कलत्र/व्यापार भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण साझेदारी, व्यावसायिक लेन-देन, व्यापार और सार्वजनिक संपर्क के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से व्यावसायिक साझेदारी, व्यापार और जीवनसाथी या सहयोगी से वित्तीय योगदान से धन को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mercury_8": {
+    "key": "mercury_8",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 8,
+    "houseName": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 8th house (8th House (Ayu/Mrityu Bhava)). This means core personality and approach to money works through transformation, insurance, inheritance, and hidden/sudden matters. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes sudden wealth or losses, inheritance, insurance payouts, and hidden or in-laws' financial resources. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश बुध (Budh) 8वें भाव (अष्टम भाव (आयु/मृत्यु भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रूपांतरण, बीमा, विरासत और छिपे/अचानक विषय के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से अचानक धन-लाभ या हानि, विरासत, बीमा भुगतान, और छिपे या ससुराल पक्ष के वित्तीय संसाधन को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "mercury_9": {
+    "key": "mercury_9",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 9,
+    "houseName": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 9th house (9th House (Bhagya Bhava)). This means core personality and approach to money works through fortune, higher education, philosophy, and long-distance/foreign connections. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes wealth through fortune/luck, paternal assets, foreign income, and dharmic or higher-education-linked earning. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बुध (Budh) 9वें भाव (नवम भाव (भाग्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण भाग्य, उच्च शिक्षा, दर्शनशास्त्र और दूरस्थ/विदेश संबंध के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से भाग्य, पैतृक संपत्ति, विदेशी आय, और धर्म या उच्च-शिक्षा से जुड़ी कमाई से धन को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mercury_10": {
+    "key": "mercury_10",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 10th house (10th House (Karma Bhava)). This means core personality and approach to money works through career, profession, public status, and authority. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes wealth generated through career, professional reputation, and public recognition translating into earnings. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बुध (Budh) 10वें भाव (दशम भाव (कर्म भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण करियर, व्यवसाय, सार्वजनिक प्रतिष्ठा और अधिकार के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से करियर, व्यावसायिक प्रतिष्ठा और आय में परिवर्तित होने वाली सार्वजनिक पहचान से उत्पन्न धन को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "mercury_11": {
+    "key": "mercury_11",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 11,
+    "houseName": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 11th house (11th House (Labha Bhava)). This means core personality and approach to money works through gains, income, large networks, and fulfilment of desires. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes this is the primary house of gains and income itself - profits, realised earnings, and fulfilment of financial ambitions. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is the 11th house itself - the primary seat of gains and income realisation. A well-placed factor here directly and powerfully strengthens actual cash-flow, profits, and fulfilment of financial goals.",
+      "hi": "आपका लग्नेश बुध (Budh) 11वें भाव (एकादश भाव (लाभ भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण लाभ, आय, विस्तृत नेटवर्क और इच्छाओं की पूर्ति के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से यह स्वयं लाभ और आय का प्रमुख भाव है - मुनाफ़ा, वास्तविक कमाई और वित्तीय महत्वाकांक्षाओं की पूर्ति को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह स्वयं एकादश भाव है - लाभ और आय-प्राप्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से वास्तविक नकदी-प्रवाह, मुनाफ़े और वित्तीय लक्ष्यों की पूर्ति को मज़बूत करता है।"
+    }
+  },
+  "mercury_12": {
+    "key": "mercury_12",
+    "role": "lagna",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 12,
+    "houseName": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Mercury is placed in the 12th house (12th House (Vyaya Bhava)). This means core personality and approach to money works through foreign lands, expenditure, isolation, and spirituality. A sharp, analytical, and communicative intelligence centered on trade, logic, and versatility - specifically this shapes expenditure, foreign income/investments, losses, and charitable or hidden financial outflows. This favours wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश बुध (Budh) 12वें भाव (द्वादश भाव (व्यय भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण विदेश, व्यय, एकांत और आध्यात्म के माध्यम से कार्य करती है। यह एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है - जो विशेष रूप से व्यय, विदेशी आय/निवेश, हानि, और धर्मार्थ या छिपा हुआ वित्तीय बहिर्वाह को आकार देती है। यह व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "jupiter_1": {
+    "key": "jupiter_1",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 1st house (1st House (Lagna/Ascendant)). This means core personality and approach to money works through self, personality, physical vitality, and overall approach to life. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes how your own personality, confidence, and health form the foundation of your overall earning and money-handling capacity. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 1वें भाव (प्रथम भाव (लग्न)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से आपका व्यक्तित्व, आत्मविश्वास और स्वास्थ्य किस प्रकार आपकी समग्र कमाई और धन-प्रबंधन क्षमता की नींव बनाते हैं को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "jupiter_2": {
+    "key": "jupiter_2",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 2nd house (2nd House (Dhana Bhava)). This means core personality and approach to money works through accumulated wealth, family resources, savings, and speech. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes this is the primary house of accumulated wealth itself - bank balance, savings, family assets, and net worth. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is the 2nd house itself - the primary seat of accumulated wealth. A well-placed factor here directly and powerfully strengthens savings, family assets, and overall net worth.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 2वें भाव (द्वितीय भाव (धन भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण संचित संपत्ति, पारिवारिक संसाधन, बचत और वाणी के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से यह स्वयं संचित संपत्ति का प्रमुख भाव है - बैंक बैलेंस, बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह स्वयं द्वितीय भाव है - संचित संपत्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को मज़बूत करता है।"
+    }
+  },
+  "jupiter_3": {
+    "key": "jupiter_3",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 3,
+    "houseName": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 3rd house (3rd House (Parakrama Bhava)). This means core personality and approach to money works through self-effort, courage, communication skills, and short journeys. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes wealth generated through self-driven hustle, courageous business initiatives, and support from siblings. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 3वें भाव (तृतीय भाव (पराक्रम भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से स्वप्रेरित परिश्रम, साहसिक व्यावसायिक पहल और भाई-बहनों के समर्थन से उत्पन्न संपत्ति को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "jupiter_4": {
+    "key": "jupiter_4",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 4,
+    "houseName": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 4th house (4th House (Sukha Bhava)). This means core personality and approach to money works through comfort, real estate, vehicles, and emotional/domestic foundation. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes wealth through property, real estate, vehicles, and fixed/inherited assets. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 4वें भाव (चतुर्थ भाव (सुख भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण सुख-सुविधा, संपत्ति, वाहन और भावनात्मक/घरेलू आधार के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से संपत्ति, रियल एस्टेट, वाहन और स्थिर/विरासत में मिली संपत्ति से धन को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "jupiter_5": {
+    "key": "jupiter_5",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 5,
+    "houseName": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 5th house (5th House (Vidya/Purva Punya Bhava)). This means core personality and approach to money works through creativity, intelligence, education, and speculative ability. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes wealth through speculation (stocks/trading), intelligence-driven income, and education-linked earning potential. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 5वें भाव (पंचम भाव (विद्या/पूर्व पुण्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रचनात्मकता, बुद्धिमत्ता, शिक्षा और सट्टा/अटकल क्षमता के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से सट्टेबाज़ी (शेयर/ट्रेडिंग), बुद्धि-प्रेरित आय और शिक्षा से जुड़ी कमाई क्षमता से धन को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "jupiter_6": {
+    "key": "jupiter_6",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Ripu/Rina Bhava)",
+      "hi": "षष्ठम भाव (रिपु/ऋण भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 6th house (6th House (Ripu/Rina Bhava)). This means core personality and approach to money works through debts, competition, service, and overcoming obstacles. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes debts, loans, financial disputes/litigation, and income through service or competitive employment. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 6वें भाव (षष्ठम भाव (रिपु/ऋण भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण ऋण, प्रतिस्पर्धा, सेवा और बाधाओं पर विजय के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से ऋण, कर्ज़, वित्तीय विवाद/मुकदमेबाज़ी और सेवा या प्रतिस्पर्धी रोज़गार से आय को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "jupiter_7": {
+    "key": "jupiter_7",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 7,
+    "houseName": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 7th house (7th House (Kalatra/Vyapara Bhava)). This means core personality and approach to money works through partnerships, business dealings, trade, and public interaction. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes wealth through business partnerships, trade, and financial contribution from a spouse or collaborator. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 7वें भाव (सप्तम भाव (कलत्र/व्यापार भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण साझेदारी, व्यावसायिक लेन-देन, व्यापार और सार्वजनिक संपर्क के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से व्यावसायिक साझेदारी, व्यापार और जीवनसाथी या सहयोगी से वित्तीय योगदान से धन को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "jupiter_8": {
+    "key": "jupiter_8",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 8,
+    "houseName": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 8th house (8th House (Ayu/Mrityu Bhava)). This means core personality and approach to money works through transformation, insurance, inheritance, and hidden/sudden matters. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes sudden wealth or losses, inheritance, insurance payouts, and hidden or in-laws' financial resources. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 8वें भाव (अष्टम भाव (आयु/मृत्यु भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रूपांतरण, बीमा, विरासत और छिपे/अचानक विषय के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से अचानक धन-लाभ या हानि, विरासत, बीमा भुगतान, और छिपे या ससुराल पक्ष के वित्तीय संसाधन को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "jupiter_9": {
+    "key": "jupiter_9",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 9,
+    "houseName": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 9th house (9th House (Bhagya Bhava)). This means core personality and approach to money works through fortune, higher education, philosophy, and long-distance/foreign connections. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes wealth through fortune/luck, paternal assets, foreign income, and dharmic or higher-education-linked earning. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 9वें भाव (नवम भाव (भाग्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण भाग्य, उच्च शिक्षा, दर्शनशास्त्र और दूरस्थ/विदेश संबंध के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से भाग्य, पैतृक संपत्ति, विदेशी आय, और धर्म या उच्च-शिक्षा से जुड़ी कमाई से धन को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "jupiter_10": {
+    "key": "jupiter_10",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 10th house (10th House (Karma Bhava)). This means core personality and approach to money works through career, profession, public status, and authority. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes wealth generated through career, professional reputation, and public recognition translating into earnings. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 10वें भाव (दशम भाव (कर्म भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण करियर, व्यवसाय, सार्वजनिक प्रतिष्ठा और अधिकार के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से करियर, व्यावसायिक प्रतिष्ठा और आय में परिवर्तित होने वाली सार्वजनिक पहचान से उत्पन्न धन को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "jupiter_11": {
+    "key": "jupiter_11",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 11,
+    "houseName": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 11th house (11th House (Labha Bhava)). This means core personality and approach to money works through gains, income, large networks, and fulfilment of desires. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes this is the primary house of gains and income itself - profits, realised earnings, and fulfilment of financial ambitions. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is the 11th house itself - the primary seat of gains and income realisation. A well-placed factor here directly and powerfully strengthens actual cash-flow, profits, and fulfilment of financial goals.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 11वें भाव (एकादश भाव (लाभ भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण लाभ, आय, विस्तृत नेटवर्क और इच्छाओं की पूर्ति के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से यह स्वयं लाभ और आय का प्रमुख भाव है - मुनाफ़ा, वास्तविक कमाई और वित्तीय महत्वाकांक्षाओं की पूर्ति को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह स्वयं एकादश भाव है - लाभ और आय-प्राप्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से वास्तविक नकदी-प्रवाह, मुनाफ़े और वित्तीय लक्ष्यों की पूर्ति को मज़बूत करता है।"
+    }
+  },
+  "jupiter_12": {
+    "key": "jupiter_12",
+    "role": "lagna",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 12,
+    "houseName": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Jupiter is placed in the 12th house (12th House (Vyaya Bhava)). This means core personality and approach to money works through foreign lands, expenditure, isolation, and spirituality. A wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance - specifically this shapes expenditure, foreign income/investments, losses, and charitable or hidden financial outflows. This favours one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश बृहस्पति / गुरु (Guru) 12वें भाव (द्वादश भाव (व्यय भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण विदेश, व्यय, एकांत और आध्यात्म के माध्यम से कार्य करती है। यह एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है - जो विशेष रूप से व्यय, विदेशी आय/निवेश, हानि, और धर्मार्थ या छिपा हुआ वित्तीय बहिर्वाह को आकार देती है। यह कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "venus_1": {
+    "key": "venus_1",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 1st house (1st House (Lagna/Ascendant)). This means core personality and approach to money works through self, personality, physical vitality, and overall approach to life. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes how your own personality, confidence, and health form the foundation of your overall earning and money-handling capacity. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 1वें भाव (प्रथम भाव (लग्न)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से आपका व्यक्तित्व, आत्मविश्वास और स्वास्थ्य किस प्रकार आपकी समग्र कमाई और धन-प्रबंधन क्षमता की नींव बनाते हैं को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "venus_2": {
+    "key": "venus_2",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 2nd house (2nd House (Dhana Bhava)). This means core personality and approach to money works through accumulated wealth, family resources, savings, and speech. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes this is the primary house of accumulated wealth itself - bank balance, savings, family assets, and net worth. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is the 2nd house itself - the primary seat of accumulated wealth. A well-placed factor here directly and powerfully strengthens savings, family assets, and overall net worth.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 2वें भाव (द्वितीय भाव (धन भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण संचित संपत्ति, पारिवारिक संसाधन, बचत और वाणी के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से यह स्वयं संचित संपत्ति का प्रमुख भाव है - बैंक बैलेंस, बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह स्वयं द्वितीय भाव है - संचित संपत्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को मज़बूत करता है।"
+    }
+  },
+  "venus_3": {
+    "key": "venus_3",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 3,
+    "houseName": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 3rd house (3rd House (Parakrama Bhava)). This means core personality and approach to money works through self-effort, courage, communication skills, and short journeys. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes wealth generated through self-driven hustle, courageous business initiatives, and support from siblings. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 3वें भाव (तृतीय भाव (पराक्रम भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से स्वप्रेरित परिश्रम, साहसिक व्यावसायिक पहल और भाई-बहनों के समर्थन से उत्पन्न संपत्ति को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "venus_4": {
+    "key": "venus_4",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 4,
+    "houseName": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 4th house (4th House (Sukha Bhava)). This means core personality and approach to money works through comfort, real estate, vehicles, and emotional/domestic foundation. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes wealth through property, real estate, vehicles, and fixed/inherited assets. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 4वें भाव (चतुर्थ भाव (सुख भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण सुख-सुविधा, संपत्ति, वाहन और भावनात्मक/घरेलू आधार के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से संपत्ति, रियल एस्टेट, वाहन और स्थिर/विरासत में मिली संपत्ति से धन को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "venus_5": {
+    "key": "venus_5",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 5,
+    "houseName": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 5th house (5th House (Vidya/Purva Punya Bhava)). This means core personality and approach to money works through creativity, intelligence, education, and speculative ability. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes wealth through speculation (stocks/trading), intelligence-driven income, and education-linked earning potential. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 5वें भाव (पंचम भाव (विद्या/पूर्व पुण्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रचनात्मकता, बुद्धिमत्ता, शिक्षा और सट्टा/अटकल क्षमता के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से सट्टेबाज़ी (शेयर/ट्रेडिंग), बुद्धि-प्रेरित आय और शिक्षा से जुड़ी कमाई क्षमता से धन को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "venus_6": {
+    "key": "venus_6",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Ripu/Rina Bhava)",
+      "hi": "षष्ठम भाव (रिपु/ऋण भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 6th house (6th House (Ripu/Rina Bhava)). This means core personality and approach to money works through debts, competition, service, and overcoming obstacles. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes debts, loans, financial disputes/litigation, and income through service or competitive employment. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 6वें भाव (षष्ठम भाव (रिपु/ऋण भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण ऋण, प्रतिस्पर्धा, सेवा और बाधाओं पर विजय के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से ऋण, कर्ज़, वित्तीय विवाद/मुकदमेबाज़ी और सेवा या प्रतिस्पर्धी रोज़गार से आय को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "venus_7": {
+    "key": "venus_7",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 7,
+    "houseName": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 7th house (7th House (Kalatra/Vyapara Bhava)). This means core personality and approach to money works through partnerships, business dealings, trade, and public interaction. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes wealth through business partnerships, trade, and financial contribution from a spouse or collaborator. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 7वें भाव (सप्तम भाव (कलत्र/व्यापार भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण साझेदारी, व्यावसायिक लेन-देन, व्यापार और सार्वजनिक संपर्क के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से व्यावसायिक साझेदारी, व्यापार और जीवनसाथी या सहयोगी से वित्तीय योगदान से धन को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "venus_8": {
+    "key": "venus_8",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 8,
+    "houseName": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 8th house (8th House (Ayu/Mrityu Bhava)). This means core personality and approach to money works through transformation, insurance, inheritance, and hidden/sudden matters. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes sudden wealth or losses, inheritance, insurance payouts, and hidden or in-laws' financial resources. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 8वें भाव (अष्टम भाव (आयु/मृत्यु भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रूपांतरण, बीमा, विरासत और छिपे/अचानक विषय के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से अचानक धन-लाभ या हानि, विरासत, बीमा भुगतान, और छिपे या ससुराल पक्ष के वित्तीय संसाधन को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "venus_9": {
+    "key": "venus_9",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 9,
+    "houseName": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 9th house (9th House (Bhagya Bhava)). This means core personality and approach to money works through fortune, higher education, philosophy, and long-distance/foreign connections. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes wealth through fortune/luck, paternal assets, foreign income, and dharmic or higher-education-linked earning. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 9वें भाव (नवम भाव (भाग्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण भाग्य, उच्च शिक्षा, दर्शनशास्त्र और दूरस्थ/विदेश संबंध के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से भाग्य, पैतृक संपत्ति, विदेशी आय, और धर्म या उच्च-शिक्षा से जुड़ी कमाई से धन को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "venus_10": {
+    "key": "venus_10",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 10th house (10th House (Karma Bhava)). This means core personality and approach to money works through career, profession, public status, and authority. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes wealth generated through career, professional reputation, and public recognition translating into earnings. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 10वें भाव (दशम भाव (कर्म भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण करियर, व्यवसाय, सार्वजनिक प्रतिष्ठा और अधिकार के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से करियर, व्यावसायिक प्रतिष्ठा और आय में परिवर्तित होने वाली सार्वजनिक पहचान से उत्पन्न धन को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "venus_11": {
+    "key": "venus_11",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 11,
+    "houseName": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 11th house (11th House (Labha Bhava)). This means core personality and approach to money works through gains, income, large networks, and fulfilment of desires. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes this is the primary house of gains and income itself - profits, realised earnings, and fulfilment of financial ambitions. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is the 11th house itself - the primary seat of gains and income realisation. A well-placed factor here directly and powerfully strengthens actual cash-flow, profits, and fulfilment of financial goals.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 11वें भाव (एकादश भाव (लाभ भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण लाभ, आय, विस्तृत नेटवर्क और इच्छाओं की पूर्ति के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से यह स्वयं लाभ और आय का प्रमुख भाव है - मुनाफ़ा, वास्तविक कमाई और वित्तीय महत्वाकांक्षाओं की पूर्ति को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह स्वयं एकादश भाव है - लाभ और आय-प्राप्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से वास्तविक नकदी-प्रवाह, मुनाफ़े और वित्तीय लक्ष्यों की पूर्ति को मज़बूत करता है।"
+    }
+  },
+  "venus_12": {
+    "key": "venus_12",
+    "role": "lagna",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 12,
+    "houseName": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Venus is placed in the 12th house (12th House (Vyaya Bhava)). This means core personality and approach to money works through foreign lands, expenditure, isolation, and spirituality. A graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living - specifically this shapes expenditure, foreign income/investments, losses, and charitable or hidden financial outflows. This favours wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश शुक्र (Shukra) 12वें भाव (द्वादश भाव (व्यय भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण विदेश, व्यय, एकांत और आध्यात्म के माध्यम से कार्य करती है। यह एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है - जो विशेष रूप से व्यय, विदेशी आय/निवेश, हानि, और धर्मार्थ या छिपा हुआ वित्तीय बहिर्वाह को आकार देती है। यह कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "saturn_1": {
+    "key": "saturn_1",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 1st house (1st House (Lagna/Ascendant)). This means core personality and approach to money works through self, personality, physical vitality, and overall approach to life. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes how your own personality, confidence, and health form the foundation of your overall earning and money-handling capacity. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शनि (Shani) 1वें भाव (प्रथम भाव (लग्न)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वयं, व्यक्तित्व, शारीरिक ऊर्जा और जीवन के प्रति समग्र दृष्टिकोण के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से आपका व्यक्तित्व, आत्मविश्वास और स्वास्थ्य किस प्रकार आपकी समग्र कमाई और धन-प्रबंधन क्षमता की नींव बनाते हैं को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "saturn_2": {
+    "key": "saturn_2",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 2,
+    "houseName": {
+      "en": "2nd House (Dhana Bhava)",
+      "hi": "द्वितीय भाव (धन भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 2nd house (2nd House (Dhana Bhava)). This means core personality and approach to money works through accumulated wealth, family resources, savings, and speech. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes this is the primary house of accumulated wealth itself - bank balance, savings, family assets, and net worth. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is the 2nd house itself - the primary seat of accumulated wealth. A well-placed factor here directly and powerfully strengthens savings, family assets, and overall net worth.",
+      "hi": "आपका लग्नेश शनि (Shani) 2वें भाव (द्वितीय भाव (धन भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण संचित संपत्ति, पारिवारिक संसाधन, बचत और वाणी के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से यह स्वयं संचित संपत्ति का प्रमुख भाव है - बैंक बैलेंस, बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह स्वयं द्वितीय भाव है - संचित संपत्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से बचत, पारिवारिक संपत्ति और कुल निवल संपत्ति को मज़बूत करता है।"
+    }
+  },
+  "saturn_3": {
+    "key": "saturn_3",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 3,
+    "houseName": {
+      "en": "3rd House (Parakrama Bhava)",
+      "hi": "तृतीय भाव (पराक्रम भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 3rd house (3rd House (Parakrama Bhava)). This means core personality and approach to money works through self-effort, courage, communication skills, and short journeys. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes wealth generated through self-driven hustle, courageous business initiatives, and support from siblings. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश शनि (Shani) 3वें भाव (तृतीय भाव (पराक्रम भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण स्वप्रयास, साहस, संचार कौशल और छोटी यात्राएँ के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से स्वप्रेरित परिश्रम, साहसिक व्यावसायिक पहल और भाई-बहनों के समर्थन से उत्पन्न संपत्ति को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "saturn_4": {
+    "key": "saturn_4",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 4,
+    "houseName": {
+      "en": "4th House (Sukha Bhava)",
+      "hi": "चतुर्थ भाव (सुख भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 4th house (4th House (Sukha Bhava)). This means core personality and approach to money works through comfort, real estate, vehicles, and emotional/domestic foundation. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes wealth through property, real estate, vehicles, and fixed/inherited assets. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शनि (Shani) 4वें भाव (चतुर्थ भाव (सुख भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण सुख-सुविधा, संपत्ति, वाहन और भावनात्मक/घरेलू आधार के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से संपत्ति, रियल एस्टेट, वाहन और स्थिर/विरासत में मिली संपत्ति से धन को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "saturn_5": {
+    "key": "saturn_5",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 5,
+    "houseName": {
+      "en": "5th House (Vidya/Purva Punya Bhava)",
+      "hi": "पंचम भाव (विद्या/पूर्व पुण्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 5th house (5th House (Vidya/Purva Punya Bhava)). This means core personality and approach to money works through creativity, intelligence, education, and speculative ability. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes wealth through speculation (stocks/trading), intelligence-driven income, and education-linked earning potential. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शनि (Shani) 5वें भाव (पंचम भाव (विद्या/पूर्व पुण्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रचनात्मकता, बुद्धिमत्ता, शिक्षा और सट्टा/अटकल क्षमता के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से सट्टेबाज़ी (शेयर/ट्रेडिंग), बुद्धि-प्रेरित आय और शिक्षा से जुड़ी कमाई क्षमता से धन को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "saturn_6": {
+    "key": "saturn_6",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Ripu/Rina Bhava)",
+      "hi": "षष्ठम भाव (रिपु/ऋण भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 6th house (6th House (Ripu/Rina Bhava)). This means core personality and approach to money works through debts, competition, service, and overcoming obstacles. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes debts, loans, financial disputes/litigation, and income through service or competitive employment. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is an Upachaya (growth-oriented) placement. Financial results may be modest early on but keep improving steadily with age, effort and experience - long-term persistence here pays off substantially.",
+      "hi": "आपका लग्नेश शनि (Shani) 6वें भाव (षष्ठम भाव (रिपु/ऋण भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण ऋण, प्रतिस्पर्धा, सेवा और बाधाओं पर विजय के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से ऋण, कर्ज़, वित्तीय विवाद/मुकदमेबाज़ी और सेवा या प्रतिस्पर्धी रोज़गार से आय को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक उपचय (वृद्धि-उन्मुख) स्थान है। प्रारंभ में वित्तीय परिणाम सामान्य हो सकते हैं परन्तु उम्र, प्रयास और अनुभव के साथ लगातार सुधरते जाते हैं - यहाँ दीर्घकालिक दृढ़ता का फल बहुत अच्छा मिलता है।"
+    }
+  },
+  "saturn_7": {
+    "key": "saturn_7",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 7,
+    "houseName": {
+      "en": "7th House (Kalatra/Vyapara Bhava)",
+      "hi": "सप्तम भाव (कलत्र/व्यापार भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 7th house (7th House (Kalatra/Vyapara Bhava)). This means core personality and approach to money works through partnerships, business dealings, trade, and public interaction. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes wealth through business partnerships, trade, and financial contribution from a spouse or collaborator. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शनि (Shani) 7वें भाव (सप्तम भाव (कलत्र/व्यापार भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण साझेदारी, व्यावसायिक लेन-देन, व्यापार और सार्वजनिक संपर्क के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से व्यावसायिक साझेदारी, व्यापार और जीवनसाथी या सहयोगी से वित्तीय योगदान से धन को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "saturn_8": {
+    "key": "saturn_8",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 8,
+    "houseName": {
+      "en": "8th House (Ayu/Mrityu Bhava)",
+      "hi": "अष्टम भाव (आयु/मृत्यु भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 8th house (8th House (Ayu/Mrityu Bhava)). This means core personality and approach to money works through transformation, insurance, inheritance, and hidden/sudden matters. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes sudden wealth or losses, inheritance, insurance payouts, and hidden or in-laws' financial resources. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश शनि (Shani) 8वें भाव (अष्टम भाव (आयु/मृत्यु भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण रूपांतरण, बीमा, विरासत और छिपे/अचानक विषय के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से अचानक धन-लाभ या हानि, विरासत, बीमा भुगतान, और छिपे या ससुराल पक्ष के वित्तीय संसाधन को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  },
+  "saturn_9": {
+    "key": "saturn_9",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 9,
+    "houseName": {
+      "en": "9th House (Bhagya Bhava)",
+      "hi": "नवम भाव (भाग्य भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 9th house (9th House (Bhagya Bhava)). This means core personality and approach to money works through fortune, higher education, philosophy, and long-distance/foreign connections. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes wealth through fortune/luck, paternal assets, foreign income, and dharmic or higher-education-linked earning. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शनि (Shani) 9वें भाव (नवम भाव (भाग्य भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण भाग्य, उच्च शिक्षा, दर्शनशास्त्र और दूरस्थ/विदेश संबंध के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से भाग्य, पैतृक संपत्ति, विदेशी आय, और धर्म या उच्च-शिक्षा से जुड़ी कमाई से धन को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "saturn_10": {
+    "key": "saturn_10",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 10th house (10th House (Karma Bhava)). This means core personality and approach to money works through career, profession, public status, and authority. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes wealth generated through career, professional reputation, and public recognition translating into earnings. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is a Kendra/Trikona (angular or trinal) placement - one of the strongest positions in the chart. It gives direct, visible, and relatively stable financial growth, and this factor should be treated as a major pillar of strength in your wealth story.",
+      "hi": "आपका लग्नेश शनि (Shani) 10वें भाव (दशम भाव (कर्म भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण करियर, व्यवसाय, सार्वजनिक प्रतिष्ठा और अधिकार के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से करियर, व्यावसायिक प्रतिष्ठा और आय में परिवर्तित होने वाली सार्वजनिक पहचान से उत्पन्न धन को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक केंद्र/त्रिकोण स्थान है - कुंडली की सबसे मज़बूत स्थितियों में से एक। यह प्रत्यक्ष, दृश्यमान और अपेक्षाकृत स्थिर वित्तीय वृद्धि देता है, और इसे आपकी धन-कहानी में एक प्रमुख शक्ति-स्तंभ माना जाना चाहिए।"
+    }
+  },
+  "saturn_11": {
+    "key": "saturn_11",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 11,
+    "houseName": {
+      "en": "11th House (Labha Bhava)",
+      "hi": "एकादश भाव (लाभ भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 11th house (11th House (Labha Bhava)). This means core personality and approach to money works through gains, income, large networks, and fulfilment of desires. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes this is the primary house of gains and income itself - profits, realised earnings, and fulfilment of financial ambitions. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is the 11th house itself - the primary seat of gains and income realisation. A well-placed factor here directly and powerfully strengthens actual cash-flow, profits, and fulfilment of financial goals.",
+      "hi": "आपका लग्नेश शनि (Shani) 11वें भाव (एकादश भाव (लाभ भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण लाभ, आय, विस्तृत नेटवर्क और इच्छाओं की पूर्ति के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से यह स्वयं लाभ और आय का प्रमुख भाव है - मुनाफ़ा, वास्तविक कमाई और वित्तीय महत्वाकांक्षाओं की पूर्ति को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह स्वयं एकादश भाव है - लाभ और आय-प्राप्ति का प्रमुख स्थान। यहाँ एक अच्छी तरह स्थित कारक सीधे और शक्तिशाली ढंग से वास्तविक नकदी-प्रवाह, मुनाफ़े और वित्तीय लक्ष्यों की पूर्ति को मज़बूत करता है।"
+    }
+  },
+  "saturn_12": {
+    "key": "saturn_12",
+    "role": "lagna",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 12,
+    "houseName": {
+      "en": "12th House (Vyaya Bhava)",
+      "hi": "द्वादश भाव (व्यय भाव)"
+    },
+    "text": {
+      "en": "Your Lagna (Ascendant) lord Saturn is placed in the 12th house (12th House (Vyaya Bhava)). This means core personality and approach to money works through foreign lands, expenditure, isolation, and spirituality. A disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance - specifically this shapes expenditure, foreign income/investments, losses, and charitable or hidden financial outflows. This favours wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established. This is a Dusthana (challenging) placement. It can bring debts, sudden losses, or unconventional financial circumstances - but it often rewards depth, insurance/inheritance-linked gains, or foreign sources with unexpectedly strong results once initial hurdles are crossed.",
+      "hi": "आपका लग्नेश शनि (Shani) 12वें भाव (द्वादश भाव (व्यय भाव)) में स्थित है। इसका अर्थ है कि मूल व्यक्तित्व और धन के प्रति दृष्टिकोण विदेश, व्यय, एकांत और आध्यात्म के माध्यम से कार्य करती है। यह एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है - जो विशेष रूप से व्यय, विदेशी आय/निवेश, हानि, और धर्मार्थ या छिपा हुआ वित्तीय बहिर्वाह को आकार देती है। यह अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति के लिए अनुकूल है। यह एक दुःस्थान (चुनौतीपूर्ण) स्थान है। इसमें ऋण, अचानक हानि या अपरंपरागत वित्तीय परिस्थितियाँ आ सकती हैं - परन्तु प्रारंभिक बाधाओं को पार करने के बाद यह प्रायः गहराई, बीमा/विरासत-संबंधी लाभ, या विदेशी स्रोतों को अप्रत्याशित रूप से मज़बूत परिणामों से पुरस्कृत करता है।"
+    }
+  }
+}

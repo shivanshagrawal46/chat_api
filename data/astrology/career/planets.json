@@ -1,0 +1,377 @@
+{
+  "sun": {
+    "order": 1,
+    "name": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition",
+      "hi": "एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "government service and administration",
+        "politics and public leadership",
+        "management and executive roles",
+        "the energy, power or gold/bullion sector",
+        "medicine (especially heart-related fields)"
+      ],
+      "hi": [
+        "सरकारी सेवा और प्रशासन",
+        "राजनीति और सार्वजनिक नेतृत्व",
+        "प्रबंधन और कार्यकारी पद",
+        "ऊर्जा, विद्युत या स्वर्ण/बुलियन क्षेत्र",
+        "चिकित्सा (विशेषकर हृदय से जुड़े क्षेत्र)"
+      ]
+    },
+    "friends": [
+      "moon",
+      "mars",
+      "jupiter"
+    ],
+    "neutrals": [
+      "mercury"
+    ],
+    "enemies": [
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ]
+  },
+  "moon": {
+    "order": 2,
+    "name": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection",
+      "hi": "एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "nursing, healthcare and hospitality",
+        "public relations and customer-facing roles",
+        "psychology and counselling",
+        "travel, tourism and shipping",
+        "dairy, liquids, food and beverages business"
+      ],
+      "hi": [
+        "नर्सिंग, स्वास्थ्य सेवा और आतिथ्य",
+        "जनसंपर्क और ग्राहक-सेवा भूमिकाएँ",
+        "मनोविज्ञान और परामर्श",
+        "यात्रा, पर्यटन और जलमार्ग व्यवसाय",
+        "डेयरी, तरल पदार्थ, खाद्य एवं पेय व्यवसाय"
+      ]
+    },
+    "friends": [
+      "sun",
+      "mercury"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": []
+  },
+  "mars": {
+    "order": 3,
+    "name": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a bold, energetic, and competitive drive centered on courage, action, and technical mastery",
+      "hi": "एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "engineering, mechanical and automobile fields",
+        "defence, police and security services",
+        "sports, fitness and athletics",
+        "real estate and construction",
+        "surgery and technical/manual trades"
+      ],
+      "hi": [
+        "इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र",
+        "रक्षा, पुलिस और सुरक्षा सेवाएँ",
+        "खेल, फिटनेस और एथलेटिक्स",
+        "रियल एस्टेट और निर्माण कार्य",
+        "सर्जरी और तकनीकी/शारीरिक व्यवसाय"
+      ]
+    },
+    "friends": [
+      "sun",
+      "moon",
+      "jupiter"
+    ],
+    "neutrals": [
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "mercury"
+    ]
+  },
+  "mercury": {
+    "order": 4,
+    "name": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility",
+      "hi": "एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "business, trading and commerce",
+        "writing, journalism and media",
+        "accounting, finance and analytics",
+        "IT, software and data-driven fields",
+        "teaching (commerce/mathematics) and public speaking"
+      ],
+      "hi": [
+        "व्यापार और वाणिज्य",
+        "लेखन, पत्रकारिता और मीडिया",
+        "लेखांकन, वित्त और विश्लेषण",
+        "आईटी, सॉफ्टवेयर और डेटा-आधारित क्षेत्र",
+        "शिक्षण (वाणिज्य/गणित) और सार्वजनिक वक्तृत्व"
+      ]
+    },
+    "friends": [
+      "sun",
+      "venus"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "moon"
+    ]
+  },
+  "jupiter": {
+    "order": 5,
+    "name": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning",
+      "hi": "एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "teaching, professorship and academia",
+        "law, judiciary and legal consultancy",
+        "banking, finance and investment advisory",
+        "civil services and public administration",
+        "religious, spiritual or philanthropic work"
+      ],
+      "hi": [
+        "शिक्षण, प्रोफेसरशिप और शिक्षाजगत",
+        "कानून, न्यायपालिका और विधिक परामर्श",
+        "बैंकिंग, वित्त और निवेश सलाहकारी",
+        "सिविल सेवाएँ और लोक प्रशासन",
+        "धार्मिक, आध्यात्मिक या परोपकारी कार्य"
+      ]
+    },
+    "friends": [
+      "sun",
+      "moon",
+      "mars"
+    ],
+    "neutrals": [
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "mercury",
+      "venus"
+    ]
+  },
+  "venus": {
+    "order": 6,
+    "name": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste",
+      "hi": "एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "arts, entertainment and the film industry",
+        "fashion, design and beauty industry",
+        "luxury goods, hospitality and event management",
+        "music, dance and creative performance",
+        "diplomacy, marketing and client relations"
+      ],
+      "hi": [
+        "कला, मनोरंजन और फिल्म उद्योग",
+        "फैशन, डिज़ाइन और सौंदर्य उद्योग",
+        "विलासिता वस्तुएँ, आतिथ्य और इवेंट प्रबंधन",
+        "संगीत, नृत्य और रचनात्मक प्रदर्शन",
+        "कूटनीति, विपणन और ग्राहक संबंध"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "saturn"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "sun",
+      "moon"
+    ]
+  },
+  "saturn": {
+    "order": 7,
+    "name": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance",
+      "hi": "एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "labour-intensive and service-oriented industries",
+        "mining, oil, agriculture and heavy industry",
+        "judiciary, law-and-order and compliance roles",
+        "civil/structural engineering and infrastructure",
+        "social work and mass-oriented public service"
+      ],
+      "hi": [
+        "श्रम-प्रधान और सेवा-उन्मुख उद्योग",
+        "खनन, तेल, कृषि और भारी उद्योग",
+        "न्यायपालिका, कानून-व्यवस्था और अनुपालन भूमिकाएँ",
+        "सिविल/संरचनात्मक इंजीनियरिंग और अवसंरचना",
+        "सामाजिक कार्य और जन-उन्मुख लोक सेवा"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "venus"
+    ],
+    "neutrals": [
+      "jupiter",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "sun",
+      "moon",
+      "mars"
+    ]
+  },
+  "rahu": {
+    "order": 8,
+    "name": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "nature": "malefic (shadow)",
+    "traits": {
+      "en": "an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections",
+      "hi": "एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "technology, IT and emerging/disruptive fields",
+        "foreign trade, import-export and aviation",
+        "mass media, digital content and photography",
+        "e-commerce and unconventional startups",
+        "politics and large-scale public influence"
+      ],
+      "hi": [
+        "प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र",
+        "विदेश व्यापार, आयात-निर्यात और विमानन",
+        "जनसंचार माध्यम, डिजिटल सामग्री और फोटोग्राफी",
+        "ई-कॉमर्स और अपरंपरागत स्टार्टअप",
+        "राजनीति और बड़े पैमाने पर जनप्रभाव"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "venus",
+      "saturn"
+    ],
+    "neutrals": [
+      "jupiter"
+    ],
+    "enemies": [
+      "sun",
+      "moon",
+      "mars"
+    ]
+  },
+  "ketu": {
+    "order": 9,
+    "name": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "nature": "malefic (shadow)",
+    "traits": {
+      "en": "a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge",
+      "hi": "एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है"
+    },
+    "careerAreas": {
+      "en": [
+        "research, analytics and highly specialised technical work",
+        "spirituality, astrology and religious institutions",
+        "alternative medicine and healing sciences",
+        "IT/technical backend and behind-the-scenes roles",
+        "occult sciences and investigative work"
+      ],
+      "hi": [
+        "शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य",
+        "आध्यात्म, ज्योतिष और धार्मिक संस्थान",
+        "वैकल्पिक चिकित्सा और उपचार विज्ञान",
+        "आईटी/तकनीकी बैकएंड और पर्दे के पीछे की भूमिकाएँ",
+        "गूढ़ विद्या और खोजपरक कार्य"
+      ]
+    },
+    "friends": [
+      "mars",
+      "venus",
+      "saturn"
+    ],
+    "neutrals": [
+      "jupiter",
+      "mercury"
+    ],
+    "enemies": [
+      "sun",
+      "moon"
+    ]
+  }
+}

@@ -1,0 +1,794 @@
+{
+  "sun_moon": {
+    "key": "sun_moon",
+    "planets": [
+      "sun",
+      "moon"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Moon blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For wealth, this combination brings together wealth and standing tied to authority, government or leadership positions and income linked to status, power, or public office with income through public dealing, hospitality, or caregiving-related business and wealth via liquids, dairy, food, or beverage trade - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "सूर्य (Surya) और चंद्रमा (Chandra) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। धन के लिए, यह संयोजन अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा और प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय को जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय और तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_mars": {
+    "key": "sun_mars",
+    "planets": [
+      "sun",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Mars blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For wealth, this combination brings together wealth and standing tied to authority, government or leadership positions and income linked to status, power, or public office with wealth through real estate, land, and property dealings and income via engineering, technical trades, or competitive ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "सूर्य (Surya) और मंगल (Mangal) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। धन के लिए, यह संयोजन अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा और प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय को रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति और इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_mercury": {
+    "key": "sun_mercury",
+    "planets": [
+      "sun",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Sun and Mercury blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth and standing tied to authority, government or leadership positions and income linked to status, power, or public office with wealth through business, trading, and commerce and income via writing, media, consulting, or analytical fields - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "सूर्य (Surya) और बुध (Budh) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा और प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय को व्यापार, व्यवसाय और वाणिज्य से संपत्ति और लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_jupiter": {
+    "key": "sun_jupiter",
+    "planets": [
+      "sun",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Jupiter blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For wealth, this combination brings together wealth and standing tied to authority, government or leadership positions and income linked to status, power, or public office with one of the single greatest natural indicators (karaka) of wealth and abundance in the chart and income through teaching, law, finance, banking, or advisory work - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "सूर्य (Surya) और बृहस्पति / गुरु (Guru) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। धन के लिए, यह संयोजन अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा और प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय को कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_venus": {
+    "key": "sun_venus",
+    "planets": [
+      "sun",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Venus blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For wealth, this combination brings together wealth and standing tied to authority, government or leadership positions and income linked to status, power, or public office with wealth through arts, entertainment, fashion, or the beauty/luxury industry and income via partnerships, marriage-linked assets, or creative/aesthetic pursuits - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "सूर्य (Surya) और शुक्र (Shukra) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। धन के लिए, यह संयोजन अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा और प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय को कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति और साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_saturn": {
+    "key": "sun_saturn",
+    "planets": [
+      "sun",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Saturn blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For wealth, this combination brings together wealth and standing tied to authority, government or leadership positions and income linked to status, power, or public office with wealth built slowly and steadily through discipline, labour, and long-term commitment and income via mining, land, agriculture, or heavy/structured industries - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "सूर्य (Surya) और शनि (Shani) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। धन के लिए, यह संयोजन अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा और प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय को अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति और खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_rahu": {
+    "key": "sun_rahu",
+    "planets": [
+      "sun",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Rahu blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For wealth, this combination brings together wealth and standing tied to authority, government or leadership positions and income linked to status, power, or public office with sudden, unconventional, or foreign-sourced wealth and speculative gains through stock markets, trading, or high-risk ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "सूर्य (Surya) और राहु (Rahu) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। धन के लिए, यह संयोजन अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा और प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय को अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति और शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_ketu": {
+    "key": "sun_ketu",
+    "planets": [
+      "sun",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Ketu blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For wealth, this combination brings together wealth and standing tied to authority, government or leadership positions and income linked to status, power, or public office with relative detachment from material wealth or reduced interest in active accumulation and sudden, unexpected financial gains or losses, often outside one's direct control - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "सूर्य (Surya) और केतु (Ketu) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। धन के लिए, यह संयोजन अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा और प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय को भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि और अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_mars": {
+    "key": "moon_mars",
+    "planets": [
+      "moon",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Mars blends a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods with a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together income through public dealing, hospitality, or caregiving-related business and wealth via liquids, dairy, food, or beverage trade with wealth through real estate, land, and property dealings and income via engineering, technical trades, or competitive ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और मंगल (Mangal) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है को एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय और तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति को रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति और इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_mercury": {
+    "key": "moon_mercury",
+    "planets": [
+      "moon",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Moon and Mercury blends a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods with a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For wealth, this combination brings together income through public dealing, hospitality, or caregiving-related business and wealth via liquids, dairy, food, or beverage trade with wealth through business, trading, and commerce and income via writing, media, consulting, or analytical fields - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और बुध (Budh) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। धन के लिए, यह संयोजन जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय और तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति को व्यापार, व्यवसाय और वाणिज्य से संपत्ति और लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_jupiter": {
+    "key": "moon_jupiter",
+    "planets": [
+      "moon",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Jupiter blends a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods with a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together income through public dealing, hospitality, or caregiving-related business and wealth via liquids, dairy, food, or beverage trade with one of the single greatest natural indicators (karaka) of wealth and abundance in the chart and income through teaching, law, finance, banking, or advisory work - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और बृहस्पति / गुरु (Guru) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय और तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति को कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_venus": {
+    "key": "moon_venus",
+    "planets": [
+      "moon",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Venus blends a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods with a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together income through public dealing, hospitality, or caregiving-related business and wealth via liquids, dairy, food, or beverage trade with wealth through arts, entertainment, fashion, or the beauty/luxury industry and income via partnerships, marriage-linked assets, or creative/aesthetic pursuits - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और शुक्र (Shukra) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है को एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय और तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति को कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति और साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_saturn": {
+    "key": "moon_saturn",
+    "planets": [
+      "moon",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Saturn blends a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together income through public dealing, hospitality, or caregiving-related business and wealth via liquids, dairy, food, or beverage trade with wealth built slowly and steadily through discipline, labour, and long-term commitment and income via mining, land, agriculture, or heavy/structured industries - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और शनि (Shani) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय और तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति को अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति और खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_rahu": {
+    "key": "moon_rahu",
+    "planets": [
+      "moon",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Rahu blends a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods with an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together income through public dealing, hospitality, or caregiving-related business and wealth via liquids, dairy, food, or beverage trade with sudden, unconventional, or foreign-sourced wealth and speculative gains through stock markets, trading, or high-risk ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और राहु (Rahu) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय और तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति को अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति और शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_ketu": {
+    "key": "moon_ketu",
+    "planets": [
+      "moon",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Ketu blends a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods with a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together income through public dealing, hospitality, or caregiving-related business and wealth via liquids, dairy, food, or beverage trade with relative detachment from material wealth or reduced interest in active accumulation and sudden, unexpected financial gains or losses, often outside one's direct control - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और केतु (Ketu) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय और तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति को भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि और अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_mercury": {
+    "key": "mars_mercury",
+    "planets": [
+      "mars",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Mars and Mercury blends a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery with a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For wealth, this combination brings together wealth through real estate, land, and property dealings and income via engineering, technical trades, or competitive ventures with wealth through business, trading, and commerce and income via writing, media, consulting, or analytical fields - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "मंगल (Mangal) और बुध (Budh) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। धन के लिए, यह संयोजन रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति और इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय को व्यापार, व्यवसाय और वाणिज्य से संपत्ति और लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_jupiter": {
+    "key": "mars_jupiter",
+    "planets": [
+      "mars",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Mars and Jupiter blends a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery with a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For wealth, this combination brings together wealth through real estate, land, and property dealings and income via engineering, technical trades, or competitive ventures with one of the single greatest natural indicators (karaka) of wealth and abundance in the chart and income through teaching, law, finance, banking, or advisory work - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "मंगल (Mangal) और बृहस्पति / गुरु (Guru) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। धन के लिए, यह संयोजन रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति और इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय को कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_venus": {
+    "key": "mars_venus",
+    "planets": [
+      "mars",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Venus blends a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery with a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through real estate, land, and property dealings and income via engineering, technical trades, or competitive ventures with wealth through arts, entertainment, fashion, or the beauty/luxury industry and income via partnerships, marriage-linked assets, or creative/aesthetic pursuits - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "मंगल (Mangal) और शुक्र (Shukra) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति और इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय को कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति और साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_saturn": {
+    "key": "mars_saturn",
+    "planets": [
+      "mars",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Saturn blends a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through real estate, land, and property dealings and income via engineering, technical trades, or competitive ventures with wealth built slowly and steadily through discipline, labour, and long-term commitment and income via mining, land, agriculture, or heavy/structured industries - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "मंगल (Mangal) और शनि (Shani) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति और इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय को अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति और खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_rahu": {
+    "key": "mars_rahu",
+    "planets": [
+      "mars",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Rahu blends a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery with an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through real estate, land, and property dealings and income via engineering, technical trades, or competitive ventures with sudden, unconventional, or foreign-sourced wealth and speculative gains through stock markets, trading, or high-risk ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "मंगल (Mangal) और राहु (Rahu) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति और इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय को अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति और शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_ketu": {
+    "key": "mars_ketu",
+    "planets": [
+      "mars",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Ketu blends a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery with a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through real estate, land, and property dealings and income via engineering, technical trades, or competitive ventures with relative detachment from material wealth or reduced interest in active accumulation and sudden, unexpected financial gains or losses, often outside one's direct control - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "मंगल (Mangal) और केतु (Ketu) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति और इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय को भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि और अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_jupiter": {
+    "key": "mercury_jupiter",
+    "planets": [
+      "mercury",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Jupiter blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through business, trading, and commerce and income via writing, media, consulting, or analytical fields with one of the single greatest natural indicators (karaka) of wealth and abundance in the chart and income through teaching, law, finance, banking, or advisory work - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बुध (Budh) और बृहस्पति / गुरु (Guru) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन व्यापार, व्यवसाय और वाणिज्य से संपत्ति और लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय को कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_venus": {
+    "key": "mercury_venus",
+    "planets": [
+      "mercury",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Mercury and Venus blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For wealth, this combination brings together wealth through business, trading, and commerce and income via writing, media, consulting, or analytical fields with wealth through arts, entertainment, fashion, or the beauty/luxury industry and income via partnerships, marriage-linked assets, or creative/aesthetic pursuits - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बुध (Budh) और शुक्र (Shukra) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। धन के लिए, यह संयोजन व्यापार, व्यवसाय और वाणिज्य से संपत्ति और लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय को कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति और साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_saturn": {
+    "key": "mercury_saturn",
+    "planets": [
+      "mercury",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Saturn blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through business, trading, and commerce and income via writing, media, consulting, or analytical fields with wealth built slowly and steadily through discipline, labour, and long-term commitment and income via mining, land, agriculture, or heavy/structured industries - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बुध (Budh) और शनि (Shani) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन व्यापार, व्यवसाय और वाणिज्य से संपत्ति और लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय को अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति और खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_rahu": {
+    "key": "mercury_rahu",
+    "planets": [
+      "mercury",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Rahu blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through business, trading, and commerce and income via writing, media, consulting, or analytical fields with sudden, unconventional, or foreign-sourced wealth and speculative gains through stock markets, trading, or high-risk ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बुध (Budh) और राहु (Rahu) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन व्यापार, व्यवसाय और वाणिज्य से संपत्ति और लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय को अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति और शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_ketu": {
+    "key": "mercury_ketu",
+    "planets": [
+      "mercury",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Ketu blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through business, trading, and commerce and income via writing, media, consulting, or analytical fields with relative detachment from material wealth or reduced interest in active accumulation and sudden, unexpected financial gains or losses, often outside one's direct control - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बुध (Budh) और केतु (Ketu) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन व्यापार, व्यवसाय और वाणिज्य से संपत्ति और लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय को भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि और अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_venus": {
+    "key": "jupiter_venus",
+    "planets": [
+      "jupiter",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Jupiter and Venus blends a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance with a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For wealth, this combination brings together one of the single greatest natural indicators (karaka) of wealth and abundance in the chart and income through teaching, law, finance, banking, or advisory work with wealth through arts, entertainment, fashion, or the beauty/luxury industry and income via partnerships, marriage-linked assets, or creative/aesthetic pursuits - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और शुक्र (Shukra) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है को एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। धन के लिए, यह संयोजन कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय को कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति और साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_saturn": {
+    "key": "jupiter_saturn",
+    "planets": [
+      "jupiter",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Saturn blends a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together one of the single greatest natural indicators (karaka) of wealth and abundance in the chart and income through teaching, law, finance, banking, or advisory work with wealth built slowly and steadily through discipline, labour, and long-term commitment and income via mining, land, agriculture, or heavy/structured industries - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और शनि (Shani) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय को अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति और खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_rahu": {
+    "key": "jupiter_rahu",
+    "planets": [
+      "jupiter",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Rahu blends a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance with an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together one of the single greatest natural indicators (karaka) of wealth and abundance in the chart and income through teaching, law, finance, banking, or advisory work with sudden, unconventional, or foreign-sourced wealth and speculative gains through stock markets, trading, or high-risk ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और राहु (Rahu) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय को अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति और शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_ketu": {
+    "key": "jupiter_ketu",
+    "planets": [
+      "jupiter",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Ketu blends a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance with a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together one of the single greatest natural indicators (karaka) of wealth and abundance in the chart and income through teaching, law, finance, banking, or advisory work with relative detachment from material wealth or reduced interest in active accumulation and sudden, unexpected financial gains or losses, often outside one's direct control - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और केतु (Ketu) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय को भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि और अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_saturn": {
+    "key": "venus_saturn",
+    "planets": [
+      "venus",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Venus and Saturn blends a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For wealth, this combination brings together wealth through arts, entertainment, fashion, or the beauty/luxury industry and income via partnerships, marriage-linked assets, or creative/aesthetic pursuits with wealth built slowly and steadily through discipline, labour, and long-term commitment and income via mining, land, agriculture, or heavy/structured industries - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "शुक्र (Shukra) और शनि (Shani) की युति एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। धन के लिए, यह संयोजन कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति और साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय को अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति और खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_rahu": {
+    "key": "venus_rahu",
+    "planets": [
+      "venus",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Venus and Rahu blends a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living with an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through arts, entertainment, fashion, or the beauty/luxury industry and income via partnerships, marriage-linked assets, or creative/aesthetic pursuits with sudden, unconventional, or foreign-sourced wealth and speculative gains through stock markets, trading, or high-risk ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "शुक्र (Shukra) और राहु (Rahu) की युति एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति और साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय को अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति और शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_ketu": {
+    "key": "venus_ketu",
+    "planets": [
+      "venus",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Venus and Ketu blends a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living with a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth through arts, entertainment, fashion, or the beauty/luxury industry and income via partnerships, marriage-linked assets, or creative/aesthetic pursuits with relative detachment from material wealth or reduced interest in active accumulation and sudden, unexpected financial gains or losses, often outside one's direct control - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "शुक्र (Shukra) और केतु (Ketu) की युति एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति और साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय को भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि और अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "saturn_rahu": {
+    "key": "saturn_rahu",
+    "planets": [
+      "saturn",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Saturn and Rahu blends a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance with an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth built slowly and steadily through discipline, labour, and long-term commitment and income via mining, land, agriculture, or heavy/structured industries with sudden, unconventional, or foreign-sourced wealth and speculative gains through stock markets, trading, or high-risk ventures - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "शनि (Shani) और राहु (Rahu) की युति एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति और खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय को अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति और शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "saturn_ketu": {
+    "key": "saturn_ketu",
+    "planets": [
+      "saturn",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Saturn and Ketu blends a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance with a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together wealth built slowly and steadily through discipline, labour, and long-term commitment and income via mining, land, agriculture, or heavy/structured industries with relative detachment from material wealth or reduced interest in active accumulation and sudden, unexpected financial gains or losses, often outside one's direct control - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "शनि (Shani) और केतु (Ketu) की युति एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति और खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय को भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि और अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "rahu_ketu": {
+    "key": "rahu_ketu",
+    "planets": [
+      "rahu",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Rahu and Ketu blends an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains with a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For wealth, this combination brings together sudden, unconventional, or foreign-sourced wealth and speculative gains through stock markets, trading, or high-risk ventures with relative detachment from material wealth or reduced interest in active accumulation and sudden, unexpected financial gains or losses, often outside one's direct control - a layered financial dynamic that draws on both planets' strengths. When this conjunction falls in or influences the 1st, 2nd, or 11th house, its effect on wealth becomes especially direct.",
+      "hi": "राहु (Rahu) और केतु (Ketu) की युति एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। धन के लिए, यह संयोजन अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति और शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ को भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि और अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि के साथ एक साथ लाता है - एक बहुस्तरीय वित्तीय गतिशीलता जो दोनों ग्रहों की शक्तियों का लाभ उठाती है। जब यह युति प्रथम, द्वितीय या एकादश भाव में हो या उसे प्रभावित करे, तो धन पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  }
+}

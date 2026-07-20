@@ -1,0 +1,377 @@
+{
+  "sun": {
+    "order": 1,
+    "name": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force",
+      "hi": "एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "overall vitality, life-force, and core immune strength",
+        "heart, bones, and the eyes (especially the right eye)",
+        "heat-related conditions - fevers, inflammation, blood pressure",
+        "father's health and paternal-line hereditary constitution",
+        "a strong Sun generally supports faster recovery and resilient stamina"
+      ],
+      "hi": [
+        "समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति",
+        "हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख)",
+        "ऊष्मा-संबंधी स्थितियाँ - बुखार, सूजन, रक्तचाप",
+        "पिता का स्वास्थ्य और पितृ-वंश की वंशानुगत संरचना",
+        "एक मज़बूत सूर्य आम तौर पर तेज़ रिकवरी और मज़बूत सहनशक्ति का समर्थन करता है"
+      ]
+    },
+    "friends": [
+      "moon",
+      "mars",
+      "jupiter"
+    ],
+    "neutrals": [
+      "mercury"
+    ],
+    "enemies": [
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ]
+  },
+  "moon": {
+    "order": 2,
+    "name": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids",
+      "hi": "एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "mental and emotional wellbeing, sleep quality, and stress resilience",
+        "bodily fluids, lymphatic balance, and digestive sensitivity",
+        "health that fluctuates with emotional state, much like the Moon's phases",
+        "mother's health and maternal-line hereditary constitution",
+        "a weak or afflicted Moon often shows as anxiety, insomnia, or fluid-retention issues"
+      ],
+      "hi": [
+        "मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता",
+        "शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता",
+        "स्वास्थ्य जो चंद्रमा की कलाओं की तरह भावनात्मक स्थिति के साथ बदलता है",
+        "माता का स्वास्थ्य और मातृ-वंश की वंशानुगत संरचना",
+        "एक कमज़ोर या पीड़ित चंद्रमा प्रायः चिंता, अनिद्रा या द्रव-प्रतिधारण समस्याओं के रूप में दिखता है"
+      ]
+    },
+    "friends": [
+      "sun",
+      "mercury"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": []
+  },
+  "mars": {
+    "order": 3,
+    "name": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a bold, energetic, and combative drive centered on blood, muscle, and physical action",
+      "hi": "एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "blood, muscles, and physical stamina",
+        "injuries, cuts, burns, accidents, and surgery-related events",
+        "inflammatory or fast-onset conditions, and higher risk of impulsive-risk-driven injury",
+        "a well-placed Mars supports quick healing, strong immunity, and surgical success",
+        "an afflicted Mars raises risk of blood disorders, high blood pressure, or accident-proneness"
+      ],
+      "hi": [
+        "रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति",
+        "चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ",
+        "सूजन संबंधी या तेज़ी से शुरू होने वाली स्थितियाँ, और आवेगी-जोखिम से चोट लगने का अधिक खतरा",
+        "एक अच्छी तरह स्थित मंगल तेज़ उपचार, मज़बूत प्रतिरक्षा और सफल शल्य-चिकित्सा का समर्थन करता है",
+        "एक पीड़ित मंगल रक्त विकार, उच्च रक्तचाप या दुर्घटना-प्रवणता का खतरा बढ़ाता है"
+      ]
+    },
+    "friends": [
+      "sun",
+      "moon",
+      "jupiter"
+    ],
+    "neutrals": [
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "mercury"
+    ]
+  },
+  "mercury": {
+    "order": 4,
+    "name": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability",
+      "hi": "एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "the nervous system, skin, and respiratory function",
+        "speech-related organs and overall neuro-muscular coordination",
+        "nervous tension, anxiety, or skin allergies when afflicted",
+        "quick mental processing that helps in fast diagnosis and adaptive treatment decisions",
+        "a well-placed Mercury supports a resilient, quick-recovering nervous system"
+      ],
+      "hi": [
+        "तंत्रिका तंत्र, त्वचा और श्वसन क्रिया",
+        "वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय",
+        "पीड़ित होने पर तंत्रिका तनाव, चिंता या त्वचा एलर्जी",
+        "त्वरित मानसिक प्रसंस्करण जो तेज़ निदान और अनुकूल उपचार निर्णयों में सहायक है",
+        "एक अच्छी तरह स्थित बुध एक लचीले, तेज़ी से ठीक होने वाले तंत्रिका तंत्र का समर्थन करता है"
+      ]
+    },
+    "friends": [
+      "sun",
+      "venus"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "moon"
+    ]
+  },
+  "jupiter": {
+    "order": 5,
+    "name": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity",
+      "hi": "एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart",
+        "the liver, fat metabolism, and overall bodily growth/expansion",
+        "strong natural immunity and recuperative power when well-placed",
+        "a tendency towards weight gain, liver strain, or blood-sugar issues if excessive/afflicted",
+        "general protection from chronic and severe disease when well-supported"
+      ],
+      "hi": [
+        "कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक",
+        "यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार",
+        "अच्छी तरह स्थित होने पर मज़बूत प्राकृतिक प्रतिरक्षा और स्वास्थ्य-लाभ क्षमता",
+        "अत्यधिक/पीड़ित होने पर वज़न बढ़ने, यकृत पर दबाव या रक्त-शर्करा समस्याओं की प्रवृत्ति",
+        "अच्छी तरह समर्थित होने पर गंभीर और पुरानी बीमारी से सामान्य सुरक्षा"
+      ]
+    },
+    "friends": [
+      "sun",
+      "moon",
+      "mars"
+    ],
+    "neutrals": [
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "mercury",
+      "venus"
+    ]
+  },
+  "venus": {
+    "order": 6,
+    "name": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality",
+      "hi": "एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "the reproductive and hormonal systems, and kidney function",
+        "skin health, complexion, and overall physical glow/vitality",
+        "a tendency towards indulgence-linked conditions - diabetes, kidney strain, hormonal imbalance",
+        "comfort and pleasure-seeking that, unchecked, can undermine disciplined health habits",
+        "a well-placed Venus supports healthy vitality and hormonal balance"
+      ],
+      "hi": [
+        "प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली",
+        "त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति",
+        "भोग-प्रवृत्त स्थितियों की प्रवृत्ति - मधुमेह, गुर्दे पर दबाव, हार्मोनल असंतुलन",
+        "सुख और आनंद की चाह जो अनियंत्रित होने पर अनुशासित स्वास्थ्य आदतों को कमज़ोर कर सकती है",
+        "एक अच्छी तरह स्थित शुक्र स्वस्थ जीवनशक्ति और हार्मोनल संतुलन का समर्थन करता है"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "saturn"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "sun",
+      "moon"
+    ]
+  },
+  "saturn": {
+    "order": 7,
+    "name": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance",
+      "hi": "एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "bones, joints, teeth, and long-term skeletal/structural health",
+        "chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments",
+        "longevity itself, along with a disciplined approach to health routines",
+        "a tendency towards low energy, delayed recovery, or depressive tendencies if afflicted",
+        "a well-placed Saturn supports remarkable long-term endurance and longevity despite slow-healing tendencies"
+      ],
+      "hi": [
+        "हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य",
+        "पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ",
+        "स्वयं दीर्घायु, स्वास्थ्य दिनचर्या के प्रति अनुशासित दृष्टिकोण के साथ",
+        "पीड़ित होने पर कम ऊर्जा, विलंबित रिकवरी या अवसादग्रस्त प्रवृत्तियों की प्रवृत्ति",
+        "एक अच्छी तरह स्थित शनि धीमी गति से ठीक होने की प्रवृत्ति के बावजूद उल्लेखनीय दीर्घकालिक सहनशक्ति और दीर्घायु का समर्थन करता है"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "venus"
+    ],
+    "neutrals": [
+      "jupiter",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "sun",
+      "moon",
+      "mars"
+    ]
+  },
+  "rahu": {
+    "order": 8,
+    "name": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "nature": "malefic (shadow)",
+    "traits": {
+      "en": "an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained",
+      "hi": "एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "mysterious, undiagnosed, or hard-to-treat ailments",
+        "allergies, poisoning-type reactions, and psychological/obsessive disturbances",
+        "sudden, unexplained health crises that defy conventional diagnosis",
+        "a tendency towards addictive or compulsive behaviours affecting health if unchecked",
+        "often benefits from foreign or unconventional treatment approaches"
+      ],
+      "hi": [
+        "रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ",
+        "एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ",
+        "अचानक, अस्पष्टीकृत स्वास्थ्य संकट जो पारंपरिक निदान को चुनौती देते हैं",
+        "अनियंत्रित होने पर स्वास्थ्य को प्रभावित करने वाली व्यसनी या बाध्यकारी प्रवृत्तियाँ",
+        "प्रायः विदेशी या अपरंपरागत उपचार दृष्टिकोणों से लाभ होता है"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "venus",
+      "saturn"
+    ],
+    "neutrals": [
+      "jupiter"
+    ],
+    "enemies": [
+      "sun",
+      "moon",
+      "mars"
+    ]
+  },
+  "ketu": {
+    "order": 9,
+    "name": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "nature": "malefic (shadow)",
+    "traits": {
+      "en": "a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns",
+      "hi": "एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है"
+    },
+    "healthAreas": {
+      "en": [
+        "subtle, hidden, or psychosomatic ailments that resist conventional diagnosis",
+        "accidents, sudden ailments, or equally sudden and unexpected recovery",
+        "a relative detachment from the physical body and its needs unless consciously managed",
+        "issues linked to the nervous system or spiritual/psychic disturbance",
+        "benefits from alternative, spiritual, or research-based healing approaches"
+      ],
+      "hi": [
+        "सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं",
+        "दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी",
+        "जब तक सचेत रूप से प्रबंधित न किया जाए, भौतिक शरीर और उसकी आवश्यकताओं से अपेक्षाकृत विरक्ति",
+        "तंत्रिका तंत्र या आध्यात्मिक/मानसिक विक्षोभ से जुड़े मुद्दे",
+        "वैकल्पिक, आध्यात्मिक या शोध-आधारित उपचार दृष्टिकोणों से लाभ"
+      ]
+    },
+    "friends": [
+      "mars",
+      "venus",
+      "saturn"
+    ],
+    "neutrals": [
+      "jupiter",
+      "mercury"
+    ],
+    "enemies": [
+      "sun",
+      "moon"
+    ]
+  }
+}

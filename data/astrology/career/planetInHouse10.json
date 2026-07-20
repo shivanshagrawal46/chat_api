@@ -1,0 +1,155 @@
+{
+  "sun": {
+    "key": "sun",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Sun placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition. This placement strongly favours government service and administration, politics and public leadership, management and executive roles, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "सूर्य (Surya) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है है। यह स्थिति सरकारी सेवा और प्रशासन, राजनीति और सार्वजनिक नेतृत्व, प्रबंधन और कार्यकारी पद के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  },
+  "moon": {
+    "key": "moon",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Moon placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection. This placement strongly favours nursing, healthcare and hospitality, public relations and customer-facing roles, psychology and counselling, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "चंद्रमा (Chandra) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है है। यह स्थिति नर्सिंग, स्वास्थ्य सेवा और आतिथ्य, जनसंपर्क और ग्राहक-सेवा भूमिकाएँ, मनोविज्ञान और परामर्श के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  },
+  "mars": {
+    "key": "mars",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Mars placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries a bold, energetic, and competitive drive centered on courage, action, and technical mastery. This placement strongly favours engineering, mechanical and automobile fields, defence, police and security services, sports, fitness and athletics, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "मंगल (Mangal) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है है। यह स्थिति इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र, रक्षा, पुलिस और सुरक्षा सेवाएँ, खेल, फिटनेस और एथलेटिक्स के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  },
+  "mercury": {
+    "key": "mercury",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Mercury placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. This placement strongly favours business, trading and commerce, writing, journalism and media, accounting, finance and analytics, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "बुध (Budh) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है। यह स्थिति व्यापार और वाणिज्य, लेखन, पत्रकारिता और मीडिया, लेखांकन, वित्त और विश्लेषण के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  },
+  "jupiter": {
+    "key": "jupiter",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Jupiter placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning. This placement strongly favours teaching, professorship and academia, law, judiciary and legal consultancy, banking, finance and investment advisory, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "बृहस्पति / गुरु (Guru) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है है। यह स्थिति शिक्षण, प्रोफेसरशिप और शिक्षाजगत, कानून, न्यायपालिका और विधिक परामर्श, बैंकिंग, वित्त और निवेश सलाहकारी के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  },
+  "venus": {
+    "key": "venus",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Venus placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste. This placement strongly favours arts, entertainment and the film industry, fashion, design and beauty industry, luxury goods, hospitality and event management, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "शुक्र (Shukra) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है है। यह स्थिति कला, मनोरंजन और फिल्म उद्योग, फैशन, डिज़ाइन और सौंदर्य उद्योग, विलासिता वस्तुएँ, आतिथ्य और इवेंट प्रबंधन के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  },
+  "saturn": {
+    "key": "saturn",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Saturn placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. This placement strongly favours labour-intensive and service-oriented industries, mining, oil, agriculture and heavy industry, judiciary, law-and-order and compliance roles, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "शनि (Shani) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है। यह स्थिति श्रम-प्रधान और सेवा-उन्मुख उद्योग, खनन, तेल, कृषि और भारी उद्योग, न्यायपालिका, कानून-व्यवस्था और अनुपालन भूमिकाएँ के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  },
+  "rahu": {
+    "key": "rahu",
+    "planet": "rahu",
+    "planetName": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Rahu placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. This placement strongly favours technology, IT and emerging/disruptive fields, foreign trade, import-export and aviation, mass media, digital content and photography, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "राहु (Rahu) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है है। यह स्थिति प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र, विदेश व्यापार, आयात-निर्यात और विमानन, जनसंचार माध्यम, डिजिटल सामग्री और फोटोग्राफी के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  },
+  "ketu": {
+    "key": "ketu",
+    "planet": "ketu",
+    "planetName": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "house": 10,
+    "houseName": {
+      "en": "10th House (Karma Bhava)",
+      "hi": "दशम भाव (कर्म भाव)"
+    },
+    "text": {
+      "en": "Ketu placed directly in the 10th house (career house) has a strong, immediate influence on your profession and public image, since it occupies the very house of career/karma. It carries a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. This placement strongly favours research, analytics and highly specialised technical work, spirituality, astrology and religious institutions, alternative medicine and healing sciences, and tends to bring visible recognition tied to this planet's nature in your professional field.",
+      "hi": "केतु (Ketu) का सीधे दशम भाव (करियर भाव) में स्थित होना आपके व्यवसाय और सार्वजनिक छवि पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह स्वयं करियर/कर्म के भाव में स्थित है। इसमें एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है है। यह स्थिति शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य, आध्यात्म, ज्योतिष और धार्मिक संस्थान, वैकल्पिक चिकित्सा और उपचार विज्ञान के लिए अत्यंत अनुकूल है, और आपके व्यावसायिक क्षेत्र में इस ग्रह की प्रकृति से जुड़ी दृश्यमान पहचान लाती है।"
+    }
+  }
+}

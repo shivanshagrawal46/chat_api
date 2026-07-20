@@ -1,0 +1,734 @@
+{
+  "aries": {
+    "lagna": "aries",
+    "lagnaName": {
+      "en": "Aries",
+      "hi": "मेष (Mesh)"
+    },
+    "lagnaLord": "mars",
+    "lagnaLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "sixthHouseSign": "virgo",
+    "sixthHouseSignName": {
+      "en": "Virgo",
+      "hi": "कन्या (Kanya)"
+    },
+    "sixthLord": "mercury",
+    "sixthLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "eighthHouseSign": "scorpio",
+    "eighthHouseSignName": {
+      "en": "Scorpio",
+      "hi": "वृश्चिक (Vrishchik)"
+    },
+    "eighthLord": "mars",
+    "eighthLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "twelfthHouseSign": "pisces",
+    "twelfthHouseSignName": {
+      "en": "Pisces",
+      "hi": "मीन (Meen)"
+    },
+    "twelfthLord": "jupiter",
+    "twelfthLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "houseLords": {
+      "1": "mars",
+      "2": "venus",
+      "3": "mercury",
+      "4": "moon",
+      "5": "sun",
+      "6": "mercury",
+      "7": "venus",
+      "8": "mars",
+      "9": "jupiter",
+      "10": "saturn",
+      "11": "saturn",
+      "12": "jupiter"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Aries Lagna, the Ascendant (Lagna) lord is Mars. The 6th house (Roga/disease) falls in Virgo, ruled by Mercury; the 8th house (Ayu/chronic-longevity) falls in Scorpio, ruled by Mars; and the 12th house (Vyaya/hospitalization) falls in Pisces, ruled by Jupiter.",
+      "hi": "मेष (Mesh) लग्न के लिए, लग्नेश मंगल (Mangal) है। षष्ठ भाव (रोग) कन्या (Kanya) राशि में पड़ता है, जिसके स्वामी बुध (Budh) हैं; अष्टम भाव (आयु) वृश्चिक (Vrishchik) राशि में पड़ता है, जिसके स्वामी मंगल (Mangal) हैं; और द्वादश भाव (व्यय) मीन (Meen) राशि में पड़ता है, जिसके स्वामी बृहस्पति / गुरु (Guru) हैं।"
+    }
+  },
+  "taurus": {
+    "lagna": "taurus",
+    "lagnaName": {
+      "en": "Taurus",
+      "hi": "वृषभ (Vrishabh)"
+    },
+    "lagnaLord": "venus",
+    "lagnaLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "sixthHouseSign": "libra",
+    "sixthHouseSignName": {
+      "en": "Libra",
+      "hi": "तुला (Tula)"
+    },
+    "sixthLord": "venus",
+    "sixthLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "eighthHouseSign": "sagittarius",
+    "eighthHouseSignName": {
+      "en": "Sagittarius",
+      "hi": "धनु (Dhanu)"
+    },
+    "eighthLord": "jupiter",
+    "eighthLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "twelfthHouseSign": "aries",
+    "twelfthHouseSignName": {
+      "en": "Aries",
+      "hi": "मेष (Mesh)"
+    },
+    "twelfthLord": "mars",
+    "twelfthLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "houseLords": {
+      "1": "venus",
+      "2": "mercury",
+      "3": "moon",
+      "4": "sun",
+      "5": "mercury",
+      "6": "venus",
+      "7": "mars",
+      "8": "jupiter",
+      "9": "saturn",
+      "10": "saturn",
+      "11": "jupiter",
+      "12": "mars"
+    },
+    "yogakaraka": "saturn",
+    "note": {
+      "en": "For Taurus Lagna, the Ascendant (Lagna) lord is Venus. The 6th house (Roga/disease) falls in Libra, ruled by Venus; the 8th house (Ayu/chronic-longevity) falls in Sagittarius, ruled by Jupiter; and the 12th house (Vyaya/hospitalization) falls in Aries, ruled by Mars. Saturn is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious, health-strengthening planets in this chart.",
+      "hi": "वृषभ (Vrishabh) लग्न के लिए, लग्नेश शुक्र (Shukra) है। षष्ठ भाव (रोग) तुला (Tula) राशि में पड़ता है, जिसके स्वामी शुक्र (Shukra) हैं; अष्टम भाव (आयु) धनु (Dhanu) राशि में पड़ता है, जिसके स्वामी बृहस्पति / गुरु (Guru) हैं; और द्वादश भाव (व्यय) मेष (Mesh) राशि में पड़ता है, जिसके स्वामी मंगल (Mangal) हैं। शनि (Shani) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ, स्वास्थ्य-वर्धक ग्रहों में से एक है।"
+    }
+  },
+  "gemini": {
+    "lagna": "gemini",
+    "lagnaName": {
+      "en": "Gemini",
+      "hi": "मिथुन (Mithun)"
+    },
+    "lagnaLord": "mercury",
+    "lagnaLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "sixthHouseSign": "scorpio",
+    "sixthHouseSignName": {
+      "en": "Scorpio",
+      "hi": "वृश्चिक (Vrishchik)"
+    },
+    "sixthLord": "mars",
+    "sixthLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "eighthHouseSign": "capricorn",
+    "eighthHouseSignName": {
+      "en": "Capricorn",
+      "hi": "मकर (Makar)"
+    },
+    "eighthLord": "saturn",
+    "eighthLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "twelfthHouseSign": "taurus",
+    "twelfthHouseSignName": {
+      "en": "Taurus",
+      "hi": "वृषभ (Vrishabh)"
+    },
+    "twelfthLord": "venus",
+    "twelfthLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "houseLords": {
+      "1": "mercury",
+      "2": "moon",
+      "3": "sun",
+      "4": "mercury",
+      "5": "venus",
+      "6": "mars",
+      "7": "jupiter",
+      "8": "saturn",
+      "9": "saturn",
+      "10": "jupiter",
+      "11": "mars",
+      "12": "venus"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Gemini Lagna, the Ascendant (Lagna) lord is Mercury. The 6th house (Roga/disease) falls in Scorpio, ruled by Mars; the 8th house (Ayu/chronic-longevity) falls in Capricorn, ruled by Saturn; and the 12th house (Vyaya/hospitalization) falls in Taurus, ruled by Venus.",
+      "hi": "मिथुन (Mithun) लग्न के लिए, लग्नेश बुध (Budh) है। षष्ठ भाव (रोग) वृश्चिक (Vrishchik) राशि में पड़ता है, जिसके स्वामी मंगल (Mangal) हैं; अष्टम भाव (आयु) मकर (Makar) राशि में पड़ता है, जिसके स्वामी शनि (Shani) हैं; और द्वादश भाव (व्यय) वृषभ (Vrishabh) राशि में पड़ता है, जिसके स्वामी शुक्र (Shukra) हैं।"
+    }
+  },
+  "cancer": {
+    "lagna": "cancer",
+    "lagnaName": {
+      "en": "Cancer",
+      "hi": "कर्क (Kark)"
+    },
+    "lagnaLord": "moon",
+    "lagnaLordName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "sixthHouseSign": "sagittarius",
+    "sixthHouseSignName": {
+      "en": "Sagittarius",
+      "hi": "धनु (Dhanu)"
+    },
+    "sixthLord": "jupiter",
+    "sixthLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "eighthHouseSign": "aquarius",
+    "eighthHouseSignName": {
+      "en": "Aquarius",
+      "hi": "कुंभ (Kumbh)"
+    },
+    "eighthLord": "saturn",
+    "eighthLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "twelfthHouseSign": "gemini",
+    "twelfthHouseSignName": {
+      "en": "Gemini",
+      "hi": "मिथुन (Mithun)"
+    },
+    "twelfthLord": "mercury",
+    "twelfthLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "houseLords": {
+      "1": "moon",
+      "2": "sun",
+      "3": "mercury",
+      "4": "venus",
+      "5": "mars",
+      "6": "jupiter",
+      "7": "saturn",
+      "8": "saturn",
+      "9": "jupiter",
+      "10": "mars",
+      "11": "venus",
+      "12": "mercury"
+    },
+    "yogakaraka": "mars",
+    "note": {
+      "en": "For Cancer Lagna, the Ascendant (Lagna) lord is Moon. The 6th house (Roga/disease) falls in Sagittarius, ruled by Jupiter; the 8th house (Ayu/chronic-longevity) falls in Aquarius, ruled by Saturn; and the 12th house (Vyaya/hospitalization) falls in Gemini, ruled by Mercury. Mars is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious, health-strengthening planets in this chart.",
+      "hi": "कर्क (Kark) लग्न के लिए, लग्नेश चंद्रमा (Chandra) है। षष्ठ भाव (रोग) धनु (Dhanu) राशि में पड़ता है, जिसके स्वामी बृहस्पति / गुरु (Guru) हैं; अष्टम भाव (आयु) कुंभ (Kumbh) राशि में पड़ता है, जिसके स्वामी शनि (Shani) हैं; और द्वादश भाव (व्यय) मिथुन (Mithun) राशि में पड़ता है, जिसके स्वामी बुध (Budh) हैं। मंगल (Mangal) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ, स्वास्थ्य-वर्धक ग्रहों में से एक है।"
+    }
+  },
+  "leo": {
+    "lagna": "leo",
+    "lagnaName": {
+      "en": "Leo",
+      "hi": "सिंह (Simha)"
+    },
+    "lagnaLord": "sun",
+    "lagnaLordName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "sixthHouseSign": "capricorn",
+    "sixthHouseSignName": {
+      "en": "Capricorn",
+      "hi": "मकर (Makar)"
+    },
+    "sixthLord": "saturn",
+    "sixthLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "eighthHouseSign": "pisces",
+    "eighthHouseSignName": {
+      "en": "Pisces",
+      "hi": "मीन (Meen)"
+    },
+    "eighthLord": "jupiter",
+    "eighthLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "twelfthHouseSign": "cancer",
+    "twelfthHouseSignName": {
+      "en": "Cancer",
+      "hi": "कर्क (Kark)"
+    },
+    "twelfthLord": "moon",
+    "twelfthLordName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "houseLords": {
+      "1": "sun",
+      "2": "mercury",
+      "3": "venus",
+      "4": "mars",
+      "5": "jupiter",
+      "6": "saturn",
+      "7": "saturn",
+      "8": "jupiter",
+      "9": "mars",
+      "10": "venus",
+      "11": "mercury",
+      "12": "moon"
+    },
+    "yogakaraka": "mars",
+    "note": {
+      "en": "For Leo Lagna, the Ascendant (Lagna) lord is Sun. The 6th house (Roga/disease) falls in Capricorn, ruled by Saturn; the 8th house (Ayu/chronic-longevity) falls in Pisces, ruled by Jupiter; and the 12th house (Vyaya/hospitalization) falls in Cancer, ruled by Moon. Mars is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious, health-strengthening planets in this chart.",
+      "hi": "सिंह (Simha) लग्न के लिए, लग्नेश सूर्य (Surya) है। षष्ठ भाव (रोग) मकर (Makar) राशि में पड़ता है, जिसके स्वामी शनि (Shani) हैं; अष्टम भाव (आयु) मीन (Meen) राशि में पड़ता है, जिसके स्वामी बृहस्पति / गुरु (Guru) हैं; और द्वादश भाव (व्यय) कर्क (Kark) राशि में पड़ता है, जिसके स्वामी चंद्रमा (Chandra) हैं। मंगल (Mangal) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ, स्वास्थ्य-वर्धक ग्रहों में से एक है।"
+    }
+  },
+  "virgo": {
+    "lagna": "virgo",
+    "lagnaName": {
+      "en": "Virgo",
+      "hi": "कन्या (Kanya)"
+    },
+    "lagnaLord": "mercury",
+    "lagnaLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "sixthHouseSign": "aquarius",
+    "sixthHouseSignName": {
+      "en": "Aquarius",
+      "hi": "कुंभ (Kumbh)"
+    },
+    "sixthLord": "saturn",
+    "sixthLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "eighthHouseSign": "aries",
+    "eighthHouseSignName": {
+      "en": "Aries",
+      "hi": "मेष (Mesh)"
+    },
+    "eighthLord": "mars",
+    "eighthLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "twelfthHouseSign": "leo",
+    "twelfthHouseSignName": {
+      "en": "Leo",
+      "hi": "सिंह (Simha)"
+    },
+    "twelfthLord": "sun",
+    "twelfthLordName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "houseLords": {
+      "1": "mercury",
+      "2": "venus",
+      "3": "mars",
+      "4": "jupiter",
+      "5": "saturn",
+      "6": "saturn",
+      "7": "jupiter",
+      "8": "mars",
+      "9": "venus",
+      "10": "mercury",
+      "11": "moon",
+      "12": "sun"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Virgo Lagna, the Ascendant (Lagna) lord is Mercury. The 6th house (Roga/disease) falls in Aquarius, ruled by Saturn; the 8th house (Ayu/chronic-longevity) falls in Aries, ruled by Mars; and the 12th house (Vyaya/hospitalization) falls in Leo, ruled by Sun.",
+      "hi": "कन्या (Kanya) लग्न के लिए, लग्नेश बुध (Budh) है। षष्ठ भाव (रोग) कुंभ (Kumbh) राशि में पड़ता है, जिसके स्वामी शनि (Shani) हैं; अष्टम भाव (आयु) मेष (Mesh) राशि में पड़ता है, जिसके स्वामी मंगल (Mangal) हैं; और द्वादश भाव (व्यय) सिंह (Simha) राशि में पड़ता है, जिसके स्वामी सूर्य (Surya) हैं।"
+    }
+  },
+  "libra": {
+    "lagna": "libra",
+    "lagnaName": {
+      "en": "Libra",
+      "hi": "तुला (Tula)"
+    },
+    "lagnaLord": "venus",
+    "lagnaLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "sixthHouseSign": "pisces",
+    "sixthHouseSignName": {
+      "en": "Pisces",
+      "hi": "मीन (Meen)"
+    },
+    "sixthLord": "jupiter",
+    "sixthLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "eighthHouseSign": "taurus",
+    "eighthHouseSignName": {
+      "en": "Taurus",
+      "hi": "वृषभ (Vrishabh)"
+    },
+    "eighthLord": "venus",
+    "eighthLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "twelfthHouseSign": "virgo",
+    "twelfthHouseSignName": {
+      "en": "Virgo",
+      "hi": "कन्या (Kanya)"
+    },
+    "twelfthLord": "mercury",
+    "twelfthLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "houseLords": {
+      "1": "venus",
+      "2": "mars",
+      "3": "jupiter",
+      "4": "saturn",
+      "5": "saturn",
+      "6": "jupiter",
+      "7": "mars",
+      "8": "venus",
+      "9": "mercury",
+      "10": "moon",
+      "11": "sun",
+      "12": "mercury"
+    },
+    "yogakaraka": "saturn",
+    "note": {
+      "en": "For Libra Lagna, the Ascendant (Lagna) lord is Venus. The 6th house (Roga/disease) falls in Pisces, ruled by Jupiter; the 8th house (Ayu/chronic-longevity) falls in Taurus, ruled by Venus; and the 12th house (Vyaya/hospitalization) falls in Virgo, ruled by Mercury. Saturn is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious, health-strengthening planets in this chart.",
+      "hi": "तुला (Tula) लग्न के लिए, लग्नेश शुक्र (Shukra) है। षष्ठ भाव (रोग) मीन (Meen) राशि में पड़ता है, जिसके स्वामी बृहस्पति / गुरु (Guru) हैं; अष्टम भाव (आयु) वृषभ (Vrishabh) राशि में पड़ता है, जिसके स्वामी शुक्र (Shukra) हैं; और द्वादश भाव (व्यय) कन्या (Kanya) राशि में पड़ता है, जिसके स्वामी बुध (Budh) हैं। शनि (Shani) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ, स्वास्थ्य-वर्धक ग्रहों में से एक है।"
+    }
+  },
+  "scorpio": {
+    "lagna": "scorpio",
+    "lagnaName": {
+      "en": "Scorpio",
+      "hi": "वृश्चिक (Vrishchik)"
+    },
+    "lagnaLord": "mars",
+    "lagnaLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "sixthHouseSign": "aries",
+    "sixthHouseSignName": {
+      "en": "Aries",
+      "hi": "मेष (Mesh)"
+    },
+    "sixthLord": "mars",
+    "sixthLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "eighthHouseSign": "gemini",
+    "eighthHouseSignName": {
+      "en": "Gemini",
+      "hi": "मिथुन (Mithun)"
+    },
+    "eighthLord": "mercury",
+    "eighthLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "twelfthHouseSign": "libra",
+    "twelfthHouseSignName": {
+      "en": "Libra",
+      "hi": "तुला (Tula)"
+    },
+    "twelfthLord": "venus",
+    "twelfthLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "houseLords": {
+      "1": "mars",
+      "2": "jupiter",
+      "3": "saturn",
+      "4": "saturn",
+      "5": "jupiter",
+      "6": "mars",
+      "7": "venus",
+      "8": "mercury",
+      "9": "moon",
+      "10": "sun",
+      "11": "mercury",
+      "12": "venus"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Scorpio Lagna, the Ascendant (Lagna) lord is Mars. The 6th house (Roga/disease) falls in Aries, ruled by Mars; the 8th house (Ayu/chronic-longevity) falls in Gemini, ruled by Mercury; and the 12th house (Vyaya/hospitalization) falls in Libra, ruled by Venus.",
+      "hi": "वृश्चिक (Vrishchik) लग्न के लिए, लग्नेश मंगल (Mangal) है। षष्ठ भाव (रोग) मेष (Mesh) राशि में पड़ता है, जिसके स्वामी मंगल (Mangal) हैं; अष्टम भाव (आयु) मिथुन (Mithun) राशि में पड़ता है, जिसके स्वामी बुध (Budh) हैं; और द्वादश भाव (व्यय) तुला (Tula) राशि में पड़ता है, जिसके स्वामी शुक्र (Shukra) हैं।"
+    }
+  },
+  "sagittarius": {
+    "lagna": "sagittarius",
+    "lagnaName": {
+      "en": "Sagittarius",
+      "hi": "धनु (Dhanu)"
+    },
+    "lagnaLord": "jupiter",
+    "lagnaLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "sixthHouseSign": "taurus",
+    "sixthHouseSignName": {
+      "en": "Taurus",
+      "hi": "वृषभ (Vrishabh)"
+    },
+    "sixthLord": "venus",
+    "sixthLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "eighthHouseSign": "cancer",
+    "eighthHouseSignName": {
+      "en": "Cancer",
+      "hi": "कर्क (Kark)"
+    },
+    "eighthLord": "moon",
+    "eighthLordName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "twelfthHouseSign": "scorpio",
+    "twelfthHouseSignName": {
+      "en": "Scorpio",
+      "hi": "वृश्चिक (Vrishchik)"
+    },
+    "twelfthLord": "mars",
+    "twelfthLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "houseLords": {
+      "1": "jupiter",
+      "2": "saturn",
+      "3": "saturn",
+      "4": "jupiter",
+      "5": "mars",
+      "6": "venus",
+      "7": "mercury",
+      "8": "moon",
+      "9": "sun",
+      "10": "mercury",
+      "11": "venus",
+      "12": "mars"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Sagittarius Lagna, the Ascendant (Lagna) lord is Jupiter. The 6th house (Roga/disease) falls in Taurus, ruled by Venus; the 8th house (Ayu/chronic-longevity) falls in Cancer, ruled by Moon; and the 12th house (Vyaya/hospitalization) falls in Scorpio, ruled by Mars.",
+      "hi": "धनु (Dhanu) लग्न के लिए, लग्नेश बृहस्पति / गुरु (Guru) है। षष्ठ भाव (रोग) वृषभ (Vrishabh) राशि में पड़ता है, जिसके स्वामी शुक्र (Shukra) हैं; अष्टम भाव (आयु) कर्क (Kark) राशि में पड़ता है, जिसके स्वामी चंद्रमा (Chandra) हैं; और द्वादश भाव (व्यय) वृश्चिक (Vrishchik) राशि में पड़ता है, जिसके स्वामी मंगल (Mangal) हैं।"
+    }
+  },
+  "capricorn": {
+    "lagna": "capricorn",
+    "lagnaName": {
+      "en": "Capricorn",
+      "hi": "मकर (Makar)"
+    },
+    "lagnaLord": "saturn",
+    "lagnaLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "sixthHouseSign": "gemini",
+    "sixthHouseSignName": {
+      "en": "Gemini",
+      "hi": "मिथुन (Mithun)"
+    },
+    "sixthLord": "mercury",
+    "sixthLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "eighthHouseSign": "leo",
+    "eighthHouseSignName": {
+      "en": "Leo",
+      "hi": "सिंह (Simha)"
+    },
+    "eighthLord": "sun",
+    "eighthLordName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "twelfthHouseSign": "sagittarius",
+    "twelfthHouseSignName": {
+      "en": "Sagittarius",
+      "hi": "धनु (Dhanu)"
+    },
+    "twelfthLord": "jupiter",
+    "twelfthLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "houseLords": {
+      "1": "saturn",
+      "2": "saturn",
+      "3": "jupiter",
+      "4": "mars",
+      "5": "venus",
+      "6": "mercury",
+      "7": "moon",
+      "8": "sun",
+      "9": "mercury",
+      "10": "venus",
+      "11": "mars",
+      "12": "jupiter"
+    },
+    "yogakaraka": "venus",
+    "note": {
+      "en": "For Capricorn Lagna, the Ascendant (Lagna) lord is Saturn. The 6th house (Roga/disease) falls in Gemini, ruled by Mercury; the 8th house (Ayu/chronic-longevity) falls in Leo, ruled by Sun; and the 12th house (Vyaya/hospitalization) falls in Sagittarius, ruled by Jupiter. Venus is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious, health-strengthening planets in this chart.",
+      "hi": "मकर (Makar) लग्न के लिए, लग्नेश शनि (Shani) है। षष्ठ भाव (रोग) मिथुन (Mithun) राशि में पड़ता है, जिसके स्वामी बुध (Budh) हैं; अष्टम भाव (आयु) सिंह (Simha) राशि में पड़ता है, जिसके स्वामी सूर्य (Surya) हैं; और द्वादश भाव (व्यय) धनु (Dhanu) राशि में पड़ता है, जिसके स्वामी बृहस्पति / गुरु (Guru) हैं। शुक्र (Shukra) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ, स्वास्थ्य-वर्धक ग्रहों में से एक है।"
+    }
+  },
+  "aquarius": {
+    "lagna": "aquarius",
+    "lagnaName": {
+      "en": "Aquarius",
+      "hi": "कुंभ (Kumbh)"
+    },
+    "lagnaLord": "saturn",
+    "lagnaLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "sixthHouseSign": "cancer",
+    "sixthHouseSignName": {
+      "en": "Cancer",
+      "hi": "कर्क (Kark)"
+    },
+    "sixthLord": "moon",
+    "sixthLordName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "eighthHouseSign": "virgo",
+    "eighthHouseSignName": {
+      "en": "Virgo",
+      "hi": "कन्या (Kanya)"
+    },
+    "eighthLord": "mercury",
+    "eighthLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "twelfthHouseSign": "capricorn",
+    "twelfthHouseSignName": {
+      "en": "Capricorn",
+      "hi": "मकर (Makar)"
+    },
+    "twelfthLord": "saturn",
+    "twelfthLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "houseLords": {
+      "1": "saturn",
+      "2": "jupiter",
+      "3": "mars",
+      "4": "venus",
+      "5": "mercury",
+      "6": "moon",
+      "7": "sun",
+      "8": "mercury",
+      "9": "venus",
+      "10": "mars",
+      "11": "jupiter",
+      "12": "saturn"
+    },
+    "yogakaraka": "venus",
+    "note": {
+      "en": "For Aquarius Lagna, the Ascendant (Lagna) lord is Saturn. The 6th house (Roga/disease) falls in Cancer, ruled by Moon; the 8th house (Ayu/chronic-longevity) falls in Virgo, ruled by Mercury; and the 12th house (Vyaya/hospitalization) falls in Capricorn, ruled by Saturn. Venus is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious, health-strengthening planets in this chart.",
+      "hi": "कुंभ (Kumbh) लग्न के लिए, लग्नेश शनि (Shani) है। षष्ठ भाव (रोग) कर्क (Kark) राशि में पड़ता है, जिसके स्वामी चंद्रमा (Chandra) हैं; अष्टम भाव (आयु) कन्या (Kanya) राशि में पड़ता है, जिसके स्वामी बुध (Budh) हैं; और द्वादश भाव (व्यय) मकर (Makar) राशि में पड़ता है, जिसके स्वामी शनि (Shani) हैं। शुक्र (Shukra) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ, स्वास्थ्य-वर्धक ग्रहों में से एक है।"
+    }
+  },
+  "pisces": {
+    "lagna": "pisces",
+    "lagnaName": {
+      "en": "Pisces",
+      "hi": "मीन (Meen)"
+    },
+    "lagnaLord": "jupiter",
+    "lagnaLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "sixthHouseSign": "leo",
+    "sixthHouseSignName": {
+      "en": "Leo",
+      "hi": "सिंह (Simha)"
+    },
+    "sixthLord": "sun",
+    "sixthLordName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "eighthHouseSign": "libra",
+    "eighthHouseSignName": {
+      "en": "Libra",
+      "hi": "तुला (Tula)"
+    },
+    "eighthLord": "venus",
+    "eighthLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "twelfthHouseSign": "aquarius",
+    "twelfthHouseSignName": {
+      "en": "Aquarius",
+      "hi": "कुंभ (Kumbh)"
+    },
+    "twelfthLord": "saturn",
+    "twelfthLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "houseLords": {
+      "1": "jupiter",
+      "2": "mars",
+      "3": "venus",
+      "4": "mercury",
+      "5": "moon",
+      "6": "sun",
+      "7": "mercury",
+      "8": "venus",
+      "9": "mars",
+      "10": "jupiter",
+      "11": "saturn",
+      "12": "saturn"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Pisces Lagna, the Ascendant (Lagna) lord is Jupiter. The 6th house (Roga/disease) falls in Leo, ruled by Sun; the 8th house (Ayu/chronic-longevity) falls in Libra, ruled by Venus; and the 12th house (Vyaya/hospitalization) falls in Aquarius, ruled by Saturn.",
+      "hi": "मीन (Meen) लग्न के लिए, लग्नेश बृहस्पति / गुरु (Guru) है। षष्ठ भाव (रोग) सिंह (Simha) राशि में पड़ता है, जिसके स्वामी सूर्य (Surya) हैं; अष्टम भाव (आयु) तुला (Tula) राशि में पड़ता है, जिसके स्वामी शुक्र (Shukra) हैं; और द्वादश भाव (व्यय) कुंभ (Kumbh) राशि में पड़ता है, जिसके स्वामी शनि (Shani) हैं।"
+    }
+  }
+}

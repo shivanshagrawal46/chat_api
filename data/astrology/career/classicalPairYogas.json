@@ -1,0 +1,842 @@
+{
+  "sun_moon": {
+    "key": "sun_moon",
+    "planets": [
+      "sun",
+      "moon"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "sun_mars": {
+    "key": "sun_mars",
+    "planets": [
+      "sun",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "sun_mercury": {
+    "key": "sun_mercury",
+    "planets": [
+      "sun",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "hasClassicalName": true,
+    "yogaName": {
+      "en": "Budh-Aditya Yoga",
+      "hi": "बुध-आदित्य योग"
+    },
+    "text": {
+      "en": "Sun and Mercury together form Budh-Aditya Yoga, blending authority/leadership with sharp intellect and communication skill. This favours careers in government, administration, business analytics, media, and any field where intelligent decision-making and public authority combine.",
+      "hi": "सूर्य और बुध मिलकर बुध-आदित्य योग बनाते हैं, जो अधिकार/नेतृत्व को तीक्ष्ण बुद्धि और संचार कौशल के साथ जोड़ता है। यह सरकार, प्रशासन, व्यावसायिक विश्लेषण, मीडिया और किसी भी ऐसे क्षेत्र में करियर के लिए अनुकूल है जहाँ बुद्धिमान निर्णय-क्षमता और सार्वजनिक अधिकार एक साथ आते हैं।"
+    }
+  },
+  "sun_jupiter": {
+    "key": "sun_jupiter",
+    "planets": [
+      "sun",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "sun_venus": {
+    "key": "sun_venus",
+    "planets": [
+      "sun",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "sun_saturn": {
+    "key": "sun_saturn",
+    "planets": [
+      "sun",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "sun_rahu": {
+    "key": "sun_rahu",
+    "planets": [
+      "sun",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "sun_ketu": {
+    "key": "sun_ketu",
+    "planets": [
+      "sun",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "moon_mars": {
+    "key": "moon_mars",
+    "planets": [
+      "moon",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "hasClassicalName": true,
+    "yogaName": {
+      "en": "Chandra-Mangal Yoga",
+      "hi": "चंद्र-मंगल योग"
+    },
+    "text": {
+      "en": "Moon and Mars together form Chandra-Mangal Yoga, a strong wealth-generating combination that blends emotional drive with bold action. This favours careers in real estate, business ventures, food/liquid-related trade, and entrepreneurial fields where quick decisive action creates financial gain.",
+      "hi": "चंद्रमा और मंगल मिलकर चंद्र-मंगल योग बनाते हैं, जो भावनात्मक प्रेरणा को साहसिक कार्यवाही के साथ जोड़ने वाला एक मज़बूत धन-सृजनकारी संयोजन है। यह रियल एस्टेट, व्यावसायिक उद्यम, खाद्य/तरल पदार्थ-संबंधी व्यापार और उद्यमशील क्षेत्रों के लिए अनुकूल है जहाँ त्वरित निर्णायक कार्यवाही वित्तीय लाभ उत्पन्न करती है।"
+    }
+  },
+  "moon_mercury": {
+    "key": "moon_mercury",
+    "planets": [
+      "moon",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "moon_jupiter": {
+    "key": "moon_jupiter",
+    "planets": [
+      "moon",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "hasClassicalName": true,
+    "yogaName": {
+      "en": "Gajakesari Yoga",
+      "hi": "गजकेसरी योग"
+    },
+    "text": {
+      "en": "Moon and Jupiter together form Gajakesari Yoga, one of the most celebrated combinations for wisdom, reputation, and prosperity. This favours careers in teaching, counselling, law, finance, and any advisory or public-facing role where good judgement and likeability bring lasting respect and success.",
+      "hi": "चंद्रमा और बृहस्पति मिलकर गजकेसरी योग बनाते हैं, जो ज्ञान, प्रतिष्ठा और समृद्धि के लिए सबसे प्रशंसित संयोजनों में से एक है। यह शिक्षण, परामर्श, कानून, वित्त और किसी भी सलाहकारी या जनसंपर्क भूमिका के लिए अनुकूल है जहाँ अच्छा निर्णय और लोकप्रियता स्थायी सम्मान और सफलता लाती है।"
+    }
+  },
+  "moon_venus": {
+    "key": "moon_venus",
+    "planets": [
+      "moon",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "moon_saturn": {
+    "key": "moon_saturn",
+    "planets": [
+      "moon",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "moon_rahu": {
+    "key": "moon_rahu",
+    "planets": [
+      "moon",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "moon_ketu": {
+    "key": "moon_ketu",
+    "planets": [
+      "moon",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mars_mercury": {
+    "key": "mars_mercury",
+    "planets": [
+      "mars",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mars_jupiter": {
+    "key": "mars_jupiter",
+    "planets": [
+      "mars",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "hasClassicalName": true,
+    "yogaName": {
+      "en": "Guru-Mangal Yoga",
+      "hi": "गुरु-मंगल योग"
+    },
+    "text": {
+      "en": "Mars and Jupiter together form Guru-Mangal Yoga, combining courage and technical energy with wisdom and principled judgement. This favours careers in engineering, law, defence leadership, sports administration, and property/finance fields that need both bold execution and sound ethical direction.",
+      "hi": "मंगल और बृहस्पति मिलकर गुरु-मंगल योग बनाते हैं, जो साहस और तकनीकी ऊर्जा को ज्ञान और सिद्धांतनिष्ठ निर्णय के साथ जोड़ता है। यह इंजीनियरिंग, कानून, रक्षा नेतृत्व, खेल प्रशासन और संपत्ति/वित्त क्षेत्रों के लिए अनुकूल है जिन्हें साहसिक क्रियान्वयन और सुदृढ़ नैतिक दिशा दोनों की आवश्यकता होती है।"
+    }
+  },
+  "mars_venus": {
+    "key": "mars_venus",
+    "planets": [
+      "mars",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mars_saturn": {
+    "key": "mars_saturn",
+    "planets": [
+      "mars",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mars_rahu": {
+    "key": "mars_rahu",
+    "planets": [
+      "mars",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mars_ketu": {
+    "key": "mars_ketu",
+    "planets": [
+      "mars",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mercury_jupiter": {
+    "key": "mercury_jupiter",
+    "planets": [
+      "mercury",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mercury_venus": {
+    "key": "mercury_venus",
+    "planets": [
+      "mercury",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mercury_saturn": {
+    "key": "mercury_saturn",
+    "planets": [
+      "mercury",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mercury_rahu": {
+    "key": "mercury_rahu",
+    "planets": [
+      "mercury",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "mercury_ketu": {
+    "key": "mercury_ketu",
+    "planets": [
+      "mercury",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "jupiter_venus": {
+    "key": "jupiter_venus",
+    "planets": [
+      "jupiter",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "jupiter_saturn": {
+    "key": "jupiter_saturn",
+    "planets": [
+      "jupiter",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "jupiter_rahu": {
+    "key": "jupiter_rahu",
+    "planets": [
+      "jupiter",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "jupiter_ketu": {
+    "key": "jupiter_ketu",
+    "planets": [
+      "jupiter",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "venus_saturn": {
+    "key": "venus_saturn",
+    "planets": [
+      "venus",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "venus_rahu": {
+    "key": "venus_rahu",
+    "planets": [
+      "venus",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "venus_ketu": {
+    "key": "venus_ketu",
+    "planets": [
+      "venus",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "saturn_rahu": {
+    "key": "saturn_rahu",
+    "planets": [
+      "saturn",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "saturn_ketu": {
+    "key": "saturn_ketu",
+    "planets": [
+      "saturn",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  },
+  "rahu_ketu": {
+    "key": "rahu_ketu",
+    "planets": [
+      "rahu",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "hasClassicalName": false,
+    "yogaName": null,
+    "text": {
+      "en": "This planetary pair does not carry one of the small set of universally-recognised classical Yoga names (like Budh-Aditya or Gajakesari) independent of house-lordship. Refer to the general conjunction meaning, and to the lagna-specific Raja/Dhana/Vipreet Raja Yoga check for this pair in the 1st/10th house tables.",
+      "hi": "यह ग्रह-युग्म किसी सर्वमान्य क्लासिक योग नाम (जैसे बुध-आदित्य या गजकेसरी) के तहत नहीं आता, जो भाव-स्वामित्व से स्वतंत्र हो। सामान्य युति अर्थ देखें, और इस युग्म के लिए प्रथम/दशम भाव की तालिकाओं में लग्न-विशिष्ट राज/धन/विपरीत राज योग जाँच देखें।"
+    }
+  }
+}

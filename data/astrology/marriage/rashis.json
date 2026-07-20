@@ -1,0 +1,122 @@
+{
+  "aries": {
+    "order": 1,
+    "name": {
+      "en": "Aries",
+      "hi": "मेष (Mesh)"
+    },
+    "lord": "mars",
+    "element": "fire",
+    "quality": "movable"
+  },
+  "taurus": {
+    "order": 2,
+    "name": {
+      "en": "Taurus",
+      "hi": "वृषभ (Vrishabh)"
+    },
+    "lord": "venus",
+    "element": "earth",
+    "quality": "fixed"
+  },
+  "gemini": {
+    "order": 3,
+    "name": {
+      "en": "Gemini",
+      "hi": "मिथुन (Mithun)"
+    },
+    "lord": "mercury",
+    "element": "air",
+    "quality": "dual"
+  },
+  "cancer": {
+    "order": 4,
+    "name": {
+      "en": "Cancer",
+      "hi": "कर्क (Kark)"
+    },
+    "lord": "moon",
+    "element": "water",
+    "quality": "movable"
+  },
+  "leo": {
+    "order": 5,
+    "name": {
+      "en": "Leo",
+      "hi": "सिंह (Simha)"
+    },
+    "lord": "sun",
+    "element": "fire",
+    "quality": "fixed"
+  },
+  "virgo": {
+    "order": 6,
+    "name": {
+      "en": "Virgo",
+      "hi": "कन्या (Kanya)"
+    },
+    "lord": "mercury",
+    "element": "earth",
+    "quality": "dual"
+  },
+  "libra": {
+    "order": 7,
+    "name": {
+      "en": "Libra",
+      "hi": "तुला (Tula)"
+    },
+    "lord": "venus",
+    "element": "air",
+    "quality": "movable"
+  },
+  "scorpio": {
+    "order": 8,
+    "name": {
+      "en": "Scorpio",
+      "hi": "वृश्चिक (Vrishchik)"
+    },
+    "lord": "mars",
+    "element": "water",
+    "quality": "fixed"
+  },
+  "sagittarius": {
+    "order": 9,
+    "name": {
+      "en": "Sagittarius",
+      "hi": "धनु (Dhanu)"
+    },
+    "lord": "jupiter",
+    "element": "fire",
+    "quality": "dual"
+  },
+  "capricorn": {
+    "order": 10,
+    "name": {
+      "en": "Capricorn",
+      "hi": "मकर (Makar)"
+    },
+    "lord": "saturn",
+    "element": "earth",
+    "quality": "movable"
+  },
+  "aquarius": {
+    "order": 11,
+    "name": {
+      "en": "Aquarius",
+      "hi": "कुंभ (Kumbh)"
+    },
+    "lord": "saturn",
+    "element": "air",
+    "quality": "fixed"
+  },
+  "pisces": {
+    "order": 12,
+    "name": {
+      "en": "Pisces",
+      "hi": "मीन (Meen)"
+    },
+    "lord": "jupiter",
+    "element": "water",
+    "quality": "dual"
+  }
+}

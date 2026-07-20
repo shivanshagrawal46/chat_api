@@ -1,0 +1,794 @@
+{
+  "sun_moon": {
+    "key": "sun_moon",
+    "planets": [
+      "sun",
+      "moon"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Moon blends a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force with a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids. The house lord is a natural friend of this placement, which smoothens outcomes and supports resilience between constitution and the matter at hand. For health, this combination brings together overall vitality, life-force, and core immune strength and heart, bones, and the eyes (especially the right eye) with mental and emotional wellbeing, sleep quality, and stress resilience and bodily fluids, lymphatic balance, and digestive sensitivity - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "सूर्य (Surya) और चंद्रमा (Chandra) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है को एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और संरचना व संबंधित विषय के बीच लचीलेपन का समर्थन करता है। स्वास्थ्य के लिए, यह संयोजन समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति और हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख) को मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता और शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_mars": {
+    "key": "sun_mars",
+    "planets": [
+      "sun",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Mars blends a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force with a bold, energetic, and combative drive centered on blood, muscle, and physical action. The house lord is a natural friend of this placement, which smoothens outcomes and supports resilience between constitution and the matter at hand. For health, this combination brings together overall vitality, life-force, and core immune strength and heart, bones, and the eyes (especially the right eye) with blood, muscles, and physical stamina and injuries, cuts, burns, accidents, and surgery-related events - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "सूर्य (Surya) और मंगल (Mangal) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है को एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और संरचना व संबंधित विषय के बीच लचीलेपन का समर्थन करता है। स्वास्थ्य के लिए, यह संयोजन समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति और हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख) को रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति और चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_mercury": {
+    "key": "sun_mercury",
+    "planets": [
+      "sun",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Sun and Mercury blends a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force with a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together overall vitality, life-force, and core immune strength and heart, bones, and the eyes (especially the right eye) with the nervous system, skin, and respiratory function and speech-related organs and overall neuro-muscular coordination - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "सूर्य (Surya) और बुध (Budh) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति और हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख) को तंत्रिका तंत्र, त्वचा और श्वसन क्रिया और वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_jupiter": {
+    "key": "sun_jupiter",
+    "planets": [
+      "sun",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Jupiter blends a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force with a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity. The house lord is a natural friend of this placement, which smoothens outcomes and supports resilience between constitution and the matter at hand. For health, this combination brings together overall vitality, life-force, and core immune strength and heart, bones, and the eyes (especially the right eye) with one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart and the liver, fat metabolism, and overall bodily growth/expansion - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "सूर्य (Surya) और बृहस्पति / गुरु (Guru) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है को एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और संरचना व संबंधित विषय के बीच लचीलेपन का समर्थन करता है। स्वास्थ्य के लिए, यह संयोजन समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति और हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख) को कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_venus": {
+    "key": "sun_venus",
+    "planets": [
+      "sun",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Venus blends a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force with a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality. There is some natural friction in this placement, which can create internal strain or extra vulnerability before results stabilise - deliberate care, discipline, and remedies help considerably. For health, this combination brings together overall vitality, life-force, and core immune strength and heart, bones, and the eyes (especially the right eye) with the reproductive and hormonal systems, and kidney function and skin health, complexion, and overall physical glow/vitality - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "सूर्य (Surya) और शुक्र (Shukra) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है को एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम स्थिर होने से पहले आंतरिक तनाव या अतिरिक्त भेद्यता उत्पन्न कर सकता है - सचेत देखभाल, अनुशासन और उपाय काफी सहायक होते हैं। स्वास्थ्य के लिए, यह संयोजन समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति और हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख) को प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली और त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_saturn": {
+    "key": "sun_saturn",
+    "planets": [
+      "sun",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Saturn blends a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force with a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance. There is some natural friction in this placement, which can create internal strain or extra vulnerability before results stabilise - deliberate care, discipline, and remedies help considerably. For health, this combination brings together overall vitality, life-force, and core immune strength and heart, bones, and the eyes (especially the right eye) with bones, joints, teeth, and long-term skeletal/structural health and chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "सूर्य (Surya) और शनि (Shani) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है को एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम स्थिर होने से पहले आंतरिक तनाव या अतिरिक्त भेद्यता उत्पन्न कर सकता है - सचेत देखभाल, अनुशासन और उपाय काफी सहायक होते हैं। स्वास्थ्य के लिए, यह संयोजन समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति और हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख) को हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य और पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_rahu": {
+    "key": "sun_rahu",
+    "planets": [
+      "sun",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Rahu blends a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force with an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained. There is some natural friction in this placement, which can create internal strain or extra vulnerability before results stabilise - deliberate care, discipline, and remedies help considerably. For health, this combination brings together overall vitality, life-force, and core immune strength and heart, bones, and the eyes (especially the right eye) with mysterious, undiagnosed, or hard-to-treat ailments and allergies, poisoning-type reactions, and psychological/obsessive disturbances - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "सूर्य (Surya) और राहु (Rahu) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है को एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम स्थिर होने से पहले आंतरिक तनाव या अतिरिक्त भेद्यता उत्पन्न कर सकता है - सचेत देखभाल, अनुशासन और उपाय काफी सहायक होते हैं। स्वास्थ्य के लिए, यह संयोजन समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति और हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख) को रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ और एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_ketu": {
+    "key": "sun_ketu",
+    "planets": [
+      "sun",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Ketu blends a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force with a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. There is some natural friction in this placement, which can create internal strain or extra vulnerability before results stabilise - deliberate care, discipline, and remedies help considerably. For health, this combination brings together overall vitality, life-force, and core immune strength and heart, bones, and the eyes (especially the right eye) with subtle, hidden, or psychosomatic ailments that resist conventional diagnosis and accidents, sudden ailments, or equally sudden and unexpected recovery - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "सूर्य (Surya) और केतु (Ketu) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम स्थिर होने से पहले आंतरिक तनाव या अतिरिक्त भेद्यता उत्पन्न कर सकता है - सचेत देखभाल, अनुशासन और उपाय काफी सहायक होते हैं। स्वास्थ्य के लिए, यह संयोजन समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति और हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख) को सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं और दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_mars": {
+    "key": "moon_mars",
+    "planets": [
+      "moon",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Mars blends a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids with a bold, energetic, and combative drive centered on blood, muscle, and physical action. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together mental and emotional wellbeing, sleep quality, and stress resilience and bodily fluids, lymphatic balance, and digestive sensitivity with blood, muscles, and physical stamina and injuries, cuts, burns, accidents, and surgery-related events - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और मंगल (Mangal) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है को एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता और शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता को रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति और चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_mercury": {
+    "key": "moon_mercury",
+    "planets": [
+      "moon",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Moon and Mercury blends a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids with a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability. The house lord is a natural friend of this placement, which smoothens outcomes and supports resilience between constitution and the matter at hand. For health, this combination brings together mental and emotional wellbeing, sleep quality, and stress resilience and bodily fluids, lymphatic balance, and digestive sensitivity with the nervous system, skin, and respiratory function and speech-related organs and overall neuro-muscular coordination - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और बुध (Budh) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और संरचना व संबंधित विषय के बीच लचीलेपन का समर्थन करता है। स्वास्थ्य के लिए, यह संयोजन मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता और शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता को तंत्रिका तंत्र, त्वचा और श्वसन क्रिया और वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_jupiter": {
+    "key": "moon_jupiter",
+    "planets": [
+      "moon",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Jupiter blends a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids with a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together mental and emotional wellbeing, sleep quality, and stress resilience and bodily fluids, lymphatic balance, and digestive sensitivity with one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart and the liver, fat metabolism, and overall bodily growth/expansion - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और बृहस्पति / गुरु (Guru) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है को एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता और शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता को कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_venus": {
+    "key": "moon_venus",
+    "planets": [
+      "moon",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Venus blends a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids with a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together mental and emotional wellbeing, sleep quality, and stress resilience and bodily fluids, lymphatic balance, and digestive sensitivity with the reproductive and hormonal systems, and kidney function and skin health, complexion, and overall physical glow/vitality - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और शुक्र (Shukra) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है को एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता और शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता को प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली और त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_saturn": {
+    "key": "moon_saturn",
+    "planets": [
+      "moon",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Saturn blends a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids with a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together mental and emotional wellbeing, sleep quality, and stress resilience and bodily fluids, lymphatic balance, and digestive sensitivity with bones, joints, teeth, and long-term skeletal/structural health and chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और शनि (Shani) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है को एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता और शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता को हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य और पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_rahu": {
+    "key": "moon_rahu",
+    "planets": [
+      "moon",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Rahu blends a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids with an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together mental and emotional wellbeing, sleep quality, and stress resilience and bodily fluids, lymphatic balance, and digestive sensitivity with mysterious, undiagnosed, or hard-to-treat ailments and allergies, poisoning-type reactions, and psychological/obsessive disturbances - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और राहु (Rahu) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है को एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता और शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता को रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ और एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_ketu": {
+    "key": "moon_ketu",
+    "planets": [
+      "moon",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Ketu blends a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids with a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together mental and emotional wellbeing, sleep quality, and stress resilience and bodily fluids, lymphatic balance, and digestive sensitivity with subtle, hidden, or psychosomatic ailments that resist conventional diagnosis and accidents, sudden ailments, or equally sudden and unexpected recovery - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और केतु (Ketu) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता और शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता को सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं और दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_mercury": {
+    "key": "mars_mercury",
+    "planets": [
+      "mars",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Mars and Mercury blends a bold, energetic, and combative drive centered on blood, muscle, and physical action with a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability. There is some natural friction in this placement, which can create internal strain or extra vulnerability before results stabilise - deliberate care, discipline, and remedies help considerably. For health, this combination brings together blood, muscles, and physical stamina and injuries, cuts, burns, accidents, and surgery-related events with the nervous system, skin, and respiratory function and speech-related organs and overall neuro-muscular coordination - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "मंगल (Mangal) और बुध (Budh) की युति एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम स्थिर होने से पहले आंतरिक तनाव या अतिरिक्त भेद्यता उत्पन्न कर सकता है - सचेत देखभाल, अनुशासन और उपाय काफी सहायक होते हैं। स्वास्थ्य के लिए, यह संयोजन रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति और चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ को तंत्रिका तंत्र, त्वचा और श्वसन क्रिया और वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_jupiter": {
+    "key": "mars_jupiter",
+    "planets": [
+      "mars",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Mars and Jupiter blends a bold, energetic, and combative drive centered on blood, muscle, and physical action with a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity. The house lord is a natural friend of this placement, which smoothens outcomes and supports resilience between constitution and the matter at hand. For health, this combination brings together blood, muscles, and physical stamina and injuries, cuts, burns, accidents, and surgery-related events with one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart and the liver, fat metabolism, and overall bodily growth/expansion - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "मंगल (Mangal) और बृहस्पति / गुरु (Guru) की युति एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है को एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और संरचना व संबंधित विषय के बीच लचीलेपन का समर्थन करता है। स्वास्थ्य के लिए, यह संयोजन रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति और चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ को कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_venus": {
+    "key": "mars_venus",
+    "planets": [
+      "mars",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Venus blends a bold, energetic, and combative drive centered on blood, muscle, and physical action with a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together blood, muscles, and physical stamina and injuries, cuts, burns, accidents, and surgery-related events with the reproductive and hormonal systems, and kidney function and skin health, complexion, and overall physical glow/vitality - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "मंगल (Mangal) और शुक्र (Shukra) की युति एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है को एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति और चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ को प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली और त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_saturn": {
+    "key": "mars_saturn",
+    "planets": [
+      "mars",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Saturn blends a bold, energetic, and combative drive centered on blood, muscle, and physical action with a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together blood, muscles, and physical stamina and injuries, cuts, burns, accidents, and surgery-related events with bones, joints, teeth, and long-term skeletal/structural health and chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "मंगल (Mangal) और शनि (Shani) की युति एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है को एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति और चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ को हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य और पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_rahu": {
+    "key": "mars_rahu",
+    "planets": [
+      "mars",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Rahu blends a bold, energetic, and combative drive centered on blood, muscle, and physical action with an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together blood, muscles, and physical stamina and injuries, cuts, burns, accidents, and surgery-related events with mysterious, undiagnosed, or hard-to-treat ailments and allergies, poisoning-type reactions, and psychological/obsessive disturbances - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "मंगल (Mangal) और राहु (Rahu) की युति एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है को एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति और चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ को रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ और एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_ketu": {
+    "key": "mars_ketu",
+    "planets": [
+      "mars",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Ketu blends a bold, energetic, and combative drive centered on blood, muscle, and physical action with a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together blood, muscles, and physical stamina and injuries, cuts, burns, accidents, and surgery-related events with subtle, hidden, or psychosomatic ailments that resist conventional diagnosis and accidents, sudden ailments, or equally sudden and unexpected recovery - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "मंगल (Mangal) और केतु (Ketu) की युति एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति और चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ को सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं और दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_jupiter": {
+    "key": "mercury_jupiter",
+    "planets": [
+      "mercury",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Jupiter blends a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability with a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together the nervous system, skin, and respiratory function and speech-related organs and overall neuro-muscular coordination with one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart and the liver, fat metabolism, and overall bodily growth/expansion - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बुध (Budh) और बृहस्पति / गुरु (Guru) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है को एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन तंत्रिका तंत्र, त्वचा और श्वसन क्रिया और वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय को कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_venus": {
+    "key": "mercury_venus",
+    "planets": [
+      "mercury",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Mercury and Venus blends a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability with a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality. The house lord is a natural friend of this placement, which smoothens outcomes and supports resilience between constitution and the matter at hand. For health, this combination brings together the nervous system, skin, and respiratory function and speech-related organs and overall neuro-muscular coordination with the reproductive and hormonal systems, and kidney function and skin health, complexion, and overall physical glow/vitality - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बुध (Budh) और शुक्र (Shukra) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है को एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और संरचना व संबंधित विषय के बीच लचीलेपन का समर्थन करता है। स्वास्थ्य के लिए, यह संयोजन तंत्रिका तंत्र, त्वचा और श्वसन क्रिया और वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय को प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली और त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_saturn": {
+    "key": "mercury_saturn",
+    "planets": [
+      "mercury",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Saturn blends a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability with a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together the nervous system, skin, and respiratory function and speech-related organs and overall neuro-muscular coordination with bones, joints, teeth, and long-term skeletal/structural health and chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बुध (Budh) और शनि (Shani) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है को एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन तंत्रिका तंत्र, त्वचा और श्वसन क्रिया और वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय को हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य और पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_rahu": {
+    "key": "mercury_rahu",
+    "planets": [
+      "mercury",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Rahu blends a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability with an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together the nervous system, skin, and respiratory function and speech-related organs and overall neuro-muscular coordination with mysterious, undiagnosed, or hard-to-treat ailments and allergies, poisoning-type reactions, and psychological/obsessive disturbances - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बुध (Budh) और राहु (Rahu) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है को एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन तंत्रिका तंत्र, त्वचा और श्वसन क्रिया और वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय को रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ और एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_ketu": {
+    "key": "mercury_ketu",
+    "planets": [
+      "mercury",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Ketu blends a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability with a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together the nervous system, skin, and respiratory function and speech-related organs and overall neuro-muscular coordination with subtle, hidden, or psychosomatic ailments that resist conventional diagnosis and accidents, sudden ailments, or equally sudden and unexpected recovery - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बुध (Budh) और केतु (Ketu) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन तंत्रिका तंत्र, त्वचा और श्वसन क्रिया और वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय को सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं और दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_venus": {
+    "key": "jupiter_venus",
+    "planets": [
+      "jupiter",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Jupiter and Venus blends a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity with a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality. There is some natural friction in this placement, which can create internal strain or extra vulnerability before results stabilise - deliberate care, discipline, and remedies help considerably. For health, this combination brings together one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart and the liver, fat metabolism, and overall bodily growth/expansion with the reproductive and hormonal systems, and kidney function and skin health, complexion, and overall physical glow/vitality - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और शुक्र (Shukra) की युति एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है को एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम स्थिर होने से पहले आंतरिक तनाव या अतिरिक्त भेद्यता उत्पन्न कर सकता है - सचेत देखभाल, अनुशासन और उपाय काफी सहायक होते हैं। स्वास्थ्य के लिए, यह संयोजन कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार को प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली और त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_saturn": {
+    "key": "jupiter_saturn",
+    "planets": [
+      "jupiter",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Saturn blends a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity with a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart and the liver, fat metabolism, and overall bodily growth/expansion with bones, joints, teeth, and long-term skeletal/structural health and chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और शनि (Shani) की युति एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है को एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार को हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य और पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_rahu": {
+    "key": "jupiter_rahu",
+    "planets": [
+      "jupiter",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Rahu blends a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity with an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart and the liver, fat metabolism, and overall bodily growth/expansion with mysterious, undiagnosed, or hard-to-treat ailments and allergies, poisoning-type reactions, and psychological/obsessive disturbances - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और राहु (Rahu) की युति एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है को एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार को रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ और एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_ketu": {
+    "key": "jupiter_ketu",
+    "planets": [
+      "jupiter",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Ketu blends a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity with a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart and the liver, fat metabolism, and overall bodily growth/expansion with subtle, hidden, or psychosomatic ailments that resist conventional diagnosis and accidents, sudden ailments, or equally sudden and unexpected recovery - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और केतु (Ketu) की युति एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक और यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार को सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं और दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_saturn": {
+    "key": "venus_saturn",
+    "planets": [
+      "venus",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Venus and Saturn blends a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality with a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance. The house lord is a natural friend of this placement, which smoothens outcomes and supports resilience between constitution and the matter at hand. For health, this combination brings together the reproductive and hormonal systems, and kidney function and skin health, complexion, and overall physical glow/vitality with bones, joints, teeth, and long-term skeletal/structural health and chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "शुक्र (Shukra) और शनि (Shani) की युति एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है को एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और संरचना व संबंधित विषय के बीच लचीलेपन का समर्थन करता है। स्वास्थ्य के लिए, यह संयोजन प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली और त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति को हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य और पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_rahu": {
+    "key": "venus_rahu",
+    "planets": [
+      "venus",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Venus and Rahu blends a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality with an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together the reproductive and hormonal systems, and kidney function and skin health, complexion, and overall physical glow/vitality with mysterious, undiagnosed, or hard-to-treat ailments and allergies, poisoning-type reactions, and psychological/obsessive disturbances - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "शुक्र (Shukra) और राहु (Rahu) की युति एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है को एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली और त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति को रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ और एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_ketu": {
+    "key": "venus_ketu",
+    "planets": [
+      "venus",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Venus and Ketu blends a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality with a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together the reproductive and hormonal systems, and kidney function and skin health, complexion, and overall physical glow/vitality with subtle, hidden, or psychosomatic ailments that resist conventional diagnosis and accidents, sudden ailments, or equally sudden and unexpected recovery - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "शुक्र (Shukra) और केतु (Ketu) की युति एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली और त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति को सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं और दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "saturn_rahu": {
+    "key": "saturn_rahu",
+    "planets": [
+      "saturn",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Saturn and Rahu blends a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance with an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together bones, joints, teeth, and long-term skeletal/structural health and chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments with mysterious, undiagnosed, or hard-to-treat ailments and allergies, poisoning-type reactions, and psychological/obsessive disturbances - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "शनि (Shani) और राहु (Rahu) की युति एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है को एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य और पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ को रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ और एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "saturn_ketu": {
+    "key": "saturn_ketu",
+    "planets": [
+      "saturn",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Saturn and Ketu blends a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance with a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together bones, joints, teeth, and long-term skeletal/structural health and chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments with subtle, hidden, or psychosomatic ailments that resist conventional diagnosis and accidents, sudden ailments, or equally sudden and unexpected recovery - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "शनि (Shani) और केतु (Ketu) की युति एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य और पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ को सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं और दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "rahu_ketu": {
+    "key": "rahu_ketu",
+    "planets": [
+      "rahu",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Rahu and Ketu blends an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained with a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious lifestyle effort. For health, this combination brings together mysterious, undiagnosed, or hard-to-treat ailments and allergies, poisoning-type reactions, and psychological/obsessive disturbances with subtle, hidden, or psychosomatic ailments that resist conventional diagnosis and accidents, sudden ailments, or equally sudden and unexpected recovery - a layered constitutional dynamic that draws on both planets' significations. When this conjunction falls in or influences the 1st, 6th, 8th, or 12th house, its effect on health becomes especially direct.",
+      "hi": "राहु (Rahu) और केतु (Ketu) की युति एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सचेत जीवनशैली प्रयास से अच्छी प्रतिक्रिया देते हैं। स्वास्थ्य के लिए, यह संयोजन रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ और एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ को सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं और दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी के साथ एक साथ लाता है - एक बहुस्तरीय संरचनात्मक गतिशीलता जो दोनों ग्रहों की विशेषताओं का लाभ उठाती है। जब यह युति प्रथम, षष्ठ, अष्टम या द्वादश भाव में हो या उसे प्रभावित करे, तो स्वास्थ्य पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  }
+}

@@ -1,0 +1,155 @@
+{
+  "sun": {
+    "key": "sun",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Sun placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect. This placement inclines you towards wealth and standing tied to authority, government or leadership positions; income linked to status, power, or public office; inherited family wealth and paternal assets, and your own nature strongly shapes your financial journey.",
+      "hi": "सूर्य (Surya) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है है। यह स्थिति आपको अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा; प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय; विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  },
+  "moon": {
+    "key": "moon",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Moon placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods. This placement inclines you towards income through public dealing, hospitality, or caregiving-related business; wealth via liquids, dairy, food, or beverage trade; fluctuating income that waxes and wanes like the Moon itself, and your own nature strongly shapes your financial journey.",
+      "hi": "चंद्रमा (Chandra) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है है। यह स्थिति आपको जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय; तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति; आय जो चंद्रमा की तरह घटती-बढ़ती रहती है की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  },
+  "mars": {
+    "key": "mars",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Mars placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery. This placement inclines you towards wealth through real estate, land, and property dealings; income via engineering, technical trades, or competitive ventures; sudden financial gains (or losses) from bold, impulsive risk-taking, and your own nature strongly shapes your financial journey.",
+      "hi": "मंगल (Mangal) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है है। यह स्थिति आपको रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति; इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय; साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि) की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  },
+  "mercury": {
+    "key": "mercury",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Mercury placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. This placement inclines you towards wealth through business, trading, and commerce; income via writing, media, consulting, or analytical fields; multiple, diversified income streams rather than a single source, and your own nature strongly shapes your financial journey.",
+      "hi": "बुध (Budh) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है है। यह स्थिति आपको व्यापार, व्यवसाय और वाणिज्य से संपत्ति; लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय; एक ही स्रोत के बजाय कई, विविध आय स्रोत की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  },
+  "jupiter": {
+    "key": "jupiter",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Jupiter placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance. This placement inclines you towards one of the single greatest natural indicators (karaka) of wealth and abundance in the chart; income through teaching, law, finance, banking, or advisory work; steady, ethically-earned, long-term prosperity rather than quick gains, and your own nature strongly shapes your financial journey.",
+      "hi": "बृहस्पति / गुरु (Guru) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है है। यह स्थिति आपको कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय; त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  },
+  "venus": {
+    "key": "venus",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Venus placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living. This placement inclines you towards wealth through arts, entertainment, fashion, or the beauty/luxury industry; income via partnerships, marriage-linked assets, or creative/aesthetic pursuits; a comfortable, pleasure-oriented lifestyle funded by steady earnings, and your own nature strongly shapes your financial journey.",
+      "hi": "शुक्र (Shukra) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है है। यह स्थिति आपको कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति; साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय; स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  },
+  "saturn": {
+    "key": "saturn",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Saturn placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. This placement inclines you towards wealth built slowly and steadily through discipline, labour, and long-term commitment; income via mining, land, agriculture, or heavy/structured industries; delayed but exceptionally durable and stable wealth once established, and your own nature strongly shapes your financial journey.",
+      "hi": "शनि (Shani) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है है। यह स्थिति आपको अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति; खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय; स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  },
+  "rahu": {
+    "key": "rahu",
+    "planet": "rahu",
+    "planetName": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Rahu placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains. This placement inclines you towards sudden, unconventional, or foreign-sourced wealth; speculative gains through stock markets, trading, or high-risk ventures; wealth through technology, foreign trade, or emerging/disruptive fields, and your own nature strongly shapes your financial journey.",
+      "hi": "राहु (Rahu) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है है। यह स्थिति आपको अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति; शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ; तकनीक, विदेश व्यापार या उभरते/विघटनकारी क्षेत्रों से संपत्ति की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  },
+  "ketu": {
+    "key": "ketu",
+    "planet": "ketu",
+    "planetName": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "house": 1,
+    "houseName": {
+      "en": "1st House (Lagna/Ascendant)",
+      "hi": "प्रथम भाव (लग्न)"
+    },
+    "text": {
+      "en": "Ketu placed in the 1st house (Lagna) sits right on the Ascendant and directly colours your personality, physical presence, and overall approach to earning and handling money. It carries a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge. This placement inclines you towards relative detachment from material wealth or reduced interest in active accumulation; sudden, unexpected financial gains or losses, often outside one's direct control; wealth through research, specialised technical work, or spiritual/occult fields, and your own nature strongly shapes your financial journey.",
+      "hi": "केतु (Ketu) का प्रथम भाव (लग्न) में स्थित होना सीधे लग्न पर बैठकर आपके व्यक्तित्व, शारीरिक उपस्थिति और धन कमाने व संभालने के समग्र दृष्टिकोण को रंग देता है। इसमें एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है है। यह स्थिति आपको भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि; अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि; शोध, विशिष्ट तकनीकी कार्य या आध्यात्मिक/गूढ़ क्षेत्रों से संपत्ति की ओर प्रवृत्त करती है, और आपका अपना स्वभाव आपकी वित्तीय यात्रा को दृढ़ता से आकार देता है।"
+    }
+  }
+}

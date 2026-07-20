@@ -1,0 +1,794 @@
+{
+  "sun_moon": {
+    "key": "sun_moon",
+    "planets": [
+      "sun",
+      "moon"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Moon blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For marriage, this combination brings together a spouse who is authoritative, proud, and status-conscious and a partner connected with government, administration, or leadership roles with a caring, emotionally attuned, and nurturing spouse and strong emotional bonding and empathetic understanding between partners - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "सूर्य (Surya) और चंद्रमा (Chandra) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। विवाह के लिए, यह संयोजन एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी और सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी को एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी और साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_mars": {
+    "key": "sun_mars",
+    "planets": [
+      "sun",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Mars blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For marriage, this combination brings together a spouse who is authoritative, proud, and status-conscious and a partner connected with government, administration, or leadership roles with a passionate, energetic, and protective spouse and a relationship with strong physical chemistry but a tendency towards arguments if unchecked - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "सूर्य (Surya) और मंगल (Mangal) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। विवाह के लिए, यह संयोजन एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी और सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी को एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी और एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_mercury": {
+    "key": "sun_mercury",
+    "planets": [
+      "sun",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Sun and Mercury blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a spouse who is authoritative, proud, and status-conscious and a partner connected with government, administration, or leadership roles with a communicative, witty, and intellectually engaging spouse and a relationship where conversation, humour, and shared interests matter greatly - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "सूर्य (Surya) और बुध (Budh) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी और सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी को एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी और एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_jupiter": {
+    "key": "sun_jupiter",
+    "planets": [
+      "sun",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Jupiter blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For marriage, this combination brings together a spouse who is authoritative, proud, and status-conscious and a partner connected with government, administration, or leadership roles with a wise, respected, and morally-grounded spouse and one of the most auspicious placements for marital happiness and mutual growth - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "सूर्य (Surya) और बृहस्पति / गुरु (Guru) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। विवाह के लिए, यह संयोजन एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी और सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी को एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी और वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_venus": {
+    "key": "sun_venus",
+    "planets": [
+      "sun",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Venus blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For marriage, this combination brings together a spouse who is authoritative, proud, and status-conscious and a partner connected with government, administration, or leadership roles with a romantic, charming, and aesthetically-inclined spouse and the single strongest natural indicator of love, attraction, and marital harmony - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "सूर्य (Surya) और शुक्र (Shukra) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। विवाह के लिए, यह संयोजन एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी और सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी को एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी और प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_saturn": {
+    "key": "sun_saturn",
+    "planets": [
+      "sun",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Saturn blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For marriage, this combination brings together a spouse who is authoritative, proud, and status-conscious and a partner connected with government, administration, or leadership roles with a mature, disciplined, and often older or more reserved spouse and a tendency towards delayed marriage or a slow, cautious courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "सूर्य (Surya) और शनि (Shani) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। विवाह के लिए, यह संयोजन एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी और सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी को एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी और विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_rahu": {
+    "key": "sun_rahu",
+    "planets": [
+      "sun",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Rahu blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For marriage, this combination brings together a spouse who is authoritative, proud, and status-conscious and a partner connected with government, administration, or leadership roles with an unconventional match - possibly crossing caste, community, religion, or country boundaries and intense attraction or infatuation-driven courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "सूर्य (Surya) और राहु (Rahu) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। विवाह के लिए, यह संयोजन एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी और सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी को एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए और तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_ketu": {
+    "key": "sun_ketu",
+    "planets": [
+      "sun",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Ketu blends a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect with a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For marriage, this combination brings together a spouse who is authoritative, proud, and status-conscious and a partner connected with government, administration, or leadership roles with a private, spiritually or introspectively inclined spouse and a tendency towards emotional detachment or reduced interest in worldly relationship dynamics - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "सूर्य (Surya) और केतु (Ketu) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है को एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। विवाह के लिए, यह संयोजन एक अधिकारपूर्ण, स्वाभिमानी और प्रतिष्ठा-सजग जीवनसाथी और सरकार, प्रशासन या नेतृत्व भूमिकाओं से जुड़ा साथी को एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी और सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_mars": {
+    "key": "moon_mars",
+    "planets": [
+      "moon",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Mars blends a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort with a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a caring, emotionally attuned, and nurturing spouse and strong emotional bonding and empathetic understanding between partners with a passionate, energetic, and protective spouse and a relationship with strong physical chemistry but a tendency towards arguments if unchecked - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और मंगल (Mangal) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है को एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी और साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ को एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी और एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_mercury": {
+    "key": "moon_mercury",
+    "planets": [
+      "moon",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Moon and Mercury blends a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort with a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For marriage, this combination brings together a caring, emotionally attuned, and nurturing spouse and strong emotional bonding and empathetic understanding between partners with a communicative, witty, and intellectually engaging spouse and a relationship where conversation, humour, and shared interests matter greatly - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और बुध (Budh) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है को एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। विवाह के लिए, यह संयोजन एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी और साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ को एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी और एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_jupiter": {
+    "key": "moon_jupiter",
+    "planets": [
+      "moon",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Jupiter blends a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort with a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a caring, emotionally attuned, and nurturing spouse and strong emotional bonding and empathetic understanding between partners with a wise, respected, and morally-grounded spouse and one of the most auspicious placements for marital happiness and mutual growth - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और बृहस्पति / गुरु (Guru) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी और साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ को एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी और वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_venus": {
+    "key": "moon_venus",
+    "planets": [
+      "moon",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Venus blends a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort with a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a caring, emotionally attuned, and nurturing spouse and strong emotional bonding and empathetic understanding between partners with a romantic, charming, and aesthetically-inclined spouse and the single strongest natural indicator of love, attraction, and marital harmony - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और शुक्र (Shukra) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है को एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी और साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ को एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी और प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_saturn": {
+    "key": "moon_saturn",
+    "planets": [
+      "moon",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Saturn blends a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort with a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a caring, emotionally attuned, and nurturing spouse and strong emotional bonding and empathetic understanding between partners with a mature, disciplined, and often older or more reserved spouse and a tendency towards delayed marriage or a slow, cautious courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और शनि (Shani) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है को एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी और साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ को एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी और विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_rahu": {
+    "key": "moon_rahu",
+    "planets": [
+      "moon",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Rahu blends a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort with an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a caring, emotionally attuned, and nurturing spouse and strong emotional bonding and empathetic understanding between partners with an unconventional match - possibly crossing caste, community, religion, or country boundaries and intense attraction or infatuation-driven courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और राहु (Rahu) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है को एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी और साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ को एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए और तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_ketu": {
+    "key": "moon_ketu",
+    "planets": [
+      "moon",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Ketu blends a receptive, nurturing, and emotionally sensitive energy centered on care, mood, and domestic comfort with a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a caring, emotionally attuned, and nurturing spouse and strong emotional bonding and empathetic understanding between partners with a private, spiritually or introspectively inclined spouse and a tendency towards emotional detachment or reduced interest in worldly relationship dynamics - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और केतु (Ketu) की युति एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो देखभाल, मनोदशा और घरेलू सुख पर केंद्रित है को एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक देखभाल करने वाला, भावनात्मक रूप से जुड़ा और पोषणकारी जीवनसाथी और साथियों के बीच मज़बूत भावनात्मक जुड़ाव और सहानुभूतिपूर्ण समझ को एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी और सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_mercury": {
+    "key": "mars_mercury",
+    "planets": [
+      "mars",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Mars and Mercury blends a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action with a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For marriage, this combination brings together a passionate, energetic, and protective spouse and a relationship with strong physical chemistry but a tendency towards arguments if unchecked with a communicative, witty, and intellectually engaging spouse and a relationship where conversation, humour, and shared interests matter greatly - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "मंगल (Mangal) और बुध (Budh) की युति एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है को एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। विवाह के लिए, यह संयोजन एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी और एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो को एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी और एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_jupiter": {
+    "key": "mars_jupiter",
+    "planets": [
+      "mars",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Mars and Jupiter blends a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action with a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For marriage, this combination brings together a passionate, energetic, and protective spouse and a relationship with strong physical chemistry but a tendency towards arguments if unchecked with a wise, respected, and morally-grounded spouse and one of the most auspicious placements for marital happiness and mutual growth - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "मंगल (Mangal) और बृहस्पति / गुरु (Guru) की युति एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। विवाह के लिए, यह संयोजन एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी और एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो को एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी और वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_venus": {
+    "key": "mars_venus",
+    "planets": [
+      "mars",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Venus blends a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action with a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a passionate, energetic, and protective spouse and a relationship with strong physical chemistry but a tendency towards arguments if unchecked with a romantic, charming, and aesthetically-inclined spouse and the single strongest natural indicator of love, attraction, and marital harmony - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "मंगल (Mangal) और शुक्र (Shukra) की युति एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है को एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी और एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो को एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी और प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_saturn": {
+    "key": "mars_saturn",
+    "planets": [
+      "mars",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Saturn blends a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action with a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a passionate, energetic, and protective spouse and a relationship with strong physical chemistry but a tendency towards arguments if unchecked with a mature, disciplined, and often older or more reserved spouse and a tendency towards delayed marriage or a slow, cautious courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "मंगल (Mangal) और शनि (Shani) की युति एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है को एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी और एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो को एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी और विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_rahu": {
+    "key": "mars_rahu",
+    "planets": [
+      "mars",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Rahu blends a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action with an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a passionate, energetic, and protective spouse and a relationship with strong physical chemistry but a tendency towards arguments if unchecked with an unconventional match - possibly crossing caste, community, religion, or country boundaries and intense attraction or infatuation-driven courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "मंगल (Mangal) और राहु (Rahu) की युति एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है को एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी और एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो को एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए और तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_ketu": {
+    "key": "mars_ketu",
+    "planets": [
+      "mars",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Ketu blends a bold, energetic, and passionate drive centered on courage, protectiveness, and quick action with a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a passionate, energetic, and protective spouse and a relationship with strong physical chemistry but a tendency towards arguments if unchecked with a private, spiritually or introspectively inclined spouse and a tendency towards emotional detachment or reduced interest in worldly relationship dynamics - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "मंगल (Mangal) और केतु (Ketu) की युति एक साहसी, ऊर्जावान और भावुक प्रवृत्ति, जो साहस, संरक्षण और त्वरित कार्यवाही पर केंद्रित है को एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक भावुक, ऊर्जावान और संरक्षणात्मक जीवनसाथी और एक ऐसा रिश्ता जिसमें मज़बूत शारीरिक आकर्षण हो परन्तु बिना संयम के बहस की प्रवृत्ति भी हो को एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी और सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_jupiter": {
+    "key": "mercury_jupiter",
+    "planets": [
+      "mercury",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Jupiter blends a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness with a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a communicative, witty, and intellectually engaging spouse and a relationship where conversation, humour, and shared interests matter greatly with a wise, respected, and morally-grounded spouse and one of the most auspicious placements for marital happiness and mutual growth - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बुध (Budh) और बृहस्पति / गुरु (Guru) की युति एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी और एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं को एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी और वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_venus": {
+    "key": "mercury_venus",
+    "planets": [
+      "mercury",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Mercury and Venus blends a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness with a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For marriage, this combination brings together a communicative, witty, and intellectually engaging spouse and a relationship where conversation, humour, and shared interests matter greatly with a romantic, charming, and aesthetically-inclined spouse and the single strongest natural indicator of love, attraction, and marital harmony - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बुध (Budh) और शुक्र (Shukra) की युति एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है को एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। विवाह के लिए, यह संयोजन एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी और एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं को एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी और प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_saturn": {
+    "key": "mercury_saturn",
+    "planets": [
+      "mercury",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Saturn blends a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness with a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a communicative, witty, and intellectually engaging spouse and a relationship where conversation, humour, and shared interests matter greatly with a mature, disciplined, and often older or more reserved spouse and a tendency towards delayed marriage or a slow, cautious courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बुध (Budh) और शनि (Shani) की युति एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है को एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी और एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं को एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी और विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_rahu": {
+    "key": "mercury_rahu",
+    "planets": [
+      "mercury",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Rahu blends a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness with an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a communicative, witty, and intellectually engaging spouse and a relationship where conversation, humour, and shared interests matter greatly with an unconventional match - possibly crossing caste, community, religion, or country boundaries and intense attraction or infatuation-driven courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बुध (Budh) और राहु (Rahu) की युति एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है को एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी और एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं को एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए और तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_ketu": {
+    "key": "mercury_ketu",
+    "planets": [
+      "mercury",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Ketu blends a sharp, witty, and communicative intelligence centered on conversation, logic, and playful youthfulness with a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a communicative, witty, and intellectually engaging spouse and a relationship where conversation, humour, and shared interests matter greatly with a private, spiritually or introspectively inclined spouse and a tendency towards emotional detachment or reduced interest in worldly relationship dynamics - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बुध (Budh) और केतु (Ketu) की युति एक तीक्ष्ण, विनोदी और संचार-कुशल बुद्धि, जो बातचीत, तर्क और चंचल यौवन पर केंद्रित है को एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक संचार-कुशल, विनोदी और बौद्धिक रूप से आकर्षक जीवनसाथी और एक ऐसा रिश्ता जहाँ बातचीत, हास्य और साझा रुचियाँ बहुत मायने रखती हैं को एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी और सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_venus": {
+    "key": "jupiter_venus",
+    "planets": [
+      "jupiter",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Jupiter and Venus blends a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance with a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For marriage, this combination brings together a wise, respected, and morally-grounded spouse and one of the most auspicious placements for marital happiness and mutual growth with a romantic, charming, and aesthetically-inclined spouse and the single strongest natural indicator of love, attraction, and marital harmony - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और शुक्र (Shukra) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है को एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। विवाह के लिए, यह संयोजन एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी और वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक को एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी और प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_saturn": {
+    "key": "jupiter_saturn",
+    "planets": [
+      "jupiter",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Saturn blends a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance with a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a wise, respected, and morally-grounded spouse and one of the most auspicious placements for marital happiness and mutual growth with a mature, disciplined, and often older or more reserved spouse and a tendency towards delayed marriage or a slow, cautious courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और शनि (Shani) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है को एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी और वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक को एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी और विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_rahu": {
+    "key": "jupiter_rahu",
+    "planets": [
+      "jupiter",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Rahu blends a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance with an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a wise, respected, and morally-grounded spouse and one of the most auspicious placements for marital happiness and mutual growth with an unconventional match - possibly crossing caste, community, religion, or country boundaries and intense attraction or infatuation-driven courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और राहु (Rahu) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है को एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी और वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक को एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए और तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_ketu": {
+    "key": "jupiter_ketu",
+    "planets": [
+      "jupiter",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Ketu blends a wise, expansive, and principled energy centered on wisdom, generosity, and moral guidance with a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a wise, respected, and morally-grounded spouse and one of the most auspicious placements for marital happiness and mutual growth with a private, spiritually or introspectively inclined spouse and a tendency towards emotional detachment or reduced interest in worldly relationship dynamics - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और केतु (Ketu) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, उदारता और नैतिक मार्गदर्शन पर केंद्रित है को एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक ज्ञानी, सम्मानित और नैतिक रूप से दृढ़ जीवनसाथी और वैवाहिक सुख और पारस्परिक विकास के लिए सबसे शुभ स्थितियों में से एक को एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी और सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_saturn": {
+    "key": "venus_saturn",
+    "planets": [
+      "venus",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Venus and Saturn blends a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership with a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and the matter at hand. For marriage, this combination brings together a romantic, charming, and aesthetically-inclined spouse and the single strongest natural indicator of love, attraction, and marital harmony with a mature, disciplined, and often older or more reserved spouse and a tendency towards delayed marriage or a slow, cautious courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "शुक्र (Shukra) और शनि (Shani) की युति एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है को एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व संबंधित विषय के बीच परस्पर सहयोग जोड़ता है। विवाह के लिए, यह संयोजन एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी और प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक को एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी और विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_rahu": {
+    "key": "venus_rahu",
+    "planets": [
+      "venus",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Venus and Rahu blends a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership with an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a romantic, charming, and aesthetically-inclined spouse and the single strongest natural indicator of love, attraction, and marital harmony with an unconventional match - possibly crossing caste, community, religion, or country boundaries and intense attraction or infatuation-driven courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "शुक्र (Shukra) और राहु (Rahu) की युति एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है को एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी और प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक को एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए और तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_ketu": {
+    "key": "venus_ketu",
+    "planets": [
+      "venus",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Venus and Ketu blends a graceful, romantic, and diplomatic charm centered on love, beauty, and harmonious partnership with a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a romantic, charming, and aesthetically-inclined spouse and the single strongest natural indicator of love, attraction, and marital harmony with a private, spiritually or introspectively inclined spouse and a tendency towards emotional detachment or reduced interest in worldly relationship dynamics - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "शुक्र (Shukra) और केतु (Ketu) की युति एक सुंदर, रोमांटिक और कूटनीतिक आकर्षण, जो प्रेम, सौंदर्य और सामंजस्यपूर्ण साझेदारी पर केंद्रित है को एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक रोमांटिक, आकर्षक और सौंदर्य-प्रिय जीवनसाथी और प्रेम, आकर्षण और वैवाहिक सामंजस्य का सबसे मज़बूत प्राकृतिक संकेतक को एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी और सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "saturn_rahu": {
+    "key": "saturn_rahu",
+    "planets": [
+      "saturn",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Saturn and Rahu blends a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment with an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a mature, disciplined, and often older or more reserved spouse and a tendency towards delayed marriage or a slow, cautious courtship with an unconventional match - possibly crossing caste, community, religion, or country boundaries and intense attraction or infatuation-driven courtship - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "शनि (Shani) और राहु (Rahu) की युति एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है को एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी और विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति को एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए और तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "saturn_ketu": {
+    "key": "saturn_ketu",
+    "planets": [
+      "saturn",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Saturn and Ketu blends a disciplined, patient, and reserved nature centered on responsibility, maturity, and long-term commitment with a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together a mature, disciplined, and often older or more reserved spouse and a tendency towards delayed marriage or a slow, cautious courtship with a private, spiritually or introspectively inclined spouse and a tendency towards emotional detachment or reduced interest in worldly relationship dynamics - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "शनि (Shani) और केतु (Ketu) की युति एक अनुशासित, धैर्यवान और संयमित स्वभाव, जो ज़िम्मेदारी, परिपक्वता और दीर्घकालिक प्रतिबद्धता पर केंद्रित है को एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक परिपक्व, अनुशासित और प्रायः अधिक आयु वाला या संयमित जीवनसाथी और विवाह में देरी या धीमी, सतर्क प्रणय-प्रक्रिया की प्रवृत्ति को एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी और सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "rahu_ketu": {
+    "key": "rahu_ketu",
+    "planets": [
+      "rahu",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Rahu and Ketu blends an intense, unconventional, and obsessive drive centered on infatuation, boundary-crossing, and sudden events with a detached, introspective, and spiritually-inclined depth centered on renunciation, intuition, and inward focus. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For marriage, this combination brings together an unconventional match - possibly crossing caste, community, religion, or country boundaries and intense attraction or infatuation-driven courtship with a private, spiritually or introspectively inclined spouse and a tendency towards emotional detachment or reduced interest in worldly relationship dynamics - a layered dynamic that draws on both planets' qualities. When this conjunction falls in or influences the 1st or 7th house, its effect on marriage becomes especially direct.",
+      "hi": "राहु (Rahu) और केतु (Ketu) की युति एक तीव्र, अपरंपरागत और गहन प्रवृत्ति, जो मोह, सीमा-उल्लंघन और अचानक घटनाओं पर केंद्रित है को एक विरक्त, आत्मनिरीक्षी और आध्यात्मिक रूप से झुकी हुई गहराई, जो त्याग, अंतर्ज्ञान और आंतरिक केंद्रितता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। विवाह के लिए, यह संयोजन एक अपरंपरागत मेल - संभवतः जाति, समुदाय, धर्म या देश की सीमाओं को पार करते हुए और तीव्र आकर्षण या मोह-प्रेरित प्रणय-निवेदन को एक निजी, आध्यात्मिक या आत्मनिरीक्षी रूप से झुका हुआ जीवनसाथी और सांसारिक रिश्ते की गतिशीलता में भावनात्मक दूरी या घटी हुई रुचि की प्रवृत्ति के साथ एक साथ लाता है - एक बहुस्तरीय गतिशीलता जो दोनों ग्रहों के गुणों का लाभ उठाती है। जब यह युति प्रथम या सप्तम भाव में हो या उसे प्रभावित करे, तो विवाह पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  }
+}

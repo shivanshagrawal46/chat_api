@@ -1,0 +1,377 @@
+{
+  "sun": {
+    "order": 1,
+    "name": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a fiery, authoritative, and self-assured energy centered on dignity, leadership, and self-respect",
+      "hi": "एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो प्रतिष्ठा, नेतृत्व और आत्म-सम्मान पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "wealth and standing tied to authority, government or leadership positions",
+        "income linked to status, power, or public office",
+        "inherited family wealth and paternal assets",
+        "earnings that grow with self-respect-driven, disciplined career choices",
+        "a tendency towards status-driven or prestige-linked spending"
+      ],
+      "hi": [
+        "अधिकार, सरकार या नेतृत्व पदों से जुड़ी संपत्ति और प्रतिष्ठा",
+        "प्रतिष्ठा, सत्ता या सार्वजनिक पद से जुड़ी आय",
+        "विरासत में मिली पारिवारिक संपत्ति और पैतृक संपत्ति",
+        "आत्म-सम्मान-प्रेरित, अनुशासित करियर विकल्पों के साथ बढ़ती आय",
+        "प्रतिष्ठा-प्रेरित खर्च की प्रवृत्ति"
+      ]
+    },
+    "friends": [
+      "moon",
+      "mars",
+      "jupiter"
+    ],
+    "neutrals": [
+      "mercury"
+    ],
+    "enemies": [
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ]
+  },
+  "moon": {
+    "order": 2,
+    "name": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a receptive, nurturing, and emotionally sensitive energy centered on public connection and fluctuating moods",
+      "hi": "एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो जनसंपर्क और उतार-चढ़ाव वाली मनोदशा पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "income through public dealing, hospitality, or caregiving-related business",
+        "wealth via liquids, dairy, food, or beverage trade",
+        "fluctuating income that waxes and wanes like the Moon itself",
+        "earnings connected with popularity, public image, or maternal inheritance",
+        "financial decisions strongly influenced by emotion and intuition"
+      ],
+      "hi": [
+        "जनसंपर्क, आतिथ्य या देखभाल-संबंधी व्यवसाय से आय",
+        "तरल पदार्थ, डेयरी, खाद्य या पेय व्यापार से संपत्ति",
+        "आय जो चंद्रमा की तरह घटती-बढ़ती रहती है",
+        "लोकप्रियता, सार्वजनिक छवि या मातृ विरासत से जुड़ी कमाई",
+        "भावना और अंतर्ज्ञान से दृढ़ता से प्रभावित वित्तीय निर्णय"
+      ]
+    },
+    "friends": [
+      "sun",
+      "mercury"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": []
+  },
+  "mars": {
+    "order": 3,
+    "name": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a bold, energetic, and competitive drive centered on courage, quick action, and technical mastery",
+      "hi": "एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, त्वरित कार्यवाही और तकनीकी दक्षता पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "wealth through real estate, land, and property dealings",
+        "income via engineering, technical trades, or competitive ventures",
+        "sudden financial gains (or losses) from bold, impulsive risk-taking",
+        "earnings through entrepreneurial courage and quick decision-making",
+        "assets built through physical labour, machinery, or defence-related work"
+      ],
+      "hi": [
+        "रियल एस्टेट, भूमि और संपत्ति सौदों से संपत्ति",
+        "इंजीनियरिंग, तकनीकी व्यापार या प्रतिस्पर्धी उद्यमों से आय",
+        "साहसिक, आवेगी जोखिम लेने से अचानक वित्तीय लाभ (या हानि)",
+        "उद्यमशील साहस और त्वरित निर्णय-क्षमता से कमाई",
+        "शारीरिक श्रम, मशीनरी या रक्षा-संबंधी कार्य से निर्मित संपत्ति"
+      ]
+    },
+    "friends": [
+      "sun",
+      "moon",
+      "jupiter"
+    ],
+    "neutrals": [
+      "venus",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "mercury"
+    ]
+  },
+  "mercury": {
+    "order": 4,
+    "name": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility",
+      "hi": "एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "wealth through business, trading, and commerce",
+        "income via writing, media, consulting, or analytical fields",
+        "multiple, diversified income streams rather than a single source",
+        "earnings built through negotiation skill and quick-witted decision-making",
+        "financial acumen strong enough to manage and grow money efficiently"
+      ],
+      "hi": [
+        "व्यापार, व्यवसाय और वाणिज्य से संपत्ति",
+        "लेखन, मीडिया, परामर्श या विश्लेषणात्मक क्षेत्रों से आय",
+        "एक ही स्रोत के बजाय कई, विविध आय स्रोत",
+        "बातचीत कौशल और त्वरित-बुद्धि निर्णय-क्षमता से निर्मित कमाई",
+        "धन को कुशलतापूर्वक प्रबंधित और बढ़ाने में सक्षम वित्तीय कुशाग्रता"
+      ]
+    },
+    "friends": [
+      "sun",
+      "venus"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "moon"
+    ]
+  },
+  "jupiter": {
+    "order": 5,
+    "name": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a wise, expansive, and principled energy centered on wisdom, growth, and ethical abundance",
+      "hi": "एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, विकास और नैतिक समृद्धि पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "one of the single greatest natural indicators (karaka) of wealth and abundance in the chart",
+        "income through teaching, law, finance, banking, or advisory work",
+        "steady, ethically-earned, long-term prosperity rather than quick gains",
+        "wealth accompanied by generosity, philanthropy, and good financial judgement",
+        "growth through wise, long-term investment rather than speculation"
+      ],
+      "hi": [
+        "कुंडली में धन और समृद्धि के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक",
+        "शिक्षण, कानून, वित्त, बैंकिंग या सलाहकारी कार्य से आय",
+        "त्वरित लाभ के बजाय स्थिर, नैतिक रूप से अर्जित, दीर्घकालिक समृद्धि",
+        "उदारता, परोपकार और अच्छे वित्तीय निर्णय के साथ संपत्ति",
+        "सट्टेबाज़ी के बजाय बुद्धिमान, दीर्घकालिक निवेश से वृद्धि"
+      ]
+    },
+    "friends": [
+      "sun",
+      "moon",
+      "mars"
+    ],
+    "neutrals": [
+      "saturn",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "mercury",
+      "venus"
+    ]
+  },
+  "venus": {
+    "order": 6,
+    "name": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "nature": "benefic",
+    "traits": {
+      "en": "a graceful, artistic, and comfort-loving charm centered on luxury, beauty, and pleasurable living",
+      "hi": "एक सुंदर, कलात्मक और सुख-प्रिय आकर्षण, जो विलासिता, सौंदर्य और आनंददायक जीवन पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "wealth through arts, entertainment, fashion, or the beauty/luxury industry",
+        "income via partnerships, marriage-linked assets, or creative/aesthetic pursuits",
+        "a comfortable, pleasure-oriented lifestyle funded by steady earnings",
+        "earnings tied to hospitality, design, or high-value/luxury goods",
+        "a natural tendency towards indulgent or comfort-driven spending that needs balancing"
+      ],
+      "hi": [
+        "कला, मनोरंजन, फैशन या सौंदर्य/विलासिता उद्योग से संपत्ति",
+        "साझेदारी, विवाह-संबंधी संपत्ति या रचनात्मक/सौंदर्यपरक कार्यों से आय",
+        "स्थिर कमाई से वित्तपोषित एक आरामदायक, सुख-उन्मुख जीवनशैली",
+        "आतिथ्य, डिज़ाइन या उच्च-मूल्य/विलासिता वस्तुओं से जुड़ी कमाई",
+        "भोग-विलासी या सुख-प्रेरित खर्च की एक स्वाभाविक प्रवृत्ति जिसे संतुलित करने की आवश्यकता है"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "saturn"
+    ],
+    "neutrals": [
+      "mars",
+      "jupiter",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "sun",
+      "moon"
+    ]
+  },
+  "saturn": {
+    "order": 7,
+    "name": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "nature": "malefic",
+    "traits": {
+      "en": "a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance",
+      "hi": "एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "wealth built slowly and steadily through discipline, labour, and long-term commitment",
+        "income via mining, land, agriculture, or heavy/structured industries",
+        "delayed but exceptionally durable and stable wealth once established",
+        "a frugal, careful approach to spending and saving",
+        "earnings through service-oriented, structured, or long-tenure professions"
+      ],
+      "hi": [
+        "अनुशासन, श्रम और दीर्घकालिक प्रतिबद्धता के माध्यम से धीरे-धीरे और स्थिर रूप से निर्मित संपत्ति",
+        "खनन, भूमि, कृषि या भारी/संरचित उद्योगों से आय",
+        "स्थापित होने के बाद विलंबित परन्तु असाधारण रूप से टिकाऊ और स्थिर संपत्ति",
+        "खर्च और बचत के प्रति एक मितव्ययी, सतर्क दृष्टिकोण",
+        "सेवा-उन्मुख, संरचित या दीर्घकालिक व्यवसायों से कमाई"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "venus"
+    ],
+    "neutrals": [
+      "jupiter",
+      "rahu",
+      "ketu"
+    ],
+    "enemies": [
+      "sun",
+      "moon",
+      "mars"
+    ]
+  },
+  "rahu": {
+    "order": 8,
+    "name": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "nature": "malefic (shadow)",
+    "traits": {
+      "en": "an ambitious, unconventional, and obsessive drive centered on sudden rise, speculation, and boundary-crossing gains",
+      "hi": "एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, सट्टेबाज़ी और सीमा-पार लाभ पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "sudden, unconventional, or foreign-sourced wealth",
+        "speculative gains through stock markets, trading, or high-risk ventures",
+        "wealth through technology, foreign trade, or emerging/disruptive fields",
+        "dramatic financial rises (and equally dramatic falls) if unchecked",
+        "an obsessive drive to accumulate wealth that benefits from grounding and caution"
+      ],
+      "hi": [
+        "अचानक, अपरंपरागत या विदेशी स्रोत से संपत्ति",
+        "शेयर बाज़ार, ट्रेडिंग या उच्च-जोखिम उद्यमों से सट्टा लाभ",
+        "तकनीक, विदेश व्यापार या उभरते/विघटनकारी क्षेत्रों से संपत्ति",
+        "बिना संयम के नाटकीय वित्तीय वृद्धि (और उतनी ही नाटकीय गिरावट)",
+        "संपत्ति संचय की एक गहन प्रवृत्ति जिसे स्थिरता और सावधानी से लाभ होता है"
+      ]
+    },
+    "friends": [
+      "mercury",
+      "venus",
+      "saturn"
+    ],
+    "neutrals": [
+      "jupiter"
+    ],
+    "enemies": [
+      "sun",
+      "moon",
+      "mars"
+    ]
+  },
+  "ketu": {
+    "order": 9,
+    "name": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "nature": "malefic (shadow)",
+    "traits": {
+      "en": "a detached, research-oriented, and intuitive depth centered on renunciation, specialization, and hidden knowledge",
+      "hi": "एक विरक्त, शोध-उन्मुख और सहज गहराई, जो त्याग, विशेषज्ञता और गूढ़ ज्ञान पर केंद्रित है"
+    },
+    "moneyAreas": {
+      "en": [
+        "relative detachment from material wealth or reduced interest in active accumulation",
+        "sudden, unexpected financial gains or losses, often outside one's direct control",
+        "wealth through research, specialised technical work, or spiritual/occult fields",
+        "a tendency to give away or lose focus on money matters unless consciously managed",
+        "past-life-linked financial karma - either unexpected windfalls or recurring drains"
+      ],
+      "hi": [
+        "भौतिक संपत्ति से अपेक्षाकृत विरक्ति या सक्रिय संचय में घटी हुई रुचि",
+        "अक्सर व्यक्ति के प्रत्यक्ष नियंत्रण से बाहर, अचानक, अप्रत्याशित वित्तीय लाभ या हानि",
+        "शोध, विशिष्ट तकनीकी कार्य या आध्यात्मिक/गूढ़ क्षेत्रों से संपत्ति",
+        "जब तक सचेत रूप से प्रबंधित न किया जाए, धन के मामलों में ध्यान खोने या दान करने की प्रवृत्ति",
+        "पूर्व-जन्म से जुड़ा वित्तीय कर्म - या तो अप्रत्याशित लाभ या बार-बार होने वाली हानि"
+      ]
+    },
+    "friends": [
+      "mars",
+      "venus",
+      "saturn"
+    ],
+    "neutrals": [
+      "jupiter",
+      "mercury"
+    ],
+    "enemies": [
+      "sun",
+      "moon"
+    ]
+  }
+}

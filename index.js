@@ -31,6 +31,12 @@ const walletRoutes = require('./routes/wallet');
 const astrologerRoutes = require('./routes/astrologers');
 const astrologerChatRoutes = require('./routes/astrologer-chat');
 const koshRoutes = require('./routes/kosh');
+const palmistryRoutes = require('./routes/palmistry');
+const careerPredictionRoutes = require('./routes/career-predictions');
+const marriagePredictionRoutes = require('./routes/marriage-predictions');
+const moneyPredictionRoutes = require('./routes/money-predictions');
+const healthPredictionRoutes = require('./routes/health-predictions');
+const kundliReportRoutes = require('./routes/kundli-report');
 const Wallet = require('./models/Wallet');
 const WalletTransaction = require('./models/WalletTransaction');
 const Astrologer = require('./models/Astrologer');
@@ -215,6 +221,11 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
+// Palmistry accepts base64 hand images in the JSON body, which exceed the
+// default 100kb limit. Give ONLY this route a larger limit (registered before
+// the global parser so it runs first and the global parser then skips it) —
+// every other endpoint keeps the default limit untouched.
+app.use('/api/palmistry', express.json({ limit: '15mb' }));
 app.use(express.json());
 
 app.set('trust proxy', 1);
@@ -3113,6 +3124,12 @@ app.use('/api/wallet', walletRoutes);
 app.use('/api/astrologers', astrologerRoutes);
 app.use('/api/astrologer-chat', astrologerChatRoutes);
 app.use('/api/kosh-purchase', koshRoutes);
+app.use('/api/palmistry', palmistryRoutes);
+app.use('/api/career-predictions', careerPredictionRoutes);
+app.use('/api/marriage-predictions', marriagePredictionRoutes);
+app.use('/api/money-predictions', moneyPredictionRoutes);
+app.use('/api/health-predictions', healthPredictionRoutes);
+app.use('/api/kundli-report', kundliReportRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {

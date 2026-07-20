@@ -1,0 +1,155 @@
+{
+  "sun": {
+    "key": "sun",
+    "planet": "sun",
+    "planetName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Sun placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries a fiery, authoritative, and self-assured energy centered on vitality, heat, and the core life-force. This placement strongly highlights overall vitality, life-force, and core immune strength; heart, bones, and the eyes (especially the right eye); heat-related conditions - fevers, inflammation, blood pressure.",
+      "hi": "सूर्य (Surya) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो जीवनशक्ति, ऊष्मा और मूल जीवन-ऊर्जा पर केंद्रित है है। यह स्थिति समग्र जीवनशक्ति, जीवन-ऊर्जा और मूल प्रतिरक्षा शक्ति; हृदय, हड्डियाँ और आँखें (विशेष रूप से दायीं आँख); ऊष्मा-संबंधी स्थितियाँ - बुखार, सूजन, रक्तचाप को दृढ़ता से उजागर करती है।"
+    }
+  },
+  "moon": {
+    "key": "moon",
+    "planet": "moon",
+    "planetName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Moon placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries a receptive, nurturing, and emotionally sensitive energy centered on the mind and bodily fluids. This placement strongly highlights mental and emotional wellbeing, sleep quality, and stress resilience; bodily fluids, lymphatic balance, and digestive sensitivity; health that fluctuates with emotional state, much like the Moon's phases.",
+      "hi": "चंद्रमा (Chandra) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक ग्रहणशील, पोषणकारी और भावनात्मक रूप से संवेदनशील ऊर्जा, जो मन और शारीरिक तरल पदार्थों पर केंद्रित है है। यह स्थिति मानसिक और भावनात्मक कल्याण, नींद की गुणवत्ता और तनाव-सहनशीलता; शारीरिक तरल पदार्थ, लसीका संतुलन और पाचन संवेदनशीलता; स्वास्थ्य जो चंद्रमा की कलाओं की तरह भावनात्मक स्थिति के साथ बदलता है को दृढ़ता से उजागर करती है।"
+    }
+  },
+  "mars": {
+    "key": "mars",
+    "planet": "mars",
+    "planetName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Mars placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries a bold, energetic, and combative drive centered on blood, muscle, and physical action. This placement strongly highlights blood, muscles, and physical stamina; injuries, cuts, burns, accidents, and surgery-related events; inflammatory or fast-onset conditions, and higher risk of impulsive-risk-driven injury.",
+      "hi": "मंगल (Mangal) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक साहसी, ऊर्जावान और आक्रामक प्रवृत्ति, जो रक्त, मांसपेशियों और शारीरिक क्रिया पर केंद्रित है है। यह स्थिति रक्त, मांसपेशियाँ और शारीरिक सहनशक्ति; चोटें, कट, जलन, दुर्घटनाएँ और शल्य-चिकित्सा से जुड़ी घटनाएँ; सूजन संबंधी या तेज़ी से शुरू होने वाली स्थितियाँ, और आवेगी-जोखिम से चोट लगने का अधिक खतरा को दृढ़ता से उजागर करती है।"
+    }
+  },
+  "mercury": {
+    "key": "mercury",
+    "planet": "mercury",
+    "planetName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Mercury placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries a sharp, analytical, and communicative intelligence centered on the nervous system and adaptability. This placement strongly highlights the nervous system, skin, and respiratory function; speech-related organs and overall neuro-muscular coordination; nervous tension, anxiety, or skin allergies when afflicted.",
+      "hi": "बुध (Budh) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो तंत्रिका तंत्र और अनुकूलनशीलता पर केंद्रित है है। यह स्थिति तंत्रिका तंत्र, त्वचा और श्वसन क्रिया; वाणी-संबंधी अंग और समग्र न्यूरो-मस्कुलर समन्वय; पीड़ित होने पर तंत्रिका तनाव, चिंता या त्वचा एलर्जी को दृढ़ता से उजागर करती है।"
+    }
+  },
+  "jupiter": {
+    "key": "jupiter",
+    "planet": "jupiter",
+    "planetName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Jupiter placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries a wise, expansive, and nourishing energy centered on growth, healing, and natural immunity. This placement strongly highlights one of the single greatest natural indicators (karaka) of health, healing, and longevity in the chart; the liver, fat metabolism, and overall bodily growth/expansion; strong natural immunity and recuperative power when well-placed.",
+      "hi": "बृहस्पति / गुरु (Guru) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक ज्ञानी, विस्तारवादी और पोषणकारी ऊर्जा, जो विकास, उपचार और प्राकृतिक प्रतिरक्षा पर केंद्रित है है। यह स्थिति कुंडली में स्वास्थ्य, उपचार और दीर्घायु के सबसे बड़े प्राकृतिक संकेतकों (कारक) में से एक; यकृत, वसा चयापचय और समग्र शारीरिक वृद्धि/विस्तार; अच्छी तरह स्थित होने पर मज़बूत प्राकृतिक प्रतिरक्षा और स्वास्थ्य-लाभ क्षमता को दृढ़ता से उजागर करती है।"
+    }
+  },
+  "venus": {
+    "key": "venus",
+    "planet": "venus",
+    "planetName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Venus placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries a graceful, comfort-loving charm centered on hormonal balance, the reproductive system, and physical vitality. This placement strongly highlights the reproductive and hormonal systems, and kidney function; skin health, complexion, and overall physical glow/vitality; a tendency towards indulgence-linked conditions - diabetes, kidney strain, hormonal imbalance.",
+      "hi": "शुक्र (Shukra) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक सुंदर, सुख-प्रिय आकर्षण, जो हार्मोनल संतुलन, प्रजनन तंत्र और शारीरिक जीवनशक्ति पर केंद्रित है है। यह स्थिति प्रजनन और हार्मोनल तंत्र, और गुर्दे की कार्यप्रणाली; त्वचा स्वास्थ्य, रंगत और समग्र शारीरिक चमक/जीवनशक्ति; भोग-प्रवृत्त स्थितियों की प्रवृत्ति - मधुमेह, गुर्दे पर दबाव, हार्मोनल असंतुलन को दृढ़ता से उजागर करती है।"
+    }
+  },
+  "saturn": {
+    "key": "saturn",
+    "planet": "saturn",
+    "planetName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Saturn placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries a disciplined, patient, and slow-moving nature centered on structure, chronicity, and endurance. This placement strongly highlights bones, joints, teeth, and long-term skeletal/structural health; chronic, slow-onset, or degenerative conditions - arthritis, stiffness, prolonged ailments; longevity itself, along with a disciplined approach to health routines.",
+      "hi": "शनि (Shani) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक अनुशासित, धैर्यवान और धीमी गति का स्वभाव, जो संरचना, दीर्घकालिकता और सहनशक्ति पर केंद्रित है है। यह स्थिति हड्डियाँ, जोड़, दाँत और दीर्घकालिक कंकालीय/संरचनात्मक स्वास्थ्य; पुरानी, धीरे-धीरे शुरू होने वाली या अपक्षयी स्थितियाँ - गठिया, अकड़न, दीर्घकालिक बीमारियाँ; स्वयं दीर्घायु, स्वास्थ्य दिनचर्या के प्रति अनुशासित दृष्टिकोण के साथ को दृढ़ता से उजागर करती है।"
+    }
+  },
+  "rahu": {
+    "key": "rahu",
+    "planet": "rahu",
+    "planetName": {
+      "en": "Rahu",
+      "hi": "राहु (Rahu)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Rahu placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries an obsessive, unconventional, and boundary-crossing energy centered on the unknown and the unexplained. This placement strongly highlights mysterious, undiagnosed, or hard-to-treat ailments; allergies, poisoning-type reactions, and psychological/obsessive disturbances; sudden, unexplained health crises that defy conventional diagnosis.",
+      "hi": "राहु (Rahu) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक गहन, अपरंपरागत और सीमा-पार करने वाली ऊर्जा, जो अज्ञात और अस्पष्टीकृत पर केंद्रित है है। यह स्थिति रहस्यमय, अनिदान या इलाज में कठिन बीमारियाँ; एलर्जी, विषाक्तता-प्रकार की प्रतिक्रियाएँ, और मनोवैज्ञानिक/गहन विक्षोभ; अचानक, अस्पष्टीकृत स्वास्थ्य संकट जो पारंपरिक निदान को चुनौती देते हैं को दृढ़ता से उजागर करती है।"
+    }
+  },
+  "ketu": {
+    "key": "ketu",
+    "planet": "ketu",
+    "planetName": {
+      "en": "Ketu",
+      "hi": "केतु (Ketu)"
+    },
+    "house": 6,
+    "houseName": {
+      "en": "6th House (Roga Bhava)",
+      "hi": "षष्ठम भाव (रोग भाव)"
+    },
+    "text": {
+      "en": "Ketu placed directly in the 6th house (Roga/disease house) has a strong, immediate influence on your health, since it occupies one of the three primary Trik/Dusthana health houses. It carries a detached, research-oriented, and intuitive depth centered on hidden, subtle, and psychosomatic patterns. This placement strongly highlights subtle, hidden, or psychosomatic ailments that resist conventional diagnosis; accidents, sudden ailments, or equally sudden and unexpected recovery; a relative detachment from the physical body and its needs unless consciously managed.",
+      "hi": "केतु (Ketu) का सीधे षष्ठ भाव (रोग भाव) में स्थित होना आपके स्वास्थ्य पर एक मज़बूत, तत्काल प्रभाव डालता है, क्योंकि यह तीन प्रमुख त्रिक/दुःस्थान स्वास्थ्य भावों में से एक में स्थित है। इसमें एक विरक्त, शोध-उन्मुख और सहज गहराई, जो छिपे, सूक्ष्म और मनोदैहिक प्रतिरूपों पर केंद्रित है है। यह स्थिति सूक्ष्म, छिपी हुई या मनोदैहिक बीमारियाँ जो पारंपरिक निदान का विरोध करती हैं; दुर्घटनाएँ, अचानक बीमारियाँ, या समान रूप से अचानक और अप्रत्याशित रिकवरी; जब तक सचेत रूप से प्रबंधित न किया जाए, भौतिक शरीर और उसकी आवश्यकताओं से अपेक्षाकृत विरक्ति को दृढ़ता से उजागर करती है।"
+    }
+  }
+}

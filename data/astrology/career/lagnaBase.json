@@ -1,0 +1,494 @@
+{
+  "aries": {
+    "lagna": "aries",
+    "lagnaName": {
+      "en": "Aries",
+      "hi": "मेष (Mesh)"
+    },
+    "lagnaLord": "mars",
+    "lagnaLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "tenthHouseSign": "capricorn",
+    "tenthHouseSignName": {
+      "en": "Capricorn",
+      "hi": "मकर (Makar)"
+    },
+    "tenthLord": "saturn",
+    "tenthLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "houseLords": {
+      "1": "mars",
+      "2": "venus",
+      "3": "mercury",
+      "4": "moon",
+      "5": "sun",
+      "6": "mercury",
+      "7": "venus",
+      "8": "mars",
+      "9": "jupiter",
+      "10": "saturn",
+      "11": "saturn",
+      "12": "jupiter"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Aries Lagna, the Ascendant (Lagna) lord is Mars and the 10th house falls in Capricorn, ruled by Saturn (your 10th lord / career significator).",
+      "hi": "मेष (Mesh) लग्न के लिए, लग्नेश मंगल (Mangal) है और दशम भाव मकर (Makar) राशि में पड़ता है, जिसके स्वामी शनि (Shani) हैं (आपके दशमेश / करियर कारक)।"
+    }
+  },
+  "taurus": {
+    "lagna": "taurus",
+    "lagnaName": {
+      "en": "Taurus",
+      "hi": "वृषभ (Vrishabh)"
+    },
+    "lagnaLord": "venus",
+    "lagnaLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "tenthHouseSign": "aquarius",
+    "tenthHouseSignName": {
+      "en": "Aquarius",
+      "hi": "कुंभ (Kumbh)"
+    },
+    "tenthLord": "saturn",
+    "tenthLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "houseLords": {
+      "1": "venus",
+      "2": "mercury",
+      "3": "moon",
+      "4": "sun",
+      "5": "mercury",
+      "6": "venus",
+      "7": "mars",
+      "8": "jupiter",
+      "9": "saturn",
+      "10": "saturn",
+      "11": "jupiter",
+      "12": "mars"
+    },
+    "yogakaraka": "saturn",
+    "note": {
+      "en": "For Taurus Lagna, the Ascendant (Lagna) lord is Venus and the 10th house falls in Aquarius, ruled by Saturn (your 10th lord / career significator). Saturn is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious planets in this chart.",
+      "hi": "वृषभ (Vrishabh) लग्न के लिए, लग्नेश शुक्र (Shukra) है और दशम भाव कुंभ (Kumbh) राशि में पड़ता है, जिसके स्वामी शनि (Shani) हैं (आपके दशमेश / करियर कारक)। शनि (Shani) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ ग्रहों में से एक है।"
+    }
+  },
+  "gemini": {
+    "lagna": "gemini",
+    "lagnaName": {
+      "en": "Gemini",
+      "hi": "मिथुन (Mithun)"
+    },
+    "lagnaLord": "mercury",
+    "lagnaLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "tenthHouseSign": "pisces",
+    "tenthHouseSignName": {
+      "en": "Pisces",
+      "hi": "मीन (Meen)"
+    },
+    "tenthLord": "jupiter",
+    "tenthLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "houseLords": {
+      "1": "mercury",
+      "2": "moon",
+      "3": "sun",
+      "4": "mercury",
+      "5": "venus",
+      "6": "mars",
+      "7": "jupiter",
+      "8": "saturn",
+      "9": "saturn",
+      "10": "jupiter",
+      "11": "mars",
+      "12": "venus"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Gemini Lagna, the Ascendant (Lagna) lord is Mercury and the 10th house falls in Pisces, ruled by Jupiter (your 10th lord / career significator).",
+      "hi": "मिथुन (Mithun) लग्न के लिए, लग्नेश बुध (Budh) है और दशम भाव मीन (Meen) राशि में पड़ता है, जिसके स्वामी बृहस्पति / गुरु (Guru) हैं (आपके दशमेश / करियर कारक)।"
+    }
+  },
+  "cancer": {
+    "lagna": "cancer",
+    "lagnaName": {
+      "en": "Cancer",
+      "hi": "कर्क (Kark)"
+    },
+    "lagnaLord": "moon",
+    "lagnaLordName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "tenthHouseSign": "aries",
+    "tenthHouseSignName": {
+      "en": "Aries",
+      "hi": "मेष (Mesh)"
+    },
+    "tenthLord": "mars",
+    "tenthLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "houseLords": {
+      "1": "moon",
+      "2": "sun",
+      "3": "mercury",
+      "4": "venus",
+      "5": "mars",
+      "6": "jupiter",
+      "7": "saturn",
+      "8": "saturn",
+      "9": "jupiter",
+      "10": "mars",
+      "11": "venus",
+      "12": "mercury"
+    },
+    "yogakaraka": "mars",
+    "note": {
+      "en": "For Cancer Lagna, the Ascendant (Lagna) lord is Moon and the 10th house falls in Aries, ruled by Mars (your 10th lord / career significator). Mars is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious planets in this chart.",
+      "hi": "कर्क (Kark) लग्न के लिए, लग्नेश चंद्रमा (Chandra) है और दशम भाव मेष (Mesh) राशि में पड़ता है, जिसके स्वामी मंगल (Mangal) हैं (आपके दशमेश / करियर कारक)। मंगल (Mangal) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ ग्रहों में से एक है।"
+    }
+  },
+  "leo": {
+    "lagna": "leo",
+    "lagnaName": {
+      "en": "Leo",
+      "hi": "सिंह (Simha)"
+    },
+    "lagnaLord": "sun",
+    "lagnaLordName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "tenthHouseSign": "taurus",
+    "tenthHouseSignName": {
+      "en": "Taurus",
+      "hi": "वृषभ (Vrishabh)"
+    },
+    "tenthLord": "venus",
+    "tenthLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "houseLords": {
+      "1": "sun",
+      "2": "mercury",
+      "3": "venus",
+      "4": "mars",
+      "5": "jupiter",
+      "6": "saturn",
+      "7": "saturn",
+      "8": "jupiter",
+      "9": "mars",
+      "10": "venus",
+      "11": "mercury",
+      "12": "moon"
+    },
+    "yogakaraka": "mars",
+    "note": {
+      "en": "For Leo Lagna, the Ascendant (Lagna) lord is Sun and the 10th house falls in Taurus, ruled by Venus (your 10th lord / career significator). Mars is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious planets in this chart.",
+      "hi": "सिंह (Simha) लग्न के लिए, लग्नेश सूर्य (Surya) है और दशम भाव वृषभ (Vrishabh) राशि में पड़ता है, जिसके स्वामी शुक्र (Shukra) हैं (आपके दशमेश / करियर कारक)। मंगल (Mangal) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ ग्रहों में से एक है।"
+    }
+  },
+  "virgo": {
+    "lagna": "virgo",
+    "lagnaName": {
+      "en": "Virgo",
+      "hi": "कन्या (Kanya)"
+    },
+    "lagnaLord": "mercury",
+    "lagnaLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "tenthHouseSign": "gemini",
+    "tenthHouseSignName": {
+      "en": "Gemini",
+      "hi": "मिथुन (Mithun)"
+    },
+    "tenthLord": "mercury",
+    "tenthLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "houseLords": {
+      "1": "mercury",
+      "2": "venus",
+      "3": "mars",
+      "4": "jupiter",
+      "5": "saturn",
+      "6": "saturn",
+      "7": "jupiter",
+      "8": "mars",
+      "9": "venus",
+      "10": "mercury",
+      "11": "moon",
+      "12": "sun"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Virgo Lagna, the Ascendant (Lagna) lord is Mercury and the 10th house falls in Gemini, ruled by Mercury (your 10th lord / career significator).",
+      "hi": "कन्या (Kanya) लग्न के लिए, लग्नेश बुध (Budh) है और दशम भाव मिथुन (Mithun) राशि में पड़ता है, जिसके स्वामी बुध (Budh) हैं (आपके दशमेश / करियर कारक)।"
+    }
+  },
+  "libra": {
+    "lagna": "libra",
+    "lagnaName": {
+      "en": "Libra",
+      "hi": "तुला (Tula)"
+    },
+    "lagnaLord": "venus",
+    "lagnaLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "tenthHouseSign": "cancer",
+    "tenthHouseSignName": {
+      "en": "Cancer",
+      "hi": "कर्क (Kark)"
+    },
+    "tenthLord": "moon",
+    "tenthLordName": {
+      "en": "Moon",
+      "hi": "चंद्रमा (Chandra)"
+    },
+    "houseLords": {
+      "1": "venus",
+      "2": "mars",
+      "3": "jupiter",
+      "4": "saturn",
+      "5": "saturn",
+      "6": "jupiter",
+      "7": "mars",
+      "8": "venus",
+      "9": "mercury",
+      "10": "moon",
+      "11": "sun",
+      "12": "mercury"
+    },
+    "yogakaraka": "saturn",
+    "note": {
+      "en": "For Libra Lagna, the Ascendant (Lagna) lord is Venus and the 10th house falls in Cancer, ruled by Moon (your 10th lord / career significator). Saturn is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious planets in this chart.",
+      "hi": "तुला (Tula) लग्न के लिए, लग्नेश शुक्र (Shukra) है और दशम भाव कर्क (Kark) राशि में पड़ता है, जिसके स्वामी चंद्रमा (Chandra) हैं (आपके दशमेश / करियर कारक)। शनि (Shani) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ ग्रहों में से एक है।"
+    }
+  },
+  "scorpio": {
+    "lagna": "scorpio",
+    "lagnaName": {
+      "en": "Scorpio",
+      "hi": "वृश्चिक (Vrishchik)"
+    },
+    "lagnaLord": "mars",
+    "lagnaLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "tenthHouseSign": "leo",
+    "tenthHouseSignName": {
+      "en": "Leo",
+      "hi": "सिंह (Simha)"
+    },
+    "tenthLord": "sun",
+    "tenthLordName": {
+      "en": "Sun",
+      "hi": "सूर्य (Surya)"
+    },
+    "houseLords": {
+      "1": "mars",
+      "2": "jupiter",
+      "3": "saturn",
+      "4": "saturn",
+      "5": "jupiter",
+      "6": "mars",
+      "7": "venus",
+      "8": "mercury",
+      "9": "moon",
+      "10": "sun",
+      "11": "mercury",
+      "12": "venus"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Scorpio Lagna, the Ascendant (Lagna) lord is Mars and the 10th house falls in Leo, ruled by Sun (your 10th lord / career significator).",
+      "hi": "वृश्चिक (Vrishchik) लग्न के लिए, लग्नेश मंगल (Mangal) है और दशम भाव सिंह (Simha) राशि में पड़ता है, जिसके स्वामी सूर्य (Surya) हैं (आपके दशमेश / करियर कारक)।"
+    }
+  },
+  "sagittarius": {
+    "lagna": "sagittarius",
+    "lagnaName": {
+      "en": "Sagittarius",
+      "hi": "धनु (Dhanu)"
+    },
+    "lagnaLord": "jupiter",
+    "lagnaLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "tenthHouseSign": "virgo",
+    "tenthHouseSignName": {
+      "en": "Virgo",
+      "hi": "कन्या (Kanya)"
+    },
+    "tenthLord": "mercury",
+    "tenthLordName": {
+      "en": "Mercury",
+      "hi": "बुध (Budh)"
+    },
+    "houseLords": {
+      "1": "jupiter",
+      "2": "saturn",
+      "3": "saturn",
+      "4": "jupiter",
+      "5": "mars",
+      "6": "venus",
+      "7": "mercury",
+      "8": "moon",
+      "9": "sun",
+      "10": "mercury",
+      "11": "venus",
+      "12": "mars"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Sagittarius Lagna, the Ascendant (Lagna) lord is Jupiter and the 10th house falls in Virgo, ruled by Mercury (your 10th lord / career significator).",
+      "hi": "धनु (Dhanu) लग्न के लिए, लग्नेश बृहस्पति / गुरु (Guru) है और दशम भाव कन्या (Kanya) राशि में पड़ता है, जिसके स्वामी बुध (Budh) हैं (आपके दशमेश / करियर कारक)।"
+    }
+  },
+  "capricorn": {
+    "lagna": "capricorn",
+    "lagnaName": {
+      "en": "Capricorn",
+      "hi": "मकर (Makar)"
+    },
+    "lagnaLord": "saturn",
+    "lagnaLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "tenthHouseSign": "libra",
+    "tenthHouseSignName": {
+      "en": "Libra",
+      "hi": "तुला (Tula)"
+    },
+    "tenthLord": "venus",
+    "tenthLordName": {
+      "en": "Venus",
+      "hi": "शुक्र (Shukra)"
+    },
+    "houseLords": {
+      "1": "saturn",
+      "2": "saturn",
+      "3": "jupiter",
+      "4": "mars",
+      "5": "venus",
+      "6": "mercury",
+      "7": "moon",
+      "8": "sun",
+      "9": "mercury",
+      "10": "venus",
+      "11": "mars",
+      "12": "jupiter"
+    },
+    "yogakaraka": "venus",
+    "note": {
+      "en": "For Capricorn Lagna, the Ascendant (Lagna) lord is Saturn and the 10th house falls in Libra, ruled by Venus (your 10th lord / career significator). Venus is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious planets in this chart.",
+      "hi": "मकर (Makar) लग्न के लिए, लग्नेश शनि (Shani) है और दशम भाव तुला (Tula) राशि में पड़ता है, जिसके स्वामी शुक्र (Shukra) हैं (आपके दशमेश / करियर कारक)। शुक्र (Shukra) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ ग्रहों में से एक है।"
+    }
+  },
+  "aquarius": {
+    "lagna": "aquarius",
+    "lagnaName": {
+      "en": "Aquarius",
+      "hi": "कुंभ (Kumbh)"
+    },
+    "lagnaLord": "saturn",
+    "lagnaLordName": {
+      "en": "Saturn",
+      "hi": "शनि (Shani)"
+    },
+    "tenthHouseSign": "scorpio",
+    "tenthHouseSignName": {
+      "en": "Scorpio",
+      "hi": "वृश्चिक (Vrishchik)"
+    },
+    "tenthLord": "mars",
+    "tenthLordName": {
+      "en": "Mars",
+      "hi": "मंगल (Mangal)"
+    },
+    "houseLords": {
+      "1": "saturn",
+      "2": "jupiter",
+      "3": "mars",
+      "4": "venus",
+      "5": "mercury",
+      "6": "moon",
+      "7": "sun",
+      "8": "mercury",
+      "9": "venus",
+      "10": "mars",
+      "11": "jupiter",
+      "12": "saturn"
+    },
+    "yogakaraka": "venus",
+    "note": {
+      "en": "For Aquarius Lagna, the Ascendant (Lagna) lord is Saturn and the 10th house falls in Scorpio, ruled by Mars (your 10th lord / career significator). Venus is the Yogakaraka (a planet that rules both a Kendra and a Trikona house) for this Lagna - one of the most auspicious planets in this chart.",
+      "hi": "कुंभ (Kumbh) लग्न के लिए, लग्नेश शनि (Shani) है और दशम भाव वृश्चिक (Vrishchik) राशि में पड़ता है, जिसके स्वामी मंगल (Mangal) हैं (आपके दशमेश / करियर कारक)। शुक्र (Shukra) इस लग्न के लिए योगकारक ग्रह है (जो केंद्र और त्रिकोण दोनों भावों का स्वामी है) - यह इस कुंडली के सबसे शुभ ग्रहों में से एक है।"
+    }
+  },
+  "pisces": {
+    "lagna": "pisces",
+    "lagnaName": {
+      "en": "Pisces",
+      "hi": "मीन (Meen)"
+    },
+    "lagnaLord": "jupiter",
+    "lagnaLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "tenthHouseSign": "sagittarius",
+    "tenthHouseSignName": {
+      "en": "Sagittarius",
+      "hi": "धनु (Dhanu)"
+    },
+    "tenthLord": "jupiter",
+    "tenthLordName": {
+      "en": "Jupiter",
+      "hi": "बृहस्पति / गुरु (Guru)"
+    },
+    "houseLords": {
+      "1": "jupiter",
+      "2": "mars",
+      "3": "venus",
+      "4": "mercury",
+      "5": "moon",
+      "6": "sun",
+      "7": "mercury",
+      "8": "venus",
+      "9": "mars",
+      "10": "jupiter",
+      "11": "saturn",
+      "12": "saturn"
+    },
+    "yogakaraka": null,
+    "note": {
+      "en": "For Pisces Lagna, the Ascendant (Lagna) lord is Jupiter and the 10th house falls in Sagittarius, ruled by Jupiter (your 10th lord / career significator).",
+      "hi": "मीन (Meen) लग्न के लिए, लग्नेश बृहस्पति / गुरु (Guru) है और दशम भाव धनु (Dhanu) राशि में पड़ता है, जिसके स्वामी बृहस्पति / गुरु (Guru) हैं (आपके दशमेश / करियर कारक)।"
+    }
+  }
+}

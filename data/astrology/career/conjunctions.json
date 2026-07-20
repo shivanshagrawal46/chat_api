@@ -1,0 +1,794 @@
+{
+  "sun_moon": {
+    "key": "sun_moon",
+    "planets": [
+      "sun",
+      "moon"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Moon blends a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition with a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and effort. For career, this combination favours fields that merge government service and administration and politics and public leadership with nursing, healthcare and hospitality and public relations and customer-facing roles - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "सूर्य (Surya) और चंद्रमा (Chandra) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है को एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व प्रयास के बीच परस्पर सहयोग जोड़ता है। करियर के लिए, यह संयोजन सरकारी सेवा और प्रशासन और राजनीति और सार्वजनिक नेतृत्व को नर्सिंग, स्वास्थ्य सेवा और आतिथ्य और जनसंपर्क और ग्राहक-सेवा भूमिकाएँ के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_mars": {
+    "key": "sun_mars",
+    "planets": [
+      "sun",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Mars blends a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition with a bold, energetic, and competitive drive centered on courage, action, and technical mastery. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and effort. For career, this combination favours fields that merge government service and administration and politics and public leadership with engineering, mechanical and automobile fields and defence, police and security services - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "सूर्य (Surya) और मंगल (Mangal) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है को एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व प्रयास के बीच परस्पर सहयोग जोड़ता है। करियर के लिए, यह संयोजन सरकारी सेवा और प्रशासन और राजनीति और सार्वजनिक नेतृत्व को इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र और रक्षा, पुलिस और सुरक्षा सेवाएँ के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_mercury": {
+    "key": "sun_mercury",
+    "planets": [
+      "sun",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Sun and Mercury blends a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition with a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge government service and administration and politics and public leadership with business, trading and commerce and writing, journalism and media - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "सूर्य (Surya) और बुध (Budh) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन सरकारी सेवा और प्रशासन और राजनीति और सार्वजनिक नेतृत्व को व्यापार और वाणिज्य और लेखन, पत्रकारिता और मीडिया के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_jupiter": {
+    "key": "sun_jupiter",
+    "planets": [
+      "sun",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Sun and Jupiter blends a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition with a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and effort. For career, this combination favours fields that merge government service and administration and politics and public leadership with teaching, professorship and academia and law, judiciary and legal consultancy - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "सूर्य (Surya) और बृहस्पति / गुरु (Guru) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व प्रयास के बीच परस्पर सहयोग जोड़ता है। करियर के लिए, यह संयोजन सरकारी सेवा और प्रशासन और राजनीति और सार्वजनिक नेतृत्व को शिक्षण, प्रोफेसरशिप और शिक्षाजगत और कानून, न्यायपालिका और विधिक परामर्श के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_venus": {
+    "key": "sun_venus",
+    "planets": [
+      "sun",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Venus blends a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition with a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For career, this combination favours fields that merge government service and administration and politics and public leadership with arts, entertainment and the film industry and fashion, design and beauty industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "सूर्य (Surya) और शुक्र (Shukra) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है को एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। करियर के लिए, यह संयोजन सरकारी सेवा और प्रशासन और राजनीति और सार्वजनिक नेतृत्व को कला, मनोरंजन और फिल्म उद्योग और फैशन, डिज़ाइन और सौंदर्य उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_saturn": {
+    "key": "sun_saturn",
+    "planets": [
+      "sun",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Saturn blends a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For career, this combination favours fields that merge government service and administration and politics and public leadership with labour-intensive and service-oriented industries and mining, oil, agriculture and heavy industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "सूर्य (Surya) और शनि (Shani) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। करियर के लिए, यह संयोजन सरकारी सेवा और प्रशासन और राजनीति और सार्वजनिक नेतृत्व को श्रम-प्रधान और सेवा-उन्मुख उद्योग और खनन, तेल, कृषि और भारी उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_rahu": {
+    "key": "sun_rahu",
+    "planets": [
+      "sun",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Rahu blends a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition with an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For career, this combination favours fields that merge government service and administration and politics and public leadership with technology, IT and emerging/disruptive fields and foreign trade, import-export and aviation - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "सूर्य (Surya) और राहु (Rahu) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। करियर के लिए, यह संयोजन सरकारी सेवा और प्रशासन और राजनीति और सार्वजनिक नेतृत्व को प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र और विदेश व्यापार, आयात-निर्यात और विमानन के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "sun_ketu": {
+    "key": "sun_ketu",
+    "planets": [
+      "sun",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Sun",
+        "hi": "सूर्य (Surya)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Sun and Ketu blends a fiery, authoritative, and self-assured energy centered on leadership, willpower, and recognition with a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For career, this combination favours fields that merge government service and administration and politics and public leadership with research, analytics and highly specialised technical work and spirituality, astrology and religious institutions - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "सूर्य (Surya) और केतु (Ketu) की युति एक तेजस्वी, अधिकारपूर्ण और आत्मविश्वासी ऊर्जा, जो नेतृत्व, इच्छाशक्ति और सम्मान पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। करियर के लिए, यह संयोजन सरकारी सेवा और प्रशासन और राजनीति और सार्वजनिक नेतृत्व को शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य और आध्यात्म, ज्योतिष और धार्मिक संस्थान के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_mars": {
+    "key": "moon_mars",
+    "planets": [
+      "moon",
+      "mars"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Mars blends a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection with a bold, energetic, and competitive drive centered on courage, action, and technical mastery. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge nursing, healthcare and hospitality and public relations and customer-facing roles with engineering, mechanical and automobile fields and defence, police and security services - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और मंगल (Mangal) की युति एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है को एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन नर्सिंग, स्वास्थ्य सेवा और आतिथ्य और जनसंपर्क और ग्राहक-सेवा भूमिकाएँ को इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र और रक्षा, पुलिस और सुरक्षा सेवाएँ के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_mercury": {
+    "key": "moon_mercury",
+    "planets": [
+      "moon",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Moon and Mercury blends a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection with a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and effort. For career, this combination favours fields that merge nursing, healthcare and hospitality and public relations and customer-facing roles with business, trading and commerce and writing, journalism and media - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और बुध (Budh) की युति एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व प्रयास के बीच परस्पर सहयोग जोड़ता है। करियर के लिए, यह संयोजन नर्सिंग, स्वास्थ्य सेवा और आतिथ्य और जनसंपर्क और ग्राहक-सेवा भूमिकाएँ को व्यापार और वाणिज्य और लेखन, पत्रकारिता और मीडिया के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_jupiter": {
+    "key": "moon_jupiter",
+    "planets": [
+      "moon",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Jupiter blends a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection with a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge nursing, healthcare and hospitality and public relations and customer-facing roles with teaching, professorship and academia and law, judiciary and legal consultancy - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और बृहस्पति / गुरु (Guru) की युति एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन नर्सिंग, स्वास्थ्य सेवा और आतिथ्य और जनसंपर्क और ग्राहक-सेवा भूमिकाएँ को शिक्षण, प्रोफेसरशिप और शिक्षाजगत और कानून, न्यायपालिका और विधिक परामर्श के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_venus": {
+    "key": "moon_venus",
+    "planets": [
+      "moon",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Venus blends a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection with a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge nursing, healthcare and hospitality and public relations and customer-facing roles with arts, entertainment and the film industry and fashion, design and beauty industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और शुक्र (Shukra) की युति एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है को एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन नर्सिंग, स्वास्थ्य सेवा और आतिथ्य और जनसंपर्क और ग्राहक-सेवा भूमिकाएँ को कला, मनोरंजन और फिल्म उद्योग और फैशन, डिज़ाइन और सौंदर्य उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_saturn": {
+    "key": "moon_saturn",
+    "planets": [
+      "moon",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Saturn blends a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge nursing, healthcare and hospitality and public relations and customer-facing roles with labour-intensive and service-oriented industries and mining, oil, agriculture and heavy industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और शनि (Shani) की युति एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन नर्सिंग, स्वास्थ्य सेवा और आतिथ्य और जनसंपर्क और ग्राहक-सेवा भूमिकाएँ को श्रम-प्रधान और सेवा-उन्मुख उद्योग और खनन, तेल, कृषि और भारी उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_rahu": {
+    "key": "moon_rahu",
+    "planets": [
+      "moon",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Rahu blends a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection with an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge nursing, healthcare and hospitality and public relations and customer-facing roles with technology, IT and emerging/disruptive fields and foreign trade, import-export and aviation - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और राहु (Rahu) की युति एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन नर्सिंग, स्वास्थ्य सेवा और आतिथ्य और जनसंपर्क और ग्राहक-सेवा भूमिकाएँ को प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र और विदेश व्यापार, आयात-निर्यात और विमानन के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "moon_ketu": {
+    "key": "moon_ketu",
+    "planets": [
+      "moon",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Moon",
+        "hi": "चंद्रमा (Chandra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Moon and Ketu blends a receptive, nurturing, and adaptable energy centered on the mind, emotions, and public connection with a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge nursing, healthcare and hospitality and public relations and customer-facing roles with research, analytics and highly specialised technical work and spirituality, astrology and religious institutions - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "चंद्रमा (Chandra) और केतु (Ketu) की युति एक ग्रहणशील, पोषणकारी और अनुकूलनीय ऊर्जा, जो मन, भावनाओं और जनसंपर्क पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन नर्सिंग, स्वास्थ्य सेवा और आतिथ्य और जनसंपर्क और ग्राहक-सेवा भूमिकाएँ को शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य और आध्यात्म, ज्योतिष और धार्मिक संस्थान के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_mercury": {
+    "key": "mars_mercury",
+    "planets": [
+      "mars",
+      "mercury"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Mars and Mercury blends a bold, energetic, and competitive drive centered on courage, action, and technical mastery with a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For career, this combination favours fields that merge engineering, mechanical and automobile fields and defence, police and security services with business, trading and commerce and writing, journalism and media - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "मंगल (Mangal) और बुध (Budh) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। करियर के लिए, यह संयोजन इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र और रक्षा, पुलिस और सुरक्षा सेवाएँ को व्यापार और वाणिज्य और लेखन, पत्रकारिता और मीडिया के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_jupiter": {
+    "key": "mars_jupiter",
+    "planets": [
+      "mars",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Mars and Jupiter blends a bold, energetic, and competitive drive centered on courage, action, and technical mastery with a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and effort. For career, this combination favours fields that merge engineering, mechanical and automobile fields and defence, police and security services with teaching, professorship and academia and law, judiciary and legal consultancy - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "मंगल (Mangal) और बृहस्पति / गुरु (Guru) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व प्रयास के बीच परस्पर सहयोग जोड़ता है। करियर के लिए, यह संयोजन इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र और रक्षा, पुलिस और सुरक्षा सेवाएँ को शिक्षण, प्रोफेसरशिप और शिक्षाजगत और कानून, न्यायपालिका और विधिक परामर्श के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_venus": {
+    "key": "mars_venus",
+    "planets": [
+      "mars",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Venus blends a bold, energetic, and competitive drive centered on courage, action, and technical mastery with a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge engineering, mechanical and automobile fields and defence, police and security services with arts, entertainment and the film industry and fashion, design and beauty industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "मंगल (Mangal) और शुक्र (Shukra) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र और रक्षा, पुलिस और सुरक्षा सेवाएँ को कला, मनोरंजन और फिल्म उद्योग और फैशन, डिज़ाइन और सौंदर्य उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_saturn": {
+    "key": "mars_saturn",
+    "planets": [
+      "mars",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Saturn blends a bold, energetic, and competitive drive centered on courage, action, and technical mastery with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge engineering, mechanical and automobile fields and defence, police and security services with labour-intensive and service-oriented industries and mining, oil, agriculture and heavy industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "मंगल (Mangal) और शनि (Shani) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र और रक्षा, पुलिस और सुरक्षा सेवाएँ को श्रम-प्रधान और सेवा-उन्मुख उद्योग और खनन, तेल, कृषि और भारी उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_rahu": {
+    "key": "mars_rahu",
+    "planets": [
+      "mars",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Rahu blends a bold, energetic, and competitive drive centered on courage, action, and technical mastery with an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge engineering, mechanical and automobile fields and defence, police and security services with technology, IT and emerging/disruptive fields and foreign trade, import-export and aviation - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "मंगल (Mangal) और राहु (Rahu) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र और रक्षा, पुलिस और सुरक्षा सेवाएँ को प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र और विदेश व्यापार, आयात-निर्यात और विमानन के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mars_ketu": {
+    "key": "mars_ketu",
+    "planets": [
+      "mars",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mars",
+        "hi": "मंगल (Mangal)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mars and Ketu blends a bold, energetic, and competitive drive centered on courage, action, and technical mastery with a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge engineering, mechanical and automobile fields and defence, police and security services with research, analytics and highly specialised technical work and spirituality, astrology and religious institutions - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "मंगल (Mangal) और केतु (Ketu) की युति एक साहसी, ऊर्जावान और प्रतिस्पर्धी प्रवृत्ति, जो साहस, कार्यवाही और तकनीकी दक्षता पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन इंजीनियरिंग, मैकेनिकल और ऑटोमोबाइल क्षेत्र और रक्षा, पुलिस और सुरक्षा सेवाएँ को शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य और आध्यात्म, ज्योतिष और धार्मिक संस्थान के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_jupiter": {
+    "key": "mercury_jupiter",
+    "planets": [
+      "mercury",
+      "jupiter"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Jupiter blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge business, trading and commerce and writing, journalism and media with teaching, professorship and academia and law, judiciary and legal consultancy - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बुध (Budh) और बृहस्पति / गुरु (Guru) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन व्यापार और वाणिज्य और लेखन, पत्रकारिता और मीडिया को शिक्षण, प्रोफेसरशिप और शिक्षाजगत और कानून, न्यायपालिका और विधिक परामर्श के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_venus": {
+    "key": "mercury_venus",
+    "planets": [
+      "mercury",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Mercury and Venus blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and effort. For career, this combination favours fields that merge business, trading and commerce and writing, journalism and media with arts, entertainment and the film industry and fashion, design and beauty industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बुध (Budh) और शुक्र (Shukra) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व प्रयास के बीच परस्पर सहयोग जोड़ता है। करियर के लिए, यह संयोजन व्यापार और वाणिज्य और लेखन, पत्रकारिता और मीडिया को कला, मनोरंजन और फिल्म उद्योग और फैशन, डिज़ाइन और सौंदर्य उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_saturn": {
+    "key": "mercury_saturn",
+    "planets": [
+      "mercury",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Saturn blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge business, trading and commerce and writing, journalism and media with labour-intensive and service-oriented industries and mining, oil, agriculture and heavy industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बुध (Budh) और शनि (Shani) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन व्यापार और वाणिज्य और लेखन, पत्रकारिता और मीडिया को श्रम-प्रधान और सेवा-उन्मुख उद्योग और खनन, तेल, कृषि और भारी उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_rahu": {
+    "key": "mercury_rahu",
+    "planets": [
+      "mercury",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Rahu blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge business, trading and commerce and writing, journalism and media with technology, IT and emerging/disruptive fields and foreign trade, import-export and aviation - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बुध (Budh) और राहु (Rahu) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन व्यापार और वाणिज्य और लेखन, पत्रकारिता और मीडिया को प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र और विदेश व्यापार, आयात-निर्यात और विमानन के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "mercury_ketu": {
+    "key": "mercury_ketu",
+    "planets": [
+      "mercury",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Mercury",
+        "hi": "बुध (Budh)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Mercury and Ketu blends a sharp, analytical, and communicative intelligence centered on trade, logic, and versatility with a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge business, trading and commerce and writing, journalism and media with research, analytics and highly specialised technical work and spirituality, astrology and religious institutions - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बुध (Budh) और केतु (Ketu) की युति एक तीक्ष्ण, विश्लेषणात्मक और संचार-कुशल बुद्धि, जो व्यापार, तर्क और बहुमुखी प्रतिभा पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन व्यापार और वाणिज्य और लेखन, पत्रकारिता और मीडिया को शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य और आध्यात्म, ज्योतिष और धार्मिक संस्थान के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_venus": {
+    "key": "jupiter_venus",
+    "planets": [
+      "jupiter",
+      "venus"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      }
+    ],
+    "relation": "enemy",
+    "text": {
+      "en": "A conjunction of Jupiter and Venus blends a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning with a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste. There is some natural friction in this placement, which can create internal conflict or extra struggle before results manifest - deliberate effort and remedies help considerably. For career, this combination favours fields that merge teaching, professorship and academia and law, judiciary and legal consultancy with arts, entertainment and the film industry and fashion, design and beauty industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और शुक्र (Shukra) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है को एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है के साथ मिलाती है। इस स्थिति में कुछ स्वाभाविक टकराव है, जो परिणाम मिलने से पहले आंतरिक द्वंद्व या अतिरिक्त संघर्ष उत्पन्न कर सकता है - सचेत प्रयास और उपाय काफी सहायक होते हैं। करियर के लिए, यह संयोजन शिक्षण, प्रोफेसरशिप और शिक्षाजगत और कानून, न्यायपालिका और विधिक परामर्श को कला, मनोरंजन और फिल्म उद्योग और फैशन, डिज़ाइन और सौंदर्य उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_saturn": {
+    "key": "jupiter_saturn",
+    "planets": [
+      "jupiter",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Saturn blends a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge teaching, professorship and academia and law, judiciary and legal consultancy with labour-intensive and service-oriented industries and mining, oil, agriculture and heavy industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और शनि (Shani) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन शिक्षण, प्रोफेसरशिप और शिक्षाजगत और कानून, न्यायपालिका और विधिक परामर्श को श्रम-प्रधान और सेवा-उन्मुख उद्योग और खनन, तेल, कृषि और भारी उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_rahu": {
+    "key": "jupiter_rahu",
+    "planets": [
+      "jupiter",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Rahu blends a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning with an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge teaching, professorship and academia and law, judiciary and legal consultancy with technology, IT and emerging/disruptive fields and foreign trade, import-export and aviation - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और राहु (Rahu) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन शिक्षण, प्रोफेसरशिप और शिक्षाजगत और कानून, न्यायपालिका और विधिक परामर्श को प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र और विदेश व्यापार, आयात-निर्यात और विमानन के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "jupiter_ketu": {
+    "key": "jupiter_ketu",
+    "planets": [
+      "jupiter",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Jupiter",
+        "hi": "बृहस्पति / गुरु (Guru)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Jupiter and Ketu blends a wise, expansive, and principled energy centered on knowledge, guidance, and higher learning with a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge teaching, professorship and academia and law, judiciary and legal consultancy with research, analytics and highly specialised technical work and spirituality, astrology and religious institutions - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "बृहस्पति / गुरु (Guru) और केतु (Ketu) की युति एक ज्ञानी, विस्तारवादी और सिद्धांतनिष्ठ ऊर्जा, जो ज्ञान, मार्गदर्शन और उच्च शिक्षा पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन शिक्षण, प्रोफेसरशिप और शिक्षाजगत और कानून, न्यायपालिका और विधिक परामर्श को शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य और आध्यात्म, ज्योतिष और धार्मिक संस्थान के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_saturn": {
+    "key": "venus_saturn",
+    "planets": [
+      "venus",
+      "saturn"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      }
+    ],
+    "relation": "friend",
+    "text": {
+      "en": "A conjunction of Venus and Saturn blends a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste with a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance. The house lord is a natural friend of this placement, which smoothens outcomes and adds mutual support between personality and effort. For career, this combination favours fields that merge arts, entertainment and the film industry and fashion, design and beauty industry with labour-intensive and service-oriented industries and mining, oil, agriculture and heavy industry - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "शुक्र (Shukra) और शनि (Shani) की युति एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है को एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है के साथ मिलाती है। यह भाव-स्वामी इस स्थिति का स्वाभाविक मित्र है, जो परिणामों को सरल बनाता है और व्यक्तित्व व प्रयास के बीच परस्पर सहयोग जोड़ता है। करियर के लिए, यह संयोजन कला, मनोरंजन और फिल्म उद्योग और फैशन, डिज़ाइन और सौंदर्य उद्योग को श्रम-प्रधान और सेवा-उन्मुख उद्योग और खनन, तेल, कृषि और भारी उद्योग के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_rahu": {
+    "key": "venus_rahu",
+    "planets": [
+      "venus",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Venus and Rahu blends a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste with an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge arts, entertainment and the film industry and fashion, design and beauty industry with technology, IT and emerging/disruptive fields and foreign trade, import-export and aviation - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "शुक्र (Shukra) और राहु (Rahu) की युति एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन कला, मनोरंजन और फिल्म उद्योग और फैशन, डिज़ाइन और सौंदर्य उद्योग को प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र और विदेश व्यापार, आयात-निर्यात और विमानन के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "venus_ketu": {
+    "key": "venus_ketu",
+    "planets": [
+      "venus",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Venus",
+        "hi": "शुक्र (Shukra)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Venus and Ketu blends a graceful, artistic, and diplomatic charm centered on beauty, comfort, and refined taste with a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge arts, entertainment and the film industry and fashion, design and beauty industry with research, analytics and highly specialised technical work and spirituality, astrology and religious institutions - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "शुक्र (Shukra) और केतु (Ketu) की युति एक सुंदर, कलात्मक और कूटनीतिक आकर्षण, जो सौंदर्य, सुख-सुविधा और परिष्कृत रुचि पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन कला, मनोरंजन और फिल्म उद्योग और फैशन, डिज़ाइन और सौंदर्य उद्योग को शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य और आध्यात्म, ज्योतिष और धार्मिक संस्थान के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "saturn_rahu": {
+    "key": "saturn_rahu",
+    "planets": [
+      "saturn",
+      "rahu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Saturn and Rahu blends a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance with an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge labour-intensive and service-oriented industries and mining, oil, agriculture and heavy industry with technology, IT and emerging/disruptive fields and foreign trade, import-export and aviation - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "शनि (Shani) और राहु (Rahu) की युति एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है को एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन श्रम-प्रधान और सेवा-उन्मुख उद्योग और खनन, तेल, कृषि और भारी उद्योग को प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र और विदेश व्यापार, आयात-निर्यात और विमानन के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "saturn_ketu": {
+    "key": "saturn_ketu",
+    "planets": [
+      "saturn",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Saturn",
+        "hi": "शनि (Shani)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Saturn and Ketu blends a disciplined, patient, and hard-working nature centered on structure, service, and long-term perseverance with a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge labour-intensive and service-oriented industries and mining, oil, agriculture and heavy industry with research, analytics and highly specialised technical work and spirituality, astrology and religious institutions - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "शनि (Shani) और केतु (Ketu) की युति एक अनुशासित, धैर्यवान और परिश्रमी स्वभाव, जो संरचना, सेवा और दीर्घकालिक दृढ़ता पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन श्रम-प्रधान और सेवा-उन्मुख उद्योग और खनन, तेल, कृषि और भारी उद्योग को शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य और आध्यात्म, ज्योतिष और धार्मिक संस्थान के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  },
+  "rahu_ketu": {
+    "key": "rahu_ketu",
+    "planets": [
+      "rahu",
+      "ketu"
+    ],
+    "planetNames": [
+      {
+        "en": "Rahu",
+        "hi": "राहु (Rahu)"
+      },
+      {
+        "en": "Ketu",
+        "hi": "केतु (Ketu)"
+      }
+    ],
+    "relation": "neutral",
+    "text": {
+      "en": "A conjunction of Rahu and Ketu blends an ambitious, unconventional, and obsessive drive centered on sudden rise, innovation, and foreign connections with a detached, research-oriented, and intuitive depth centered on specialization, spirituality, and hidden knowledge. The relationship here is neutral, giving moderate, situation-dependent results that respond well to conscious effort. For career, this combination favours fields that merge technology, IT and emerging/disruptive fields and foreign trade, import-export and aviation with research, analytics and highly specialised technical work and spirituality, astrology and religious institutions - a hybrid path that draws on both planets' strengths. When this conjunction falls in or influences the 1st or 10th house, its effect on career becomes especially direct.",
+      "hi": "राहु (Rahu) और केतु (Ketu) की युति एक महत्वाकांक्षी, अपरंपरागत और गहन प्रवृत्ति, जो अचानक उन्नति, नवाचार और विदेश संबंधों पर केंद्रित है को एक विरक्त, शोध-उन्मुख और सहज गहराई, जो विशेषज्ञता, आध्यात्म और गूढ़ ज्ञान पर केंद्रित है के साथ मिलाती है। यहाँ संबंध तटस्थ है, जो मध्यम, परिस्थिति-निर्भर परिणाम देता है जो सजग प्रयास से अच्छी प्रतिक्रिया देते हैं। करियर के लिए, यह संयोजन प्रौद्योगिकी, आईटी और उभरते/विघटनकारी क्षेत्र और विदेश व्यापार, आयात-निर्यात और विमानन को शोध, विश्लेषण और उच्च-विशिष्ट तकनीकी कार्य और आध्यात्म, ज्योतिष और धार्मिक संस्थान के साथ जोड़ने वाले क्षेत्रों के लिए अनुकूल है - एक ऐसा मिश्रित मार्ग जो दोनों ग्रहों की शक्तियों का लाभ उठाता है। जब यह युति प्रथम या दशम भाव में हो या उसे प्रभावित करे, तो करियर पर इसका प्रभाव विशेष रूप से प्रत्यक्ष हो जाता है।"
+    }
+  }
+}

@@ -7,7 +7,8 @@ const WalletTransaction = require('../models/WalletTransaction');
 const auth = require('../middleware/auth');
 
 // ==================== CONFIG ====================
-const GEMINI_MODEL = 'gemini-2.5-pro';
+const GEMINI_MODEL = 'gemini-3.1-pro-preview';
+const GEMINI_FALLBACK_MODEL = 'gemini-3.5-flash';
 const MAX_AI_RETRIES = 3;
 const RETRY_DELAY_MS = 2000;
 const AI_TIMEOUT_MS = 90000;
@@ -114,41 +115,57 @@ const generatePalmReading = async ({ base64, mimeType, note, hand, language, use
     const startTime = Date.now();
     let result;
     let lastError;
+    let usedModel;
+    // Try Gemini 3.1 Pro first, then fall back to Gemini 3.5 Flash on failure/timeout.
+    // Each model is retried on transient errors (503/429/500) up to MAX_AI_RETRIES.
+    const modelPlan = [GEMINI_MODEL, GEMINI_FALLBACK_MODEL];
 
-    for (let attempt = 1; attempt <= MAX_AI_RETRIES; attempt++) {
-        console.log(`🖐️ Palmistry attempt ${attempt}/${MAX_AI_RETRIES} | Model: ${GEMINI_MODEL} | User: ${userId}`);
-        const timeoutPromise = new Promise((_, reject) =>
-            setTimeout(() => reject(new Error('AI response timed out after 90 seconds. Please retry.')), AI_TIMEOUT_MS)
-        );
-        try {
-            const aiPromise = genAI.models.generateContent({
-                model: GEMINI_MODEL,
-                contents,
-                config: {
-                    maxOutputTokens: MAX_OUTPUT_TOKENS,
-                    temperature: 0.7,
-                    thinkingConfig: { thinkingBudget: 2048 }
+    for (let m = 0; m < modelPlan.length && !result; m++) {
+        const useModel = modelPlan[m];
+        const isLastModel = m === modelPlan.length - 1;
+        // Gemini 3.x uses `thinkingLevel` (NOT the legacy `thinkingBudget` - passing both
+        // returns a 400). 'low' keeps latency down and preserves output tokens for the reading.
+        const thinkingLevel = 'low';
+
+        for (let attempt = 1; attempt <= MAX_AI_RETRIES; attempt++) {
+            console.log(`🖐️ Palmistry | Model: ${useModel} | Attempt ${attempt}/${MAX_AI_RETRIES} | User: ${userId}`);
+            const timeoutPromise = new Promise((_, reject) =>
+                setTimeout(() => reject(new Error('AI response timed out after 90 seconds. Please retry.')), AI_TIMEOUT_MS)
+            );
+            try {
+                const aiPromise = genAI.models.generateContent({
+                    model: useModel,
+                    contents,
+                    config: {
+                        maxOutputTokens: MAX_OUTPUT_TOKENS,
+                        temperature: 0.7,
+                        thinkingConfig: { thinkingLevel: thinkingLevel }
+                    }
+                });
+                result = await Promise.race([aiPromise, timeoutPromise]);
+                usedModel = useModel;
+                console.log(`✅ Palmistry: Gemini (${useModel}) responded on attempt ${attempt}`);
+                break;
+            } catch (retryError) {
+                lastError = retryError;
+                const status = retryError.status || retryError.code;
+                console.error(`❌ Palmistry ${useModel} attempt ${attempt} failed: ${retryError.message}${status ? ` (status ${status})` : ''}`);
+                const isRetryable = status === 503 || status === 429 || status === 500;
+                if (isRetryable && attempt < MAX_AI_RETRIES) {
+                    const delay = status === 429 ? 8000 * attempt : RETRY_DELAY_MS * attempt;
+                    console.log(`⏳ Retryable error (${status}). Waiting ${delay}ms...`);
+                    await new Promise(r => setTimeout(r, delay));
+                    continue;
                 }
-            });
-            result = await Promise.race([aiPromise, timeoutPromise]);
-            console.log(`✅ Palmistry: Gemini responded on attempt ${attempt}`);
-            break;
-        } catch (retryError) {
-            lastError = retryError;
-            const status = retryError.status || retryError.code;
-            console.error(`❌ Palmistry attempt ${attempt} failed: ${retryError.message}${status ? ` (status ${status})` : ''}`);
-            const isRetryable = status === 503 || status === 429 || status === 500;
-            if (isRetryable && attempt < MAX_AI_RETRIES) {
-                const delay = status === 429 ? 8000 * attempt : RETRY_DELAY_MS * attempt;
-                console.log(`⏳ Retryable error (${status}). Waiting ${delay}ms...`);
-                await new Promise(r => setTimeout(r, delay));
-                continue;
+                // This model failed (non-retryable, timeout, or retries exhausted) - fall back to the next.
+                if (!isLastModel) console.log(`↪️ Palmistry falling back from ${useModel} to ${modelPlan[m + 1]}...`);
+                break;
             }
-            if (!isRetryable) throw retryError;
         }
     }
 
     if (!result) throw lastError || new Error('AI failed after all retry attempts');
+    console.log(`🧿 Palmistry answer generated by model: ${usedModel}`);
 
     // Defensive response parsing (result.text can throw in some SDK versions)
     let response;

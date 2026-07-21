@@ -11,8 +11,8 @@ const crypto = require('crypto');
 
 // Initialize Gemini AI (New SDK)
 let genAI = null;
-const GEMINI_MODEL = 'gemini-2.5-pro';
-const GEMINI_FALLBACK_MODEL = 'gemini-2.5-flash';
+const GEMINI_MODEL = 'gemini-3.1-pro-preview';
+const GEMINI_FALLBACK_MODEL = 'gemini-3.5-flash';
 const MAX_AI_RETRIES = 3;
 const RETRY_DELAY_MS = 2000;
 
@@ -1501,67 +1501,84 @@ Provide a COMPLETE astrological response in the SAME language as the question:`;
         const startTime = Date.now();
         const AI_TIMEOUT_MS = 90000;
         
-        // Retry loop: always use Gemini 2.5 Pro for astrology analysis (no Flash fallback)
+        // Model plan: try Gemini 3.1 Pro first, then fall back to Gemini 3.5 Flash on
+        // failure/timeout. Each model is retried on transient errors (503/429/500) up
+        // to MAX_AI_RETRIES before moving on to the next model in the plan.
         let result;
         let lastError;
-        
-        for (let attempt = 1; attempt <= MAX_AI_RETRIES; attempt++) {
-            const useModel = GEMINI_MODEL;
-            const thinkBudget = 2524;
-            
-            console.log(`🔮 Attempt ${attempt}/${MAX_AI_RETRIES} | Model: ${useModel} | User: ${userId}`);
-            console.log(`🔮 Question: ${question.substring(0, 50)}...`);
-            
-            const timeoutPromise = new Promise((_, reject) => 
-                setTimeout(() => reject(new Error('AI response timed out after 90 seconds. Please retry.')), AI_TIMEOUT_MS)
-            );
-            
-            try {
-                const aiPromise = genAI.models.generateContent({
-                    model: useModel,
-                    contents: systemPrompt,
-                    config: {
-                        maxOutputTokens: MAX_OUTPUT_TOKENS,
-                        temperature: 0.7,
-                        thinkingConfig: {
-                            thinkingBudget: thinkBudget
+        let usedModel;
+        const modelPlan = [GEMINI_MODEL, GEMINI_FALLBACK_MODEL];
+
+        for (let m = 0; m < modelPlan.length && !result; m++) {
+            const useModel = modelPlan[m];
+            const isLastModel = m === modelPlan.length - 1;
+            // Gemini 3.x uses `thinkingLevel` (NOT the legacy `thinkingBudget` - passing both
+            // returns a 400). 'low' keeps latency down and preserves the output-token budget
+            // for the actual answer rather than spending it all on hidden thinking.
+            const thinkingLevel = 'low';
+
+            for (let attempt = 1; attempt <= MAX_AI_RETRIES; attempt++) {
+                console.log(`🔮 Model: ${useModel} | Attempt ${attempt}/${MAX_AI_RETRIES} | User: ${userId}`);
+                console.log(`🔮 Question: ${question.substring(0, 50)}...`);
+
+                const timeoutPromise = new Promise((_, reject) =>
+                    setTimeout(() => reject(new Error('AI response timed out after 90 seconds. Please retry.')), AI_TIMEOUT_MS)
+                );
+
+                try {
+                    const aiPromise = genAI.models.generateContent({
+                        model: useModel,
+                        contents: systemPrompt,
+                        config: {
+                            maxOutputTokens: MAX_OUTPUT_TOKENS,
+                            temperature: 0.7,
+                            thinkingConfig: {
+                                thinkingLevel: thinkingLevel
+                            }
                         }
+                    });
+                    console.log('📡 Gemini API call initiated, waiting for response...');
+
+                    result = await Promise.race([aiPromise, timeoutPromise]);
+                    usedModel = useModel;
+                    console.log(`✅ Gemini (${useModel}) responded on attempt ${attempt}`);
+                    break;
+
+                } catch (retryError) {
+                    const elapsed = Date.now() - startTime;
+                    lastError = retryError;
+                    const status = retryError.status || retryError.code;
+                    console.error(`❌ ${useModel} attempt ${attempt} failed after ${elapsed}ms: ${retryError.message}`);
+                    if (status) console.error(`❌ HTTP Status: ${status}`);
+
+                    const isRetryable = status === 503 || status === 429 || status === 500;
+                    if (isRetryable && attempt < MAX_AI_RETRIES) {
+                        const delay = status === 429 ? 8000 * attempt : RETRY_DELAY_MS * attempt;
+                        console.log(`⏳ Retryable error (${status}). Waiting ${delay}ms before retry...`);
+                        await new Promise(r => setTimeout(r, delay));
+                        continue;
                     }
-                });
-                console.log('📡 Gemini API call initiated, waiting for response...');
-                
-                result = await Promise.race([aiPromise, timeoutPromise]);
-                console.log(`✅ Gemini responded on attempt ${attempt}`);
-                break;
-                
-            } catch (retryError) {
-                const elapsed = Date.now() - startTime;
-                lastError = retryError;
-                const status = retryError.status || retryError.code;
-                console.error(`❌ Attempt ${attempt} failed after ${elapsed}ms: ${retryError.message}`);
-                if (status) console.error(`❌ HTTP Status: ${status}`);
-                
-                const isRetryable = status === 503 || status === 429 || status === 500;
-                if (isRetryable && attempt < MAX_AI_RETRIES) {
-                    const delay = status === 429 ? 8000 * attempt : RETRY_DELAY_MS * attempt;
-                    console.log(`⏳ Retryable error (${status}). Waiting ${delay}ms before retry...`);
-                    await new Promise(r => setTimeout(r, delay));
-                    continue;
-                }
-                
-                if (!isRetryable) {
-                    console.error('❌ Non-retryable error, giving up');
-                    console.error('❌ Error name:', retryError.name, '| Code:', retryError.code || 'N/A');
-                    if (retryError.errorDetails) console.error('❌ Error details:', JSON.stringify(retryError.errorDetails));
-                    throw retryError;
+
+                    // This model has failed (non-retryable error, timeout, or retries exhausted).
+                    // Break out of the inner loop to fall back to the next model (if any).
+                    if (!isRetryable) {
+                        console.error(`❌ Non-retryable error on ${useModel}`);
+                        console.error('❌ Error name:', retryError.name, '| Code:', retryError.code || 'N/A');
+                        if (retryError.errorDetails) console.error('❌ Error details:', JSON.stringify(retryError.errorDetails));
+                    }
+                    if (!isLastModel) {
+                        console.log(`↪️ Falling back from ${useModel} to ${modelPlan[m + 1]}...`);
+                    }
+                    break;
                 }
             }
         }
-        
+
         if (!result) {
-            console.error('❌ All retry attempts exhausted');
+            console.error('❌ All models and retry attempts exhausted');
             throw lastError || new Error('AI failed after all retry attempts');
         }
+        console.log(`🧿 Answer generated by model: ${usedModel}`);
         
         const elapsed = Date.now() - startTime;
         console.log(`📥 Gemini raw response received in ${elapsed}ms`);

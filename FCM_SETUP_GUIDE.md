@@ -138,7 +138,7 @@ print('FCM Token: $fcmToken');
 // After user login, register the FCM token
 Future<void> registerFCMToken(String jwtToken, String fcmToken) async {
   final response = await http.post(
-    Uri.parse('https://your-api.com/api/chat/register-fcm-token'),
+    Uri.parse('https://jyotishvishwakosh.shop/api/chat/register-fcm-token'),
     headers: {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer $jwtToken',

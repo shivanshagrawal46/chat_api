@@ -124,6 +124,31 @@ The following fields have been added to the Message model:
 
 ---
 
+### 5. Unregister FCM Token
+**Endpoint:** `POST /api/chat/unregister-fcm-token`
+
+**Description:** Clear/remove the user's FCM token (useful for logout or disabling notifications)
+
+**Authentication:** Required (JWT token)
+
+**Request Body:** None required
+
+**Response:**
+```json
+{
+  "success": true,
+  "message": "FCM token cleared successfully"
+}
+```
+
+**Use Cases:**
+- User logs out
+- User disables notifications
+- User switches devices
+- User uninstalls app
+
+---
+
 ## Socket.IO Events
 
 ### Client -> Server Events

@@ -23,6 +23,7 @@
 const Wallet = require('../models/Wallet');
 const WalletTransaction = require('../models/WalletTransaction');
 const AstrologerChatSession = require('../models/AstrologerChatSession');
+const astroPush = require('./astroPush');
 
 // In-memory: sessionId (string) -> { timeoutId, graceTimeoutId, ringTimeoutId, joinTimeoutId }
 const activeSessionTimers = new Map();
@@ -34,6 +35,14 @@ const GRACE_PERIOD_MS = 30 * 1000;       // 30s to recharge before ending
 const RING_TIMEOUT_MS = 60 * 1000;       // admin has 60s to accept the ring
 const JOIN_TIMEOUT_MS = 60 * 1000;       // both parties must join within 60s of accept
 const ADMIN_ROOM = 'admins';
+
+// Presence grace windows. Mobile sockets drop constantly (transport
+// upgrades, network switches, backgrounding), so nothing is ended on the
+// disconnect itself — only if the side is STILL gone when the window closes.
+const PRE_ACTIVE_DISCONNECT_GRACE_MS = 15 * 1000; // ringing/accepted: free up the slot
+const USER_DISCONNECT_GRACE_MS = 60 * 1000;       // active: stop charging a user whose app died
+const ADMIN_DISCONNECT_GRACE_MS = 60 * 1000;      // active: don't bill while no admin is present
+const LIVE_STATUSES = ['ringing', 'accepted', 'active'];
 
 // Set by index.js after Socket.IO server is constructed.
 let ioRef = null;
@@ -54,6 +63,147 @@ function emitToAdmins(event, payload) {
 function emitToBoth(session, event, payload) {
     emitToUser(session.user, event, payload);
     emitToAdmins(event, payload);
+}
+
+// ==================== PRESENCE ====================
+// Every authenticated socket joins a room named after its user id, and every
+// admin socket also joins ADMIN_ROOM, so room sizes are the source of truth
+// for "is anyone from this side connected right now". This is immune to the
+// one-socket-per-user map getting clobbered by a stale socket.
+
+function roomSize(room) {
+    return ioRef?.sockets?.adapter?.rooms?.get(room)?.size || 0;
+}
+
+function adminOnlineCount() {
+    return roomSize(ADMIN_ROOM);
+}
+
+function isUserOnline(userId) {
+    return roomSize(userId.toString()) > 0;
+}
+
+function presencePayload(session, side, online, graceMs) {
+    return {
+        sessionId: session._id,
+        astrologerKey: session.astrologerKey,
+        userId: session.user,
+        side,                       // 'user' | 'admin'
+        online,
+        graceMs: online ? 0 : graceMs,
+        message: online
+            ? (side === 'admin' ? `${session.astrologerName} is back` : 'User is back')
+            : (side === 'admin'
+                ? `${session.astrologerName} lost connection. Waiting up to ${Math.round(graceMs / 1000)}s…`
+                : `User lost connection. Waiting up to ${Math.round(graceMs / 1000)}s…`)
+    };
+}
+
+const userDisconnectTimers = new Map(); // userId -> timeoutId
+let adminDisconnectTimer = null;
+
+/**
+ * Called from the socket `disconnect` handler for a non-admin user. If the
+ * user still has another socket open this is a no-op. Otherwise the admin is
+ * told immediately (so the UI can show "reconnecting…") and a grace timer is
+ * armed; when it fires and the user is still offline, their live sessions are
+ * ended: pre-active ones quickly (free the slot), active ones after the
+ * longer window (stop charging a dead phone).
+ */
+async function handleUserDisconnect(userId) {
+    const id = userId.toString();
+    if (isUserOnline(id)) return;
+
+    const live = await AstrologerChatSession.findOne({ user: id, status: { $in: LIVE_STATUSES } }).lean();
+    if (!live) return;
+
+    const graceMs = live.status === 'active' ? USER_DISCONNECT_GRACE_MS : PRE_ACTIVE_DISCONNECT_GRACE_MS;
+    if (live.status !== 'ringing') {
+        emitToAdmins('astro_peer_presence', presencePayload(live, 'user', false, graceMs));
+    }
+
+    if (userDisconnectTimers.has(id)) clearTimeout(userDisconnectTimers.get(id));
+    userDisconnectTimers.set(id, setTimeout(async () => {
+        userDisconnectTimers.delete(id);
+        try {
+            if (isUserOnline(id)) return; // came back — leave everything alone
+            const stuck = await AstrologerChatSession.find({
+                user: id, status: { $in: LIVE_STATUSES }
+            }).select('_id');
+            for (const s of stuck) {
+                await endSession(s._id, 'disconnected');
+            }
+        } catch (err) {
+            console.error('User disconnect cleanup error:', err);
+        }
+    }, graceMs));
+}
+
+/**
+ * Called when a non-admin user authenticates a socket. Cancels a pending
+ * disconnect grace timer and tells the admin the user is back.
+ */
+async function handleUserReconnect(userId) {
+    const id = userId.toString();
+    const pending = userDisconnectTimers.get(id);
+    if (!pending) return;
+    clearTimeout(pending);
+    userDisconnectTimers.delete(id);
+    try {
+        const live = await AstrologerChatSession.findOne({ user: id, status: { $in: ['accepted', 'active'] } }).lean();
+        if (live) emitToAdmins('astro_peer_presence', presencePayload(live, 'user', true, 0));
+    } catch (err) {
+        console.error('User reconnect presence error:', err);
+    }
+}
+
+/**
+ * Called from the socket `disconnect` handler for an admin socket. Only acts
+ * when NO admin socket remains. Users in active chats are told immediately;
+ * if no admin returns within the grace window, those sessions are ended so
+ * nobody is billed for talking to an empty room. Ringing sessions are left
+ * to the ring push + ring timeout.
+ */
+async function handleAdminDisconnect() {
+    if (adminOnlineCount() > 0) return;
+
+    const active = await AstrologerChatSession.find({ status: 'active' }).lean();
+    for (const s of active) {
+        emitToUser(s.user, 'astro_peer_presence', presencePayload(s, 'admin', false, ADMIN_DISCONNECT_GRACE_MS));
+    }
+    if (active.length === 0) return;
+
+    if (adminDisconnectTimer) clearTimeout(adminDisconnectTimer);
+    adminDisconnectTimer = setTimeout(async () => {
+        adminDisconnectTimer = null;
+        try {
+            if (adminOnlineCount() > 0) return;
+            const stillActive = await AstrologerChatSession.find({ status: 'active' }).select('_id');
+            for (const s of stillActive) {
+                await endSession(s._id, 'admin_disconnected');
+            }
+        } catch (err) {
+            console.error('Admin disconnect cleanup error:', err);
+        }
+    }, ADMIN_DISCONNECT_GRACE_MS);
+}
+
+/**
+ * Called when an admin socket authenticates. Cancels the pending admin grace
+ * timer and tells users in live chats the admin is back.
+ */
+async function handleAdminReconnect() {
+    if (!adminDisconnectTimer) return;
+    clearTimeout(adminDisconnectTimer);
+    adminDisconnectTimer = null;
+    try {
+        const active = await AstrologerChatSession.find({ status: 'active' }).lean();
+        for (const s of active) {
+            emitToUser(s.user, 'astro_peer_presence', presencePayload(s, 'admin', true, 0));
+        }
+    } catch (err) {
+        console.error('Admin reconnect presence error:', err);
+    }
 }
 
 // ==================== TIMER HOUSEKEEPING ====================
@@ -381,6 +531,7 @@ async function endSession(sessionId, reason = 'user_ended') {
     // Sessions that never reached `active` are cancelled (no charge); active
     // sessions become `ended` with the duration and totals already recorded.
     const newStatus = (current.status === 'active') ? 'ended' : 'cancelled';
+    const wasRinging = current.status === 'ringing';
 
     // Atomic transition guarded against an already-terminal state, so two
     // concurrent enders (user taps End + admin taps End + a timeout firing)
@@ -408,6 +559,10 @@ async function endSession(sessionId, reason = 'user_ended') {
         endedAt: session.endedAt
     };
     emitToBoth(session, 'astro_chat_ended', payload);
+
+    // A backgrounded admin phone is ringing off the FCM push, not the socket,
+    // so it needs its own "stop ringing" push.
+    if (wasRinging) astroPush.ringCancelledToAdmins(session, reason);
 
     return session;
 }
@@ -439,6 +594,7 @@ async function cancelIfStatus(sessionId, expectedStatus, reason) {
         totalCharged: session.totalCharged,
         endedAt: session.endedAt
     });
+    if (expectedStatus === 'ringing') astroPush.ringCancelledToAdmins(session, reason);
     return session;
 }
 
@@ -483,11 +639,22 @@ module.exports = {
     activeSessionTimers,
     emitToUser,
     emitToAdmins,
+    // presence
+    adminOnlineCount,
+    isUserOnline,
+    handleUserDisconnect,
+    handleUserReconnect,
+    handleAdminDisconnect,
+    handleAdminReconnect,
     // constants
     MIN_MINUTES_TO_START,
     TICK_INTERVAL_MS,
     GRACE_PERIOD_MS,
     RING_TIMEOUT_MS,
     JOIN_TIMEOUT_MS,
+    PRE_ACTIVE_DISCONNECT_GRACE_MS,
+    USER_DISCONNECT_GRACE_MS,
+    ADMIN_DISCONNECT_GRACE_MS,
+    LIVE_STATUSES,
     ADMIN_ROOM
 };

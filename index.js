@@ -23,7 +23,9 @@ const User = require('./models/User');
 const Message = require('./models/Message');
 const jwt = require('jsonwebtoken');
 const chatMetaRoutes = require('./routes/chatmeta');
-const admin = require('firebase-admin');
+const fcm = require('./services/fcmService');
+const astroChat = require('./services/astroChatService');
+const astroPush = require('./services/astroPush');
 const kundliRoutes = require('./routes/kundli');
 const aiChatRoutes = require('./routes/aichat');
 const unifiedPaymentRoutes = require('./routes/unified-payment');
@@ -70,149 +72,11 @@ app.set('io', io);
 // emit per-minute ticks, low-balance warnings, and end-session events.
 billing.setIO(io);
 
-// Initialize Firebase Admin SDK (optional - only if FCM credentials are provided)
-let fcmInitialized = false;
-try {
-    if (process.env.FIREBASE_PROJECT_ID && process.env.FIREBASE_PRIVATE_KEY && process.env.FIREBASE_CLIENT_EMAIL) {
-        const serviceAccount = {
-            type: "service_account",
-            project_id: process.env.FIREBASE_PROJECT_ID,
-            private_key_id: process.env.FIREBASE_PRIVATE_KEY_ID,
-            private_key: process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n'), // Handle escaped newlines
-            client_email: process.env.FIREBASE_CLIENT_EMAIL,
-            client_id: process.env.FIREBASE_CLIENT_ID,
-            auth_uri: process.env.FIREBASE_AUTH_URI || "https://accounts.google.com/o/oauth2/auth",
-            token_uri: process.env.FIREBASE_TOKEN_URI || "https://oauth2.googleapis.com/token",
-            auth_provider_x509_cert_url: process.env.FIREBASE_AUTH_PROVIDER_X509_CERT_URL || "https://www.googleapis.com/oauth2/v1/certs",
-            client_x509_cert_url: process.env.FIREBASE_CLIENT_X509_CERT_URL,
-            universe_domain: process.env.FIREBASE_UNIVERSE_DOMAIN || "googleapis.com"
-        };
-        
-        admin.initializeApp({
-            credential: admin.credential.cert(serviceAccount)
-        });
-        fcmInitialized = true;
-        console.log('✅ Firebase Admin SDK initialized successfully');
-        console.log(`📱 FCM configured for project: ${process.env.FIREBASE_PROJECT_ID}`);
-    } else {
-        console.log('⚠️ Firebase credentials not found. FCM notifications disabled.');
-        console.log('   Required: FIREBASE_PROJECT_ID, FIREBASE_PRIVATE_KEY, FIREBASE_CLIENT_EMAIL');
-    }
-} catch (error) {
-    console.error('⚠️ Failed to initialize Firebase Admin SDK:', error.message);
-    console.log('FCM notifications will be disabled.');
-}
-
-// FCM error codes that mean "this token is permanently dead — stop using it".
-// Source: https://firebase.google.com/docs/cloud-messaging/send-message#admin
-const FCM_DEAD_TOKEN_CODES = new Set([
-    'messaging/registration-token-not-registered',
-    'messaging/invalid-registration-token',
-    'messaging/invalid-argument' // sometimes returned for malformed tokens
-]);
-
-// When FCM tells us a token is dead, wipe it from any User docs that hold
-// it so we never try to send to it again. Returns silently — fire-and-forget.
-const cleanupDeadFCMToken = async (fcmToken, errorCode) => {
-    if (!FCM_DEAD_TOKEN_CODES.has(errorCode)) return;
-    try {
-        const result = await User.updateMany(
-            { fcmToken },
-            { $unset: { fcmToken: '' } }
-        );
-        if (result.modifiedCount > 0) {
-            console.log(`🧹 Cleared ${result.modifiedCount} dead FCM token(s) (${errorCode})`);
-        }
-    } catch (cleanupErr) {
-        console.error('Failed to clear dead FCM token:', cleanupErr);
-    }
-};
-
-// Helper function to send FCM notification
-const sendFCMNotification = async (fcmToken, title, body, data = {}) => {
-    if (!fcmInitialized || !fcmToken) {
-        return { success: false, error: 'FCM not initialized or no token' };
-    }
-    
-    try {
-        const message = {
-            notification: {
-                title,
-                body
-            },
-            data,
-            token: fcmToken
-        };
-        
-        const response = await admin.messaging().send(message);
-        console.log('Successfully sent FCM notification:', response);
-        return { success: true, response };
-    } catch (error) {
-        const code = error?.errorInfo?.code;
-        if (FCM_DEAD_TOKEN_CODES.has(code)) {
-            // Quiet log + cleanup — this is a known/expected condition, not a bug
-            console.warn(`⚠️ FCM token dead (${code}). Cleaning up.`);
-            cleanupDeadFCMToken(fcmToken, code);
-        } else {
-            console.error('Error sending FCM notification:', error);
-        }
-        return { success: false, error: error.message, code };
-    }
-};
-
-// High-priority "ringing" FCM notification used when a user starts an
-// astrologer chat. Both the user (waiting screen) and the admin (incoming
-// chat) receive it. It's a data + notification message with high priority
-// so it wakes the device and triggers the client's full-screen ringtone UI.
-const sendRingingFCMNotification = async (fcmToken, title, body, data = {}) => {
-    if (!fcmInitialized || !fcmToken) {
-        return { success: false, error: 'FCM not initialized or no token' };
-    }
-    try {
-        // FCM requires every value in `data` to be a string
-        const stringifiedData = Object.fromEntries(
-            Object.entries(data).map(([k, v]) => [k, v == null ? '' : String(v)])
-        );
-        const message = {
-            token: fcmToken,
-            notification: { title, body },
-            data: {
-                ...stringifiedData,
-                click_action: 'FLUTTER_NOTIFICATION_CLICK'
-            },
-            android: {
-                priority: 'high',
-                notification: {
-                    channelId: 'astro_chat_ring',
-                    sound: 'default',
-                    priority: 'max',
-                    visibility: 'public'
-                }
-            },
-            apns: {
-                headers: { 'apns-priority': '10' },
-                payload: {
-                    aps: {
-                        sound: 'default',
-                        contentAvailable: true,
-                        category: 'INCOMING_ASTRO_CHAT'
-                    }
-                }
-            }
-        };
-        const response = await admin.messaging().send(message);
-        return { success: true, response };
-    } catch (error) {
-        const code = error?.errorInfo?.code;
-        if (FCM_DEAD_TOKEN_CODES.has(code)) {
-            console.warn(`⚠️ Ringing FCM token dead (${code}). Cleaning up — admin/user will need to re-register the token.`);
-            cleanupDeadFCMToken(fcmToken, code);
-        } else {
-            console.error('Error sending ringing FCM notification:', error);
-        }
-        return { success: false, error: error.message, code };
-    }
-};
+// Firebase Admin SDK (optional - only if FCM credentials are provided).
+// All push helpers live in services/fcmService.js; this alias keeps the
+// legacy chat path below unchanged.
+fcm.init();
+const sendFCMNotification = fcm.sendNotification;
 
 // Middleware - CORS configuration to allow all origins (for website, Flutter app, etc.)
 // Note: JWT tokens in Authorization header don't require credentials, so we can use origin: '*'
@@ -353,7 +217,11 @@ app.get('/', (req, res) => {
                 join: 'emit: astro_join_chat({ sessionId }) (both sides) -> astro_chat_started when both joined',
                 send: 'emit: astro_send_message({ sessionId, content }) -> astro_new_message',
                 end: 'emit: astro_end_chat({ sessionId }) -> astro_chat_ended',
-                serverPushes: ['astro_chat_ringing', 'astro_chat_ringing_placed', 'astro_chat_accepted', 'astro_join_state', 'astro_chat_started', 'astro_billing_tick', 'astro_low_balance_warning', 'astro_chat_ended']
+                typing: 'emit: astro_typing({ sessionId, isTyping }) -> astro_typing on the other side',
+                markRead: 'emit: astro_mark_read({ sessionId }) -> astro_messages_seen on the other side',
+                sendWithClientId: 'astro_send_message also accepts clientId (<= 64 chars) and echoes it in astro_new_message for optimistic UI',
+                serverPushes: ['astro_chat_ringing', 'astro_chat_ringing_placed', 'astro_chat_accepted', 'astro_join_state', 'astro_chat_started', 'astro_billing_tick', 'astro_low_balance_warning', 'astro_chat_ended', 'astro_peer_presence', 'astro_typing', 'astro_messages_seen'],
+                fcmDataTypes: ['incoming_astro_chat (data-only ring, has expiresAt)', 'astro_ring_cancelled (stop ringing)', 'astro_chat_accepted', 'astro_chat_message']
             },
             aiChatWallet: {
                 ask: 'emit: ai_ask_paid_wallet({ question }) -> ai_ask_paid_wallet_response (debits ₹21 from wallet, refunds on failure)'
@@ -466,6 +334,11 @@ io.on('connection', (socket) => {
                 if (user.isAdmin) {
                     adminSockets.add(socket.id);
                     socket.join(billing.ADMIN_ROOM);
+                    // Cancel any pending "admin vanished" grace timer and tell
+                    // users in live chats that Guruji is back.
+                    billing.handleAdminReconnect().catch(err => {
+                        console.error('Admin reconnect error:', err);
+                    });
                     // Send initial user list to admin
                     const users = await User.find({ isAdmin: false })
                         .select('-password -googleId')
@@ -476,6 +349,10 @@ io.on('connection', (socket) => {
                     // moment they connect. Cheap upsert; safe to repeat.
                     Wallet.findOrCreate(user._id).catch(err => {
                         console.error('Wallet ensure error:', err);
+                    });
+                    // Cancel any pending disconnect grace timer for this user.
+                    billing.handleUserReconnect(user._id).catch(err => {
+                        console.error('User reconnect error:', err);
                     });
                 }
                 
@@ -569,18 +446,27 @@ io.on('connection', (socket) => {
                         try {
                             const liveSessions = await AstrologerChatSession.find({
                                 status: { $in: ['ringing', 'accepted', 'active'] }
-                            }).lean();
+                            }).populate('user', 'firstName lastName phone').lean();
                             for (const s of liveSessions) {
+                                const userId = s.user?._id || s.user;
                                 const base = {
                                     sessionId: s._id,
                                     astrologerKey: s.astrologerKey,
                                     astrologerName: s.astrologerName,
                                     ratePerMinute: s.ratePerMinute,
-                                    userId: s.user,
+                                    userId,
                                     resumed: true
                                 };
                                 if (s.status === 'ringing') {
-                                    socket.emit('astro_chat_ringing', base);
+                                    // Same shape as a fresh ring so the admin
+                                    // UI can render the card without a refetch.
+                                    socket.emit('astro_chat_ringing', {
+                                        ...base,
+                                        user: s.user && s.user._id ? s.user : { _id: userId },
+                                        requestedAt: s.requestedAt,
+                                        expiresAt: new Date(new Date(s.requestedAt).getTime() + billing.RING_TIMEOUT_MS),
+                                        ringTimeoutMs: billing.RING_TIMEOUT_MS
+                                    });
                                 } else if (s.status === 'accepted') {
                                     socket.emit('astro_chat_accepted', {
                                         ...base,
@@ -2422,9 +2308,10 @@ io.on('connection', (socket) => {
     // ASTROLOGER CHAT SOCKET EVENTS
     // ==========================================
 
-    // User requests a chat with an astrologer. Validates min balance,
-    // creates a `ringing` session and notifies all admin sockets + the
-    // admin's FCM token (incoming-call style ringtone).
+    // User requests a chat with an astrologer. All the rules (online,
+    // reachable, busy, min balance), the ring timeout, the admin socket
+    // broadcast and the admin phone push live in astroChatService so the
+    // REST route behaves identically.
     socket.on('astro_request_chat', async (data) => {
         try {
             if (!socket.userId) return socket.emit('error', 'Not authenticated');
@@ -2434,129 +2321,17 @@ io.on('connection', (socket) => {
                 });
             }
             const { astrologerKey } = data || {};
-            if (!astrologerKey) {
-                return socket.emit('astro_request_chat_response', {
-                    success: false, error: 'astrologerKey is required'
-                });
+            const result = await astroChat.requestChat({ userId: socket.userId, astrologerKey });
+            if (!result.ok) {
+                const { ok, status, ...rest } = result;
+                return socket.emit('astro_request_chat_response', { success: false, ...rest });
             }
-
-            const astro = await Astrologer.findOne({ key: astrologerKey.toLowerCase(), isActive: true });
-            if (!astro) {
-                return socket.emit('astro_request_chat_response', {
-                    success: false, error: 'Astrologer not found'
-                });
-            }
-            if (!astro.isOnline) {
-                return socket.emit('astro_request_chat_response', {
-                    success: false, error: 'Astrologer is currently offline'
-                });
-            }
-
-            const existing = await AstrologerChatSession.findOne({
-                user: socket.userId,
-                status: { $in: ['ringing', 'accepted', 'active'] }
-            });
-            if (existing) {
-                return socket.emit('astro_request_chat_response', {
-                    success: false,
-                    error: 'You already have an in-progress chat session',
-                    session: existing
-                });
-            }
-
-            const astroBusy = await AstrologerChatSession.findOne({
-                astrologerKey: astro.key,
-                status: { $in: ['ringing', 'accepted', 'active'] }
-            });
-            if (astroBusy) {
-                return socket.emit('astro_request_chat_response', {
-                    success: false,
-                    error: `${astro.displayName} is currently busy. Please try again shortly.`
-                });
-            }
-
-            const wallet = await Wallet.findOrCreate(socket.userId);
-            const minRequired = astro.ratePerMinute * billing.MIN_MINUTES_TO_START;
-            if (wallet.balance < minRequired) {
-                return socket.emit('astro_request_chat_response', {
-                    success: false,
-                    error: 'Insufficient wallet balance',
-                    walletBalance: wallet.balance,
-                    ratePerMinute: astro.ratePerMinute,
-                    minBalanceRequired: minRequired,
-                    shortfall: minRequired - wallet.balance
-                });
-            }
-
-            const session = await AstrologerChatSession.create({
-                user: socket.userId,
-                astrologerKey: astro.key,
-                astrologerName: astro.displayName,
-                ratePerMinute: astro.ratePerMinute,
-                minBalanceRequired: minRequired,
-                status: 'ringing',
-                requestedAt: new Date()
-            });
-
-            billing.armRingTimeout(session._id);
-
-            const userDoc = await User.findById(socket.userId).select('firstName lastName phone').lean();
-            const ringPayload = {
-                sessionId: session._id,
-                astrologerKey: astro.key,
-                astrologerName: astro.displayName,
-                ratePerMinute: astro.ratePerMinute,
-                user: { _id: socket.userId, ...userDoc },
-                walletBalance: wallet.balance,
-                estimatedMinutes: Math.floor(wallet.balance / astro.ratePerMinute),
-                requestedAt: session.requestedAt,
-                ringTimeoutMs: billing.RING_TIMEOUT_MS
-            };
-
-            // Ring all admin sockets (single-admin model — every admin device
-            // shows the incoming card; whoever taps Accept first wins).
-            io.to(billing.ADMIN_ROOM).emit('astro_chat_ringing', ringPayload);
-
-            // FCM push so admin gets a ringtone even if app is backgrounded.
-            (async () => {
-                try {
-                    const adminUsers = await User.find({ isAdmin: true, fcmToken: { $ne: null } })
-                        .select('fcmToken').lean();
-                    for (const a of adminUsers) {
-                        sendRingingFCMNotification(
-                            a.fcmToken,
-                            `Incoming chat for ${astro.displayName}`,
-                            `${userDoc?.firstName || 'A user'} wants to chat (₹${astro.ratePerMinute}/min)`,
-                            {
-                                type: 'incoming_astro_chat',
-                                sessionId: session._id.toString(),
-                                astrologerKey: astro.key,
-                                astrologerName: astro.displayName,
-                                ratePerMinute: astro.ratePerMinute,
-                                userId: socket.userId,
-                                userName: `${userDoc?.firstName || ''} ${userDoc?.lastName || ''}`.trim()
-                            }
-                        ).catch(() => {});
-                    }
-                } catch (e) {
-                    console.error('Admin ring FCM error:', e);
-                }
-            })();
-
             socket.emit('astro_request_chat_response', {
                 success: true,
-                session,
-                walletBalance: wallet.balance,
-                estimatedMinutes: Math.floor(wallet.balance / astro.ratePerMinute),
-                ringTimeoutMs: billing.RING_TIMEOUT_MS
-            });
-            // Also a direct "we are ringing" event for the user's UI
-            socket.emit('astro_chat_ringing_placed', {
-                sessionId: session._id,
-                astrologerKey: astro.key,
-                astrologerName: astro.displayName,
-                ratePerMinute: astro.ratePerMinute,
-                ringTimeoutMs: billing.RING_TIMEOUT_MS
+                session: result.session,
+                walletBalance: result.walletBalance,
+                estimatedMinutes: result.estimatedMinutes,
+                ringTimeoutMs: result.ringTimeoutMs
             });
         } catch (err) {
             console.error('astro_request_chat error:', err);
@@ -2574,66 +2349,104 @@ io.on('connection', (socket) => {
             const { sessionId } = data || {};
             if (!sessionId) return socket.emit('error', 'sessionId is required');
 
-            // Atomic ringing -> accepted: if two admin devices tap Accept, or
-            // Accept races the 60s ring-timeout, only one wins this update.
-            const session = await AstrologerChatSession.findOneAndUpdate(
-                { _id: sessionId, status: 'ringing' },
-                { $set: { status: 'accepted', acceptedAt: new Date(), updatedAt: new Date() } },
-                { new: true }
-            );
-            if (!session) {
-                const existing = await AstrologerChatSession.findById(sessionId);
+            const result = await astroChat.acceptChat({ sessionId });
+            if (!result.ok) {
                 return socket.emit('astro_accept_chat_response', {
-                    success: false,
-                    error: existing ? `Session is already ${existing.status}` : 'Session not found'
+                    success: false, code: result.code, error: result.error
                 });
             }
+            socket.emit('astro_accept_chat_response', { success: true, session: result.session });
+        } catch (err) {
+            console.error('astro_accept_chat error:', err);
+            socket.emit('error', 'Failed to accept chat');
+        }
+    });
 
-            billing.clearRingTimeout(session._id);
-            billing.armJoinTimeout(session._id);
+    // Typing indicator relay. No DB write; one cheap lookup to find the
+    // other side. Clients should debounce (send true on first keystroke,
+    // false after ~2s idle).
+    socket.on('astro_typing', async (data) => {
+        try {
+            if (!socket.userId) return;
+            const { sessionId, isTyping } = data || {};
+            if (!sessionId || !mongoose.Types.ObjectId.isValid(sessionId)) return;
+
+            const session = await AstrologerChatSession.findById(sessionId)
+                .select('user status astrologerKey').lean();
+            if (!session || !['accepted', 'active'].includes(session.status)) return;
+
+            const isUser = session.user.toString() === socket.userId;
+            if (!isUser && !socket.isAdmin) return;
 
             const payload = {
                 sessionId: session._id,
                 astrologerKey: session.astrologerKey,
-                astrologerName: session.astrologerName,
-                ratePerMinute: session.ratePerMinute,
-                joinTimeoutMs: billing.JOIN_TIMEOUT_MS,
-                acceptedAt: session.acceptedAt
+                userId: session.user,
+                from: isUser ? 'user' : 'admin',
+                isTyping: !!isTyping
             };
-            io.to(session.user.toString()).emit('astro_chat_accepted', payload);
-            io.to(billing.ADMIN_ROOM).emit('astro_chat_accepted', { ...payload, userId: session.user });
-
-            // Wake the user's app (backgrounded / locked / socket dropped) so
-            // they can enter the chat before the join window closes. The
-            // socket emit above covers the foreground case; this is the
-            // fallback that prevents "stuck on ringing" when the app isn't
-            // actively listening.
-            (async () => {
-                try {
-                    const u = await User.findById(session.user).select('fcmToken').lean();
-                    if (u?.fcmToken) {
-                        sendRingingFCMNotification(
-                            u.fcmToken,
-                            `${session.astrologerName} accepted your chat`,
-                            'Tap to join the chat now',
-                            {
-                                type: 'astro_chat_accepted',
-                                sessionId: session._id.toString(),
-                                astrologerKey: session.astrologerKey,
-                                astrologerName: session.astrologerName,
-                                ratePerMinute: session.ratePerMinute
-                            }
-                        ).catch(() => {});
-                    }
-                } catch (e) {
-                    console.error('Accept FCM error:', e);
-                }
-            })();
-
-            socket.emit('astro_accept_chat_response', { success: true, session });
+            if (isUser) {
+                io.to(billing.ADMIN_ROOM).emit('astro_typing', payload);
+            } else {
+                io.to(session.user.toString()).emit('astro_typing', payload);
+            }
         } catch (err) {
-            console.error('astro_accept_chat error:', err);
-            socket.emit('error', 'Failed to accept chat');
+            console.error('astro_typing error:', err);
+        }
+    });
+
+    // Mark every unread message the caller RECEIVED in this session as read,
+    // scoped to the session (the legacy mark_messages_read is per sender and
+    // would blank the unread badge on every persona at once).
+    socket.on('astro_mark_read', async (data) => {
+        try {
+            if (!socket.userId) return socket.emit('error', 'Not authenticated');
+            const { sessionId } = data || {};
+            if (!sessionId || !mongoose.Types.ObjectId.isValid(sessionId)) {
+                return socket.emit('error', 'Valid sessionId is required');
+            }
+            const session = await AstrologerChatSession.findById(sessionId)
+                .select('user astrologerKey').lean();
+            if (!session) return socket.emit('error', 'Session not found');
+
+            const isUser = session.user.toString() === socket.userId;
+            if (!isUser && !socket.isAdmin) return socket.emit('error', 'Forbidden');
+
+            // Admin reads what the user sent; the user reads what admin sent.
+            const filter = isUser
+                ? { sessionId: session._id, receiver: socket.userId, isRead: false }
+                : { sessionId: session._id, sender: session.user, isRead: false };
+
+            const unread = await Message.find(filter, { _id: 1 }).lean();
+            const messageIds = unread.map(m => m._id.toString());
+            const seenAt = new Date();
+
+            socket.emit('astro_messages_marked_read', {
+                success: true, sessionId: session._id, count: messageIds.length
+            });
+            if (messageIds.length === 0) return;
+
+            const seenPayload = {
+                sessionId: session._id,
+                astrologerKey: session.astrologerKey,
+                userId: session.user,
+                seenBy: isUser ? 'user' : 'admin',
+                messageIds,
+                seenAt
+            };
+            if (isUser) {
+                io.to(billing.ADMIN_ROOM).emit('astro_messages_seen', seenPayload);
+            } else {
+                io.to(session.user.toString()).emit('astro_messages_seen', seenPayload);
+            }
+
+            Message.updateMany(
+                { _id: { $in: unread.map(m => m._id) } },
+                { $set: { isRead: true, readAt: seenAt } }
+            ).catch(err => console.error('astro_mark_read update error:', err));
+        } catch (err) {
+            console.error('astro_mark_read error:', err);
+            socket.emit('error', 'Failed to mark messages read');
         }
     });
 
@@ -2736,6 +2549,10 @@ io.on('connection', (socket) => {
         try {
             if (!socket.userId) return socket.emit('error', 'Not authenticated');
             const { sessionId, content } = data || {};
+            // Optional client-generated id so the app can match the echoed
+            // message to its optimistic bubble.
+            const clientId = (typeof data?.clientId === 'string' && data.clientId.length <= 64)
+                ? data.clientId : undefined;
             if (!sessionId || !content) {
                 return socket.emit('error', 'sessionId and content are required');
             }
@@ -2779,8 +2596,9 @@ io.on('connection', (socket) => {
             //    account it is). Online = any admin socket connected.
             //  - admin -> user  : emit to the session user's room.
             const receiverIsAdmin = isUser;
-            const userSocketId = connectedUsers.get(session.user.toString());
-            const isOnline = receiverIsAdmin ? (adminSockets.size > 0) : !!userSocketId;
+            const isOnline = receiverIsAdmin
+                ? billing.adminOnlineCount() > 0
+                : billing.isUserOnline(session.user);
 
             const message = new Message({
                 sender: senderId,
@@ -2804,7 +2622,8 @@ io.on('connection', (socket) => {
                 isRead: false,
                 createdAt: now,
                 astrologerKey: session.astrologerKey,
-                sessionId: session._id
+                sessionId: session._id,
+                clientId
             };
 
             // Echo to sender immediately
@@ -2825,8 +2644,18 @@ io.on('connection', (socket) => {
             if (isOnline) {
                 socket.emit('astro_message_delivered', {
                     messageId: message._id,
+                    clientId,
                     deliveredAt: now
                 });
+            } else {
+                // Receiver's socket is gone (app backgrounded / killed mid-chat)
+                // — push so the message isn't silently lost until they return.
+                User.findById(senderId).select('firstName lastName').lean()
+                    .then(sender => astroPush.messageToOfflineReceiver({
+                        session, message, toAdmin: receiverIsAdmin,
+                        senderName: sender ? `${sender.firstName} ${sender.lastName}`.trim() : ''
+                    }))
+                    .catch(err => console.error('Astro message push error:', err));
             }
 
             // Save async — non-blocking
@@ -3055,36 +2884,26 @@ io.on('connection', (socket) => {
     // Handle disconnection
     socket.on('disconnect', () => {
         if (socket.userId) {
-            connectedUsers.delete(socket.userId);
+            // Only drop the user->socket mapping if it still points at THIS
+            // socket. A client that reconnected on a new socket seconds ago
+            // (very common on mobile) must not have its fresh mapping wiped by
+            // the old socket's late disconnect — that used to make the user
+            // look offline and get their live session cancelled.
+            if (connectedUsers.get(socket.userId) === socket.id) {
+                connectedUsers.delete(socket.userId);
+            }
             adminSockets.delete(socket.id);
             console.log('User disconnected:', socket.userId);
 
-            // Free up the user's not-yet-active astrologer sessions so a
-            // reconnect/retry isn't blocked by a stuck `ringing`/`accepted`
-            // session — BUT only after a grace window, and only if the user is
-            // still offline. Mobile clients drop the socket constantly
-            // (transport upgrades, brief blips, backgrounding); cancelling
-            // immediately would make a normal reconnect kill a live request.
-            // Active (billing) sessions are never touched here — the
-            // billing/grace logic owns those.
-            if (!socket.isAdmin) {
-                const disconnectedUserId = socket.userId;
-                setTimeout(async () => {
-                    try {
-                        // Reconnected in the meantime? Leave the session alone.
-                        if (connectedUsers.has(disconnectedUserId)) return;
-                        const stuck = await AstrologerChatSession.find({
-                            user: disconnectedUserId,
-                            status: { $in: ['ringing', 'accepted'] }
-                        }).select('_id');
-                        for (const s of stuck) {
-                            await billing.endSession(s._id, 'disconnected');
-                        }
-                    } catch (err) {
-                        console.error('Disconnect session cleanup error:', err);
-                    }
-                }, 15000);
-            }
+            // Presence-based session handling lives in the billing engine:
+            //   user  → ringing/accepted freed after 15s, active ended after 60s
+            //   admin → active sessions ended after 60s if no admin returns
+            // Both are no-ops when the side still has another socket open and
+            // both are cancelled by a reconnect inside the window.
+            const handler = socket.isAdmin
+                ? billing.handleAdminDisconnect()
+                : billing.handleUserDisconnect(socket.userId);
+            handler.catch(err => console.error('Disconnect session cleanup error:', err));
         }
     });
 });

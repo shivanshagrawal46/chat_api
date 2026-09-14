@@ -3,13 +3,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const Astrologer = require('../models/Astrologer');
 const AstrologerChatSession = require('../models/AstrologerChatSession');
-const Wallet = require('../models/Wallet');
 const Message = require('../models/Message');
 const User = require('../models/User');
 const auth = require('../middleware/auth');
 const billing = require('../services/astroBillingEngine');
-
-const MIN_MINUTES_TO_START = billing.MIN_MINUTES_TO_START;
+const astroChat = require('../services/astroChatService');
 
 // ==================== USER ENDPOINTS ====================
 
@@ -92,108 +90,26 @@ router.get('/:sessionId/messages', auth, async (req, res) => {
 // POST /api/astrologer-chat/sessions/start
 // Body: { astrologerKey: string }
 //
-// Creates a session in `ringing` state and notifies admin sockets. Returns
-// the session id and the FCM-ready payload the client app should pass to
-// its native ringtone screen.
+// Creates a session in `ringing` state, rings every admin socket AND every
+// admin device (FCM), and tells the user's socket the ring was placed. Same
+// service function as the `astro_request_chat` socket event.
 router.post('/sessions/start', auth, async (req, res) => {
     try {
-        const { astrologerKey } = req.body;
-        if (!astrologerKey) {
-            return res.status(400).json({ error: 'astrologerKey is required' });
+        if (req.user.isAdmin) {
+            return res.status(403).json({ error: 'Admins cannot start a paid chat' });
         }
-
-        // 1. Validate astrologer
-        const astro = await Astrologer.findOne({ key: astrologerKey.toLowerCase(), isActive: true });
-        if (!astro) {
-            return res.status(404).json({ error: 'Astrologer not found' });
+        const { astrologerKey } = req.body || {};
+        const result = await astroChat.requestChat({ userId: req.user._id, astrologerKey });
+        if (!result.ok) {
+            const { ok, status, ...rest } = result;
+            return res.status(status).json(rest);
         }
-        if (!astro.isOnline) {
-            return res.status(409).json({ error: 'Astrologer is currently offline' });
-        }
-
-        // 2. Block if user already has an in-flight session
-        const existing = await AstrologerChatSession.findOne({
-            user: req.user._id,
-            status: { $in: ['ringing', 'accepted', 'active'] }
-        });
-        if (existing) {
-            return res.status(409).json({
-                error: 'You already have an in-progress chat session',
-                session: existing
-            });
-        }
-
-        // 3. Block if astrologer is already in a session (single admin can only
-        // attend one user per persona at a time).
-        const astroBusy = await AstrologerChatSession.findOne({
-            astrologerKey: astro.key,
-            status: { $in: ['ringing', 'accepted', 'active'] }
-        });
-        if (astroBusy) {
-            return res.status(409).json({
-                error: `${astro.displayName} is currently busy with another user. Please try again shortly.`
-            });
-        }
-
-        // 4. Min-balance check (5 minutes worth)
-        const wallet = await Wallet.findOrCreate(req.user._id);
-        const minRequired = astro.ratePerMinute * MIN_MINUTES_TO_START;
-        if (wallet.balance < minRequired) {
-            return res.status(402).json({
-                error: 'Insufficient wallet balance',
-                walletBalance: wallet.balance,
-                ratePerMinute: astro.ratePerMinute,
-                minBalanceRequired: minRequired,
-                shortfall: minRequired - wallet.balance
-            });
-        }
-
-        // 5. Create session
-        const session = await AstrologerChatSession.create({
-            user: req.user._id,
-            astrologerKey: astro.key,
-            astrologerName: astro.displayName,
-            ratePerMinute: astro.ratePerMinute,
-            minBalanceRequired: minRequired,
-            status: 'ringing',
-            requestedAt: new Date()
-        });
-
-        // 6. Arm the ring timeout
-        billing.armRingTimeout(session._id);
-
-        // 7. Notify admin sockets (single-admin model)
-        const ringPayload = {
-            sessionId: session._id,
-            astrologerKey: astro.key,
-            astrologerName: astro.displayName,
-            ratePerMinute: astro.ratePerMinute,
-            user: {
-                _id: req.user._id,
-                firstName: req.user.firstName,
-                lastName: req.user.lastName,
-                phone: req.user.phone
-            },
-            walletBalance: wallet.balance,
-            estimatedMinutes: Math.floor(wallet.balance / astro.ratePerMinute),
-            requestedAt: session.requestedAt
-        };
-        billing.emitToAdmins('astro_chat_ringing', ringPayload);
-        // Also tell the user we've placed the ring
-        billing.emitToUser(req.user._id, 'astro_chat_ringing_placed', {
-            sessionId: session._id,
-            astrologerKey: astro.key,
-            astrologerName: astro.displayName,
-            ratePerMinute: astro.ratePerMinute,
-            ringTimeoutMs: billing.RING_TIMEOUT_MS
-        });
-
         res.json({
             success: true,
-            session,
-            walletBalance: wallet.balance,
-            estimatedMinutes: Math.floor(wallet.balance / astro.ratePerMinute),
-            ringTimeoutMs: billing.RING_TIMEOUT_MS
+            session: result.session,
+            walletBalance: result.walletBalance,
+            estimatedMinutes: result.estimatedMinutes,
+            ringTimeoutMs: result.ringTimeoutMs
         });
     } catch (error) {
         console.error('Error starting astrologer chat session:', error);
@@ -318,35 +234,17 @@ router.post('/admin/sessions/:id/accept', auth, async (req, res) => {
         if (!req.user.isAdmin) {
             return res.status(403).json({ error: 'Admin access required' });
         }
-        // Atomic ringing -> accepted: guards against a double accept or an
-        // accept racing the ring-timeout (only one transition wins).
-        const session = await AstrologerChatSession.findOneAndUpdate(
-            { _id: req.params.id, status: 'ringing' },
-            { $set: { status: 'accepted', acceptedAt: new Date(), updatedAt: new Date() } },
-            { new: true }
-        );
-        if (!session) {
-            const existing = await AstrologerChatSession.findById(req.params.id);
-            return res.status(existing ? 400 : 404).json({
-                error: existing ? `Session is already ${existing.status}` : 'Session not found'
-            });
+        if (!mongoose.Types.ObjectId.isValid(req.params.id)) {
+            return res.status(400).json({ error: 'Invalid session id' });
         }
-
-        billing.clearRingTimeout(session._id);
-        billing.armJoinTimeout(session._id);
-
-        const payload = {
-            sessionId: session._id,
-            astrologerKey: session.astrologerKey,
-            astrologerName: session.astrologerName,
-            ratePerMinute: session.ratePerMinute,
-            joinTimeoutMs: billing.JOIN_TIMEOUT_MS,
-            acceptedAt: session.acceptedAt
-        };
-        billing.emitToUser(session.user, 'astro_chat_accepted', payload);
-        billing.emitToAdmins('astro_chat_accepted', { ...payload, userId: session.user });
-
-        res.json({ success: true, session });
+        // Atomic ringing -> accepted, socket events, user push and
+        // stop-ringing push all happen inside the service (shared with the
+        // `astro_accept_chat` socket event).
+        const result = await astroChat.acceptChat({ sessionId: req.params.id });
+        if (!result.ok) {
+            return res.status(result.status).json({ error: result.error, code: result.code });
+        }
+        res.json({ success: true, session: result.session });
     } catch (error) {
         console.error('Error accepting session:', error);
         res.status(500).json({ error: 'Failed to accept session' });

@@ -58,6 +58,8 @@ const astrologerChatSessionSchema = new mongoose.Schema({
             'user_cancelled',
             'server_restart',
             'disconnected',
+            'admin_disconnected',
+            'admin_unreachable',
             null
         ],
         default: null
@@ -98,5 +100,21 @@ astrologerChatSessionSchema.pre('save', function (next) {
 astrologerChatSessionSchema.index({ user: 1, status: 1 });
 astrologerChatSessionSchema.index({ astrologerKey: 1, status: 1 });
 astrologerChatSessionSchema.index({ status: 1, createdAt: -1 });
+
+// Hard guarantees enforced by the database, not just by the pre-checks in
+// the request handler (which two concurrent taps can both pass):
+//   * a user has at most ONE live session
+//   * an astrologer persona has at most ONE live session
+// `$in` inside partialFilterExpression needs MongoDB 6.0+. On older servers
+// the index build logs an error and the app keeps the handler-level checks.
+const LIVE_FILTER = { status: { $in: ['ringing', 'accepted', 'active'] } };
+astrologerChatSessionSchema.index(
+    { user: 1 },
+    { unique: true, partialFilterExpression: LIVE_FILTER, name: 'one_live_session_per_user' }
+);
+astrologerChatSessionSchema.index(
+    { astrologerKey: 1 },
+    { unique: true, partialFilterExpression: LIVE_FILTER, name: 'one_live_session_per_astrologer' }
+);
 
 module.exports = mongoose.model('AstrologerChatSession', astrologerChatSessionSchema);

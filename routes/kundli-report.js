@@ -3,6 +3,9 @@ const router = express.Router();
 const { fetchFullKundliChart } = require('../services/kundliChartService');
 const { buildFullReport } = require('../services/kundliReportService');
 const { buildNarrativeReport, pickLanguage } = require('../services/kundliNarrative');
+const { extractRichChart } = require('../services/kundliExtract');
+const { analyseChart } = require('../services/kundliAnalysis');
+const { composeReport } = require('../services/kundliNarrative/compose');
 
 /**
  * POST /api/kundli-report/full
@@ -71,7 +74,7 @@ router.post('/full', async (req, res) => {
 
     let chart;
     try {
-        chart = await fetchFullKundliChart(input);
+        chart = await fetchFullKundliChart(input, { includeRaw: true });
     } catch (err) {
         if (err.code === 'VALIDATION') {
             return res.status(400).json({ error: err.message, details: err.details });
@@ -87,8 +90,12 @@ router.post('/full', async (req, res) => {
     }
 
     let report;
+    let rich;
+    let analysis;
     try {
-        report = buildNarrativeReport(chart.normalized, chart.basicDetails, {
+        rich = extractRichChart(chart.raw, { now: new Date() });
+        analysis = analyseChart(rich);
+        report = composeReport(rich, analysis, {
             domains,
             name: input.name || input.fullName || ''
         });

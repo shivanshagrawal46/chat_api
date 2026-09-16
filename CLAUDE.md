@@ -62,9 +62,16 @@ Start with `npm start` (runs `node index.js`). No test suite exists; verify with
 - **Wallet + payments** (Razorpay) — `routes/wallet.js`, `routes/unified-payment.js`.
 - **Kundli, palmistry, predictions, reports** — `routes/kundli*.js`, `routes/palmistry.js`,
   `routes/*-predictions.js`, `services/*PredictionEngine.js`, data in `data/astrology/`.
-  - `POST /api/kundli-report/full` returns a topic-wise narrative report (2–3 paragraphs
-    per topic, EN + HI, no AI) composed by `services/kundliNarrative/`; see
-    `KUNDLI_REPORT_NARRATIVE.md`. The raw table-row output is behind `?includeSections=1`.
+  - `POST /api/kundli-report/full` returns a topic-wise reading (EN + HI, no AI). Pipeline:
+    `services/kundliExtract.js` (reads the full upstream payload: degrees, nakshatras,
+    Ashtakavarga, Shadbala, aspects, avasthas, Vimshottari dasha) →
+    `services/kundliAnalysis/` (0–100 strength scores for planets and houses,
+    rarity-gated yoga detection, per-domain verdicts) → `services/kundliNarrative/compose.js`
+    (writes the paragraphs, prevents repetition). See `KUNDLI_REPORT_NARRATIVE.md`.
+    The old flat table-row output is behind `?includeSections=1`.
+  - Yoga detection is deliberately rarity-gated: a plain kendra–trikona Raja Yoga occurs in
+    ~97.5% of charts, so it is only surfaced when both lords are genuinely strong. Do not
+    loosen those gates without re-running the distribution check in the doc.
 - **Push notifications** — `services/fcmService.js` (Firebase Admin). Optional; the app
   runs without Firebase credentials.
 

@@ -7,9 +7,7 @@ rest improves smoothness and can be done incrementally.
 ## 1. Admin app: call-style incoming chat (REQUIRED)
 
 The admin ring is now a **data-only** high-priority FCM message
-(`ASTRO_RING_PUSH_STYLE=call`, the default). The OS shows nothing by itself —
-the app must draw the incoming-chat screen. Until this is implemented, set
-`ASTRO_RING_PUSH_STYLE=banner` in `.env` to get the old tray notification back.
+(`ASTRO_RING_PUSH_STYLE=call`, the default). 
 
 ### FCM data payload (all values are strings)
 

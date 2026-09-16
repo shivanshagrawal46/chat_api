@@ -62,6 +62,9 @@ Start with `npm start` (runs `node index.js`). No test suite exists; verify with
 - **Wallet + payments** (Razorpay) — `routes/wallet.js`, `routes/unified-payment.js`.
 - **Kundli, palmistry, predictions, reports** — `routes/kundli*.js`, `routes/palmistry.js`,
   `routes/*-predictions.js`, `services/*PredictionEngine.js`, data in `data/astrology/`.
+  - `POST /api/kundli-report/full` returns a topic-wise narrative report (2–3 paragraphs
+    per topic, EN + HI, no AI) composed by `services/kundliNarrative/`; see
+    `KUNDLI_REPORT_NARRATIVE.md`. The raw table-row output is behind `?includeSections=1`.
 - **Push notifications** — `services/fcmService.js` (Firebase Admin). Optional; the app
   runs without Firebase credentials.
 

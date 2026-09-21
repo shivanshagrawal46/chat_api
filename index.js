@@ -39,6 +39,9 @@ const marriagePredictionRoutes = require('./routes/marriage-predictions');
 const moneyPredictionRoutes = require('./routes/money-predictions');
 const healthPredictionRoutes = require('./routes/health-predictions');
 const kundliReportRoutes = require('./routes/kundli-report');
+const appConfigRoutes = require('./routes/app-config');
+const appVersionGate = require('./middleware/appVersion');
+const appVersion = require('./services/appVersionService');
 const Wallet = require('./models/Wallet');
 const WalletTransaction = require('./models/WalletTransaction');
 const Astrologer = require('./models/Astrologer');
@@ -83,7 +86,8 @@ const sendFCMNotification = fcm.sendNotification;
 app.use(cors({
     origin: '*',
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-App-Version', 'X-App-Version-Name', 'X-App-Id'],
+    exposedHeaders: ['X-Update-Required']
 }));
 // Palmistry accepts base64 hand images in the JSON body, which exceed the
 // default 100kb limit. Give ONLY this route a larger limit (registered before
@@ -118,6 +122,13 @@ app.get('/', (req, res) => {
         message: 'Welcome to Bhupendra Chat API',
         version: '4.0.0',
         note: 'All features now support Socket.IO for real-time communication',
+        appVersionGate: {
+            headers: 'Send X-App-Version (build number, e.g. 92 or 5.0.0+92), X-App-Version-Name (5.0.0), X-App-Id (user|admin) on every request; socket: auth { appVersion, appVersionName, appId }',
+            blocked: 'HTTP 401 { code: "UPDATE_REQUIRED", error, minBuild, latestBuild, androidStoreUrl, iosStoreUrl, message: { en, hi } } on every /api route except /api/app-config; socket connect_error with the same body in err.data',
+            config: 'GET /api/app-config?app=user (public) -> { minBuild, latestBuild, latestVersionName, updateRequired, updateAvailable, androidStoreUrl, iosStoreUrl, message }',
+            adminGet: 'GET /api/app-config/admin (admin only)',
+            adminUpdate: 'PUT /api/app-config/admin/:app { minBuild?, latestBuild?, latestVersionName?, blockMissingVersion?, androidStoreUrl?, iosStoreUrl?, messageEn?, messageHi? } (admin only)'
+        },
         restEndpoints: {
             health: 'GET /health',
             auth: {
@@ -301,6 +312,26 @@ recoverOrphanSessionsOnBoot();
 // Socket.IO connection handling
 const connectedUsers = new Map();
 const adminSockets = new Set();
+
+// ===== App version gate (Socket.IO) =====
+// Same rule as the REST gate, applied at the handshake. The app passes
+// { appVersion, appVersionName, appId } in the socket `auth` option (or the
+// X-App-* extraHeaders). A too-old build is refused with a `connect_error`
+// whose `data` carries the same UPDATE_REQUIRED body as the REST 401.
+io.use(async (socket, next) => {
+    try {
+        const info = appVersion.fromSocket(socket);
+        const result = await appVersion.evaluate(info);
+        socket.appVersion = { appId: info.appId, build: result.build, versionName: info.versionName };
+        if (result.ok) return next();
+        const err = new Error(result.body.error);
+        err.data = result.body;
+        return next(err);
+    } catch (err) {
+        console.error('Socket app version gate error:', err);
+        return next(); // never let the gate itself block connections
+    }
+});
 
 io.on('connection', (socket) => {
     console.log('User connected:', socket.id);
@@ -2924,6 +2955,16 @@ const notifyAdminsAboutNewUser = async (user) => {
         io.to(socketId).emit('new_user', userData);
     });
 };
+
+// ===== App version gate =====
+// Public config the app reads on launch (store links, min build, message).
+// Mounted BEFORE the gate so a blocked app can still fetch it.
+app.use('/api/app-config', appConfigRoutes);
+// Every other /api route: builds below the minimum get
+// 401 { code: 'UPDATE_REQUIRED', error: 'Please update the app...' }.
+// Requests with no X-App-Version header (old APK) are allowed until
+// `blockMissingVersion` is switched on via PUT /api/app-config/admin/:app.
+app.use('/api', appVersionGate);
 
 // Routes
 app.use('/api/auth', authRoutes);

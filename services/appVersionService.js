@@ -19,6 +19,9 @@ const AppVersionPolicy = require('../models/AppConfig');
 
 const APP_IDS = ['user', 'admin'];
 const CACHE_TTL_MS = 30 * 1000;
+// Play Store listing of the user app. Used whenever the DB row has no
+// androidStoreUrl set, so the update screen always has a working button.
+const DEFAULT_ANDROID_STORE_URL = 'https://play.google.com/store/apps/details?id=jyotishvivkosh.mobileapplication';
 const UPDATE_REQUIRED = 'UPDATE_REQUIRED';
 
 let cache = { at: 0, byApp: null };
@@ -45,7 +48,7 @@ function defaultsFor(app) {
         latestBuild: envInt(`APP_LATEST_BUILD_${upper}`, app === 'user' ? 92 : 0),
         latestVersionName: process.env[`APP_LATEST_VERSION_NAME_${upper}`] || (app === 'user' ? '5.0.0' : ''),
         blockMissingVersion: envBool(`APP_BLOCK_MISSING_VERSION_${upper}`, false),
-        androidStoreUrl: process.env[`APP_ANDROID_STORE_URL_${upper}`] || process.env.APP_ANDROID_STORE_URL || '',
+        androidStoreUrl: process.env[`APP_ANDROID_STORE_URL_${upper}`] || process.env.APP_ANDROID_STORE_URL || (app === 'user' ? DEFAULT_ANDROID_STORE_URL : ''),
         iosStoreUrl: process.env[`APP_IOS_STORE_URL_${upper}`] || process.env.APP_IOS_STORE_URL || '',
         messageEn: 'Please update the app from the Play Store to continue.',
         messageHi: 'कृपया जारी रखने के लिए Play Store से ऐप अपडेट करें।'
@@ -131,7 +134,7 @@ function publicView(policy, build) {
         updateRequired: hasBuild ? build < policy.minBuild : !!policy.blockMissingVersion,
         // Soft nudge: newer build exists but this one still works.
         updateAvailable: hasBuild ? build < policy.latestBuild : false,
-        androidStoreUrl: policy.androidStoreUrl || '',
+        androidStoreUrl: policy.androidStoreUrl || (policy.app === 'user' ? DEFAULT_ANDROID_STORE_URL : ''),
         iosStoreUrl: policy.iosStoreUrl || '',
         message: { en: policy.messageEn, hi: policy.messageHi }
     };
@@ -246,6 +249,7 @@ async function updatePolicy(appId, patch, updatedBy) {
 
 module.exports = {
     APP_IDS,
+    DEFAULT_ANDROID_STORE_URL,
     UPDATE_REQUIRED,
     parseBuild,
     normalizeAppId,

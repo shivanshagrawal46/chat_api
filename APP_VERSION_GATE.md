@@ -46,8 +46,8 @@ X-Update-Required: 1
   "latestVersionName": "5.0.0",
   "currentBuild": 80,
   "updateAvailable": true,
-  "androidStoreUrl": "...",
-  "iosStoreUrl": "...",
+  "androidStoreUrl": "https://play.google.com/store/apps/details?id=jyotishvivkosh.mobileapplication",
+  "iosStoreUrl": "",
   "message": { "en": "...", "hi": "..." }
 }
 ```
@@ -74,7 +74,7 @@ GET /api/app-config?app=user
   "currentBuild": 92,          // null if X-App-Version was not sent
   "updateRequired": false,     // hard block -> show blocking update screen
   "updateAvailable": false,    // soft nudge -> optional "update available" banner
-  "androidStoreUrl": "",
+  "androidStoreUrl": "https://play.google.com/store/apps/details?id=jyotishvivkosh.mobileapplication",
   "iosStoreUrl": "",
   "message": { "en": "...", "hi": "..." }
 }
@@ -140,7 +140,7 @@ APP_LATEST_BUILD_USER=92
 APP_LATEST_VERSION_NAME_USER=5.0.0
 APP_BLOCK_MISSING_VERSION_USER=false
 APP_MIN_BUILD_ADMIN=0
-APP_ANDROID_STORE_URL=
+APP_ANDROID_STORE_URL=https://play.google.com/store/apps/details?id=jyotishvivkosh.mobileapplication   # built-in default for the user app
 APP_IOS_STORE_URL=
 ```
 

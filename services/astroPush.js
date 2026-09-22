@@ -25,6 +25,25 @@ const RING_CANCEL_TTL_MS = 60 * 1000;
 
 const fullName = (u) => `${u?.firstName || ''} ${u?.lastName || ''}`.trim();
 
+// Last 8 chars of a token: enough to tell admin devices apart in the logs
+// without printing the whole credential.
+const tokenTail = (t) => (t ? `…${String(t).slice(-8)}` : 'none');
+
+/**
+ * One log line per push fan-out so a "the admin never rang" report can be
+ * checked against the server log: how many admin devices had a token, how
+ * many FCM accepted, and the error code for each one it rejected.
+ */
+function logFanout(label, session, tokens, results, extra = '') {
+    const ok = results.filter(r => r && r.success).length;
+    const failed = results
+        .map((r, i) => (r && r.success) ? null : `${tokenTail(tokens[i])}:${r?.code || r?.error || 'unknown'}`)
+        .filter(Boolean);
+    const summary = `${label} session=${session._id} astro=${session.astrologerKey} tokens=${tokens.length} sent=${ok} failed=${failed.length}${extra}`;
+    if (failed.length) console.warn(`⚠️ ${summary} [${failed.join(', ')}]`);
+    else console.log(`🔔 ${summary}`);
+}
+
 async function adminTokens() {
     const admins = await User.find({ isAdmin: true, fcmToken: { $ne: null } })
         .select('fcmToken').lean();
@@ -44,7 +63,10 @@ async function userToken(userId) {
 async function ringAdmins({ session, astro, user, walletBalance, ringTimeoutMs }) {
     try {
         const tokens = await adminTokens();
-        if (tokens.length === 0) return;
+        if (tokens.length === 0) {
+            console.warn(`⚠️ Admin ring push skipped: no admin has an FCM token (session=${session._id} astro=${astro.key})`);
+            return;
+        }
 
         const requestedAt = session.requestedAt || new Date();
         const expiresAt = new Date(new Date(requestedAt).getTime() + ringTimeoutMs);
@@ -71,7 +93,7 @@ async function ringAdmins({ session, astro, user, walletBalance, ringTimeoutMs }
             click_action: 'FLUTTER_NOTIFICATION_CLICK'
         };
 
-        await Promise.all(tokens.map(token =>
+        const results = await Promise.all(tokens.map(token =>
             RING_PUSH_STYLE === 'banner'
                 ? fcm.sendRingingBanner(token, title, body, data, { ttlMs: ringTimeoutMs })
                 : fcm.sendData(token, data, {
@@ -79,6 +101,8 @@ async function ringAdmins({ session, astro, user, walletBalance, ringTimeoutMs }
                     ios: { title, body, sound: RING_IOS_SOUND, category: 'INCOMING_ASTRO_CHAT' }
                 })
         ));
+        logFanout('Admin ring push', session, tokens, results,
+            ` style=${RING_PUSH_STYLE} expiresAt=${data.expiresAt}`);
     } catch (e) {
         console.error('Admin ring FCM error:', e);
     }
@@ -99,7 +123,8 @@ async function ringCancelledToAdmins(session, reason) {
             userId: session.user.toString(),
             reason
         };
-        await Promise.all(tokens.map(token => fcm.sendData(token, data, { ttlMs: RING_CANCEL_TTL_MS })));
+        const results = await Promise.all(tokens.map(token => fcm.sendData(token, data, { ttlMs: RING_CANCEL_TTL_MS })));
+        logFanout('Admin ring-cancel push', session, tokens, results, ` reason=${reason}`);
     } catch (e) {
         console.error('Admin ring-cancel FCM error:', e);
     }

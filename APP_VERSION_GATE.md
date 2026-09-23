@@ -112,25 +112,35 @@ PUT /api/app-config/admin/admin                 (admin JWT)
 All fields optional. Changes apply immediately on that server and within 30 s
 on other instances (policy is cached for 30 s).
 
-## Rollout plan for the old APK
+## Old APK handling
 
 Old builds send **no** version header. They are treated as build "unknown".
 
 | `blockMissingVersion` | Old APK (no header) | New APK below `minBuild` |
 |---|---|---|
-| `false` (default) | keeps working | blocked (401 UPDATE_REQUIRED) |
-| `true` | blocked (401, logs out, login shows update text) | blocked |
+| `true` (**current setting for `user`**) | blocked: 401 on every call, app logs out, login shows the update text | blocked |
+| `false` (current setting for `admin`) | keeps working | blocked |
 
-Recommended:
-1. Deploy backend. Nothing changes for anyone yet.
-2. Release build 92 with the headers and update screen.
-3. Wait for most users to update (send a push saying "please update").
-4. `PUT /api/app-config/admin/user { "blockMissingVersion": true }` to cut off
-   the remaining old builds. Do the same for `admin` only after the admin app
-   also sends the headers, otherwise the admin app locks itself out.
+The `user` policy was switched to `true` on 2026-09-24, so every pre-92 user
+build is cut off as soon as a server running this code is live.
 
-If the admin app gets locked out, `/api/app-config/*` is exempt from the gate,
-so the fix endpoint always works with a valid admin token.
+Sockets: the handshake gate refuses new connections from blocked builds, and a
+sweep every 30 s (and immediately after any admin policy change) disconnects
+sockets that were already connected. Each such socket gets `update_required`
+with the 401 body, then `error` with the message text, then is closed.
+
+Changing the switch without an admin JWT (reads `.env` for the DB):
+
+```
+node scripts/set-app-version-policy.js user blockMissingVersion=false
+node scripts/set-app-version-policy.js user minBuild=95 latestBuild=95 latestVersionName=5.1.0
+node scripts/set-app-version-policy.js user            # print current policy
+```
+
+Do the same for `admin` only after the admin app also sends the headers,
+otherwise the admin app locks itself out. If that happens, `/api/app-config/*`
+is exempt from the gate, so the fix endpoint always works with a valid admin
+token, and the script above works without one.
 
 ## Env defaults (only used the first time the policy row is created)
 
@@ -138,7 +148,7 @@ so the fix endpoint always works with a valid admin token.
 APP_MIN_BUILD_USER=92
 APP_LATEST_BUILD_USER=92
 APP_LATEST_VERSION_NAME_USER=5.0.0
-APP_BLOCK_MISSING_VERSION_USER=false
+APP_BLOCK_MISSING_VERSION_USER=true
 APP_MIN_BUILD_ADMIN=0
 APP_ANDROID_STORE_URL=https://play.google.com/store/apps/details?id=jyotishvivkosh.mobileapplication   # built-in default for the user app
 APP_IOS_STORE_URL=

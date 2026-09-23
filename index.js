@@ -318,6 +318,15 @@ const adminSockets = new Set();
 // { appVersion, appVersionName, appId } in the socket `auth` option (or the
 // X-App-* extraHeaders). A too-old build is refused with a `connect_error`
 // whose `data` carries the same UPDATE_REQUIRED body as the REST 401.
+appVersion.setIO(io);
+// Sockets that were already connected when the policy tightened are not
+// re-checked by the handshake gate, so sweep them every 30s (and right after
+// an admin policy change, which the service triggers itself).
+const APP_VERSION_SWEEP_MS = 30 * 1000;
+setInterval(() => {
+    appVersion.sweepSockets().catch(err => console.error('App version sweep error:', err));
+}, APP_VERSION_SWEEP_MS).unref();
+
 io.use(async (socket, next) => {
     try {
         const info = appVersion.fromSocket(socket);

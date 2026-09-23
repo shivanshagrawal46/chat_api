@@ -25,6 +25,50 @@ const DEFAULT_ANDROID_STORE_URL = 'https://play.google.com/store/apps/details?id
 const UPDATE_REQUIRED = 'UPDATE_REQUIRED';
 
 let cache = { at: 0, byApp: null };
+let ioRef = null;
+
+function setIO(io) {
+    ioRef = io;
+}
+
+/**
+ * Disconnect every connected socket whose build is no longer allowed.
+ * The handshake gate only runs when a socket connects, so a client that was
+ * already connected when the policy tightened would otherwise keep its
+ * socket (and keep chatting) until it happened to reconnect. Called right
+ * after an admin policy change and on a 30s interval so a change made from
+ * another server instance or a script is enforced too.
+ *
+ * Each blocked socket first receives `update_required` with the same body
+ * as the REST 401 so a new app can show its update screen, then is closed.
+ */
+async function sweepSockets() {
+    if (!ioRef) return { checked: 0, disconnected: 0 };
+    let checked = 0;
+    let disconnected = 0;
+    try {
+        for (const socket of ioRef.sockets.sockets.values()) {
+            checked++;
+            const info = fromSocket(socket);
+            const result = await evaluate(info);
+            if (result.ok) continue;
+            try {
+                socket.emit('update_required', result.body);
+                socket.emit('error', result.body.error); // old app listens for plain 'error'
+                socket.disconnect(true);
+                disconnected++;
+            } catch (e) {
+                console.error('appVersion sweep: failed to disconnect socket', socket.id, e.message);
+            }
+        }
+        if (disconnected > 0) {
+            console.log(`🔒 App version sweep: disconnected ${disconnected}/${checked} socket(s) below minimum build`);
+        }
+    } catch (err) {
+        console.error('appVersion sweep error:', err);
+    }
+    return { checked, disconnected };
+}
 
 function envInt(name, fallback) {
     const n = parseInt(process.env[name], 10);
@@ -47,7 +91,10 @@ function defaultsFor(app) {
         minBuild: envInt(`APP_MIN_BUILD_${upper}`, app === 'user' ? 92 : 0),
         latestBuild: envInt(`APP_LATEST_BUILD_${upper}`, app === 'user' ? 92 : 0),
         latestVersionName: process.env[`APP_LATEST_VERSION_NAME_${upper}`] || (app === 'user' ? '5.0.0' : ''),
-        blockMissingVersion: envBool(`APP_BLOCK_MISSING_VERSION_${upper}`, false),
+        // User app: block builds that send no version header (the pre-92 APK)
+        // by default, so old users are logged out and told to update.
+        // Admin app: allowed until the admin app sends headers too.
+        blockMissingVersion: envBool(`APP_BLOCK_MISSING_VERSION_${upper}`, app === 'user'),
         androidStoreUrl: process.env[`APP_ANDROID_STORE_URL_${upper}`] || process.env.APP_ANDROID_STORE_URL || (app === 'user' ? DEFAULT_ANDROID_STORE_URL : ''),
         iosStoreUrl: process.env[`APP_IOS_STORE_URL_${upper}`] || process.env.APP_IOS_STORE_URL || '',
         messageEn: 'Please update the app from the Play Store to continue.',
@@ -244,12 +291,16 @@ async function updatePolicy(appId, patch, updatedBy) {
         { upsert: true, new: true, setDefaultsOnInsert: true }
     ).lean();
     invalidateCache();
+    // Enforce immediately on sockets already connected to this instance.
+    sweepSockets().catch(() => {});
     return { ok: true, policy: updated };
 }
 
 module.exports = {
     APP_IDS,
     DEFAULT_ANDROID_STORE_URL,
+    setIO,
+    sweepSockets,
     UPDATE_REQUIRED,
     parseBuild,
     normalizeAppId,
